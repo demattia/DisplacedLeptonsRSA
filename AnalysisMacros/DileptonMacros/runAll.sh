@@ -1,0 +1,6 @@
+make
+./main 5 Diboson
+./main 5 Signal
+./main 5 DYJets
+./main 5 QCD
+./main 5 Data22Jan

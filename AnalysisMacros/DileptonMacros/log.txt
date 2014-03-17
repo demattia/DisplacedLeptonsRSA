@@ -1,0 +1,134 @@
+g++ `root-config --glibs` fullAnalyzer.o DileptonAnalyzer.o PileupReweighting.o treeAnalyzerBase.o DileptonAnalysisCuts.o Histograms.o libMyLib.so -g -o main 
+String contains
+processing: /eos/uscms/store/user/lpcdve/noreplica/DisplacedLeptons/Trees/Data_Mu_Run2012A22Jan_analysis_20140305 Weight : -1 Ana : 5
+anaType_ : 5 dirName : muTrackAnalysis
+Total processed events : 4683192
+Total events after event filters : 4.65838e+06
+Total events after trigger : 561201
+Total events after prefilter : 343775
+Using pileup file ../../AnalysisMacros/PileupFiles/pileup_muon_22Jan.root
+=========================================
+Printing cut values for analysis : 5
+And set of cuts : 0
+===
+---> Lepton cuts
+Minimum track pt : 26
+Maximum eta : 2.4
+Require opposite sign d0 : 1
+Minimum d0 significance : 5
+Maximum d0 significance : 1e+08
+Maximum sum pt (isolation) : 0.05
+Maximum calo match delta R : 999999
+---> Photon ID cuts
+Minimum photon R9 : -1
+Maximum photon H/E : 99999
+Maximum photon sigma ieta ieta barrel/endcap : 99999/99999
+---> Di Lepton cuts
+Minimum Lxy significance : -99999
+Maximum Lxy significance : 9999
+Require opposite charged leptons : 0
+Require vertex : 1
+Maximum vertex Chi^2 : 5
+Maximum hits before vertex : 9999
+Maximum missing hits after vertex : 9999
+Minimum deltaR between leptons : 0.2
+Minimum cos(angle between leptons) : -0.79
+Maximum delta Phi : 1e+11
+Minimum invariant mass : 15
+=========================================
+Number of events : 298046
+[=====---------------------------------------------] 10%[==========----------------------------------------] 20%[===============-----------------------------------] 30%[====================------------------------------] 40%[=========================-------------------------] 50%[==============================--------------------] 60%[===================================---------------] 70%[========================================----------] 80%[=============================================-----] 90%[==================================================] 100%
+number of standALoneMuons candidates matched to track-based candidates = 0
+number of standALoneMuons candidates complementary to track-based candidates = 216223
+Writing and closing files
+Deleting histograms
+Deleting tau histograms
+String contains
+processing: /eos/uscms/store/user/lpcdve/noreplica/DisplacedLeptons/Trees/Data_Mu_Run2012B22Jan_analysis_20140310 Weight : -1 Ana : 5
+anaType_ : 5 dirName : muTrackAnalysis
+Total processed events : 27924748
+Total events after event filters : 2.7873e+07
+Total events after trigger : 3222844
+Total events after prefilter : 1.93482e+06
+Using pileup file ../../AnalysisMacros/PileupFiles/pileup_muon_22Jan.root
+=========================================
+Printing cut values for analysis : 5
+And set of cuts : 0
+===
+---> Lepton cuts
+Minimum track pt : 26
+Maximum eta : 2.4
+Require opposite sign d0 : 1
+Minimum d0 significance : 5
+Maximum d0 significance : 1e+08
+Maximum sum pt (isolation) : 0.05
+Maximum calo match delta R : 999999
+---> Photon ID cuts
+Minimum photon R9 : -1
+Maximum photon H/E : 99999
+Maximum photon sigma ieta ieta barrel/endcap : 99999/99999
+---> Di Lepton cuts
+Minimum Lxy significance : -99999
+Maximum Lxy significance : 9999
+Require opposite charged leptons : 0
+Require vertex : 1
+Maximum vertex Chi^2 : 5
+Maximum hits before vertex : 9999
+Maximum missing hits after vertex : 9999
+Minimum deltaR between leptons : 0.2
+Minimum cos(angle between leptons) : -0.79
+Maximum delta Phi : 1e+11
+Minimum invariant mass : 15
+=========================================
+Number of events : 1654752
+[=====---------------------------------------------] 10%[==========----------------------------------------] 20%[===============-----------------------------------] 30%[====================------------------------------] 40%[=========================-------------------------] 50%[==============================--------------------] 60%[===================================---------------] 70%[========================================----------] 80%[=============================================-----] 90%[==================================================] 100%
+number of standALoneMuons candidates matched to track-based candidates = 0
+number of standALoneMuons candidates complementary to track-based candidates = 1189366
+Writing and closing files
+Deleting histograms
+Deleting tau histograms
+String contains
+processing: /eos/uscms/store/user/lpcdve/noreplica/DisplacedLeptons/Trees/Data_Mu_Run2012C22Jan_analysis_20140305 Weight : -1 Ana : 5
+anaType_ : 5 dirName : muTrackAnalysis
+Total processed events : 36330308
+Total events after event filters : 3.6254e+07
+Total events after trigger : 5084917
+Total events after prefilter : 3.01728e+06
+Using pileup file ../../AnalysisMacros/PileupFiles/pileup_muon_22Jan.root
+=========================================
+Printing cut values for analysis : 5
+And set of cuts : 0
+===
+---> Lepton cuts
+Minimum track pt : 26
+Maximum eta : 2.4
+Require opposite sign d0 : 1
+Minimum d0 significance : 5
+Maximum d0 significance : 1e+08
+Maximum sum pt (isolation) : 0.05
+Maximum calo match delta R : 999999
+---> Photon ID cuts
+Minimum photon R9 : -1
+Maximum photon H/E : 99999
+Maximum photon sigma ieta ieta barrel/endcap : 99999/99999
+---> Di Lepton cuts
+Minimum Lxy significance : -99999
+Maximum Lxy significance : 9999
+Require opposite charged leptons : 0
+Require vertex : 1
+Maximum vertex Chi^2 : 5
+Maximum hits before vertex : 9999
+Maximum missing hits after vertex : 9999
+Minimum deltaR between leptons : 0.2
+Minimum cos(angle between leptons) : -0.79
+Maximum delta Phi : 1e+11
+Minimum invariant mass : 15
+=========================================
+Number of events : 2563555
+[=====---------------------------------------------] 10%[==========----------------------------------------] 20%[===============-----------------------------------] 30%[====================------------------------------] 40%[=========================-------------------------] 50%[==============================--------------------] 60%[===================================---------------] 70%[========================================----------] 80%[=============================================-----] 90%[==================================================] 100%
+number of standALoneMuons candidates matched to track-based candidates = 0
+number of standALoneMuons candidates complementary to track-based candidates = 1862195
+Writing and closing files
+Deleting histograms
+Deleting tau histograms
+Unknown category for 
