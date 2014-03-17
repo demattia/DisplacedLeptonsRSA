@@ -115,7 +115,8 @@ class DileptonAnalysisCuts {
     double getSubleadingSCEtCut() { return minSCEt2_; }
     double getTrackEtaCut() { return maxEta_; }
     double getTrackD0SigmaCut() { return minD0Sig_; }
-
+    
+    bool get_use_PV() { return use_PV; }
     void electronsCuts();
     void trackMuonsCuts();
     void standAloneMuonsCuts();
@@ -177,6 +178,8 @@ class DileptonAnalysisCuts {
     // New cut for SA muons
     // Added by Melih February 11, 2014 Fermilab
     int min_csc_dt_station_valid_hits_; // minimum number of csc and dt muon stations with valid hits
+    bool use_PV; // To decide if we want to use PV or BS....
+ 
 };
 
 #endif

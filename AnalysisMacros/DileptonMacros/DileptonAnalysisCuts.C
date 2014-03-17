@@ -24,6 +24,7 @@ void DileptonAnalysisCuts::electronsCuts()
   maxHoverE_=0.05;
   maxSigmaIetaIeta_barrel_=0.012;
   maxSigmaIetaIeta_endcap_=0.034;
+  use_PV = true;
 }
 
 void DileptonAnalysisCuts::trackMuonsCuts()
@@ -42,6 +43,7 @@ void DileptonAnalysisCuts::trackMuonsCuts()
   minDeltaR_=0.2;
   minCosine_=-0.79;
   minMass_=15;
+  use_PV = true;
 }
 
 void DileptonAnalysisCuts::standAloneMuonsCuts()
@@ -60,6 +62,8 @@ void DileptonAnalysisCuts::standAloneMuonsCuts()
   minCosine_ = -0.79;
   minMass_ = 15.;
   min_csc_dt_station_valid_hits_ = 2;
+  use_PV = true; // use primary vertex...
+//  minLxySig_ = 6.5; //chosen arbitrarily...
 }
 
 DileptonAnalysisCuts::DileptonAnalysisCuts( analysisType analysis, analysisCuts cuts ):
@@ -72,7 +76,7 @@ maxIso_(9999), maxCaloMatchDeltaR_(999999),
 minR9_(-1), maxHoverE_(99999), maxSigmaIetaIeta_barrel_(99999), maxSigmaIetaIeta_endcap_(99999),
 requireVertex_(true), minLxySig_(-99999), maxLxySig_(9999),
 oppositeCharge_(true), maxVertexChi2_(99999999999), maxHitsBeforeVertex_(9999), maxMissingHitsAfterVertex_(9999),
-minDeltaR_(-1), minCosine_(-9999), minDeltaPhi_(0), maxDeltaPhi_(99999999999), minMass_(0), min_csc_dt_station_valid_hits_(0)   
+minDeltaR_(-1), minCosine_(-9999), minDeltaPhi_(0), maxDeltaPhi_(99999999999), minMass_(0), min_csc_dt_station_valid_hits_(0), use_PV(true)   
 {
   // Different set of cuts for final, tight, loose etc.
 
@@ -522,7 +526,7 @@ DileptonAnalysisCuts::PassedWhichCuts DileptonAnalysisCuts::whichCuts( TreeDipse
   if ( fabs( leptonH.eta ) < maxEta_ && fabs( leptonL.eta ) < maxEta_  ) passedCuts.passEta=true;
 
   // Lepton d0/sigma
-//  if( analysis != _2saMu ) {
+  if( use_PV ) {
     if ( ( requireOppositeSignD0_ &&candidate.leptonD0SignificanceL_PVrefit_includingPVError * candidate.leptonD0SignificanceH_PVrefit_includingPVError > 0 ) ||
          !requireOppositeSignD0_ ) passedCuts.passOppSignD0=true;
     if ( ( cutOnSignedD0_  && candidate.leptonD0SignificanceL_PVrefit_includingPVError > minD0Sig_ &&
@@ -531,17 +535,17 @@ DileptonAnalysisCuts::PassedWhichCuts DileptonAnalysisCuts::whichCuts( TreeDipse
          ( !cutOnSignedD0_ && fabs( candidate.leptonD0SignificanceL_PVrefit_includingPVError ) > minD0Sig_ &&
            fabs( candidate.leptonD0SignificanceH_PVrefit_includingPVError ) > minD0Sig_ )
          ) passedCuts.passLeptonD0=true;
-//  }
-//  else {
-//    if ( ( requireOppositeSignD0_ &&candidate.leptonD0SignificanceL_BS * candidate.leptonD0SignificanceH_BS > 0 ) ||
-//         !requireOppositeSignD0_ ) passedCuts.passOppSignD0=true;
-//    if ( ( cutOnSignedD0_  && candidate.leptonD0SignificanceL_BS > minD0Sig_ &&
-//           candidate.leptonD0SignificanceH_BS > minD0Sig_ &&
-//           candidate.leptonD0SignificanceL_BS < maxD0Sig_ && candidate.leptonD0SignificanceH_BS < maxD0Sig_ ) ||
-//         ( !cutOnSignedD0_ && fabs( candidate.leptonD0SignificanceL_BS ) > minD0Sig_ &&
-//           fabs( candidate.leptonD0SignificanceH_BS ) > minD0Sig_ )
-//         ) passedCuts.passLeptonD0=true;
-//  }
+  }
+  else {
+    if ( ( requireOppositeSignD0_ &&candidate.leptonD0SignificanceL_BS * candidate.leptonD0SignificanceH_BS > 0 ) ||
+         !requireOppositeSignD0_ ) passedCuts.passOppSignD0=true;
+    if ( ( cutOnSignedD0_  && candidate.leptonD0SignificanceL_BS > minD0Sig_ &&
+           candidate.leptonD0SignificanceH_BS > minD0Sig_ &&
+           candidate.leptonD0SignificanceL_BS < maxD0Sig_ && candidate.leptonD0SignificanceH_BS < maxD0Sig_ ) ||
+         ( !cutOnSignedD0_ && fabs( candidate.leptonD0SignificanceL_BS ) > minD0Sig_ &&
+           fabs( candidate.leptonD0SignificanceH_BS ) > minD0Sig_ )
+         ) passedCuts.passLeptonD0=true;
+  }
 
   // Cuts on original leptons, but need to know about other lepton
 
@@ -557,8 +561,15 @@ DileptonAnalysisCuts::PassedWhichCuts DileptonAnalysisCuts::whichCuts( TreeDipse
   if ( ( leptonL.triggerMatch != 0 && leptonH.triggerMatch != 0 && candidate.differentTO ) || analysis == _2eTrack ) passedCuts.passTriggerMatch=true;
 //  passedCuts.passTriggerMatch=true;
 
-  //   Cuts on dilepton
-  passedCuts.passMinLxySig=true; // Cut has been removed
+  //   Cuts on dilepton Lxy reused for SA Muons...
+
+     if (use_PV){
+       if (fabs(candidate.decayLengthSignificance_PV) >= minLxySig_) passedCuts.passMinLxySig=true;
+     }
+     else{
+       if (fabs(candidate.decayLengthSignificance_BS) >= minLxySig_) passedCuts.passMinLxySig=true;
+     }
+//  passedCuts.passMinLxySig=true; // Cut has been removed
   passedCuts.passMaxLxySig=true; // Cut has been removed
 
   // Opposite charge

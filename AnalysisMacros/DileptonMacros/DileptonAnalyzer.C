@@ -855,8 +855,8 @@ void DileptonAnalyzer::outputCandInfoToScreen( const TreeDipseudoLeptonCandidate
   cout << "Index : " << leptonL.triggerObjectIndex << endl;
   cout << "Signed d0 wrt PV : " << cand.leptonD0L_PV << endl;
   cout << "wrt BS : " << cand.leptonD0L_BS << endl;
-  cout << "Signed d0/sigma : " << cand.leptonD0SignificanceL_PVrefit_includingPVError << endl;
-  cout << "Sigma : " << cand.leptonD0L_PV / cand.leptonD0SignificanceL_PVrefit_includingPVError << endl;
+  cout << "Signed d0/sigma : " << cand.leptonD0SignificanceL_BS << endl;
+  cout << "Sigma : " << cand.leptonD0L_PV / cand.leptonD0SignificanceL_BS << endl;
   cout << "dz : " << leptonL.dz_PV << endl;
   cout << "dz/sigma : " << leptonL.dzsignificance_PV << endl;
   cout << "Rel iso : " << cand.leptonIsoL/leptonL.pt << endl;
@@ -870,8 +870,8 @@ void DileptonAnalyzer::outputCandInfoToScreen( const TreeDipseudoLeptonCandidate
   cout << "Trigger match : " << leptonH.triggerMatch << endl;
   cout << "Index : " << leptonH.triggerObjectIndex << endl;
   cout << "Signed d0 : " << cand.leptonD0H_PV << " wrt BS : " << cand.leptonD0H_BS << endl;
-  cout << "Signed d0/sigma : " << cand.leptonD0SignificanceH_PVrefit_includingPVError << endl;
-  cout << "Sigma : " << cand.leptonD0H_PV / cand.leptonD0SignificanceH_PVrefit_includingPVError << endl;
+  cout << "Signed d0/sigma : " << cand.leptonD0SignificanceH_BS << endl;
+  cout << "Sigma : " << cand.leptonD0H_PV / cand.leptonD0SignificanceH_BS << endl;
   cout << "dz : " << leptonH.dz_PV << endl;
   cout << "dz/sigma : " << leptonH.dzsignificance_PV << endl;
   cout << "Rel iso : " << cand.leptonIsoH/leptonH.pt << endl;
@@ -914,15 +914,15 @@ void DileptonAnalyzer::whichIso( const TreeDipseudoLeptonCandidate &cand, double
 
 double DileptonAnalyzer::getMinD0( const TreeDipseudoLeptonCandidate &cand )
 {
-  return min( fabs(cand.leptonD0SignificanceL_PVrefit_includingPVError), fabs(cand.leptonD0SignificanceH_PVrefit_includingPVError)) ==
-      fabs( cand.leptonD0SignificanceL_PVrefit_includingPVError ) ?
-        cand.leptonD0SignificanceL_PVrefit_includingPVError : cand.leptonD0SignificanceH_PVrefit_includingPVError;
-}
+  return min( fabs(cand.leptonD0SignificanceL_BS), fabs(cand.leptonD0SignificanceH_BS)) ==
+      fabs( cand.leptonD0SignificanceL_BS ) ?
+        cand.leptonD0SignificanceL_BS : cand.leptonD0SignificanceH_BS;
+  } 
 
 double DileptonAnalyzer::getMaxD0( const TreeDipseudoLeptonCandidate &cand, float minD0Sigma )
 {
-  return ( minD0Sigma == cand.leptonD0SignificanceL_PVrefit_includingPVError ) ? cand.leptonD0SignificanceH_PVrefit_includingPVError :
-                                                                                 cand.leptonD0SignificanceL_PVrefit_includingPVError;
+  return ( minD0Sigma == cand.leptonD0SignificanceL_BS ) ? cand.leptonD0SignificanceH_BS :
+                                                                                 cand.leptonD0SignificanceL_BS;
 }
 
 void DileptonAnalyzer::fillRemovedLifetimePlots( TreeDipseudoLeptonCandidate &cand, TreeLepton& leptonL, TreeLepton& leptonH,
@@ -974,8 +974,8 @@ void DileptonAnalyzer::studyD0Signing( TreeDipseudoLeptonCandidate &cand, TreeLe
 void DileptonAnalyzer::studyCollinearity( TreeDipseudoLeptonCandidate &cand, TreeLepton & leptonL, TreeLepton & leptonH,
                                           double & mass,Histograms & h, bool fillCorrectedTextFiles )
 {
-  if ( cand.leptonD0SignificanceL_PVrefit_includingPVError != cand.leptonD0SignificanceL_PVrefit_includingPVError
-       || cand.leptonD0SignificanceH_PVrefit_includingPVError != cand.leptonD0SignificanceH_PVrefit_includingPVError ) return;
+  if ( cand.leptonD0SignificanceL_BS != cand.leptonD0SignificanceL_BS
+       || cand.leptonD0SignificanceH_BS != cand.leptonD0SignificanceH_BS ) return;
 
   // Two selection criteria
   // One selects candidates with dPhi < 90 and one for dPhi > 90
@@ -1014,25 +1014,25 @@ void DileptonAnalyzer::studyCollinearity( TreeDipseudoLeptonCandidate &cand, Tre
 
     if ( unblind_ && dileptonCuts_finalColl_.passAllCuts( finalCollCuts ) ) {
       if ( fillCorrectedTextFiles ) {
-        allCollCuts_corrected_ << mass << "\t" << cand.transverseMass << "\t" << cand.decayLength_PV << "\t" << cand.leptonD0SignificanceL_PVrefit_includingPVError
-                               << "\t" << cand.leptonD0SignificanceH_PVrefit_includingPVError << "\t" << eventWeight_
+        allCollCuts_corrected_ << mass << "\t" << cand.transverseMass << "\t" << cand.decayLength_PV << "\t" << cand.leptonD0SignificanceL_BS
+                               << "\t" << cand.leptonD0SignificanceH_BS << "\t" << eventWeight_
                                << "\t" << candidates->run << "\t" << candidates->lumi << "\t" << candidates->event << endl;
       }
       else {
-        allCollCuts_ << mass << "\t" << cand.transverseMass << "\t" << cand.decayLength_PV << "\t" << cand.leptonD0SignificanceL_PVrefit_includingPVError << "\t"
-                     << cand.leptonD0SignificanceH_PVrefit_includingPVError << "\t" << eventWeight_
+        allCollCuts_ << mass << "\t" << cand.transverseMass << "\t" << cand.decayLength_PV << "\t" << cand.leptonD0SignificanceL_BS << "\t"
+                     << cand.leptonD0SignificanceH_BS << "\t" << eventWeight_
                      << "\t" << candidates->run << "\t" << candidates->lumi << "\t" << candidates->event << endl;
       }
     }
     else if ( dileptonCuts_controlColl_.passAllCuts( controlCollCuts ) ) {
       if ( fillCorrectedTextFiles ) {
         allCollCutsNegative_corrected_ << mass << "\t" << cand.transverseMass << "\t" << cand.decayLength_PV << "\t"
-                                       << cand.leptonD0SignificanceL_PVrefit_includingPVError << "\t" << cand.leptonD0SignificanceH_PVrefit_includingPVError
+                                       << cand.leptonD0SignificanceL_BS << "\t" << cand.leptonD0SignificanceH_BS
                                        << "\t" << eventWeight_ << "\t" << candidates->run << "\t" << candidates->lumi << "\t" << candidates->event << endl;
       }
       else {
-        allCollCutsNegative_ << mass << "\t" << cand.transverseMass << "\t" << cand.decayLength_PV << "\t" << cand.leptonD0SignificanceL_PVrefit_includingPVError
-                             << "\t" << cand.leptonD0SignificanceH_PVrefit_includingPVError << "\t" << eventWeight_
+        allCollCutsNegative_ << mass << "\t" << cand.transverseMass << "\t" << cand.decayLength_PV << "\t" << cand.leptonD0SignificanceL_BS
+                             << "\t" << cand.leptonD0SignificanceH_BS << "\t" << eventWeight_
                              << "\t" << candidates->run << "\t" << candidates->lumi << "\t" << candidates->event << endl;
       }
     }
@@ -1121,7 +1121,11 @@ void DileptonAnalyzer::studyCollinearity( TreeDipseudoLeptonCandidate &cand, Tre
     }
 
     // Find the smallest d0/sigma of this candidate
-    double minD0 = min( fabs(cand.leptonD0SignificanceL_PVrefit_includingPVError), fabs(cand.leptonD0SignificanceH_PVrefit_includingPVError) );
+    double minD0;
+    if (dileptonCuts_finalColl_.get_use_PV()) { minD0 = min( fabs(cand.leptonD0SignificanceL_PV_includingPVError), fabs(cand.leptonD0SignificanceH_PV_includingPVError) );}
+    else { minD0 = min( fabs(cand.leptonD0SignificanceL_BS), fabs(cand.leptonD0SignificanceH_BS) ); }
+  
+//  double minD0 = min( fabs(cand.leptonD0SignificanceL_BS), fabs(cand.leptonD0SignificanceH_BS) );
 
     // Select candidates in signal region
     if ( dileptonCuts_finalColl_.passAllCuts( finalCollCuts_removedLifetime ) ) {
@@ -1168,7 +1172,7 @@ void DileptonAnalyzer::studyCollinearity( TreeDipseudoLeptonCandidate &cand, Tre
 
       // Same plots for different track iterations
       // Plot for different tracking algorithms
-      float trackingAlgo = ( minD0 == fabs(cand.leptonD0SignificanceL_PVrefit_includingPVError )) ? leptonL.algo : leptonH.algo;
+      float trackingAlgo = ( minD0 == fabs(cand.leptonD0SignificanceL_BS )) ? leptonL.algo : leptonH.algo;
       if ( trackingAlgo==4 ) h.h_minLeptonAbsD0Sig_deltaPhiG90_algo4_removedLifetimeCollCuts->Fill( minD0, eventWeight_ );
       else if ( trackingAlgo==5 ) h.h_minLeptonAbsD0Sig_deltaPhiG90_algo5_removedLifetimeCollCuts->Fill( minD0, eventWeight_ );
       else if ( trackingAlgo==6 ) h.h_minLeptonAbsD0Sig_deltaPhiG90_algo6_removedLifetimeCollCuts->Fill( minD0, eventWeight_ );
@@ -1383,15 +1387,27 @@ void DileptonAnalyzer::fillPlots( const TreeDipseudoLeptonCandidate &cand, TreeL
                                            leptonL.dtStationsWithValidHits + leptonL.cscStationsWithValidHits), eventWeight_ );
   }
   
+  cutsTemp = passedWhichCuts;
+  cutsTemp.passMinLxySig = true;
+
+  double absLxy;
+  if ( dileptonCuts_finalColl_.get_use_PV() ) absLxy = fabs(cand.decayLengthSignificance_PV); 
+  else  absLxy = fabs(cand.decayLengthSignificance_BS); 
+ 
+  if (  cuts.passAllCuts( cutsTemp )  ) {
+      histMap["DileptonAbsLxySig"]->Fill(absLxy, eventWeight_ ); 
+  }
+
+
   if ( debug ) {
     cutsTemp = passedWhichCuts;
     cutsTemp.passMissingHitsAfterVertex = true;
     cutsTemp.passLeptonD0 = true;
     if (  cuts.passAllCuts( cutsTemp )  ) {
 
-      double minD0 = min( fabs(cand.leptonD0SignificanceL_PVrefit_includingPVError), fabs(cand.leptonD0SignificanceH_PVrefit_includingPVError) );
+      double minD0 = min( fabs(cand.leptonD0SignificanceL_BS), fabs(cand.leptonD0SignificanceH_BS) );
       if ( minD0 == minD0 ) {
-        float trackingAlgo = ( minD0 == fabs(cand.leptonD0SignificanceL_PVrefit_includingPVError )) ? leptonL.algo : leptonH.algo;
+        float trackingAlgo = ( minD0 == fabs(cand.leptonD0SignificanceL_BS )) ? leptonL.algo : leptonH.algo;
         if ( trackingAlgo==10 ) {
           histMap["d0SigmaNoMissingHits"]->Fill( minD0, eventWeight_ );
         }
@@ -1434,7 +1450,7 @@ void DileptonAnalyzer::fillPlots( const TreeDipseudoLeptonCandidate &cand, TreeL
     // Remove requirement on d0 magnitude also
     cutsTemp.passOppSignD0 = true;
     if (  cuts.passAllCuts( cutsTemp )  ) {
-      int sameSign = ( cand.leptonD0SignificanceL_PVrefit_includingPVError * cand.leptonD0SignificanceH_PVrefit_includingPVError ) > 0 ? 1 : -1 ;
+      int sameSign = ( cand.leptonD0SignificanceL_BS * cand.leptonD0SignificanceH_BS ) > 0 ? 1 : -1 ;
       histMap["leptonD0SigSameSign"]->Fill( sameSign, eventWeight_ );
 
       // Make a few plots for candidates with opposite sign d0
@@ -1527,7 +1543,7 @@ void DileptonAnalyzer::fillPlots( const TreeDipseudoLeptonCandidate &cand, TreeL
 
     float minD0 = getMinD0( cand );
     float maxD0 = getMaxD0( cand, minD0 );
-    //    int algo = ( minD0 == cand.leptonD0SignificanceL_PVrefit_includingPVError ) ? leptonL.algo : leptonH.algo;
+    //    int algo = ( minD0 == cand.leptonD0SignificanceL_BS ) ? leptonL.algo : leptonH.algo;
     //    histMap["TrackingAlgo"]->Fill( algo, eventWeight_ );
 
     histMap["leptonD0SigMin_allCuts"]->Fill(minD0, eventWeight_);
@@ -1557,11 +1573,11 @@ void DileptonAnalyzer::storeNumberOfCandsPerEvent( Histograms &h )
 TreeDipseudoLeptonCandidate& DileptonAnalyzer::largestD0Cand( TreeDipseudoLeptonCandidate& cand1, TreeDipseudoLeptonCandidate& cand2 )
 {
   // Need to find new control candidate
-  double minD0BestCand1 = min( fabs(cand1.leptonD0SignificanceL_PVrefit_includingPVError), fabs(cand1.leptonD0SignificanceH_PVrefit_includingPVError) );
-  double maxD0BestCand1 = max( fabs(cand1.leptonD0SignificanceL_PVrefit_includingPVError), fabs(cand1.leptonD0SignificanceH_PVrefit_includingPVError) );
+  double minD0BestCand1 = min( fabs(cand1.leptonD0SignificanceL_BS), fabs(cand1.leptonD0SignificanceH_BS) );
+  double maxD0BestCand1 = max( fabs(cand1.leptonD0SignificanceL_BS), fabs(cand1.leptonD0SignificanceH_BS) );
 
-  double minD0BestCand2 = min( fabs(cand2.leptonD0SignificanceL_PVrefit_includingPVError), fabs(cand2.leptonD0SignificanceH_PVrefit_includingPVError) );
-  double maxD0BestCand2 = max( fabs(cand2.leptonD0SignificanceL_PVrefit_includingPVError), fabs(cand2.leptonD0SignificanceH_PVrefit_includingPVError) );
+  double minD0BestCand2 = min( fabs(cand2.leptonD0SignificanceL_BS), fabs(cand2.leptonD0SignificanceH_BS) );
+  double maxD0BestCand2 = max( fabs(cand2.leptonD0SignificanceL_BS), fabs(cand2.leptonD0SignificanceH_BS) );
 
   if ( minD0BestCand1 > minD0BestCand2 ) {
     return cand1;
@@ -1593,8 +1609,8 @@ void DileptonAnalyzer::plotBestCandidates( bool isCorrectedDataCand )
 {
   // Plot d0/sigma of best candidate in event
   if ( !(bestSignalCand_==0) ) {
-    double minD0 = min( fabs(bestSignalCand_->leptonD0SignificanceL_PVrefit_includingPVError),
-                        fabs(bestSignalCand_->leptonD0SignificanceH_PVrefit_includingPVError) );
+    double minD0 = min( fabs(bestSignalCand_->leptonD0SignificanceL_BS),
+                        fabs(bestSignalCand_->leptonD0SignificanceH_BS) );
     if ( isData_ && isCorrectedDataCand ){
       histsCorrected_.h_minLeptonAbsD0Sig_bestCand_deltaPhiL90_removedLifetimeCollCuts->Fill( minD0, eventWeight_ );
       histsCorrected_.h_minLeptonAbsD0Sig_bestCand_signedWrtDeltaPhiGL90_removedLifetimeCollCuts->Fill( minD0, eventWeight_ );
@@ -1640,8 +1656,8 @@ void DileptonAnalyzer::plotBestCandidates( bool isCorrectedDataCand )
   }
 
   if ( !(bestControlCand_==0) ) {
-    double minD0 = min( fabs(bestControlCand_->leptonD0SignificanceL_PVrefit_includingPVError),
-                        fabs(bestControlCand_->leptonD0SignificanceH_PVrefit_includingPVError) );
+    double minD0 = min( fabs(bestControlCand_->leptonD0SignificanceL_BS),
+                        fabs(bestControlCand_->leptonD0SignificanceH_BS) );
     if ( isData_ && isCorrectedDataCand ) {
       histsCorrected_.h_minLeptonAbsD0Sig_bestCand_deltaPhiG90_removedLifetimeCollCuts->Fill( minD0, eventWeight_ );
       histsCorrected_.h_minLeptonAbsD0Sig_bestCand_signedWrtDeltaPhiGL90_removedLifetimeCollCuts->Fill( -1.0 * minD0, eventWeight_ );
@@ -1661,7 +1677,7 @@ void DileptonAnalyzer::plotBestCandidates( bool isCorrectedDataCand )
   }
 
   if ( !(bestL0Cand_==0) ) {
-    double minD0 = min( fabs(bestL0Cand_->leptonD0SignificanceL_PVrefit_includingPVError), fabs(bestL0Cand_->leptonD0SignificanceH_PVrefit_includingPVError) );
+    double minD0 = min( fabs(bestL0Cand_->leptonD0SignificanceL_BS), fabs(bestL0Cand_->leptonD0SignificanceH_BS) );
     if ( isData_ && isCorrectedDataCand ) {
       histsCorrected_.h_minLeptonAbsD0Sig_bestCand_deltaPhiMinus_removedLifetimeCollCuts->Fill( minD0, eventWeight_ );
       histsCorrected_.h_minLeptonAbsD0Sig_bestCand_signedWrtDeltaPhiPlusMinus_removedLifetimeCollCuts->Fill( -1.0 * minD0, eventWeight_ );
@@ -1677,7 +1693,7 @@ void DileptonAnalyzer::plotBestCandidates( bool isCorrectedDataCand )
   }
 
   if ( !(bestG0Cand_==0) ) {
-    double minD0 = min( fabs(bestG0Cand_->leptonD0SignificanceL_PVrefit_includingPVError), fabs(bestG0Cand_->leptonD0SignificanceH_PVrefit_includingPVError) );
+    double minD0 = min( fabs(bestG0Cand_->leptonD0SignificanceL_BS), fabs(bestG0Cand_->leptonD0SignificanceH_BS) );
     if ( isData_ && isCorrectedDataCand ) {
       histsCorrected_.h_minLeptonAbsD0Sig_bestCand_deltaPhiPlus_removedLifetimeCollCuts->Fill( minD0, eventWeight_ );
       histsCorrected_.h_minLeptonAbsD0Sig_bestCand_signedWrtDeltaPhiPlusMinus_removedLifetimeCollCuts->Fill( minD0, eventWeight_ );
@@ -1992,18 +2008,18 @@ void DileptonAnalyzer::fillCorrectedD0Sigma( const TreeDipseudoLeptonCandidate &
 
     // Low pt lepton
     if ( leptonL.algo == 9 || leptonL.algo == 10 ) {
-      d0SigmaLCorr = correctD0Sigma( leptonL, meanD0SignificanceVsThetaVsPhi_noPixel_, cand.leptonD0SignificanceL_PVrefit_includingPVError, cand.deltaPhiL );
+      d0SigmaLCorr = correctD0Sigma( leptonL, meanD0SignificanceVsThetaVsPhi_noPixel_, cand.leptonD0SignificanceL_BS, cand.deltaPhiL );
     }
     else {
-      d0SigmaLCorr = correctD0Sigma( leptonL, correctionsToUse, cand.leptonD0SignificanceL_PVrefit_includingPVError, cand.deltaPhiL );
+      d0SigmaLCorr = correctD0Sigma( leptonL, correctionsToUse, cand.leptonD0SignificanceL_BS, cand.deltaPhiL );
     }
 
     // High pt lepton
     if ( leptonL.algo == 9 || leptonL.algo == 10 ) {
-      d0SigmaHCorr = correctD0Sigma( leptonH, meanD0SignificanceVsThetaVsPhi_noPixel_, cand.leptonD0SignificanceH_PVrefit_includingPVError, cand.deltaPhiH );
+      d0SigmaHCorr = correctD0Sigma( leptonH, meanD0SignificanceVsThetaVsPhi_noPixel_, cand.leptonD0SignificanceH_BS, cand.deltaPhiH );
     }
     else {
-      d0SigmaHCorr = correctD0Sigma( leptonH, correctionsToUse, cand.leptonD0SignificanceH_PVrefit_includingPVError, cand.deltaPhiH );
+      d0SigmaHCorr = correctD0Sigma( leptonH, correctionsToUse, cand.leptonD0SignificanceH_BS, cand.deltaPhiH );
     }
   }
   else if ( typeOfCorrections=="d0" ) {
@@ -2012,19 +2028,19 @@ void DileptonAnalyzer::fillCorrectedD0Sigma( const TreeDipseudoLeptonCandidate &
     d0SigmaHCorr = correctD0Sigma( leptonH, correctionsToUse, cand.leptonD0H_PVrefit, cand.deltaPhiH );
 
     // Divide by sigma to d0/sigma
-    d0SigmaLCorr = d0SigmaLCorr * cand.leptonD0SignificanceL_PVrefit_includingPVError / cand.leptonD0L_PVrefit;
-    d0SigmaHCorr = d0SigmaHCorr * cand.leptonD0SignificanceH_PVrefit_includingPVError / cand.leptonD0H_PVrefit;
+    d0SigmaLCorr = d0SigmaLCorr * cand.leptonD0SignificanceL_BS / cand.leptonD0L_PVrefit;
+    d0SigmaHCorr = d0SigmaHCorr * cand.leptonD0SignificanceH_BS / cand.leptonD0H_PVrefit;
   }
   else if ( typeOfCorrections=="normal" ){
     // Standard corrections
-    d0SigmaLCorr = correctD0Sigma( leptonL, correctionsToUse, cand.leptonD0SignificanceL_PVrefit_includingPVError, cand.deltaPhiL );
-    d0SigmaHCorr = correctD0Sigma( leptonH, correctionsToUse, cand.leptonD0SignificanceH_PVrefit_includingPVError, cand.deltaPhiH );
+    d0SigmaLCorr = correctD0Sigma( leptonL, correctionsToUse, cand.leptonD0SignificanceL_BS, cand.deltaPhiL );
+    d0SigmaHCorr = correctD0Sigma( leptonH, correctionsToUse, cand.leptonD0SignificanceH_BS, cand.deltaPhiH );
   }
   else if ( typeOfCorrections=="none" ) {
     // Apply no corrections
     // Good for debugging
-    d0SigmaLCorr = cand.leptonD0SignificanceL_PVrefit_includingPVError;
-    d0SigmaHCorr = cand.leptonD0SignificanceH_PVrefit_includingPVError;
+    d0SigmaLCorr = cand.leptonD0SignificanceL_BS;
+    d0SigmaHCorr = cand.leptonD0SignificanceH_BS;
   }
   else if ( typeOfCorrections=="perpToDilepton") {
     // Normal corrections, but d0 is signed wrt vector perpendicular to dilepton momentum
@@ -2301,13 +2317,13 @@ void DileptonAnalyzer::Loop()
       if ( !correctLeptonsInCandidate(cand, leptonL, leptonH ) ) continue;
       //Smearing factor is added here for the collinearity plots
 
-//      std::cout << "leptonD0SignificanceL_PVrefit_includingPVError = " << cand.leptonD0SignificanceL_PVrefit_includingPVError << std::endl;
-//      std::cout << "leptonD0SignificanceL_PVrefit_includingPVError = " << cand.leptonD0SignificanceL_PVrefit_includingPVError << std::endl;
-//      std::cout << "rel diff = " << (cand.leptonD0SignificanceL_PVrefit_includingPVError - cand.leptonD0SignificanceL_PVrefit_includingPVError)/cand.leptonD0SignificanceL_PVrefit_includingPVError << std::endl;
+//      std::cout << "leptonD0SignificanceL_BS = " << cand.leptonD0SignificanceL_BS << std::endl;
+//      std::cout << "leptonD0SignificanceL_BS = " << cand.leptonD0SignificanceL_BS << std::endl;
+//      std::cout << "rel diff = " << (cand.leptonD0SignificanceL_BS - cand.leptonD0SignificanceL_BS)/cand.leptonD0SignificanceL_BS << std::endl;
       if( !(isData_ && useCorrectedCands_) ) {
         if( !isComplementary(leptonL, leptonH) ) {
           ++numMatched;
-          // std::cout << "Skipping candidate with " << cand.leptonD0SignificanceL_PVrefit_includingPVError << std::endl;
+          // std::cout << "Skipping candidate with " << cand.leptonD0SignificanceL_BS << std::endl;
           continue;
         }
         else ++numComplementary;
@@ -2350,7 +2366,7 @@ void DileptonAnalyzer::Loop()
 
         if( !isComplementary(leptonL, leptonH) ) {
           ++numMatched;
-          // std::cout << "Skipping candidate with " << cand.leptonD0SignificanceL_PVrefit_includingPVError << std::endl;
+          // std::cout << "Skipping candidate with " << cand.leptonD0SignificanceL_BS << std::endl;
           continue;
         }
         else ++numComplementary;
@@ -2359,9 +2375,9 @@ void DileptonAnalyzer::Loop()
         /*
       if ( !isData_ && !isSignalMC_ ) {
         d0Scale_ = rnd.Gaus(1.0,0.3);
-        cand.leptonD0SignificanceL_PVrefit_includingPVError = cand.leptonD0SignificanceL_PVrefit_includingPVError*d0Scale_;
+        cand.leptonD0SignificanceL_BS = cand.leptonD0SignificanceL_BS*d0Scale_;
         d0Scale_ = rnd.Gaus(1.0,0.3);
-        cand.leptonD0SignificanceH_PVrefit_includingPVError = cand.leptonD0SignificanceH_PVrefit_includingPVError*d0Scale_;
+        cand.leptonD0SignificanceH_BS = cand.leptonD0SignificanceH_BS*d0Scale_;
        }
 */
         // Study candidates

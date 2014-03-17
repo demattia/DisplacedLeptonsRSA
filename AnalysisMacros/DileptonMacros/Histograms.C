@@ -286,6 +286,7 @@ nameSuffix(suffix)
 
  // n-1 final cuts
  h_nMinus1_minValidStations_finalCollCuts=initHist(h_nMinus1_minValidStations_finalCollCuts,"nMinus1_minValidStations_finalCollCuts", "n-1 lepton minimum Valid Stations, final cuts",10,0,10);
+ h_nMinus1_DileptonAbsLxySig_finalCollCuts=initHist(h_nMinus1_DileptonAbsLxySig_finalCollCuts,"nMinus1_DileptonAbsLxy_finalCollCuts", "n-1 candidate min Abs Lxy, final cuts",40,0,40);
  h_nMinus1_oppositeCharge_finalCollCuts=initHist(h_nMinus1_oppositeCharge_finalCollCuts,"nMinus1_oppositeCharge_finalCollCuts", "n-1 lepton opposite charges, final cuts",5,-2,2);
  h_nMinus1_vertexChi2_finalCollCuts=initHist(h_nMinus1_vertexChi2_finalCollCuts,"nMinus1_vertexChi2_finalCollCuts", "n-1 Vertex Chi^2, final cuts", 20, 0, 20);
  h_nMinus1_deltaPhi_finalCollCuts=initHist(h_nMinus1_deltaPhi_finalCollCuts,"nMinus1_deltaPhi_finalCollCuts", "n-1 Delta Phi, final cuts", 40, 0, 4);
@@ -337,6 +338,7 @@ nameSuffix(suffix)
 
  // n-1 final cuts
  h_nMinus1_minValidStations_looseCollCuts=initHist(h_nMinus1_minValidStations_looseCollCuts,"nMinus1_minValidStations_looseCollCuts", "n-1 lepton minimum Valid Stations, final cuts",10,0,10);
+ h_nMinus1_DileptonAbsLxySig_looseCollCuts=initHist(h_nMinus1_DileptonAbsLxySig_looseCollCuts,"nMinus1_DileptonAbsLxy_looseCollCuts", "n-1 candidate min Abs Lxy, final cuts",40,0,40);
  h_nMinus1_oppositeCharge_looseCollCuts=initHist(h_nMinus1_oppositeCharge_looseCollCuts,"nMinus1_oppositeCharge_looseCollCuts", "n-1 lepton opposite charges, final cuts",5,-2,2);
  h_nMinus1_vertexChi2_looseCollCuts=initHist(h_nMinus1_vertexChi2_looseCollCuts,"nMinus1_vertexChi2_looseCollCuts", "n-1 Vertex Chi^2, final cuts", 20, 0, 20);
  h_nMinus1_deltaPhi_looseCollCuts=initHist(h_nMinus1_deltaPhi_looseCollCuts,"nMinus1_deltaPhi_looseCollCuts", "n-1 Delta Phi, final cuts", 40, 0, 4);
@@ -378,6 +380,7 @@ nameSuffix(suffix)
 
  // n-1 loose control cuts
  h_nMinus1_minValidStations_looseControlCollCuts=initHist(h_nMinus1_minValidStations_looseControlCollCuts,"nMinus1_minValidStations_looseControlCollCuts", "n-1 lepton minimum Valid Stations, final cuts",10,0,10);
+ h_nMinus1_DileptonAbsLxySig_looseControlCollCuts=initHist(h_nMinus1_DileptonAbsLxySig_looseControlCollCuts,"nMinus1_DileptonAbsLxy_looseControlCollCuts", "n-1 candidate min Abs Lxy, final cuts",40,0,40);
  h_nMinus1_oppositeCharge_looseControlCollCuts=initHist(h_nMinus1_oppositeCharge_looseControlCollCuts,"nMinus1_oppositeCharge_looseControlCollCuts", "n-1 lepton opposite charges, final cuts",5,-2,2);
  h_nMinus1_vertexChi2_looseControlCollCuts=initHist(h_nMinus1_vertexChi2_looseControlCollCuts,"nMinus1_vertexChi2_looseControlCollCuts", "n-1 Vertex Chi^2, final cuts", 20, 0, 20);
  h_nMinus1_deltaPhi_looseControlCollCuts=initHist(h_nMinus1_deltaPhi_looseControlCollCuts,"nMinus1_deltaPhi_looseControlCollCuts", "n-1 Delta Phi, final cuts", 40, 0, 4);
@@ -423,6 +426,7 @@ nameSuffix(suffix)
 
  // n-1  control cuts
  h_nMinus1_minValidStations_controlCollCuts=initHist(h_nMinus1_minValidStations_controlCollCuts,"nMinus1_minValidStations_controlCollCuts", "n-1 lepton minimum Valid Stations, final cuts",10,0,10);
+ h_nMinus1_DileptonAbsLxySig_controlCollCuts=initHist(h_nMinus1_DileptonAbsLxySig_controlCollCuts,"nMinus1_DileptonAbsLxy_controlCollCuts", "n-1 candidate min Abs Lxy, final cuts",40,0,40);
  h_nMinus1_oppositeCharge_controlCollCuts=initHist(h_nMinus1_oppositeCharge_controlCollCuts,"nMinus1_oppositeCharge_controlCollCuts", "n-1 lepton opposite charges, final cuts",5,-2,2);
  h_nMinus1_vertexChi2_controlCollCuts=initHist(h_nMinus1_vertexChi2_controlCollCuts,"nMinus1_vertexChi2_controlCollCuts", "n-1 Vertex Chi^2, final cuts", 20, 0, 20);
  h_nMinus1_deltaPhi_controlCollCuts=initHist(h_nMinus1_deltaPhi_controlCollCuts,"nMinus1_deltaPhi_controlCollCuts", "n-1 Delta Phi, final cuts", 40, 0, 4);
@@ -881,6 +885,7 @@ nameSuffix(suffix)
   histMapFinalColl["ptMinusE"] = h_ptMinusE_finalCollCuts;
   histMapFinalColl["nCandsPerEvent"] = h_nCandsPerEvent_finalCollCuts;
   histMapFinalColl["minValidStations"] = h_nMinus1_minValidStations_finalCollCuts;
+  histMapFinalColl["DileptonAbsLxySig"] = h_nMinus1_DileptonAbsLxySig_finalCollCuts;
 
   // Loose Cuts Coll
   histMapLooseColl["vertexChi2"] = h_nMinus1_vertexChi2_looseCollCuts;
@@ -917,6 +922,7 @@ nameSuffix(suffix)
   histMapLooseColl["ptMinusE"] = h_ptMinusE_looseCollCuts;
   histMapLooseColl["nCandsPerEvent"] = h_nCandsPerEvent_looseCollCuts;
   histMapLooseColl["minValidStations"] = h_nMinus1_minValidStations_looseCollCuts;
+  histMapLooseColl["DileptonAbsLxySig"] = h_nMinus1_DileptonAbsLxySig_looseCollCuts;
 
   // Loose Control Cuts Coll
   histMapLooseControlColl["vertexChi2"] = h_nMinus1_vertexChi2_looseControlCollCuts;
@@ -954,6 +960,7 @@ nameSuffix(suffix)
   histMapLooseControlColl["d0SigmaNoMissingHits"] = h_minLeptonAbsD0Sig_deltaPhiG90_noMissingHits_algo10_removedLifetimeCollCuts;
   histMapLooseControlColl["nCandsPerEvent"] = h_nCandsPerEvent_looseControlCollCuts;
   histMapLooseControlColl["minValidStations"] = h_nMinus1_minValidStations_looseControlCollCuts;
+  histMapLooseControlColl["DileptonAbsLxySig"] = h_nMinus1_DileptonAbsLxySig_looseControlCollCuts;
 
   //  control Cuts Coll
   histMapControlColl["vertexChi2"] = h_nMinus1_vertexChi2_controlCollCuts;
@@ -990,6 +997,7 @@ nameSuffix(suffix)
   histMapControlColl["ptMinusE"] = h_ptMinusE_controlCollCuts;
   histMapControlColl["nCandsPerEvent"] = h_nCandsPerEvent_controlCollCuts;
   histMapControlColl["minValidStations"] = h_nMinus1_minValidStations_controlCollCuts;
+  histMapControlColl["DileptonAbsLxySig"] = h_nMinus1_DileptonAbsLxySig_controlCollCuts;
 
 }
 
@@ -1060,6 +1068,10 @@ void Histograms::writeHistograms( TFile & outputFile ) {
   h_nMinus1_minValidStations_looseControlCollCuts->Write();
   h_nMinus1_minValidStations_looseCollCuts->Write();
 
+  h_nMinus1_DileptonAbsLxySig_controlCollCuts->Write();
+  h_nMinus1_DileptonAbsLxySig_finalCollCuts->Write();
+  h_nMinus1_DileptonAbsLxySig_looseControlCollCuts->Write();
+  h_nMinus1_DileptonAbsLxySig_looseCollCuts->Write();
 
   for (unsigned int i=0; i<h_trigEff_meanLifetime.size(); i++)
     h_trigEff_meanLifetime[i]->Write();
@@ -1152,6 +1164,10 @@ void Histograms::drawUnderflows() {
   underflow(*h_nMinus1_minValidStations_looseControlCollCuts);
   underflow(*h_nMinus1_minValidStations_looseCollCuts);
 
+  underflow(*h_nMinus1_DileptonAbsLxySig_controlCollCuts);
+  underflow(*h_nMinus1_DileptonAbsLxySig_finalCollCuts);
+  underflow(*h_nMinus1_DileptonAbsLxySig_looseControlCollCuts);
+  underflow(*h_nMinus1_DileptonAbsLxySig_looseCollCuts);
 }
 
 void Histograms::deleteHistograms() {

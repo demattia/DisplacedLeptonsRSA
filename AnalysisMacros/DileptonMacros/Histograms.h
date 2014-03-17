@@ -348,6 +348,7 @@ class Histograms {
     TH1F * h_photonHadTowOverEm_finalCollCuts;
     TH1F * h_photonHadronicOverEm_finalCollCuts;
     TH1F * h_nMinus1_minValidStations_finalCollCuts;
+    TH1F * h_nMinus1_DileptonAbsLxySig_finalCollCuts;
 
     // Signal isolation plots
     TH2F * h_nMinus1_relIsolationLeptonL_vsPU_finalCollCuts_genMatched;
@@ -394,6 +395,7 @@ class Histograms {
     TH1F * h_photonHadTowOverEm_looseCollCuts;
     TH1F * h_photonHadronicOverEm_looseCollCuts;
     TH1F * h_nMinus1_minValidStations_looseCollCuts;
+    TH1F * h_nMinus1_DileptonAbsLxySig_looseCollCuts;
 
     // Loose Control Coll
     TH1F * h_mass_looseControlCollCuts;
@@ -436,6 +438,7 @@ class Histograms {
     TH1F * h_photonHadTowOverEm_looseControlCollCuts;
     TH1F * h_photonHadronicOverEm_looseControlCollCuts;
     TH1F * h_nMinus1_minValidStations_looseControlCollCuts;
+    TH1F * h_nMinus1_DileptonAbsLxySig_looseControlCollCuts;
 
     // Control Coll
     TH1F * h_mass_controlCollCuts;
@@ -474,6 +477,7 @@ class Histograms {
     TH1F * h_photonHadTowOverEm_controlCollCuts;
     TH1F * h_photonHadronicOverEm_controlCollCuts;
     TH1F * h_nMinus1_minValidStations_controlCollCuts;
+    TH1F * h_nMinus1_DileptonAbsLxySig_controlCollCuts;
 
     // d0/sigma
     TH1F * h_minLeptonD0Sig_removedLifetimeCuts;
