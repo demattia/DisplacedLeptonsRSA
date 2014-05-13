@@ -1,0 +1,79 @@
+This directory contains tools for private MC generation for the displaced lepton analysis for trigger
+studies. It is intended as a "quick fix" to get us a few samples until we can get the central production
+samples. These directions are similar to the ones for the main generation, but with a few changes.
+
+As it is designed to mimic the TSG Fall13dr samples, it was run under CMSSW_6_2_5.
+
+In order to use it, you'll need to follow a few steps:
+
+1) Create the PYUPDA file. (Note: the PYUPDA file is only needed for the H->XX channel, not the neutralino
+channel.) You can start with one of the PYUPDA files used for the official production, which
+are located in Configuration/Generator/data (viewable on the web at
+http://cvs.web.cern.ch/cvs/cgi-bin/viewcvs.cgi/CMSSW/Configuration/Generator/data/), or one of the PYUPDA
+files located in the data directory here. The ones located here only contain X->ll decay (hence the name
+change to HTo2LongLivedTo4L), rather than any fermion.
+
+Please note that even if you're planning to use one of the official PYUPDA files, you'll probably still need
+to make a local copy of it into your data/ directory here, since I don't think they're included in the
+standard CMSSW releases (you can try, but I think you'll fail when you get to step 3 here).
+
+2) Create the generator fragment. Again, you can start with one of the official generator fragments in
+Configuration/GenProduction/python/EightTeV (viewable at
+http://cvs.web.cern.ch/cvs/cgi-bin/viewcvs.cgi/CMSSW/Configuration/GenProduction/python/EightTeV/) or with one
+of the fragments in the python/ directory here. If you use one of the official fragments, you'll need to do
+the following:
+ * change the COM energy to 13 TeV
+ * change the directory in PYUPDA_CARDS to MCGeneration/TSGSamples/data
+This is already done for the files here, so you'll just need to change the variables at top as necessary.
+
+After you've created all your generator fragments, do a scram b so that they'll be available to the
+environment. I sometimes have problems getting cmsDriver to recognize new fragments even after a scram b, so I
+just start a new session from scratch and that works.
+
+3) Build the run scripts using cmsDriver.py. Here are the necessary commands, which I got from the PdmV page
+for the TSG samples (example:
+https://cms-pdmv.cern.ch/mcm/requests?member_of_campaign=Fall13dr&page=0&prepid=TSG-Fall13dr-00022 )
+
+I've taken these and combined into one step. (Note that this precludes the ability to rerun a different
+trigger configuration, unfortunately. The central production will hopefully address this.) The number of
+events is not really important here -- it's determined in crab.cfg. The example shown below is for the
+25ns/PU40 case (the "worst case"). The other two cases are AVE_40_BX_50ns and AVE_20_BX_25ns, respectively.
+
+cmsDriver.py MCGeneration/TSGSamples/python/HTo2LongLivedTo4L_MH_1000_MFF_150_CTau10To1000_13TeV_pythia6_cff.py --step GEN,SIM,DIGI,L1,DIGI2RAW,HLT,RAW2DIGI,L1Reco,RECO --pileup_input "dbs:/MinBias_TuneA2MB_13TeV-pythia8/Fall13-POSTLS162_V1-v1/GEN-SIM" --eventcontent AODSIM --datatier AODSIM --mc --pileup AVE_40_BX_25ns --customise SLHCUpgradeSimulations/Configuration/postLS1Customs.customisePostLS1,Configuration/DataProcessing/Utils.addMonitoring --conditions POSTLS162_V2::All --magField 38T_PostLS1 --geometry Extended2015 --python_filename HTo2LongLivedTo4L_MH_1000_MFF_150_CTau10To1000_TSG_PU40BX25_cfg.py --fileout file:HTo2LongLivedTo4L_MH_1000_MFF_150_CTau10To1000_TSG_PU40BX25_AODSIM.root --no_exec -n 101
+
+Obviously, replace the first argument with your own .py file, and python_filename and fileout with your own
+desired filenames (although this is cosmetic).
+
+** IMPORTANT WARNING: Although the pileup_input is properly specified in the above line, when you run this
+cmsDriver.py command (at least when I've tried it), the dbs query doesn't seem to actually work properly, and
+so you end up with an empty mix.input.fileNames as follows:
+process.mix.input.fileNames = cms.untracked.vstring([])
+causing the script to fail when it tries to run the pileup.
+
+I've manually created a fix for this -- just insert the contents of mixFileNames.py immediately after the line
+above. There may be a better way to do this, but this at least works.
+
+4) Next, submit the jobs to Crab. Make a copy of one of the crab-*.cfg files and edit it:
+ * Change the pset to the python file you just generated.
+ * Change the number of jobs and events per job, if desired. Here I ran into a lot of problems -- the jobs
+tended to exceed the available memory on LPC Condor. I ended up choosing 26 events/job (the H->XX filter has
+an efficiency of 0.99, and I wanted 25 events/job) and 120 jobs for a total of 3000 events. For the
+neutralinos, since they don't have a filter, 25 events/job should suffice. The number of jobs is of course
+determined by the total number of events you want.
+ * Change storage_element, storage_path, and user_remote_dir as appropriate for the storage you're writing to.
+ * Change publish_data_name to the name you want to publish the dataset to.
+ * If you're not running on FNAL LPC, change scheduler = condor to something else (probably remoteGlidein).
+
+If you're running on LPC Condor, your jobs are limited to 3G of memory; if they get killed by condor for
+exceeding this limit, no log files are returned and crab reports that the job output files are corrupt (but
+that's what it most likely means). If you're running on some other CAF, then you can set max_rss in your Crab
+file to give yourself a higher limit.
+
+Now create and submit the jobs, wait a little while (you'll probably have to resubmit some segments, since the
+pileup input file appears to not always read successfully), and when it's done, publish. Make a note of which
+instance your dataset is being published in (should be https://cmsweb.cern.ch/dbs/prod/phys03/) and the
+dataset name under which it was published (you don't need the stuff after the #).
+
+Go ahead and check on DAS to make sure that the publication was actually succcessful (don't forget to change
+the dbs instance at the top appropriately). Also make a note of the total number of events -- it may not be
+exactly equal to the number you wanted because of the uncertainty in the filter efficiency.
