@@ -1,1 +1,0 @@
-Use the CosmicMuonTreeWriter_cfg.py cfgs to produce trees from the AOD input files. The trees will contain timing information.
