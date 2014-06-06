@@ -1,0 +1,1 @@
+Use the CosmicMuonAnalyzer.cpp to analyze the trees. Do "make" to compile the executable and runDataMC.sh to run it on data and MC.
