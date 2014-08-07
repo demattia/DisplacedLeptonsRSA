@@ -1,0 +1,103 @@
+
+INSTRUCTIONS FOR RUNNING LIMIT CODE
+=====================================
+
+Please note:
+
+This folder is used to compute combined limits from the track-based and the stand-alone muons (RSA) based
+analyses. To compute limits for the RSA-based analysis only refer to the track-based limit setting code.
+
+Calculation of CLs limits
+==========================
+
+Uses the Higgs Statistics package, based on RooStats
+https://twiki.cern.ch/twiki/bin/view/CMS/SWGuideHiggsAnalysisCombinedLimit .
+
+1) In a CMSSW area, do "cvs co HiggsAnalysis/CombinedLimit" (taking CVS version recommended on their
+   web page above). Then do "eval `scramv1 runtime -csh`" and "scram b".
+
+   Your own card files go in a seperate area (where this HELP file is).
+
+2) Check the nominal lifetimes and masses of the signal samples are specified in parseEfficiencyFiles.pl.
+   And the correct signal efficiency systematic is specified in parameter signalEffiSys_rel inside it.
+
+3) Run ./copy_txt_files to copy the .txt files containg the data from the displaced lepton analysis
+   (e.g. signal efficiencies, candidates passing cuts) to the InputData2012/ area.
+
+   This script also runs the the commands:
+       ./parseEfficiencyFiles_Tk.pl 1  
+       ./parseEfficiencyFilesNeutralino_Tk.pl 1
+       ./parseEfficiencyFiles_RSA.pl 1  
+       ./parseEfficiencyFilesNeutralino_RSA.pl 1
+
+   to read the signal signal masses, lifetimes and efficiency from InputData2012/ to
+   table to the files SignalSampleInfoEffi_Tk.py and SignalSampleInfoEffi_RSA.py respectively.
+   (The two options output efficiency and efficiency/acceptance respectively).
+   The neutralino results are written to corresponding files ending _Neutralino.py.
+   In the current form the input folder is expected to be the same and needs to be replaced
+   when running on Tk or RSA.
+
+4) Ensure that SignalSampleInfo_Tk.py and SignalSampleInfo_RSA.py contain all input parameters
+   (expected background normalization systematic = bkg_relerr (and shape), luminosity = lumi,
+   link to InputData2012/ ...) needed for the fit.
+
+   In SignalSampleInfo_Tk.py and SignalSampleInfo_RSA.py, only set loopOverCtau = True if you
+   want the limit calculation to take into account the variation in mass resolution & signal
+   efficiency uncertainty with lifetime. (This is x10 slower, but a bit more accurate).
+
+   In SignalSampleInfo_Tk.py and SignalSampleInfo_RSA.py, set doNeutralinoLimits to True (False)
+   to do long-lived neutralino (X->l+l-) limits.
+
+   In SignalSampleInfo_Tk.py and SignalSampleInfo_RSA.py, set limitMethod = CLs or Bayesian,
+   depending on what sort of limits you want. (Bayesian is more reliable and faster).
+
+5) Only if you want to change the signal/background PDF edit MakeWorkspace.py and set their parameters in
+   function setBackgrPdfParams() of SignalSampleInfo.pdf. 
+
+   Also note that MakeWorkspace.py includes hard-wired assumptions about the range of dilepton masses to fit.
+
+6) Only if you want to change the parameters of the PDF or the lumi uncertainty, edit
+   combine_template.txt
+
+7) python makeJob(Counting)_Tk.py 1
+   python makeJob(Counting)_RSA.py 1
+
+  (This creates the card files and RooWorkspace for the problem 
+   and then creates the crab.cfg and multicrab.cfg).
+
+   P.S. Option doNeutralinoLimits in SignalSampleInfo_Tk.py and SignalSampleInfo_RSA.pyshould be
+   set True or False, depending on whether you want limits for long-lived neutralinos or X bosons.
+
+8) If you want to check that makeJob(Counting)_Tk(RSA).py gave sensible results, check its output
+   by doing:
+	./testJob
+   which will calculate the upper limit using the fast (inaccurate) profile likelihood method.
+
+9) python CombineLimits.py
+   It will combine the datacards produced in step 7 and produce combined datacards. If one of the
+   two is missing (for instance that analysis is not sensitive to a given lifetime point) it will
+   preserve the original datacard and prepare the job to run the limit using the single channel.
+
+9) multicrab -create -submit
+
+10) After jobs have finished running, do "multicrab -getoutput all -c job_output/" if running 
+    a normal CRAB job. It is not necessary if you are using CRAB PBS.
+
+11) python makePlotCounting_Combined.py 1 
+
+    or for debugging do "python makePlotCounting_Combined.py 11", where adding 10 to the option
+    causes it to plot limits on the mean number of signal events passing the cuts, instead of 
+    limits on sigma*BR).
+
+    P.S. Option doNeutralinoLimits in SignalSampleInfo.py should be set True or False, depending
+    on whether you want limits for long-lived neutralinos or X bosons.
+
+    There are two hard-wired constants inside makePlotCounting_Combined.py that you should check:
+
+       i) recalcLimits - If you set this to false, makePlot use the limit calculation from a previous makePlot run to 
+          save time. This is handy if you just want to change the plotting style.
+
+12) Repeat steps 7-11 specifying argument "2" instead of "1" at steps (7) and (11),  
+to get also limits uncorrected for acceptance. (Note: this has not been tested for combined limits yet).
+
+# 13) ./copyPlotsToPaper copies the limits plot to the paper svn repository. (Note: this needs to be updated.)
