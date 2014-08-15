@@ -1,106 +1,87 @@
 import os
 import subprocess
 from math import sqrt
+from SignalSampleInfo_RSA import *
+from SignalSampleInfo_Tk import *
+
+# NOTE: the efficiency over acceptances can only be combined if the acceptance definition is the same
+# It is not the case at this moment. The Tk files should be reproduced with the same acceptance definition
+# as the RSA ones.
 
 baseDirTk = "counting_job_Tk_Bayesian"
 baseDirRSA = "counting_job_RSA_Bayesian"
 baseDirCombined = "counting_job_Combined_Bayesian"
 from itertools import izip
 
-def combine_efficiencies(file_RSA, file_Tk):
-    output_file_name = file_RSA.split("_RSA.py")[0]+"_Combined.py"
-    output_file = open(output_file_name, "w")
+samples_RSA = getSignalSampleInfoRSA()
+samples_Tk = getSignalSampleInfoTk()
+samples_Combined = getSignalSampleInfoTk()
 
-    relLineCounter = 0
-    found = False
-    foundControl = False
-    foundRel = False
-    eff1 = []
-    eff2 = []
-    for line1, line2 in izip(open(file_RSA), open(file_Tk)):
-    
-        output_line = line1
+output_file_name = "SignalSampleInfoEffi_Combined.py"
+output_file = open(output_file_name, "w")
+output_file_name_acc = "SignalSampleInfoEffiOverAcc_Combined.py"
+output_file_acc = open(output_file_name_acc, "w")
 
-        if line1.find("s.setEffiRelErrs") != -1:
-            foundRel = True
-        if line1.find("s.setEffisInControl") != -1:
-            relLineCounter = 0
-            foundControl = True
-            print eff1
-            print eff2
-            eff1 = []
-            eff2 = []
-            foundRel = False
-        if line1.find("s.setEffis ") != -1:
-            foundControl = False
-    
-        if line1.find("s.setEffiRelErrs") != -1 or line1.find("samples.append(s)") != -1:
-            found = False
-    
-        # Replace the efficiencies with the sum
-        if found == True and line1.find("s.setEffis ") == -1:
-            # print line1
-            # print line2
-            new_string = ""
-            for value_string1, value_string2 in izip(line1.split(','), line2.split(',')):
-                if value_string1.strip() != "":
-                    # print value_string1.strip().strip(' ] )')
-                    # print value_string2.strip().strip(' ] )')
-                    value1 = float(value_string1.strip().strip(' ] )'))
-                    value2 = float(value_string2.strip().strip(' ] )'))
-                    if not foundControl:
-                        eff1.append(value1)
-                        eff2.append(value2)
-                    value = value1+value2
-                    # print '%.6f' % value1, '%.6f' % value2, '%.6f' % value
-                    new_string += " "+'%.6f' % value
-                    if value_string1.find(' ] )') != -1:
-                        new_string += " ] )"
-                    else:
-                        new_string += " , "
-            output_line = new_string+"\n"
+for sIndexRSA, sRSA in enumerate(samples_RSA):
+    print "MASSES AND ACCEPTANCE:", sRSA.MH, sRSA.MX, sRSA.acceptance
+    for sIndexTk, sTk in enumerate(samples_Tk):
+        if sRSA.MH == sTk.MH and sRSA.MX == sTk.MX:
+            for ctauRSAIndex, ctauRSA in enumerate(sRSA.ctaus):
+                if sRSA.acceptance != sTk.acceptance:
+                    continue
+                # print ctauRSA, sRSA.ctauScales[ctauRSAIndex]
+                i = -1
+                for ctauTkIndex, ctauTk in enumerate(sTk.ctaus):
+                    if ctauTk == ctauRSA:
+                        i = ctauTkIndex
+                        break
+                if i != -1:
+                    # print ctauRSA, sTk.ctaus[i]
+                    eff1 = sTk.effis['Muons'][i]
+                    eff2 = sRSA.effis['Muons'][ctauRSAIndex]
+                    # print "effs =", eff1, eff2
+                    value1 = sTk.effi_relerrs['Muons'][i]
+                    value2 = sRSA.effi_relerrs['Muons'][ctauRSAIndex]
+                    samples_Combined[sIndexTk].effis['Muons'][i] = eff1 + eff2
+                    samples_Combined[sIndexTk].effi_relerrs['Muons'][i] =\
+                        sqrt((value1*eff1)**2+(value2*eff2)**2)/(eff1+eff2)
+                    samples_Combined[sIndexTk].effis_control['Muons'][i] =\
+                        sTk.effis_control['Muons'][i] + sRSA.effis_control['Muons'][ctauRSAIndex]
+                else:
+                    # print ctauRSA, sTk.ctaus
+                    samples_Combined[sIndexTk].ctaus.append(ctauRSA)
+                    samples_Combined[sIndexTk].ctauScales.append(sRSA.ctauScales[ctauRSAIndex]*10)
+                    samples_Combined[sIndexTk].effis['Muons'].append(sRSA.effis['Muons'][ctauRSAIndex])
+                    samples_Combined[sIndexTk].effi_relerrs['Muons'].append(sRSA.effi_relerrs['Muons'][ctauRSAIndex])
+                    samples_Combined[sIndexTk].effis_control['Muons'].append(sRSA.effis_control['Muons'][ctauRSAIndex])
+                    # print sRSA.ctauScales[ctauRSAIndex], samples_Combined[sIndexTk].effis
 
-        # Replace the relative errors on the efficiencies with the weighted average
-        if foundRel == True and line1.find("s.setEffiRelErrs") == -1:
-            new_string = ""
-            for value_string1, value_string2 in izip(line1.split(','), line2.split(',')):
-                if value_string1.strip() != "":
-                    value1 = float(value_string1.strip().strip(' ] )'))
-                    value2 = float(value_string2.strip().strip(' ] )'))
-                    value = value1
-                    if eff1[relLineCounter] != 0 or eff2[relLineCounter] != 0:
-                        # print value1, eff1[relLineCounter], value2, eff2[relLineCounter]
-                        value = sqrt((value1*eff1[relLineCounter])**2+(value2*eff2[relLineCounter])**2)/(eff1[relLineCounter]+eff2[relLineCounter])
-                        # print "value =", value
-                    new_string += " "+'%.6f' % value
-                    if value_string1.find(' ] )') != -1:
-                        new_string += " ] )"
-                    else:
-                        new_string += " , "
-                    relLineCounter += 1
-            output_line = new_string+"\n"
+for sCombined in samples_Combined:
+    of = output_file
+    if sCombined.acceptance == 2:
+        of = output_file_acc
+    line = "s = SignalSampleInfo("+str(sCombined.MH)+","+str(sCombined.MX)+","+\
+           str(sCombined.ctau0)+","+str(sCombined.acceptance)+")\n"
+    of.write(line)
+    line = "s.setCtauScales ( "+str(sCombined.ctauScales)+" )\n"
+    of.write(line)
+    line = "s.setWidths ( \"Muons\", [] )\n"
+    of.write(line)
+    line = "s.setEffis ( \"Muons\", "+str(sCombined.effis["Muons"])+" )\n"
+    of.write(line)
+    line = "s.setEffiRelErrs ( \"Muons\", "+str(sCombined.effi_relerrs["Muons"])+" )\n"
+    of.write(line)
+    line = "s.setEffisInControl ( \"Muons\", "+str(sCombined.effis_control["Muons"])+" )\n"
+    of.write(line)
+    line = "samples.append(s)\n"
+    of.write(line)
+    of.write("#\n")
 
-    
-        if line1.find("s = SignalSampleInfo") != -1:
-            masses1 = line1.split('(')[1].split(',')
-            masses2 = line2.split('(')[1].split(',')
-            if masses1[0] != masses2[0] or masses1[1] != masses2[1]:
-                print "Efficiency files for RSA and Tk are inconsistent. Exiting"
-                sys.exit(1)
-        if line1.find("s.setEffis") != -1:
-            found = True
-    
-        output_file.write(output_line)
+output_file.close()
 
 
-# Combine the efficiencies and efficiencies over acceptance
-combine_efficiencies("SignalSampleInfoEffi_RSA.py", "SignalSampleInfoEffi_Tk.py")
-# NOTE: the efficiency over acceptances can only be combined if the acceptance definition is the same
-# It is not the case at this moment. The Tk files should be reproduced with the same acceptance definition
-# as the RSA ones.
-combine_efficiencies("SignalSampleInfoEffiOverAcc_RSA.py", "SignalSampleInfoEffiOverAcc_Tk.py")
-
-
+# This creates the combined files for the limit jobs
+# --------------------------------------------------
 dirs_RSA = set(os.listdir(baseDirRSA))
 dirs_Tk = set(os.listdir(baseDirTk))
 
@@ -160,7 +141,7 @@ CMSSW.output_file = higgsCombineTest.MarkovChainMC.mH0.root, higgsCombineTest.Ma
     if dir_Tk_exists and dir_RSA_exists:
         modifyCard(baseDirTk+"/"+subDirName+"/combine.txt", baseDirTk+"/"+subDirName+"/combine_mod.txt")
         modifyCard(baseDirRSA+"/"+subDirName+"/combine.txt", baseDirRSA+"/"+subDirName+"/combine_mod.txt")
-        # print "combineCards.py "+baseDirTk+"/"+subDirName+"/combine.txt "+baseDirRSA+"/"+subDirName+"/combine.txt > "+baseDirCombined+"/"+subDirName+"/combine.txt"
+        print "combineCards.py "+baseDirTk+"/"+subDirName+"/combine.txt "+baseDirRSA+"/"+subDirName+"/combine.txt > "+baseDirCombined+"/"+subDirName+"/combine.txt"
         os.system("combineCards.py "+baseDirTk+"/"+subDirName+"/combine_mod.txt "+baseDirRSA+"/"+subDirName+"/combine_mod.txt > "+baseDirCombined+"/"+subDirName+"/combine.txt")
     else:
         os.system("cp "+dir_to_use+"/combine.txt "+baseDirCombined+"/"+subDirName+"/")

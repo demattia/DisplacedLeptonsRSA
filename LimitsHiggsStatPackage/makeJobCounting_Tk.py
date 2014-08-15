@@ -24,7 +24,7 @@ USE_PBS = False
 sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)
 
 # Get job options.
-jobOpt = JobOptions()
+jobOpt = JobOptionsTk()
 
 # Note "combine" command options corresponding to CLs or Bayesian.
 if jobOpt.limitMethod == "CLs":
@@ -65,7 +65,7 @@ else:
     sys.exit("ERROR: Unknown acceptance option %i" %(acceptanceOption) )
 
 # Get information about signal samples (efficiency, background etc.)
-samples = getSignalSampleInfo()
+samples = getSignalSampleInfoTk()
 
 #leptons = ["Muons", "Electrons"]
 #leptons = ["Electrons"]

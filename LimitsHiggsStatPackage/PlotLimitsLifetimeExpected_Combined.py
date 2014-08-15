@@ -98,10 +98,10 @@ if Xlimits:
         if logy == 1:
             if getSigmaBRacc:
                 ymin = 5.0e-5
-                ymax = 300.0
+                ymax = 3000.0
             else:
                 ymin = 5.0e-5
-                ymax = 400.0
+                ymax = 4000.0
     elif hmass == 400:
         xmin = 0.003
         xmax = 85000
@@ -109,10 +109,10 @@ if Xlimits:
         if logy == 1:
             if getSigmaBRacc:
                 ymin = 5.0e-5
-                ymax = 10.0
+                ymax = 100.0
             else:
                 ymin = 1.0e-4
-                ymax = 20.0
+                ymax = 200.0
     elif hmass == 200:
         xmin = 0.001
         xmax = 100000
@@ -120,11 +120,11 @@ if Xlimits:
         if logy == 1:
             if getSigmaBRacc:
                 ymin = 9.0e-5
-                ymax = 0.3
+                ymax = 3.0
             else:
                 # ymin = 3.0e-4
                 ymin = 2.0e-4
-                ymax = 20.0
+                ymax = 200.0
     elif hmass == 125:
         xmin = 0.001
         xmax = 100000
@@ -132,10 +132,10 @@ if Xlimits:
         if logy == 1:
             if getSigmaBRacc:
                 ymin = 1.0e-4
-                ymax = 0.03
+                ymax = 0.3
             else:
                 ymin = 7.0e-4
-                ymax = 40.0
+                ymax = 400.0
     else:
         print "Oops, requested Higgs mass = ", hmass, " not recognized.", Xlimits
         sys.exit(1)
@@ -530,9 +530,11 @@ else:
 if Xlimits:
     c.Print("limitsLifetime" + LeptonType + "MH" + str(hmass) + ".png")
     c.Print("limitsLifetime" + LeptonType + "MH" + str(hmass) + ".pdf")
+    c.SaveAs("limitsLifetime" + LeptonType + "MH" + str(hmass) + ".root")
 else:
     c.Print("limitsLifetime" + LeptonType + "_neutralino.png")
     c.Print("limitsLifetime" + LeptonType + "_neutralino.pdf")
+    c.SaveAs("limitsLifetime" + LeptonType + "_neutralino.root")
 
 #raw_input("Press ENTER to finish...")
 #sys.stdin.read(1)
