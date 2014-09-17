@@ -33,25 +33,18 @@ bool correctedData = false;
 bool debug = true;
 
 // Signal histos
-TString signal1("CombinedFiles/HTo2LongLivedTo4F_MH1000_MFF350_CTau350To35000_combined_");
-//TString signal1("CombinedFiles/HTo2LongLivedTo4F_MH1000_MFF20_CTau1p5To150_combined_");
+TString signal1("CombinedFiles/HTo2LongLivedTo4F_MH1000_MFF350_CTau35To3500_combined_");
 TString signal1Legend("m_{H}=1 TeV} m_{X}=350 GeV");
-//TString signal1Legend("m_{H}=1 TeV} m_{X}=20 GeV");
 TString signal1Legend_part1("m_{H}=1000 GeV");
 TString signal1Legend_part2("m_{X}=350 GeV");
-//TString signal1Legend_part2("m_{X}=20 GeV");
 //TString signal1Legend("Signal 1");
 
 //TString signal1("CombinedFiles/Chi0ToNuLL_MSquark1000_MChi148_combined_");
 
-// TString signal2("CombinedFiles/HTo2LongLivedTo4F_MH125_MFF20_CTau130To13000_combined_");
-// TString signal2Legend("m_{H}=125 GeV} m_{X}=20 GeV");
-// TString signal2Legend_part1("m_{H}=125 GeV");
-// TString signal2Legend_part2("m_{X}=20 GeV");
- TString signal2("CombinedFiles/Chi0ToNuLL_MSquark350_MChi148_combined_");
- TString signal2Legend("m_{#tilde{q}}=350 GeV m_{#tilde{#Chi}^{0}_{1}}=148 GeV");
- TString signal2Legend_part1("m_{#tilde{q}}=350 GeV");
- TString signal2Legend_part2("m_{#tilde{#Chi}^{0}_{1}}=148 GeV");
+// TString signal2("CombinedFiles/Chi0ToNuLL_MSquark120_MChi48_combined_");
+// TString signal2Legend("m_{#tilde{q}}=350 GeV m_{#tilde{#Chi}^{0}_{1}}=148 GeV");
+// TString signal2Legend_part1("m_{#tilde{q}}=350 GeV");
+// TString signal2Legend_part2("m_{#tilde{#Chi}^{0}_{1}}=148 GeV");
 //TString signal2Legend("Signal 2");
 
 //TString signal2("CombinedFiles/HTo2LongLivedTo4F_MH400_MFF50_CTau8To800_combined_");
@@ -84,7 +77,6 @@ float getLumi(const bool electrons)
   if ( rereco ) {
     if( electrons ) lumiFile = "../LumiFiles/lumi_electron_22Jan.txt";
     else lumiFile = "../LumiFiles/lumi_muon_22Jan.txt";
-//    else lumiFile = "../LumiFiles/lumi_muon_22Jan_MET.txt";
   }
   else {
     if( electrons ) lumiFile = "../LumiFiles/lumi_electron.txt";
@@ -288,9 +280,9 @@ void makeSignalPlots(const TString & histoName, TFile * outputFile, TString anaT
   TH1F * histoSignal1 = (TH1F*)signalInputFile1->Get(histoName);
   histoSignal1->SetStats(0);
 
-   TFile * signalInputFile2= new TFile (signal2+anaType+".root", "READ");
-   TH1F * histoSignal2 = (TH1F*)signalInputFile2->Get(histoName);
-   histoSignal2->SetStats(0);
+//   TFile * signalInputFile2= new TFile (signal2+anaType+".root", "READ");
+//   TH1F * histoSignal2 = (TH1F*)signalInputFile2->Get(histoName);
+//   histoSignal2->SetStats(0);
 
   // Output histograms to file
   outputFile->cd();
@@ -312,16 +304,16 @@ void makeSignalPlots(const TString & histoName, TFile * outputFile, TString anaT
   histoSignal1->GetYaxis()->SetLimits(yMin,yMax);
   histoSignal1->Draw();
 
-    histoSignal2->SetLineColor(6);
-    histoSignal2->Scale(1/histoSignal2->Integral());
-    histoSignal2->Draw("SAME");
+  //  histoSignal2->SetLineColor(6);
+  //  histoSignal2->Scale(1/histoSignal2->Integral());
+  //  histoSignal2->Draw("SAME");
 
   // Draw legend
   TLegend *legend= new TLegend(0.5,0.6,0.85,0.85);
   legend->SetBorderSize(0);
   legend->SetFillStyle(0);
   legend->AddEntry(histoSignal1,signal1Legend,"l");
-  legend->AddEntry(histoSignal2,signal2Legend,"l");
+//   legend->AddEntry(histoSignal2,signal2Legend,"l");
 
   legend->Draw();
 
@@ -424,24 +416,22 @@ void makePlot(const TString & histoName, TFile * outputFile, TString anaType,
   TH1F * histoSignal1 = (TH1F*)signalInputFile1->Get(histoName);
   histoSignal1->SetStats(0);
   histoSignal1->Scale(lumi);
-  std::cout<<"***********lumi="<<lumi<<"***********"<<std::endl;
 
   // For signal MC, need to add extra weight
   // Have not divided by number of events
   // Get this from cut flow histogram
   TH1F * cutFlowSignal1 = (TH1F*)signalInputFile1->Get("cutFlowColl_preselection");
   double nInitialEventsSignal1 = cutFlowSignal1->GetBinContent(0);
-  std::cout<<"***********nInitialEventsSignal1="<<nInitialEventsSignal1<<"***********"<<std::endl;
-  histoSignal1->Scale(0.1/nInitialEventsSignal1);
+  histoSignal1->Scale(1/nInitialEventsSignal1);
 
-   if ( debug ) cout << "Signal2" << endl;
-   TFile * signalInputFile2= new TFile (signal2+anaType+".root", "READ");
-   TH1F * histoSignal2 = (TH1F*)signalInputFile2->Get(histoName);
-   histoSignal2->SetStats(0);
-   histoSignal2->Scale(lumi);
-   TH1F * cutFlowSignal2 = (TH1F*)signalInputFile2->Get("cutFlowColl_preselection");
-   double nInitialEventsSignal2 = cutFlowSignal2->GetBinContent(0);
-   histoSignal2->Scale(0.1/nInitialEventsSignal2);
+//   if ( debug ) cout << "Signal2" << endl;
+//   TFile * signalInputFile2= new TFile (signal2+anaType+".root", "READ");
+//   TH1F * histoSignal2 = (TH1F*)signalInputFile2->Get(histoName);
+//   histoSignal2->SetStats(0);
+//   histoSignal2->Scale(lumi);
+//   TH1F * cutFlowSignal2 = (TH1F*)signalInputFile2->Get("cutFlowColl_preselection");
+//   double nInitialEventsSignal2 = cutFlowSignal2->GetBinContent(0);
+//   histoSignal2->Scale(1/nInitialEventsSignal2);
 
   int minIntegral=1;
   int maxIntegral=histoSignal1->GetNbinsX();
@@ -619,17 +609,17 @@ void makePlot(const TString & histoName, TFile * outputFile, TString anaType,
     histoSignal1->Draw("HIST");
   }
 
-   histoSignal2->SetLineStyle(8);
-   histoSignal2->SetLineColor(kGreen+2);
-   histoSignal2->SetLineWidth(2);
-   if(axesExist) histoSignal2->Draw("same,HIST");
-   else {
-     axesExist=true;
-     histoSignal2->GetXaxis()->SetRangeUser(xMin, xMax);
-     histoSignal2->SetMaximum(yMax);
-     histoSignal2->SetMinimum(yMin);
-     histoSignal2->Draw("HIST");
-   }
+//   histoSignal2->SetLineStyle(8);
+//   histoSignal2->SetLineColor(kGreen+2);
+//   histoSignal2->SetLineWidth(2);
+//   if(axesExist) histoSignal2->Draw("same,HIST");
+//   else {
+//     axesExist=true;
+//     histoSignal2->GetXaxis()->SetRangeUser(xMin, xMax);
+//     histoSignal2->SetMaximum(yMax);
+//     histoSignal2->SetMinimum(yMin);
+//     histoSignal2->Draw("HIST");
+//   }
 
   // Draw data
   if ( plotData ) {
@@ -650,8 +640,8 @@ void makePlot(const TString & histoName, TFile * outputFile, TString anaType,
   if ( plotData ) legendSignalData->AddEntry(histoData,"Data","p");
   legendSignalData->AddEntry(histoSignal1,signal1Legend_part1,"l");
   legendSignalData->AddEntry((TObject*)0,signal1Legend_part2,"");
-  legendSignalData->AddEntry(histoSignal2,signal2Legend_part1,"l");
-  legendSignalData->AddEntry((TObject*)0,signal2Legend_part2,"");
+//   legendSignalData->AddEntry(histoSignal2,signal2Legend_part1,"l");
+//   legendSignalData->AddEntry((TObject*)0,signal2Legend_part2,"");
 
   legendBkg->Draw();
   legendSignalData->Draw();
@@ -698,8 +688,8 @@ void makePlot(const TString & histoName, TFile * outputFile, TString anaType,
     can.cd();
     can.SetLogy();
     can.Draw();
-    gr.SetTitle("TGraphAsymmErrors Example");    
-    gr.SetName("gr");
+    gr.SetTitle("TGraphAsymmErrors Example");
+
     stack.Draw("HISTE");
     gr.Draw("2P0");
     histoData->Draw("P,E,X0SAME");
@@ -719,7 +709,7 @@ void makePlot(const TString & histoName, TFile * outputFile, TString anaType,
     dp->cd();
     std::cout << "totalBkgMCIntegral = " << totalBkgMCIntegral << std::endl;
     ratioHist = drawMCDataRatio( ((TH1*)stack.GetStack()->Last()), histoData, xMax );
-   // Check content of ratioHist
+    // Check content of ratioHist
     ratioHist.SetMarkerStyle(20);
     ratioHist.GetYaxis()->SetNdivisions(5,0,0);
     ratioHist.GetYaxis()->SetTickLength(0.01);
@@ -791,12 +781,11 @@ void makePlot(const TString & histoName, TFile * outputFile, TString anaType,
 // Draw plots which are common between a few set of cuts e.g. for loose selection
 void makeCommonPlots( TString anaType, TFile * outputFile, TString pdfOutputFile, double lumi, bool plotData, bool makeRatioPlot, TString cuts, bool plotCutValue ) {
 
-  double yMaxFactor = 10000;
+  double yMaxFactor = 100;
 //  if ( cuts == "controlCollCuts" ) yMaxFactor = 1000;
   if ( cuts == "looseControlCollCuts" ) yMaxFactor = 10000;
 
-    makeRatioPlot = false;
-//  if ( plotData == false ) makeRatioPlot = false;
+  if ( plotData == false ) makeRatioPlot = false;
 
     // Final cuts
     makePlot("Mass_"+cuts, outputFile, anaType, 0.6, 0.7, 0.9, 0.92,
@@ -910,10 +899,6 @@ void makeCommonPlots( TString anaType, TFile * outputFile, TString pdfOutputFile
 //         "Tracking algo", 0, 11, 0.1, 5000000, true,
 //         false, -999,
 //         lumi, plotData, pdfOutputFile, makeRatioPlot );
-    makePlot("nMinus1_deltaPhi_"+cuts, outputFile, anaType, 0.6, 0.7, 0.9, 0.93,
-          "Collinearity Angle |#Delta#Phi|", 0, 4, 0.1, 5000*yMaxFactor, true,
-          plotCutValue, 1.57,
-          lumi, plotData, pdfOutputFile, makeRatioPlot );
     makePlot("nMinus1_minValidStations_"+cuts, outputFile, anaType, 0.6, 0.7, 0.9, 0.93,
           validStations, 0, 20, 0.1, 5000*yMaxFactor, true,
           plotCutValue, 3,
@@ -1362,10 +1347,10 @@ void makeAllPlots( analysisType ana, bool plotData )
 //  //      false, -999,
 //  //  //      lumi, unblind, pdfOutputFile );
 //  //
-      makePlot("nRecoPV_looseControlCollCuts", outputFile, anaType, 0.6, 0.6, 0.9, 0.9,
-        "Number of reconstructed PV",0,50,0.1,1000000, true,
-         false, -999,
-          lumi, unblind, pdfOutputFile);
+//  //  //  makePlot("nRecoPV_finalCuts", outputFile, anaType, 0.6, 0.6, 0.9, 0.9,
+//  //  //      "Number reco PV",0,50,0.1,1000000, true,
+//  //      false, -999,
+//  //  //      lumi, unblind, pdfOutputFile);
 //  //  //
 //  //  //
 //  //  //
@@ -1791,7 +1776,7 @@ void makeAllPlots( analysisType ana, bool plotData )
   // Event histograms
   pdfOutputFile="output/output_"+anaType+".pdf)";
   makePlot("nRecoPV_removedLifetimeCollCuts", outputFile, anaType, 0.75, 0.6, 0.95, 0.90,
-      "Reconstructed Primary Vertices",0,50,10,100000000, true,
+      "Number Reconstructed PV",0,50,0.1,3000000, true,
       false, -999,
       lumi, true, pdfOutputFile, true);
 

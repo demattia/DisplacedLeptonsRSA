@@ -1,6 +1,7 @@
 #define DileptonAnalysisCuts_cxx
 
 #include "DileptonAnalysisCuts.h"
+#include "DileptonAnalyzer.h"
 
 void DileptonAnalysisCuts::electronsCuts()
 {
@@ -25,6 +26,7 @@ void DileptonAnalysisCuts::electronsCuts()
   maxSigmaIetaIeta_barrel_=0.012;
   maxSigmaIetaIeta_endcap_=0.034;
   use_PV = true;
+  cosinecut_cosmics = -0.79;
 }
 
 void DileptonAnalysisCuts::trackMuonsCuts()
@@ -44,6 +46,7 @@ void DileptonAnalysisCuts::trackMuonsCuts()
   minCosine_=-0.79;
   minMass_=15;
   use_PV = true;
+  cosinecut_cosmics = -0.79;
 }
 
 void DileptonAnalysisCuts::standAloneMuonsCuts()
@@ -53,17 +56,28 @@ void DileptonAnalysisCuts::standAloneMuonsCuts()
   minTrackPt2_ = minTrackPt1_;
   minSCEt1_ = -1;
   minSCEt2_ = -1;
-  maxEta_ = 2.4;
-  minD0Sig_ = 5;
-  maxIso_ = 0.1;
+  maxEta_ = 2.;
+//  minD0Sig_ = 6;
+//  maxIso_ = 0.2;
+  // maxIso_ = 10.;
   oppositeCharge_ = false;
-  maxVertexChi2_ = 5;
+  maxVertexChi2_ = 4;
   minDeltaR_ = 0.2;
-  minCosine_ = -0.79;
+  minCosine_ = -0.75;
+//  minCosine_ = -10000;
   minMass_ = 15.;
-  min_csc_dt_station_valid_hits_ = 2;
+  min_csc_dt_station_valid_hits_ = 3;
+//Additional cuts on minimum number of hits...
+  min_valid_hits_ = 17; 
+//  min_dt_valid_hits_ = 0;
+//  min_csc_valid_hits_ = 0;
   use_PV = true; // use primary vertex...
-//  minLxySig_ = 6.5; //chosen arbitrarily...
+  cosinecut_cosmics = -0.75;
+  maxTrackChi2_ = 2;
+  track_reject_DR = 0.1;
+//  minLeptonD0_ = 10;
+//  minLeptonDZ_ = 5;
+//  minLeptonDZSignificance_ = 0;
 }
 
 DileptonAnalysisCuts::DileptonAnalysisCuts( analysisType analysis, analysisCuts cuts ):
@@ -75,8 +89,8 @@ requireOppositeSignD0_(true), cutOnSignedD0_(true), minD0Sig_(-99999), maxD0Sig_
 maxIso_(9999), maxCaloMatchDeltaR_(999999),
 minR9_(-1), maxHoverE_(99999), maxSigmaIetaIeta_barrel_(99999), maxSigmaIetaIeta_endcap_(99999),
 requireVertex_(true), minLxySig_(-99999), maxLxySig_(9999),
-oppositeCharge_(true), maxVertexChi2_(99999999999), maxHitsBeforeVertex_(9999), maxMissingHitsAfterVertex_(9999),
-minDeltaR_(-1), minCosine_(-9999), minDeltaPhi_(0), maxDeltaPhi_(99999999999), minMass_(0), min_csc_dt_station_valid_hits_(0), use_PV(true)   
+oppositeCharge_(true), maxTrackChi2_(99999999999), maxVertexChi2_(99999999999), maxHitsBeforeVertex_(9999), maxMissingHitsAfterVertex_(9999),
+minDeltaR_(-1), minCosine_(-9999), minDeltaPhi_(0), maxDeltaPhi_(99999999999), minMass_(0), min_csc_dt_station_valid_hits_(-999), min_valid_hits_(-999), use_PV(true), cosinecut_cosmics(-999.0), track_reject_DR(9999.0), minLeptonD0_(-999.0), minLeptonDZ_(-999.0), minLeptonDZSignificance_(-999.0) 
 {
   // Different set of cuts for final, tight, loose etc.
 
@@ -358,8 +372,9 @@ minDeltaR_(-1), minCosine_(-9999), minDeltaPhi_(0), maxDeltaPhi_(99999999999), m
     }
     else if ( analysisType_==_2muTrack) {
       // Cuts for dimuon (track+TO) analysis
+      // Modified for standAloneMuons
       trackMuonsCuts();
-      minD0Sig_=12;
+      minD0Sig_=-9999;
       requireOppositeSignD0_ = false;
       cutOnSignedD0_ = false;
       minDeltaPhi_ = 0;
@@ -369,7 +384,8 @@ minDeltaR_(-1), minCosine_(-9999), minDeltaPhi_(0), maxDeltaPhi_(99999999999), m
     else if ( analysisType_==_2saMu ) {
       // Cuts for di-SA muon analysis
       standAloneMuonsCuts();
-      minD0Sig_=9;
+      minD0Sig_=4;
+      minLxySig_ = 12;
       requireOppositeSignD0_ = false;
       cutOnSignedD0_ = false;
       minDeltaPhi_ = 0;
@@ -400,7 +416,10 @@ minDeltaR_(-1), minCosine_(-9999), minDeltaPhi_(0), maxDeltaPhi_(99999999999), m
     }
     else if ( analysisType_==_2saMu) {
       standAloneMuonsCuts();
-      minD0Sig_=3;
+      minD0Sig_ = 1;
+      maxD0Sig_ = 3;
+      minLxySig_ = 3;
+      maxLxySig_ = 6;
       requireOppositeSignD0_ = false;
       cutOnSignedD0_ = false;
       minDeltaPhi_ = 0;
@@ -431,8 +450,11 @@ minDeltaR_(-1), minCosine_(-9999), minDeltaPhi_(0), maxDeltaPhi_(99999999999), m
     }
     else if ( analysisType_==_2saMu) {
       standAloneMuonsCuts();
-      minD0Sig_=3;
-      requireOppositeSignD0_ = false;
+      //minD0Sig_= 1;
+      minD0Sig_= 0;
+	  //minLxySig_ = 3;
+      minLxySig_ = 0;
+	  requireOppositeSignD0_ = false;
       cutOnSignedD0_ = false;
       minDeltaPhi_ = TMath::PiOver2();
       maxDeltaPhi_ = TMath::Pi();
@@ -462,7 +484,8 @@ minDeltaR_(-1), minCosine_(-9999), minDeltaPhi_(0), maxDeltaPhi_(99999999999), m
     }
     else if ( analysisType_==_2saMu) {
       standAloneMuonsCuts();
-      minD0Sig_=12;
+      minD0Sig_=4;
+      minLxySig_ = 12;
       requireOppositeSignD0_ = false;
       cutOnSignedD0_ = false;
       minDeltaPhi_ = TMath::PiOver2();
@@ -477,9 +500,13 @@ minDeltaR_(-1), minCosine_(-9999), minDeltaPhi_(0), maxDeltaPhi_(99999999999), m
 }
 
 // Checks which cuts have passed and then returns a struct saying which cuts have passed
-DileptonAnalysisCuts::PassedWhichCuts DileptonAnalysisCuts::whichCuts( TreeDipseudoLeptonCandidate & candidate, double mass, TreeLepton & leptonL,
-                                                                       TreeLepton & leptonH, analysisType analysis, double lxyScale, double d0Scale ) {
-
+DileptonAnalysisCuts::PassedWhichCuts DileptonAnalysisCuts::whichCuts( const std::vector<TreeLepton> & single_cosmic_leptons, 
+								       const Candidates * candidates,
+								       const TreeDipseudoLeptonCandidate & candidate,
+								       const double & mass, const TreeLepton & leptonL, const TreeLepton & leptonH,
+								       const analysisType & analysis, const double & lxyScale, const double & d0Scale,
+								       const DileptonAnalysisCuts * dileptonCuts_finalColl_muTrack) const
+{
   PassedWhichCuts passedCuts;
 
   // Check if candidate passed each individual cut
@@ -512,9 +539,7 @@ DileptonAnalysisCuts::PassedWhichCuts DileptonAnalysisCuts::whichCuts( TreeDipse
     else if ( leptonH.photonEt < leptonL.photonEt ) {
       if ( leptonL.pt > minTrackPt1_ && leptonH.pt > minTrackPt2_ ) passedCuts.passTrackPt=true;
     }
-
   }
-
   passedCuts.passCaloMatch=true;  // No longer require calo matching
   // Check matched photon is within deltaR cone
   // And check these are different photons
@@ -532,8 +557,11 @@ DileptonAnalysisCuts::PassedWhichCuts DileptonAnalysisCuts::whichCuts( TreeDipse
     if ( ( cutOnSignedD0_  && candidate.leptonD0SignificanceL_PVrefit_includingPVError > minD0Sig_ &&
            candidate.leptonD0SignificanceH_PVrefit_includingPVError > minD0Sig_ &&
            candidate.leptonD0SignificanceL_PVrefit_includingPVError < maxD0Sig_ && candidate.leptonD0SignificanceH_PVrefit_includingPVError < maxD0Sig_ ) ||
-         ( !cutOnSignedD0_ && fabs( candidate.leptonD0SignificanceL_PVrefit_includingPVError ) > minD0Sig_ &&
-           fabs( candidate.leptonD0SignificanceH_PVrefit_includingPVError ) > minD0Sig_ )
+         ( !cutOnSignedD0_ &&
+	   fabs( candidate.leptonD0SignificanceL_PVrefit_includingPVError ) > minD0Sig_ &&
+           fabs( candidate.leptonD0SignificanceH_PVrefit_includingPVError ) > minD0Sig_ &&
+	   fabs( candidate.leptonD0SignificanceL_PVrefit_includingPVError ) < maxD0Sig_ &&
+           fabs( candidate.leptonD0SignificanceH_PVrefit_includingPVError ) < maxD0Sig_ )
          ) passedCuts.passLeptonD0=true;
   }
   else {
@@ -542,38 +570,75 @@ DileptonAnalysisCuts::PassedWhichCuts DileptonAnalysisCuts::whichCuts( TreeDipse
     if ( ( cutOnSignedD0_  && candidate.leptonD0SignificanceL_BS > minD0Sig_ &&
            candidate.leptonD0SignificanceH_BS > minD0Sig_ &&
            candidate.leptonD0SignificanceL_BS < maxD0Sig_ && candidate.leptonD0SignificanceH_BS < maxD0Sig_ ) ||
-         ( !cutOnSignedD0_ && fabs( candidate.leptonD0SignificanceL_BS ) > minD0Sig_ &&
-           fabs( candidate.leptonD0SignificanceH_BS ) > minD0Sig_ )
+         ( !cutOnSignedD0_ &&
+	   fabs( candidate.leptonD0SignificanceL_BS ) > minD0Sig_ &&
+           fabs( candidate.leptonD0SignificanceH_BS ) > minD0Sig_ &&
+	   fabs( candidate.leptonD0SignificanceL_BS ) < maxD0Sig_ &&
+           fabs( candidate.leptonD0SignificanceH_BS ) < maxD0Sig_ )
          ) passedCuts.passLeptonD0=true;
   }
 
   // Cuts on original leptons, but need to know about other lepton
 
+  // Slightly larger inner cone for electron channel
   if ( analysis == _2eTrack ) {
-    // Slightly larger inner cone for electron channel
     if ( candidate.leptonIsoL4/leptonL.pt < maxIso_ && candidate.leptonIsoH4/leptonH.pt < maxIso_ ) passedCuts.passIso=true;
+  }
+  else if( analysis == _2saMu ) {
+//     if ( candidate.leptonIsoL/candidate.leptonPtL < maxIso_ && candidate.leptonIsoH/candidate.leptonPtH < maxIso_ ) passedCuts.passIso=true;
+//    if ( candidate.leptonIsoL < maxIso_ && candidate.leptonIsoH < maxIso_ ) passedCuts.passIso=true;
+    passedCuts.passIso=true;
+//  if ( candidate.leptonIsoL/leptonL.pt < maxIso_ && candidate.leptonIsoH/leptonH.pt < maxIso_ ) passedCuts.passIso=true;
   }
   else {
     if ( candidate.leptonIsoL/leptonL.pt < maxIso_ && candidate.leptonIsoH/leptonH.pt < maxIso_ ) passedCuts.passIso=true;
   }
 
-  //  if ( ( leptonL.triggerMatch != 0 && leptonH.triggerMatch != 0 && candidate.differentTO ) || !( analysis == _2muTrack) ) passedCuts.passTriggerMatch=true;
-  if ( ( leptonL.triggerMatch != 0 && leptonH.triggerMatch != 0 && candidate.differentTO ) || analysis == _2eTrack ) passedCuts.passTriggerMatch=true;
-//  passedCuts.passTriggerMatch=true;
+
+
+
+
+  if( analysis == _2saMu ) passedCuts.passTriggerMatch=true;
+  else {
+    //  if ( ( leptonL.triggerMatch != 0 && leptonH.triggerMatch != 0 && candidate.differentTO ) || !( analysis == _2muTrack) ) passedCuts.passTriggerMatch=true;
+    if ( ( leptonL.triggerMatch != 0 && leptonH.triggerMatch != 0 && candidate.differentTO ) || analysis == _2eTrack ) passedCuts.passTriggerMatch=true;
+  }
+
+  passedCuts.passAbsD0 = false;
+  if( analysis == _2saMu ) {
+    if( min(fabs(leptonH.d0_PV), fabs(leptonL.d0_PV)) > minLeptonD0_ ) passedCuts.passAbsD0 = true;
+  }
+  else passedCuts.passAbsD0 = true;
+
+  passedCuts.passAbsDZ = false;
+  if( analysis == _2saMu ) {
+    if( min(fabs(leptonH.dz_PV), fabs(leptonL.dz_PV)) > minLeptonDZ_ ) passedCuts.passAbsDZ = true;
+  }
+  else passedCuts.passAbsDZ = true;
+
+  passedCuts.passAbsDZSignificance = false;
+  if( analysis == _2saMu ) {
+    if( min(fabs(leptonH.dzsignificance_PV), fabs(leptonL.dzsignificance_PV)) > minLeptonDZSignificance_ ) passedCuts.passAbsDZSignificance = true;
+  }
+  else passedCuts.passAbsDZSignificance = true;
 
   //   Cuts on dilepton Lxy reused for SA Muons...
 
-     if (use_PV){
-       if (fabs(candidate.decayLengthSignificance_PV) >= minLxySig_) passedCuts.passMinLxySig=true;
-     }
-     else{
-       if (fabs(candidate.decayLengthSignificance_BS) >= minLxySig_) passedCuts.passMinLxySig=true;
-     }
-//  passedCuts.passMinLxySig=true; // Cut has been removed
-  passedCuts.passMaxLxySig=true; // Cut has been removed
+  if (use_PV) {
+    if (fabs(candidate.decayLengthSignificance_PV) >= minLxySig_) passedCuts.passMinLxySig=true;
+    if (fabs(candidate.decayLengthSignificance_PV) < maxLxySig_) passedCuts.passMaxLxySig=true;
+  }
+  else {
+    if (fabs(candidate.decayLengthSignificance_BS) >= minLxySig_) passedCuts.passMinLxySig=true;
+    if (fabs(candidate.decayLengthSignificance_BS) < maxLxySig_) passedCuts.passMaxLxySig=true;
+  }
+  // passedCuts.passMinLxySig=true; // Cut has been removed
+  // passedCuts.passMaxLxySig=true; // Cut has been removed
 
   // Opposite charge
   if ( ( oppositeCharge_ && ( leptonL.charge != leptonH.charge ) ) || !oppositeCharge_ ) passedCuts.passOppCharge=true;
+  // Max Track Chi2
+  if ( std::max(leptonL.trackChi2, leptonH.trackChi2) < maxTrackChi2_ ) passedCuts.passMaxTrackChi2=true;
   // Vertex
   if ( !requireVertex_ || (requireVertex_ && candidate.validVertex ) ) passedCuts.passRequireVertex=true;
   if ( !requireVertex_ || (requireVertex_ && candidate.vertexChi2 < maxVertexChi2_ ) ) passedCuts.passVertexChi2=true;
@@ -586,11 +651,16 @@ DileptonAnalysisCuts::PassedWhichCuts DileptonAnalysisCuts::whichCuts( TreeDipse
   // Dilepton Mass
   if ( mass > minMass_ ) passedCuts.passMass=true;
 
-  // Hits before vertex
-  if ( candidate.hitsBeforeVertexL + candidate.hitsBeforeVertexH <= maxHitsBeforeVertex_ ) passedCuts.passHitsBeforeVertex=true;
-
-  // Missing hits after vertex
-  if ( candidate.missedLayersAfterVertexL + candidate.missedLayersAfterVertexH <= maxMissingHitsAfterVertex_ ) passedCuts.passMissingHitsAfterVertex=true;
+  if( analysis != _2saMu ) {
+    // Hits before vertex
+    if ( candidate.hitsBeforeVertexL + candidate.hitsBeforeVertexH <= maxHitsBeforeVertex_ ) passedCuts.passHitsBeforeVertex=true;
+    // Missing hits after vertex
+    if ( candidate.missedLayersAfterVertexL + candidate.missedLayersAfterVertexH <= maxMissingHitsAfterVertex_ ) passedCuts.passMissingHitsAfterVertex=true;
+  }
+  else {
+    passedCuts.passHitsBeforeVertex=true;
+    passedCuts.passMissingHitsAfterVertex=true;
+  }
 
   // Photon ID cuts
   bool passSigmaIetaIeta=false;
@@ -602,15 +672,34 @@ DileptonAnalysisCuts::PassedWhichCuts DileptonAnalysisCuts::whichCuts( TreeDipse
   bool photonHPass = ( leptonH.photonHadTowOverEm < maxHoverE_ && leptonH.photonR9 > minR9_ && passSigmaIetaIeta ) ? true : false;
   if ( ( photonLPass && photonHPass ) || analysis != _2eTrack ) passedCuts.passPhotonID = true;
 
-//SA Muon Minimum Valid Stations Cut
-
+  //SA Muon Minimum Valid Stations Cut
   if (analysis == _2saMu) {
     if (leptonH.dtStationsWithValidHits + leptonH.cscStationsWithValidHits >= min_csc_dt_station_valid_hits_ &&
         leptonL.dtStationsWithValidHits + leptonL.cscStationsWithValidHits >= min_csc_dt_station_valid_hits_) passedCuts.passMinMuonValidStations=true;
   }
   else passedCuts.passMinMuonValidStations=true;
 
- 
+
+  //SA Muon Minimum Valid Hits Cut
+  if (analysis == _2saMu) {
+    if (std::min(leptonH.numberOfValidMuonHits, leptonL.numberOfValidMuonHits) >= min_valid_hits_ ) passedCuts.passMinMuonValidHits=true;
+  }
+  else passedCuts.passMinMuonValidHits=true;
+  //  //Cosmics Rejection
+  if (analysis == _2saMu) {
+    if ( !rejectCosmics( single_cosmic_leptons, leptonL, leptonH, cosinecut_cosmics) ) passedCuts.passRejectionCosmics=true;
+   }
+  else passedCuts.passRejectionCosmics=true;
+  
+//  passedCuts.passRejectionCosmics=true;
+
+
+  // Track-based candidates rejection
+  passedCuts.passComplementarity=true;
+  passedCuts.passTrackRejection=true;
+  if( analysis == _2saMu ) {
+    if( trackRejected(leptonL, leptonH) ) passedCuts.passTrackRejection = false;
+  }
   // Muon ID cuts
   if ( ( leptonL.isLooseMuon && leptonH.isLooseMuon ) || analysis != _2globalOrTrackerMu ) passedCuts.passMuonID = true;
 
@@ -628,7 +717,8 @@ DileptonAnalysisCuts::PassedWhichCuts DileptonAnalysisCuts::whichCuts( TreeDipse
 
 // Checks if candidate has passed all cuts
 // Returns true if all cuts have been passed
-bool DileptonAnalysisCuts::passAllCuts( DileptonAnalysisCuts::PassedWhichCuts cuts ) {
+bool DileptonAnalysisCuts::passAllCuts( const DileptonAnalysisCuts::PassedWhichCuts & cuts ) const
+{
   if ( !cuts.passTrackPt ) return false;
   if ( !cuts.passSCEt ) return false;
   if ( !cuts.passSCEta ) return false;
@@ -644,6 +734,7 @@ bool DileptonAnalysisCuts::passAllCuts( DileptonAnalysisCuts::PassedWhichCuts cu
   if ( !cuts.passPhotonMatch ) return false;
   if ( !cuts.passRequireVertex ) return false;
   if ( !cuts.passVertexChi2 ) return false;
+  if ( !cuts.passMaxTrackChi2 ) return false;
   if ( !cuts.passHitsBeforeVertex ) return false;
   if ( !cuts.passMissingHitsAfterVertex ) return false;
   if ( !cuts.passDeltaR ) return false;
@@ -653,7 +744,50 @@ bool DileptonAnalysisCuts::passAllCuts( DileptonAnalysisCuts::PassedWhichCuts cu
   if ( !cuts.passPhotonID ) return false;
   if ( !cuts.passMuonID ) return false;
   if ( !cuts.passMinMuonValidStations ) return false;
+  if ( !cuts.passRejectionCosmics ) return false;
+  if ( !cuts.passComplementarity ) return false;
+  if ( !cuts.passTrackRejection ) return false;
+  if ( !cuts.passMinMuonValidHits ) return false;
+  if ( !cuts.passAbsD0 ) return false;
+  if ( !cuts.passAbsDZ ) return false;
+  if ( !cuts.passAbsDZSignificance ) return false;
   return true;
+}
+
+bool DileptonAnalysisCuts::rejectCosmic(const TreeLepton * l1, const TreeLepton * l2, const float & cosineCut) const
+{
+  // Skip if it is the same lepton
+  if( l1->eta != l2->eta ) {
+    float theta1 = 2*atan(exp(-l1->eta));
+    float theta2 = 2*atan(exp(-l2->eta));
+    // float cosine = sin(l1->phi)*sin(l2->phi)*cos(theta1 - theta2) + cos(l1->phi)*cos(l2->phi);
+    float cosine = sin(theta1)*sin(theta2)*cos(l1->phi - l2->phi) + cos(theta1)*cos(theta2);
+    if( cosine < cosineCut ) {
+      return true;
+      // std::cout << "We have a potential cosmic with cosine = " << cosine << std::endl;
+      // std::cout << "l1 eta = " << l1->eta << " phi = " << l1->phi << std::endl;
+      // std::cout << "l2 eta = " << l2->eta << " phi = " << l2->phi << std::endl;
+    }
+  }
+  return false;
+}
+
+bool DileptonAnalysisCuts::rejectCosmics( const std::vector<TreeLepton> & single_cosmic_leptons,
+					  const TreeLepton & leptonL, const TreeLepton & leptonH, const float & cosineCut) const
+{
+  // Check for collinear pairs of leptons in this event (indication of a cosmic)
+  //  for( std::vector<TreeLepton>::const_iterator lit = candidates->leptons_.begin(); lit != candidates->leptons_.end(); ++lit ) {
+  for( std::vector<TreeLepton>::const_iterator lit = single_cosmic_leptons.begin(); lit != single_cosmic_leptons.end(); ++lit ) {
+    if( rejectCosmic(&leptonL, &*lit, cosineCut) ) {
+      // cout << "It is likely to be cosmic" << endl;
+      return true;
+    }
+    if( rejectCosmic(&leptonH, &*lit, cosineCut) ) {
+      // cout << "It is likely to be cosmic" << endl;
+      return true;
+    }
+  }
+  return false;
 }
 
 // Print whether each cut was passed or failed
@@ -672,6 +806,7 @@ void DileptonAnalysisCuts::printPassForOneCand( DileptonAnalysisCuts::PassedWhic
   cout << "Opposite charge : " << cuts.passOppCharge << endl;
   cout << "Trigger match : " << cuts.passTriggerMatch << endl;
   cout << "Vertex Chi2 : " << cuts.passVertexChi2 << endl;
+  cout << "Max Track Chi2 : " << cuts.passMaxTrackChi2 << endl;
   cout << "Hits before vertex : " << cuts.passHitsBeforeVertex << endl;
   cout << "Missing hits after vertex : " << cuts.passMissingHitsAfterVertex << endl;
   cout << "Delta R : " << cuts.passDeltaR << endl;
@@ -725,3 +860,76 @@ void DileptonAnalysisCuts::printCutValues() {
   cout << "Minimum invariant mass : " << minMass_ << endl;
   cout << "=========================================" << endl;
 }
+
+bool DileptonAnalysisCuts::trackRejected(const TreeLepton & leptonL, const TreeLepton & leptonH) const
+{
+  if( leptonL.minMatchedDeltaR_10 <= track_reject_DR || leptonH.minMatchedDeltaR_10 <= track_reject_DR ) return true;
+//  if( leptonL.minMatchedDeltaR_5 <= track_reject_DR || leptonH.minMatchedDeltaR_5 <= track_reject_DR ) return true;
+  return false;
+}
+
+bool DileptonAnalysisCuts::isComplementaryExtrapolated(const TreeDipseudoLeptonCandidate & cand, const Candidates * candidates,
+						       const DileptonAnalysisCuts & dileptonCuts_finalColl_muTrack )
+{
+  // std::cout << "number of matches = " << cand.tkMatches.size() << std::endl;
+  std::vector<std::pair<Int_t, Float_t> >::const_iterator it = cand.tkMatches.begin();
+  if( it->first == -999 ) return true;
+  // std::cout << "it->first = " << it->first << std::endl;
+  // std::cout << "size of candidates = " << candidates->candidates_.size() << std::endl;
+  for( ; it != cand.tkMatches.end(); ++it ) {
+    TreeDipseudoLeptonCandidate trackCand = candidates->candidates_.at(it->first);
+    TreeLepton trackL = DileptonAnalyzer::getLepton( candidates->leptons_, trackCand.leptonIndexL );
+    TreeLepton trackH = DileptonAnalyzer::getLepton( candidates->leptons_, trackCand.leptonIndexH );
+    if(trackL.isCentralTrack && trackH.isCentralTrack) {
+      DileptonAnalysisCuts::PassedWhichCuts finalCollCuts_muTrack = dileptonCuts_finalColl_muTrack.whichCuts( candidates->leptons_, candidates,
+													      trackCand, trackCand.corrDileptonMass, trackL,
+													      trackH, _2muTrack, 1.0, 1.0, 0 );
+      if (dileptonCuts_finalColl_muTrack.passAllCuts(finalCollCuts_muTrack)) {
+	// std::cout << "minDR = " << it->second << std::endl;
+	if( it->second < 0.1 ) {
+	  return false;
+	}
+      }
+    }
+  }
+  return true;
+}
+
+bool DileptonAnalysisCuts::isComplementary(const TreeLepton & leptonL, const TreeLepton & leptonH,
+					   const Candidates * candidates, const DileptonAnalysisCuts & dileptonCuts_finalColl_muTrack )
+{
+  // std::cout << "complementary - in" << std::endl;
+  // Complementarity requirement (reject candidates already selected by the track-based analysis).
+  double mindeltaRL = 100000;
+  double mindeltaRH = 100000;
+  for( unsigned int iTreeCand_=0; iTreeCand_ != candidates->candidates_.size(); ++iTreeCand_ ) {
+    TreeDipseudoLeptonCandidate cand_ = candidates->candidates_.at(iTreeCand_);
+    TreeLepton leptonL_ = DileptonAnalyzer::getLepton( candidates->leptons_, cand_.leptonIndexL );
+    TreeLepton leptonH_ = DileptonAnalyzer::getLepton( candidates->leptons_, cand_.leptonIndexH );
+    if(leptonL_.isCentralTrack && leptonH_.isCentralTrack) {
+      DileptonAnalysisCuts::PassedWhichCuts finalCollCuts_muTrack = dileptonCuts_finalColl_muTrack.whichCuts( candidates->leptons_, candidates,
+													      cand_, cand_.corrDileptonMass, leptonL_,
+													      leptonH_, _2muTrack, 1.0, 1.0, 0 );
+      //The following if loop is to make sure the muTrack cuts have been passed
+      if (dileptonCuts_finalColl_muTrack.passAllCuts(finalCollCuts_muTrack)) {
+	// std::cout << "track-based candidate passing selection found" << std::endl;
+
+        // the threshold is 0.1, and we require deltaR > 0.2 between the two leptons so the two L and H cannot be matched to the same track.
+        double deltaRL = std::min(DileptonAnalyzer::DeltaR(leptonL_,leptonL), DileptonAnalyzer::DeltaR(leptonL_,leptonH));
+        double deltaRH = std::min(DileptonAnalyzer::DeltaR(leptonH_,leptonL), DileptonAnalyzer::DeltaR(leptonH_,leptonH));
+        if(deltaRL < mindeltaRL) mindeltaRL = deltaRL;
+        if(deltaRH < mindeltaRH) mindeltaRH = deltaRH;
+	// std::cout << mindeltaRL << ", " << mindeltaRH << std::endl;
+      }
+    }
+    if (mindeltaRL < 0.1 && mindeltaRH < 0.1) {
+      // std::cout << "found a match" << std::endl;
+      return false;
+    }
+  }
+  //To remove the overlap between track analysis and SA muon analysis...
+  return true;
+}
+      
+
+

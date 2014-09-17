@@ -14,11 +14,66 @@ nameSuffix(suffix)
   h_singleLepton_sigma=initHist(h_singleLepton_sigma,"singleLepton_sigma", "Individual lepton sigma", 20, 0, 0.01);
 
   // Tracking efficiency plots
-  h_all_d0=initHist(h_all_d0,"all_d0","Gen all d0",25,0,50);
-  h_reco_d0=initHist(h_reco_d0,"reco_d0","Gen recod d0",25,0,50);
-  h_all_lxy=initHist(h_all_lxy,"all_lxy","Gen all lxy",50,0,100);
-  h_reco_lxy=initHist(h_reco_lxy,"reco_lxy","Gen recod lxy",50,0,100);
+  h_all_d0=initHist(h_all_d0,"gen_d0_all","Gen all d0",100,-50,50);
+  h_reco_d0=initHist(h_reco_d0,"gen_d0_afterReco","Gen d0 after reco",100,-50,50);
+  h_reco_d0_aftercuts=initHist(h_reco_d0_aftercuts,"gen_d0_afterAllCuts","Gen d0 afterAllCuts",100,-50,50);
+  h_all_lxy=initHist(h_all_lxy,"gen_lxy_all","Gen all lxy for muon",100,0,500);
+  h_all_lxy_DecayMode=initHist(h_all_lxy_DecayMode,"gen_lxy_all_DecayMode","Gen lxy for the DecayMode",100,0,500);
+  h_all_lxy_DecayMode_withinAcc=initHist(h_all_lxy_DecayMode_withinAcc,"gen_lxy_all_DecayMode_withinAcc","Gen lxy for the DecayMode within Acc",100,0,500);
+  h_all_lxy_DecayMode_withinAcc_trigFired=initHist(h_all_lxy_DecayMode_withinAcc_trigFired,"gen_lxy_all_DecayMode_withinAcc_trigFired","Gen lxy for the DecayMode within Acc after trigger",100,0,500);
+//TEff plots
+//  h_all_lxy_DecayMode_withinAcc=initHist(h_all_lxy_DecayMode_withinAcc,"gen_lxy_all_DecayMode_withinAcc","Gen lxy for the DecayMode within Acc",10,0,500);
+//  h_all_lxy_DecayMode_withinAcc_trigFired=initHist(h_all_lxy_DecayMode_withinAcc_trigFired,"gen_lxy_all_DecayMode_withinAcc_trigFired","Gen lxy for the DecayMode within Acc after trigger",10,0,500);
+  h_reco_lxy=initHist(h_reco_lxy,"gen_lxy_afterReco_noGenMatch","reco lxy after reco",100,0,500);
+  h_reco_lxy_genMatched=initHist(h_reco_lxy_genMatched,"gen_lxy_reco_genMatched","Gen lxy after reco (genMatched)",100,0,500);
+  h_reco_lxy_removeFakeComb=initHist(h_reco_lxy_removeFakeComb,"gen_lxy_reco_removeFakeComb","Gen lxy after reco (removeFakeComb)",100,0,500);
+  h_reco_lxy_triggerMatch=initHist(h_reco_lxy_triggerMatch,"gen_lxy_reco_triggerMatch","Gen lxy after reco (triggerMatched)",100,0,500);
+  h_reco_lxy_withinAcc=initHist(h_reco_lxy_withinAcc,"gen_lxy_reco_withinAcc","Gen lxy after reco (withinAcc)",100,0,500);
+  h_reco_lxy_aftercuts_noCosmicRejection=initHist(h_reco_lxy_aftercuts_noCosmicRejection,"gen_lxy_afterAllCutsLoose_noCosmicRejection","Gen lxy afterAllCutsLoose (before cosmic rejection)",100,0,500);
+  h_reco_lxy_aftercuts=initHist(h_reco_lxy_aftercuts,"gen_lxy_afterAllCutsLoose","Gen lxy afterAllCutsLoose",100,0,500);
+  h_reco_lxy_aftercuts_complementary=initHist(h_reco_lxy_aftercuts,"gen_lxy_afterAllCutsLoose_complementary","Gen lxy afterAllCutsLoose complenmentary",100,0,500);
+  h_reco_lxy_final=initHist(h_reco_lxy_final,"gen_lxy_final","Gen lxy after reco FINAL",100,0,500);
 
+//Additional studies (by Melih March 27, 2014) 
+
+  h_reco_d0_gen_d0 = new TH2F ("reco_d0_gen_d0", "Reco d0 vs. Gen D0", 400, 0, 400, 400, 0, 400); 
+  h_reco_d0_gen_d0->GetXaxis()->SetTitle("|reco d_{0}| cm");
+  h_reco_d0_gen_d0->GetYaxis()->SetTitle("|gen d_{0}| cm");
+  h_reco_d0Sig_gen_d0 = new TH2F ("reco_d0Sig_gen_d0", "d0Sig vs. Gen D0", 400, 0, 400, 400, 0, 400); 
+  h_reco_d0Sig_gen_d0->GetXaxis()->SetTitle("|d_{0} Significance|");
+  h_reco_d0Sig_gen_d0->GetYaxis()->SetTitle("|gen d_{0}| cm");
+  h_reco_d0Error_gen_d0 = new TH2F ("reco_d0Error_gen_d0", "d0Error vs. Gen D0", 400, 0, 400, 400, 0, 400); 
+  h_reco_d0Error_gen_d0->GetXaxis()->SetTitle("|d_{0} Error| cm");
+  h_reco_d0Error_gen_d0->GetYaxis()->SetTitle("|gen d_{0}| cm");
+  h_reco_Lxy_gen_Lxy = new TH2F ("reco_Lxy_gen_Lxy", "Reco Lxy vs. Gen Lxy", 400, 0, 400, 400, 0, 400); 
+  h_reco_Lxy_gen_Lxy->GetXaxis()->SetTitle("|reco L_{xy}| cm");
+  h_reco_Lxy_gen_Lxy->GetYaxis()->SetTitle("|gen L_{xy}| cm");
+  h_reco_LxySig_gen_Lxy = new TH2F ("reco_LxySig_gen_Lxy", "Lxy Sig vs. Gen Lxy", 400, 0, 400, 400, 0, 400); 
+  h_reco_LxySig_gen_Lxy->GetXaxis()->SetTitle("|L_{xy} Significance|");
+  h_reco_LxySig_gen_Lxy->GetYaxis()->SetTitle("|gen L_{xy}| cm");
+  h_reco_LxyError_gen_Lxy = new TH2F ("reco_LxyError_gen_Lxy", "Lxy Error vs. Gen Lxy", 400, 0, 400, 400, 0, 400); 
+  h_reco_LxyError_gen_Lxy->GetXaxis()->SetTitle("|L_{xy} Error|");
+  h_reco_LxyError_gen_Lxy->GetYaxis()->SetTitle("|gen L_{xy}| cm");
+
+  h_reco_d0_gen_d0_aftercuts = new TH2F ("reco_d0_gen_d0_aftercuts", "Reco d0 vs. Gen D0", 400, 0, 400, 400, 0, 400); 
+  h_reco_d0_gen_d0_aftercuts->GetXaxis()->SetTitle("|reco d_{0}| cm");
+  h_reco_d0_gen_d0_aftercuts->GetYaxis()->SetTitle("|gen d_{0}| cm");
+  h_reco_d0Sig_gen_d0_aftercuts = new TH2F ("reco_d0Sig_gen_d0_aftercuts", "d0Sig vs. Gen D0", 400, 0, 400, 400, 0, 400); 
+  h_reco_d0Sig_gen_d0_aftercuts->GetXaxis()->SetTitle("|d_{0} Significance|");
+  h_reco_d0Sig_gen_d0_aftercuts->GetYaxis()->SetTitle("|gen d_{0}| cm");
+  h_reco_d0Error_gen_d0_aftercuts = new TH2F ("reco_d0Error_gen_d0_aftercuts", "d0Error vs. Gen D0", 400, 0, 400, 400, 0, 400); 
+  h_reco_d0Error_gen_d0_aftercuts->GetXaxis()->SetTitle("|d_{0} Error| cm");
+  h_reco_d0Error_gen_d0_aftercuts->GetYaxis()->SetTitle("|gen d_{0}| cm");
+  h_reco_Lxy_gen_Lxy_aftercuts = new TH2F ("reco_Lxy_gen_Lxy_aftercuts", "Reco Lxy vs. Gen Lxy", 400, 0, 400, 400, 0, 400); 
+  h_reco_Lxy_gen_Lxy_aftercuts->GetXaxis()->SetTitle("|reco L_{xy}| cm");
+  h_reco_Lxy_gen_Lxy_aftercuts->GetYaxis()->SetTitle("|gen L_{xy}| cm");
+  h_reco_LxySig_gen_Lxy_aftercuts = new TH2F ("reco_LxySig_gen_Lxy_aftercuts", "Lxy Sig vs. Gen Lxy", 400, 0, 400, 400, 0, 400); 
+  h_reco_LxySig_gen_Lxy_aftercuts->GetXaxis()->SetTitle("|L_{xy} Significance|");
+  h_reco_LxySig_gen_Lxy_aftercuts->GetYaxis()->SetTitle("|gen L_{xy}| cm");
+  h_reco_LxyError_gen_Lxy_aftercuts = new TH2F ("reco_LxyError_gen_Lxy_aftercuts", "Lxy Error vs. Gen Lxy", 400, 0, 400, 400, 0, 400); 
+  h_reco_LxyError_gen_Lxy_aftercuts->GetXaxis()->SetTitle("|L_{xy} Error|");
+  h_reco_LxyError_gen_Lxy_aftercuts->GetYaxis()->SetTitle("|gen L_{xy}| cm");
+  
   // Neutralino pt plots
   h_chiPt_all=initHist(h_chiPt_all,"ChiPt_all","Neutralino gen pt",75,0,2500);
   h_chiPt_ss=initHist(h_chiPt_ss,"ChiPt_ss","Neutralino gen pt, squark squark production",75,0,2500);
@@ -27,7 +82,7 @@ nameSuffix(suffix)
   // Final set of cuts
   h_mass_finalCuts=initHist(h_mass_finalCuts,"Mass_finalCuts","Dilepton mass, final cuts",75,0,500);
   h_mt_finalCuts=initHist(h_mt_finalCuts,"Mt_finalCuts", "Dilepton Mt, final cuts", 75, 0, 500);
-  h_Lxy_finalCuts=initHist(h_Lxy_finalCuts,"Lxy_finalCuts", "Dilepton Lxy, final cuts", 100, -50, 50);
+  h_Lxy_finalCuts=initHist(h_Lxy_finalCuts,"Lxy_finalCuts", "Dilepton Lxy, final cuts", 100, 0, 100);
   h_nRecoPV_finalCuts=initHist(h_nRecoPV_finalCuts,"nRecoPV_finalCuts", "Number reco PV, final cuts", 50, 0, 50);
   h_leptonHSCEta_finalCuts=initHist(h_leptonHSCEta_finalCuts,"leptonHSCEta_finalCuts", "Eta leading lepton, final cuts",60,-3,3);
   h_leptonLSCEta_finalCuts=initHist(h_leptonLSCEta_finalCuts,"leptonLSCEta_finalCuts", "Eta subleading lepton, final cuts",60,-3,3);
@@ -70,7 +125,7 @@ nameSuffix(suffix)
   h_nMinus1_vertexChi2_finalCuts=initHist(h_nMinus1_vertexChi2_finalCuts,"nMinus1_vertexChi2_finalCuts", "n-1 Vertex Chi^2, final cuts", 20, 0, 20);
   h_nMinus1_deltaPhi_finalCuts=initHist(h_nMinus1_deltaPhi_finalCuts,"nMinus1_deltaPhi_finalCuts", "n-1 Delta Phi, final cuts", 40, 0, 4);
   h_nMinus1_cosine_finalCuts=initHist(h_nMinus1_cosine_finalCuts,"nMinus1_cosine_finalCuts", "n-1 Cosine, final cuts",22,-1.1,1.1);
-  h_nMinus1_deltaR_finalCuts=initHist(h_nMinus1_deltaR_finalCuts,"nMinus1_deltaR_finalCuts", "n-1 delta R, final cuts",10,0,0.5);
+  h_nMinus1_deltaR_finalCuts=initHist(h_nMinus1_deltaR_finalCuts,"nMinus1_deltaR_finalCuts", "n-1 delta R, final cuts",20,0,1.0);
   h_nMinus1_nHitsBeforeVertex_finalCuts=initHist(h_nMinus1_nHitsBeforeVertex_finalCuts,"nMinus1_nHitsBeforeVertex_finalCuts", "n-1 N hits before vertex", 5, -0.5, 4.5);
   h_nMinus1_nMissingHitsAfterVertex_finalCuts=initHist(h_nMinus1_nMissingHitsAfterVertex_finalCuts,"nMinus1_nMissingHitsAfterVertex_finalCuts", "n-1 N missing hits after vertex", 20, -0.5, 19.5);
   h_nMinus1_leptonD0Sig_finalCuts=initHist(h_nMinus1_leptonD0Sig_finalCuts,"nMinus1_leptonD0Sig_finalCuts", "n-1 Min Lepton D0 Significance, no smearing", 60, -20, 10 );
@@ -86,8 +141,12 @@ nameSuffix(suffix)
   h_nMinus1_subleadingSCEt_finalCuts=initHist(h_nMinus1_subleadingSCEt_finalCuts,"nMinus1_subleadingSCEt_finalCuts", "n-1 subleading SC Et, final cuts",100,0,150);
   h_nMinus1_relIso_finalCuts=initHist(h_nMinus1_relIso_finalCuts,"nMinus1_relIso_finalCuts", "n-1 lepton rel iso, final cuts", 40, 0, 0.5);
   h_nMinus1_absIso_finalCuts=initHist(h_nMinus1_absIso_finalCuts,"nMinus1_absIso_finalCuts", "n-1 lepton abs iso, final cuts", 80, 0, 20);
+  h_nMinus1_maxTrackChi2_finalCuts=initHist(h_nMinus1_maxTrackChi2_finalCuts,"nMinus1_maxTrackChi2_finalCuts", "n-1 max lepton trackChi2, final cuts", 80, 0, 20);
 
-  h_nMinus1_leptonD0Sig_vs_LxySig_finalCuts = new TH2F(TString("nMinus1_leptonD0Sig_vs_LxySig_finalCuts")+nameSuffix, "d0 sig vs lxy sig", 40, 0, 10, 40, 0, 20 );
+//  h_nMinus1_leptonD0Sig_vs_LxySig_finalCuts = new TH2F(TString("nMinus1_leptonD0Sig_vs_LxySig_finalCuts")+nameSuffix, "d0 sig vs lxy sig", 40, 0, 20, 40, 0, 20 );
+  h_nMinus1_leptonD0Sig_vs_LxySig_finalCuts = new TH2F(TString("nMinus1_leptonD0Sig_vs_LxySig_finalCuts")+nameSuffix, "d0 sig vs lxy sig", 20, 0, 20, 20, 0, 20 );
+  h_nMinus1_vertexChi2_vs_LxySig_finalCuts = new TH2F(TString("nMinus1_vertexChi2_vs_LxySig_finalCuts")+nameSuffix, "vertex chi2 vs lxy sig", 160, 0, 40, 160, 0, 40 );
+  h_nMinus1_maxTrackChi2_vs_LxySig_finalCuts = new TH2F(TString("nMinus1_maxTrackChi2_vs_LxySig_finalCuts")+nameSuffix, "min track chi2 vs lxy sig", 160, 0, 40, 160, 0, 40 );
 
   // n-1 final cuts, gen matched signal only
   h_nMinus1_isolationLeptonL_finalCuts_genMatched=initHist(h_nMinus1_isolationLeptonL_finalCuts_genMatched,"nMinus1_isolationLeptonL_finalCuts_genMatched", "n-1 Isolation low pt lepton, final cuts, gen matched signal", 80, 0, 20 );
@@ -215,7 +274,7 @@ nameSuffix(suffix)
   h_leptonLSCEta_removedLifetimeCuts=initHist(h_leptonLSCEta_removedLifetimeCuts,"leptonLSCEta_removedLifetimeCuts", "Eta subleading lepton, removed lifetime cuts",60,-3,3);
   h_leptonLCaloMatchDeltaR_removedLifetimeCuts=initHist(h_leptonLCaloMatchDeltaR_removedLifetimeCuts,"leptonLCaloMatchDeltaR_removedLifetimeCuts","Lepton L calo match delta R, removed lifetime cuts",20,0,0.1);
   h_leptonHCaloMatchDeltaR_removedLifetimeCuts=initHist(h_leptonHCaloMatchDeltaR_removedLifetimeCuts,"leptonHCaloMatchDeltaR_removedLifetimeCuts","Lepton H calo match delta R, removed lifetime cuts",20,0,0.1);
-  h_Lxy_removedLifetimeCuts=initHist(h_Lxy_removedLifetimeCuts,"Lxy_removedLifetimeCuts", "Lxy removed lifetime cuts",100,0,70);
+  h_Lxy_removedLifetimeCuts=initHist(h_Lxy_removedLifetimeCuts,"Lxy_removedLifetimeCuts", "Lxy removed lifetime cuts",100,0,100);
   h_LxySig_removedLifetimeCuts=initHist(h_LxySig_removedLifetimeCuts,"LxySig_removedLifetimeCuts","Lxy/sigma removed lifetime cuts",60,-30,30);
 
   h_deltaPhi_removedLifetimeCollCuts=initHist(h_deltaPhi_removedLifetimeCollCuts,"deltaPhi_removedLifetimeCollCuts", "n-1 Delta Phi, removed lifetime cuts", 40, 0, 4);
@@ -266,12 +325,26 @@ nameSuffix(suffix)
   h_nMinus1_trigDeltaR_removedLifetimeCollCuts=initHist(h_nMinus1_trigDeltaR_removedLifetimeCollCuts,"nMinus1_trigDeltaR_removedLifetimeCollCuts","TO-track deltaR",20,0,0.2);
   h_nMinus1_photonDeltaR_removedLifetimeCollCuts=initHist(h_nMinus1_photonDeltaR_removedLifetimeCollCuts,"nMinus1_photonDeltaR_removedLifetimeCollCuts","Photon-track deltaR",20,0,0.2);
 
+//
+//n-3 Plots for Final and Control regions
+//
+
+ h_nMinus3_3D_finalCollCuts = new TH3F ("nMinus3_3D_finalCollCuts","n-3 Final Coll Cuts", 50, -1.0, -0.5, 20, 0, 20, 40, 0, 40);
+ h_nMinus3_3D_finalCollCuts->GetXaxis()->SetTitle("cos(#theta)"); 
+ h_nMinus3_3D_finalCollCuts->GetYaxis()->SetTitle("Abs d_{0} Significance"); 
+ h_nMinus3_3D_finalCollCuts->GetZaxis()->SetTitle("Abs L_{xy} Significance"); 
+
+ h_nMinus3_3D_controlCollCuts = new TH3F ("nMinus3_3D_controlCollCuts","n-3 Control Coll Cuts", 50, -1.0, -0.5, 20, 0, 20, 40, 0, 40);
+ h_nMinus3_3D_controlCollCuts->GetXaxis()->SetTitle("cos(#theta)"); 
+ h_nMinus3_3D_controlCollCuts->GetYaxis()->SetTitle("Abs d_{0} Significance"); 
+ h_nMinus3_3D_controlCollCuts->GetZaxis()->SetTitle("Abs L_{xy} Significance"); 
+
   //
  // Final Collinearity Cuts
  //
  h_mass_finalCollCuts=initHist(h_mass_finalCollCuts,"Mass_finalCollCuts","Dilepton mass, loose cuts",75,0,500);
  h_mt_finalCollCuts=initHist(h_mt_finalCollCuts,"Mt_finalCollCuts", "Dilepton Mt, final cuts", 75, 0, 500);
- h_Lxy_finalCollCuts=initHist(h_Lxy_finalCollCuts,"Lxy_finalCollCuts", "Lxy loose cuts",100,0,70);
+ h_Lxy_finalCollCuts=initHist(h_Lxy_finalCollCuts,"Lxy_finalCollCuts", "Lxy loose cuts",100,0,100);
  h_nRecoPV_finalCollCuts=initHist(h_nRecoPV_finalCollCuts,"nRecoPV_finalCollCuts", "Number reco PV, final cuts", 50, 0, 50);
  h_leptonHSCEta_finalCollCuts=initHist(h_leptonHSCEta_finalCollCuts,"leptonHSCEta_finalCollCuts", "Eta leading lepton, final cuts",60,-3,3);
  h_leptonLSCEta_finalCollCuts=initHist(h_leptonLSCEta_finalCollCuts,"leptonLSCEta_finalCollCuts", "Eta subleading lepton, final cuts",60,-3,3);
@@ -282,16 +355,31 @@ nameSuffix(suffix)
  h_ptMinusE_finalCollCuts=initHist(h_ptMinusE_finalCollCuts,"ptMinusE_finalCollCuts","Track pt over ECAL E",20,0,0.5);
  h_nCandsPerEvent_finalCollCuts=initHist(h_nCandsPerEvent_finalCollCuts,"nCandsPerEvent_finalCollCuts", "Number of candidates found per event",5, -0.5, 4.5);
  h_mass_bestCand_finalCollCuts=initHist(h_mass_bestCand_finalCollCuts,"Mass_bestCand_finalCollCuts","Dilepton mass, loose cuts",75,0,500);
- h_Lxy_bestCand_finalCollCuts=initHist(h_Lxy_bestCand_finalCollCuts,"Lxy_bestCand_finalCollCuts","Dilepton mass, loose cuts",100,0,70);
+ h_Lxy_bestCand_finalCollCuts=initHist(h_Lxy_bestCand_finalCollCuts,"Lxy_bestCand_finalCollCuts","Dilepton mass, loose cuts",100,0,100);
+ h_signal_numberOfValidMuonHits_finalCollCuts=initHist(h_signal_numberOfValidMuonHits_finalCollCuts, "signal_numberOfValidMuonHits_finalCollCuts", "Leptons Passing Final Selection, final collCuts", 12, 0, 60);
+ h_signal_numberOfValidMuonHits_finalCollCuts->GetXaxis()->SetTitle("numberOfValidMuonHits");
+ h_signal_numberOfValidMuonDTHits_finalCollCuts=initHist(h_signal_numberOfValidMuonDTHits_finalCollCuts, "signal_numberOfValidMuonDTHits_finalCollCuts", "Leptons Passing Final Selection, final collCuts", 12, 0, 60);
+ h_signal_numberOfValidMuonDTHits_finalCollCuts->GetXaxis()->SetTitle("numberOfValidMuonDTHits");
+ h_signal_numberOfValidMuonCSCHits_finalCollCuts=initHist(h_signal_numberOfValidMuonCSCHits_finalCollCuts, "signal_numberOfValidMuonCSCHits_finalCollCuts", "Leptons Passing Final Selection, final collCuts", 12, 0, 60);
+ h_signal_numberOfValidMuonCSCHits_finalCollCuts->GetXaxis()->SetTitle("numberOfValidMuonCSCHits");
 
+//
+ h_minLepton_d0Sig_mutrack_finalColl=new TH1F("MinLepton_d0Sig_mutrack_finalColl", "Overlapped MuTrack min Lepton D0 Sig", 20, 0, 20);  
  // n-1 final cuts
  h_nMinus1_minValidStations_finalCollCuts=initHist(h_nMinus1_minValidStations_finalCollCuts,"nMinus1_minValidStations_finalCollCuts", "n-1 lepton minimum Valid Stations, final cuts",10,0,10);
- h_nMinus1_DileptonAbsLxySig_finalCollCuts=initHist(h_nMinus1_DileptonAbsLxySig_finalCollCuts,"nMinus1_DileptonAbsLxy_finalCollCuts", "n-1 candidate min Abs Lxy, final cuts",40,0,40);
+ h_nMinus1_minValidHits_finalCollCuts=initHist(h_nMinus1_minValidHits_finalCollCuts,"nMinus1_minValidHits_finalCollCuts", "n-1 lepton minimum Muon Valid Hits, final cuts",55,0,55);
+ h_nMinus1_minValidDTHits_finalCollCuts=initHist(h_nMinus1_minValidDTHits_finalCollCuts,"nMinus1_minValidDTHits_finalCollCuts", "n-1 lepton minimum Muon Valid DT Hits, final cuts",55,0,55);
+ h_nMinus1_minValidCSCHits_finalCollCuts=initHist(h_nMinus1_minValidCSCHits_finalCollCuts,"nMinus1_minValidCSCHits_finalCollCuts", "n-1 lepton minimum Muon Valid CSC Hits, final cuts",55,0,55);
+ h_nMinus1_DileptonAbsLxySig_finalCollCuts=initHist(h_nMinus1_DileptonAbsLxySig_finalCollCuts,"nMinus1_DileptonAbsLxySig_finalCollCuts", "n-1 candidate min Abs Lxy significance, final cuts",40,0,40);
+ h_nMinus1_AbsLeptonD0_finalCollCuts=initHist(h_nMinus1_AbsLeptonD0_finalCollCuts,"nMinus1_AbsLeptonD0_finalCollCuts", "n-1  min Lepton Abs D0, final cuts",100,0,100);
+ h_nMinus1_AbsD0_finalCollCuts=initHist(h_nMinus1_AbsD0_finalCollCuts,"nMinus1_AbsD0_finalCollCuts", "n-1  min Lepton Abs D0, final cuts",250,0,250);
+ h_nMinus1_AbsDZ_finalCollCuts=initHist(h_nMinus1_AbsDZ_finalCollCuts,"nMinus1_AbsDZ_finalCollCuts", "n-1  min Lepton Abs DZ, final cuts",250,0,250);
+ h_nMinus1_AbsDZSignificance_finalCollCuts=initHist(h_nMinus1_AbsDZSignificance_finalCollCuts,"nMinus1_AbsDZSignificance_finalCollCuts", "n-1  min Lepton Abs DZSignificance, final cuts",50,0,50);
  h_nMinus1_oppositeCharge_finalCollCuts=initHist(h_nMinus1_oppositeCharge_finalCollCuts,"nMinus1_oppositeCharge_finalCollCuts", "n-1 lepton opposite charges, final cuts",5,-2,2);
  h_nMinus1_vertexChi2_finalCollCuts=initHist(h_nMinus1_vertexChi2_finalCollCuts,"nMinus1_vertexChi2_finalCollCuts", "n-1 Vertex Chi^2, final cuts", 20, 0, 20);
  h_nMinus1_deltaPhi_finalCollCuts=initHist(h_nMinus1_deltaPhi_finalCollCuts,"nMinus1_deltaPhi_finalCollCuts", "n-1 Delta Phi, final cuts", 40, 0, 4);
  h_nMinus1_cosine_finalCollCuts=initHist(h_nMinus1_cosine_finalCollCuts,"nMinus1_cosine_finalCollCuts", "n-1 Cosine, final cuts",22,-1.1,1.1);
- h_nMinus1_deltaR_finalCollCuts=initHist(h_nMinus1_deltaR_finalCollCuts,"nMinus1_deltaR_finalCollCuts", "n-1 delta R, final cuts",10,0,0.5);
+ h_nMinus1_deltaR_finalCollCuts=initHist(h_nMinus1_deltaR_finalCollCuts,"nMinus1_deltaR_finalCollCuts", "n-1 delta R, final cuts",20,0,1.0);
  h_nMinus1_nHitsBeforeVertex_finalCollCuts=initHist(h_nMinus1_nHitsBeforeVertex_finalCollCuts,"nMinus1_nHitsBeforeVertex_finalCollCuts", "n-1 N hits before vertex", 5, -0.5, 4.5);
  h_nMinus1_nMissingHitsAfterVertex_finalCollCuts=initHist(h_nMinus1_nMissingHitsAfterVertex_finalCollCuts,"nMinus1_nMissingHitsAfterVertex_finalCollCuts", "n-1 N missing hits after vertex", 20, -0.5, 19.5);
  h_nMinus1_minMissingHitsAfterVertex_finalCollCuts=initHist(h_nMinus1_minMissingHitsAfterVertex_finalCollCuts,"nMinus1_minMissingHitsAfterVertex_finalCollCuts", "n-1 N missing hits after vertex", 20, -0.5, 19.5);
@@ -303,7 +391,25 @@ nameSuffix(suffix)
  h_nMinus1_subleadingSCEt_finalCollCuts=initHist(h_nMinus1_subleadingSCEt_finalCollCuts,"nMinus1_subleadingSCEt_finalCollCuts", "n-1 subleading SC Et, final cuts",100,0,150);
  h_nMinus1_relIso_finalCollCuts=initHist(h_nMinus1_relIso_finalCollCuts,"nMinus1_relIso_finalCollCuts", "n-1 lepton rel iso, final cuts", 40, 0, 0.5);
  h_nMinus1_absIso_finalCollCuts=initHist(h_nMinus1_absIso_finalCollCuts,"nMinus1_absIso_finalCollCuts", "n-1 lepton abs iso, final cuts", 80, 0, 20);
+ h_nMinus1_maxTrackChi2_finalCollCuts=initHist(h_nMinus1_maxTrackChi2_finalCollCuts,"nMinus1_maxTrackChi2_finalCollCuts", "n-1 max lepton trackChi2, final collCuts", 80, 0, 20);
+ h_nMinus1_muonTimeC_inverseBeta_finalCollCuts=initHist(h_nMinus1_muonTimeC_inverseBeta_finalCollCuts,"nMinus1_muonTimeC_inverseBeta_finalCollCuts", "n-1 two leptons inverseBeta, final collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeC_freeInverseBeta_finalCollCuts=initHist(h_nMinus1_muonTimeC_freeInverseBeta_finalCollCuts,"nMinus1_muonTimeC_freeInverseBeta_finalCollCuts", "n-1 two leptons freeInverseBeta, final collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeC_timeAtIpInOut_finalCollCuts=initHist(h_nMinus1_muonTimeC_timeAtIpInOut_finalCollCuts,"nMinus1_muonTimeC_timeAtIpInOut_finalCollCuts", "n-1 two leptons timeAtIpInOut, final collCuts", 20, -40, 40);
+ h_nMinus1_muonTimeC_timeAtIpOutIn_finalCollCuts=initHist(h_nMinus1_muonTimeC_timeAtIpOutIn_finalCollCuts,"nMinus1_muonTimeC_timeAtIpOutIn_finalCollCuts", "n-1 two leptons timeAtIpOutIn, final collCuts", 20, -40, 40);
+ h_nMinus1_muonTimeDT_inverseBeta_finalCollCuts=initHist(h_nMinus1_muonTimeDT_inverseBeta_finalCollCuts,"nMinus1_muonTimeDT_inverseBeta_finalCollCuts", "n-1 two leptons inverseBeta, final collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeDT_freeInverseBeta_finalCollCuts=initHist(h_nMinus1_muonTimeDT_freeInverseBeta_finalCollCuts,"nMinus1_muonTimeDT_freeInverseBeta_finalCollCuts", "n-1 two leptons freeInverseBeta, final collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeDT_timeAtIpInOut_finalCollCuts=initHist(h_nMinus1_muonTimeDT_timeAtIpInOut_finalCollCuts,"nMinus1_muonTimeDT_timeAtIpInOut_finalCollCuts", "n-1 two leptons timeAtIpInOut, final collCuts", 20, -40, 40);
+ h_nMinus1_muonTimeDT_timeAtIpOutIn_finalCollCuts=initHist(h_nMinus1_muonTimeDT_timeAtIpOutIn_finalCollCuts,"nMinus1_muonTimeDT_timeAtIpOutIn_finalCollCuts", "n-1 two leptons timeAtIpOutIn, final collCuts", 20, -40, 40);
+ h_nMinus1_muonTimeCSC_inverseBeta_finalCollCuts=initHist(h_nMinus1_muonTimeCSC_inverseBeta_finalCollCuts,"nMinus1_muonTimeCSC_inverseBeta_finalCollCuts", "n-1 two leptons inverseBeta, final collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeCSC_freeInverseBeta_finalCollCuts=initHist(h_nMinus1_muonTimeCSC_freeInverseBeta_finalCollCuts,"nMinus1_muonTimeCSC_freeInverseBeta_finalCollCuts", "n-1 two leptons freeInverseBeta, final collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeCSC_timeAtIpInOut_finalCollCuts=initHist(h_nMinus1_muonTimeCSC_timeAtIpInOut_finalCollCuts,"nMinus1_muonTimeCSC_timeAtIpInOut_finalCollCuts", "n-1 two leptons timeAtIpInOut, final collCuts", 20, -40, 40);
+ h_nMinus1_muonTimeCSC_timeAtIpOutIn_finalCollCuts=initHist(h_nMinus1_muonTimeCSC_timeAtIpOutIn_finalCollCuts,"nMinus1_muonTimeCSC_timeAtIpOutIn_finalCollCuts", "n-1 two leptons timeAtIpOutIn, final collCuts", 20, -40, 40);
 
+ // h_nMinus1_leptonD0Sig_vs_LxySig_finalCollCuts = new TH2F(TString("nMinus1_leptonD0Sig_vs_LxySig_finalCollCuts")+nameSuffix, "n-1 min d0 sig vs lxy sig", 40, 0, 20, 40, 0, 20 );
+ h_nMinus1_leptonD0Sig_vs_LxySig_finalCollCuts = new TH2F(TString("nMinus1_leptonD0Sig_vs_LxySig_finalCollCuts")+nameSuffix, "n-1 min d0 sig vs lxy sig", 160, 0, 40, 160, 0, 40 );
+ h_nMinus1_vertexChi2_vs_LxySig_finalCollCuts = new TH2F(TString("nMinus1_vertexChi2_vs_LxySig_finalCollCuts")+nameSuffix, "n-1 vertex chi2 vs lxy sig", 160, 0, 40, 160, 0, 40 );
+ h_nMinus1_maxTrackChi2_vs_LxySig_finalCollCuts = new TH2F(TString("nMinus1_maxTrackChi2_vs_LxySig_finalCollCuts")+nameSuffix, "n-1 min track chi2 vs lxy sig", 160, 0, 40, 160, 0, 40 );
+ h_nMinus1_lepton_Eta_vs_Phi_finalCollCuts = new TH3F(TString("nMinus1_lepton_Eta_vs_Phi_finalCollCuts")+nameSuffix, "n-1 min Lepton eta vs. Phi", 40, -2.0, 2.0, 60, 3.14, -3.14, 40, 0, 20);
  // Photon ID Cuts
  h_photonR9_finalCollCuts=initHist(h_photonR9_finalCollCuts,"PhotonR9_finalCollCuts", "Photon R9, final cuts", 20, 0, 1.1);
  h_photonSigmaIetaIeta_barrel_finalCollCuts=initHist(h_photonSigmaIetaIeta_barrel_finalCollCuts,"PhotonSigmaIetaIeta_barrel_finalCollCuts", "Photon SigmaIetaIeta, barrel, final cuts", 40, 0, 0.05);
@@ -325,7 +431,7 @@ nameSuffix(suffix)
  //
  h_mass_looseCollCuts=initHist(h_mass_looseCollCuts,"Mass_looseCollCuts","Dilepton mass, loose cuts",75,0,500);
  h_mt_looseCollCuts=initHist(h_mt_looseCollCuts,"Mt_looseCollCuts", "Dilepton Mt, final cuts", 75, 0, 500);
- h_Lxy_looseCollCuts=initHist(h_Lxy_looseCollCuts,"Lxy_looseCollCuts", "Lxy loose cuts",100,0,70);
+ h_Lxy_looseCollCuts=initHist(h_Lxy_looseCollCuts,"Lxy_looseCollCuts", "Lxy loose cuts",100,0,100);
  h_nRecoPV_looseCollCuts=initHist(h_nRecoPV_looseCollCuts,"nRecoPV_looseCollCuts", "Number reco PV, final cuts", 50, 0, 50);
  h_leptonHSCEta_looseCollCuts=initHist(h_leptonHSCEta_looseCollCuts,"leptonHSCEta_looseCollCuts", "Eta leading lepton, final cuts",60,-3,3);
  h_leptonLSCEta_looseCollCuts=initHist(h_leptonLSCEta_looseCollCuts,"leptonLSCEta_looseCollCuts", "Eta subleading lepton, final cuts",60,-3,3);
@@ -338,12 +444,19 @@ nameSuffix(suffix)
 
  // n-1 final cuts
  h_nMinus1_minValidStations_looseCollCuts=initHist(h_nMinus1_minValidStations_looseCollCuts,"nMinus1_minValidStations_looseCollCuts", "n-1 lepton minimum Valid Stations, final cuts",10,0,10);
- h_nMinus1_DileptonAbsLxySig_looseCollCuts=initHist(h_nMinus1_DileptonAbsLxySig_looseCollCuts,"nMinus1_DileptonAbsLxy_looseCollCuts", "n-1 candidate min Abs Lxy, final cuts",40,0,40);
+ h_nMinus1_minValidHits_looseCollCuts=initHist(h_nMinus1_minValidHits_looseCollCuts,"nMinus1_minValidHits_looseCollCuts", "n-1 lepton minimum Muon Valid Hits, loose cuts",55,0,55);
+ h_nMinus1_minValidDTHits_looseCollCuts=initHist(h_nMinus1_minValidDTHits_looseCollCuts,"nMinus1_minValidDTHits_looseCollCuts", "n-1 lepton minimum Muon Valid DT Hits, loose cuts",55,0,55);
+ h_nMinus1_minValidCSCHits_looseCollCuts=initHist(h_nMinus1_minValidCSCHits_looseCollCuts,"nMinus1_minValidCSCHits_looseCollCuts", "n-1 lepton minimum Muon Valid CSC Hits, loose cuts",55,0,55);
+ h_nMinus1_DileptonAbsLxySig_looseCollCuts=initHist(h_nMinus1_DileptonAbsLxySig_looseCollCuts,"nMinus1_DileptonAbsLxySig_looseCollCuts", "n-1 candidate min Abs Lxy significance, final cuts",40,0,40);
+ h_nMinus1_AbsLeptonD0_looseCollCuts=initHist(h_nMinus1_AbsLeptonD0_looseCollCuts,"nMinus1_AbsLeptonD0_looseCollCuts", "n-1  min Lepton Abs D0, final cuts",100,0,100);
+ h_nMinus1_AbsD0_looseCollCuts=initHist(h_nMinus1_AbsD0_looseCollCuts,"nMinus1_AbsD0_looseCollCuts", "n-1  min Lepton Abs D0, loose cuts",250,0,250);
+ h_nMinus1_AbsDZ_looseCollCuts=initHist(h_nMinus1_AbsDZ_looseCollCuts,"nMinus1_AbsDZ_looseCollCuts", "n-1  min Lepton Abs DZ, loose cuts",250,0,250);
+ h_nMinus1_AbsDZSignificance_looseCollCuts=initHist(h_nMinus1_AbsDZSignificance_looseCollCuts,"nMinus1_AbsDZSignificance_looseCollCuts", "n-1  min Lepton Abs DZSignificance, loose cuts",50,0,50);
  h_nMinus1_oppositeCharge_looseCollCuts=initHist(h_nMinus1_oppositeCharge_looseCollCuts,"nMinus1_oppositeCharge_looseCollCuts", "n-1 lepton opposite charges, final cuts",5,-2,2);
  h_nMinus1_vertexChi2_looseCollCuts=initHist(h_nMinus1_vertexChi2_looseCollCuts,"nMinus1_vertexChi2_looseCollCuts", "n-1 Vertex Chi^2, final cuts", 20, 0, 20);
  h_nMinus1_deltaPhi_looseCollCuts=initHist(h_nMinus1_deltaPhi_looseCollCuts,"nMinus1_deltaPhi_looseCollCuts", "n-1 Delta Phi, final cuts", 40, 0, 4);
  h_nMinus1_cosine_looseCollCuts=initHist(h_nMinus1_cosine_looseCollCuts,"nMinus1_cosine_looseCollCuts", "n-1 Cosine, final cuts",22,-1.1,1.1);
- h_nMinus1_deltaR_looseCollCuts=initHist(h_nMinus1_deltaR_looseCollCuts,"nMinus1_deltaR_looseCollCuts", "n-1 delta R, final cuts",10,0,0.5);
+ h_nMinus1_deltaR_looseCollCuts=initHist(h_nMinus1_deltaR_looseCollCuts,"nMinus1_deltaR_looseCollCuts", "n-1 delta R, final cuts",20,0,1.0);
  h_nMinus1_nHitsBeforeVertex_looseCollCuts=initHist(h_nMinus1_nHitsBeforeVertex_looseCollCuts,"nMinus1_nHitsBeforeVertex_looseCollCuts", "n-1 N hits before vertex", 5, -0.5, 4.5);
  h_nMinus1_nMissingHitsAfterVertex_looseCollCuts=initHist(h_nMinus1_nMissingHitsAfterVertex_looseCollCuts,"nMinus1_nMissingHitsAfterVertex_looseCollCuts", "n-1 N missing hits after vertex", 20, -0.5, 19.5);
  h_nMinus1_minMissingHitsAfterVertex_looseCollCuts=initHist(h_nMinus1_minMissingHitsAfterVertex_looseCollCuts,"nMinus1_minMissingHitsAfterVertex_looseCollCuts", "n-1 N missing hits after vertex", 20, -0.5, 19.5);
@@ -355,6 +468,26 @@ nameSuffix(suffix)
  h_nMinus1_subleadingSCEt_looseCollCuts=initHist(h_nMinus1_subleadingSCEt_looseCollCuts,"nMinus1_subleadingSCEt_looseCollCuts", "n-1 subleading SC Et, final cuts",100,0,150);
  h_nMinus1_relIso_looseCollCuts=initHist(h_nMinus1_relIso_looseCollCuts,"nMinus1_relIso_looseCollCuts", "n-1 lepton rel iso, final cuts", 40, 0, 0.5);
  h_nMinus1_absIso_looseCollCuts=initHist(h_nMinus1_absIso_looseCollCuts,"nMinus1_absIso_looseCollCuts", "n-1 lepton abs iso, final cuts", 80, 0, 20);
+ h_nMinus1_maxTrackChi2_looseCollCuts=initHist(h_nMinus1_maxTrackChi2_looseCollCuts,"nMinus1_maxTrackChi2_looseCollCuts", "n-1 max lepton trackChi2, loose collCuts", 80, 0, 20);
+ h_nMinus1_muonTimeC_inverseBeta_looseCollCuts=initHist(h_nMinus1_muonTimeC_inverseBeta_looseCollCuts,"nMinus1_muonTimeC_inverseBeta_looseCollCuts", "n-1 two leptons inverseBeta, loose collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeC_freeInverseBeta_looseCollCuts=initHist(h_nMinus1_muonTimeC_freeInverseBeta_looseCollCuts,"nMinus1_muonTimeC_freeInverseBeta_looseCollCuts", "n-1 two leptons freeInverseBeta, loose collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeC_timeAtIpInOut_looseCollCuts=initHist(h_nMinus1_muonTimeC_timeAtIpInOut_looseCollCuts,"nMinus1_muonTimeC_timeAtIpInOut_looseCollCuts", "n-1 two leptons timeAtIpInOut, loose collCuts", 20, -40, 40);
+ h_nMinus1_muonTimeC_timeAtIpOutIn_looseCollCuts=initHist(h_nMinus1_muonTimeC_timeAtIpOutIn_looseCollCuts,"nMinus1_muonTimeC_timeAtIpOutIn_looseCollCuts", "n-1 two leptons timeAtIpOutIn, loose collCuts", 20, -40, 40);
+ h_nMinus1_muonTimeDT_inverseBeta_looseCollCuts=initHist(h_nMinus1_muonTimeDT_inverseBeta_looseCollCuts,"nMinus1_muonTimeDT_inverseBeta_looseCollCuts", "n-1 two leptons inverseBeta, loose collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeDT_freeInverseBeta_looseCollCuts=initHist(h_nMinus1_muonTimeDT_freeInverseBeta_looseCollCuts,"nMinus1_muonTimeDT_freeInverseBeta_looseCollCuts", "n-1 two leptons freeInverseBeta, loose collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeDT_timeAtIpInOut_looseCollCuts=initHist(h_nMinus1_muonTimeDT_timeAtIpInOut_looseCollCuts,"nMinus1_muonTimeDT_timeAtIpInOut_looseCollCuts", "n-1 two leptons timeAtIpInOut, loose collCuts", 20, -40, 40);
+ h_nMinus1_muonTimeDT_timeAtIpOutIn_looseCollCuts=initHist(h_nMinus1_muonTimeDT_timeAtIpOutIn_looseCollCuts,"nMinus1_muonTimeDT_timeAtIpOutIn_looseCollCuts", "n-1 two leptons timeAtIpOutIn, loose collCuts", 20, -40, 40);
+ h_nMinus1_muonTimeCSC_inverseBeta_looseCollCuts=initHist(h_nMinus1_muonTimeCSC_inverseBeta_looseCollCuts,"nMinus1_muonTimeCSC_inverseBeta_looseCollCuts", "n-1 two leptons inverseBeta, loose collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeCSC_freeInverseBeta_looseCollCuts=initHist(h_nMinus1_muonTimeCSC_freeInverseBeta_looseCollCuts,"nMinus1_muonTimeCSC_freeInverseBeta_looseCollCuts", "n-1 two leptons freeInverseBeta, loose collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeCSC_timeAtIpInOut_looseCollCuts=initHist(h_nMinus1_muonTimeCSC_timeAtIpInOut_looseCollCuts,"nMinus1_muonTimeCSC_timeAtIpInOut_looseCollCuts", "n-1 two leptons timeAtIpInOut, loose collCuts", 20, -40, 40);
+ h_nMinus1_muonTimeCSC_timeAtIpOutIn_looseCollCuts=initHist(h_nMinus1_muonTimeCSC_timeAtIpOutIn_looseCollCuts,"nMinus1_muonTimeCSC_timeAtIpOutIn_looseCollCuts", "n-1 two leptons timeAtIpOutIn, loose collCuts", 20, -40, 40);
+
+// h_nMinus1_leptonD0Sig_vs_LxySig_looseCollCuts = new TH2F(TString("nMinus1_leptonD0Sig_vs_LxySig_looseCollCuts")+nameSuffix, "n-1 min d0 sig vs lxy sig", 40, 0, 20, 40, 0, 20 );
+ h_nMinus1_leptonD0Sig_vs_LxySig_looseCollCuts = new TH2F(TString("nMinus1_leptonD0Sig_vs_LxySig_looseCollCuts")+nameSuffix, "n-1 min d0 sig vs lxy sig", 160, 0, 40, 160, 0, 40 );
+ h_nMinus1_vertexChi2_vs_LxySig_looseCollCuts = new TH2F(TString("nMinus1_vertexChi2_vs_LxySig_looseCollCuts")+nameSuffix, "n-1 vertex chi2 vs lxy sig", 160, 0, 40, 160, 0, 40 );
+ h_nMinus1_maxTrackChi2_vs_LxySig_looseCollCuts = new TH2F(TString("nMinus1_maxTrackChi2_vs_LxySig_looseCollCuts")+nameSuffix, "n-1 min track chi2 vs lxy sig", 160, 0, 40, 160, 0, 40 );
+
+ h_nMinus1_lepton_Eta_vs_Phi_looseCollCuts = new TH3F(TString("nMinus1_lepton_Eta_vs_Phi_looseCollCuts")+nameSuffix, "n-1 min Lepton eta vs. Phi", 40, -2.0, 2.0, 60, 3.14, -3.14, 40, 0, 20);
  // Photon ID Cuts
  h_photonR9_looseCollCuts=initHist(h_photonR9_looseCollCuts,"PhotonR9_looseCollCuts", "Photon R9, final cuts", 20, 0, 1.1);
  h_photonSigmaIetaIeta_barrel_looseCollCuts=initHist(h_photonSigmaIetaIeta_barrel_looseCollCuts,"PhotonSigmaIetaIeta_barrel_looseCollCuts", "Photon SigmaIetaIeta, barrel, final cuts", 40, 0, 0.05);
@@ -367,7 +500,7 @@ nameSuffix(suffix)
  //
  h_mass_looseControlCollCuts=initHist(h_mass_looseControlCollCuts,"Mass_looseControlCollCuts","Dilepton mass, loose cuts",75,0,500);
  h_mt_looseControlCollCuts=initHist(h_mt_looseControlCollCuts,"Mt_looseControlCollCuts", "Dilepton Mt, final cuts", 75, 0, 500);
- h_Lxy_looseControlCollCuts=initHist(h_Lxy_looseControlCollCuts,"Lxy_looseControlCollCuts", "Lxy loose cuts",100,0,70);
+ h_Lxy_looseControlCollCuts=initHist(h_Lxy_looseControlCollCuts,"Lxy_looseControlCollCuts", "Lxy loose cuts",100,0,100);
  h_nRecoPV_looseControlCollCuts=initHist(h_nRecoPV_looseControlCollCuts,"nRecoPV_looseControlCollCuts", "Number reco PV, final cuts", 50, 0, 50);
  h_leptonHSCEta_looseControlCollCuts=initHist(h_leptonHSCEta_looseControlCollCuts,"leptonHSCEta_looseControlCollCuts", "Eta leading lepton, final cuts",60,-3,3);
  h_leptonLSCEta_looseControlCollCuts=initHist(h_leptonLSCEta_looseControlCollCuts,"leptonLSCEta_looseControlCollCuts", "Eta subleading lepton, final cuts",60,-3,3);
@@ -380,12 +513,19 @@ nameSuffix(suffix)
 
  // n-1 loose control cuts
  h_nMinus1_minValidStations_looseControlCollCuts=initHist(h_nMinus1_minValidStations_looseControlCollCuts,"nMinus1_minValidStations_looseControlCollCuts", "n-1 lepton minimum Valid Stations, final cuts",10,0,10);
- h_nMinus1_DileptonAbsLxySig_looseControlCollCuts=initHist(h_nMinus1_DileptonAbsLxySig_looseControlCollCuts,"nMinus1_DileptonAbsLxy_looseControlCollCuts", "n-1 candidate min Abs Lxy, final cuts",40,0,40);
+ h_nMinus1_minValidHits_looseControlCollCuts=initHist(h_nMinus1_minValidHits_looseControlCollCuts,"nMinus1_minValidHits_looseControlCollCuts", "n-1 lepton minimum Muon Valid Hits, looseControl cuts",55,0,55);
+ h_nMinus1_minValidDTHits_looseControlCollCuts=initHist(h_nMinus1_minValidDTHits_looseControlCollCuts,"nMinus1_minValidDTHits_looseControlCollCuts", "n-1 lepton minimum Muon Valid DT Hits, looseControl cuts",55,0,55);
+ h_nMinus1_minValidCSCHits_looseControlCollCuts=initHist(h_nMinus1_minValidCSCHits_looseControlCollCuts,"nMinus1_minValidCSCHits_looseControlCollCuts", "n-1 lepton minimum Muon Valid CSC Hits, looseControl cuts",55,0,55);
+ h_nMinus1_DileptonAbsLxySig_looseControlCollCuts=initHist(h_nMinus1_DileptonAbsLxySig_looseControlCollCuts,"nMinus1_DileptonAbsLxySig_looseControlCollCuts", "n-1 candidate min Abs significance Lxy, final cuts",40,0,40);
+ h_nMinus1_AbsLeptonD0_looseControlCollCuts=initHist(h_nMinus1_AbsLeptonD0_looseControlCollCuts,"nMinus1_AbsLeptonD0_looseControlCollCuts", "n-1  min Lepton Abs D0, final cuts",100,0,100);
+ h_nMinus1_AbsD0_looseControlCollCuts=initHist(h_nMinus1_AbsD0_looseControlCollCuts,"nMinus1_AbsD0_looseControlCollCuts", "n-1  min Lepton Abs D0, loose Control cuts",250,0,250);
+ h_nMinus1_AbsDZ_looseControlCollCuts=initHist(h_nMinus1_AbsDZ_looseControlCollCuts,"nMinus1_AbsDZ_looseControlCollCuts", "n-1  min Lepton Abs DZ, loose Control cuts",250,0,250);
+ h_nMinus1_AbsDZSignificance_looseControlCollCuts=initHist(h_nMinus1_AbsDZSignificance_looseControlCollCuts,"nMinus1_AbsDZSignificance_looseControlCollCuts", "n-1  min Lepton Abs DZSignificance, loose Control cuts",50,0,50);
  h_nMinus1_oppositeCharge_looseControlCollCuts=initHist(h_nMinus1_oppositeCharge_looseControlCollCuts,"nMinus1_oppositeCharge_looseControlCollCuts", "n-1 lepton opposite charges, final cuts",5,-2,2);
  h_nMinus1_vertexChi2_looseControlCollCuts=initHist(h_nMinus1_vertexChi2_looseControlCollCuts,"nMinus1_vertexChi2_looseControlCollCuts", "n-1 Vertex Chi^2, final cuts", 20, 0, 20);
  h_nMinus1_deltaPhi_looseControlCollCuts=initHist(h_nMinus1_deltaPhi_looseControlCollCuts,"nMinus1_deltaPhi_looseControlCollCuts", "n-1 Delta Phi, final cuts", 40, 0, 4);
  h_nMinus1_cosine_looseControlCollCuts=initHist(h_nMinus1_cosine_looseControlCollCuts,"nMinus1_cosine_looseControlCollCuts", "n-1 Cosine, final cuts",22,-1.1,1.1);
- h_nMinus1_deltaR_looseControlCollCuts=initHist(h_nMinus1_deltaR_looseControlCollCuts,"nMinus1_deltaR_looseControlCollCuts", "n-1 delta R, final cuts",10,0,0.5);
+ h_nMinus1_deltaR_looseControlCollCuts=initHist(h_nMinus1_deltaR_looseControlCollCuts,"nMinus1_deltaR_looseControlCollCuts", "n-1 delta R, final cuts",20,0,1.0);
  h_nMinus1_nHitsBeforeVertex_looseControlCollCuts=initHist(h_nMinus1_nHitsBeforeVertex_looseControlCollCuts,"nMinus1_nHitsBeforeVertex_looseControlCollCuts", "n-1 N hits before vertex", 5, -0.5, 4.5);
  h_nMinus1_nMissingHitsAfterVertex_looseControlCollCuts=initHist(h_nMinus1_nMissingHitsAfterVertex_looseControlCollCuts,"nMinus1_nMissingHitsAfterVertex_looseControlCollCuts", "n-1 N missing hits after vertex", 20, -0.5, 19.5);
  h_nMinus1_minMissingHitsAfterVertex_looseControlCollCuts=initHist(h_nMinus1_minMissingHitsAfterVertex_looseControlCollCuts,"nMinus1_minMissingHitsAfterVertex_looseControlCollCuts", "n-1 N missing hits after vertex", 20, -0.5, 19.5);
@@ -399,8 +539,27 @@ nameSuffix(suffix)
  h_nMinus1_relIso3_looseControlCollCuts=initHist(h_nMinus1_relIso3_looseControlCollCuts,"nMinus1_relIso3_looseControlCollCuts", "n-1 lepton rel iso, final cuts", 40, 0, 0.5);
  h_nMinus1_relIso4_looseControlCollCuts=initHist(h_nMinus1_relIso4_looseControlCollCuts,"nMinus1_relIso4_looseControlCollCuts", "n-1 lepton rel iso, final cuts", 40, 0, 0.5);
  h_nMinus1_relIso5_looseControlCollCuts=initHist(h_nMinus1_relIso5_looseControlCollCuts,"nMinus1_relIso5_looseControlCollCuts", "n-1 lepton rel iso, final cuts", 40, 0, 0.5);
-
  h_nMinus1_absIso_looseControlCollCuts=initHist(h_nMinus1_absIso_looseControlCollCuts,"nMinus1_absIso_looseControlCollCuts", "n-1 lepton abs iso, final cuts", 80, 0, 20);
+ h_nMinus1_maxTrackChi2_looseControlCollCuts=initHist(h_nMinus1_maxTrackChi2_looseControlCollCuts,"nMinus1_maxTrackChi2_looseControlCollCuts", "n-1 max lepton trackChi2, loose controlCollCuts", 80, 0, 20);
+
+ h_nMinus1_muonTimeC_inverseBeta_looseControlCollCuts=initHist(h_nMinus1_muonTimeC_inverseBeta_looseControlCollCuts,"nMinus1_muonTimeC_inverseBeta_looseControlCollCuts", "n-1 two leptons inverseBeta, loose Control collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeC_freeInverseBeta_looseControlCollCuts=initHist(h_nMinus1_muonTimeC_freeInverseBeta_looseControlCollCuts,"nMinus1_muonTimeC_freeInverseBeta_looseControlCollCuts", "n-1 two leptons freeInverseBeta, loose Control collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeC_timeAtIpInOut_looseControlCollCuts=initHist(h_nMinus1_muonTimeC_timeAtIpInOut_looseControlCollCuts,"nMinus1_muonTimeC_timeAtIpInOut_looseControlCollCuts", "n-1 two leptons timeAtIpInOut, loose Control collCuts", 20, -40, 40);
+ h_nMinus1_muonTimeC_timeAtIpOutIn_looseControlCollCuts=initHist(h_nMinus1_muonTimeC_timeAtIpOutIn_looseControlCollCuts,"nMinus1_muonTimeC_timeAtIpOutIn_looseControlCollCuts", "n-1 two leptons timeAtIpOutIn, loose Control collCuts", 20, -40, 40);
+ h_nMinus1_muonTimeDT_inverseBeta_looseControlCollCuts=initHist(h_nMinus1_muonTimeDT_inverseBeta_looseControlCollCuts,"nMinus1_muonTimeDT_inverseBeta_looseControlCollCuts", "n-1 two leptons inverseBeta, loose Control collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeDT_freeInverseBeta_looseControlCollCuts=initHist(h_nMinus1_muonTimeDT_freeInverseBeta_looseControlCollCuts,"nMinus1_muonTimeDT_freeInverseBeta_looseControlCollCuts", "n-1 two leptons freeInverseBeta, loose Control collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeDT_timeAtIpInOut_looseControlCollCuts=initHist(h_nMinus1_muonTimeDT_timeAtIpInOut_looseControlCollCuts,"nMinus1_muonTimeDT_timeAtIpInOut_looseControlCollCuts", "n-1 two leptons timeAtIpInOut, loose Control collCuts", 20, -40, 40);
+ h_nMinus1_muonTimeDT_timeAtIpOutIn_looseControlCollCuts=initHist(h_nMinus1_muonTimeDT_timeAtIpOutIn_looseControlCollCuts,"nMinus1_muonTimeDT_timeAtIpOutIn_looseControlCollCuts", "n-1 two leptons timeAtIpOutIn, loose Control collCuts", 20, -40, 40);
+ h_nMinus1_muonTimeCSC_inverseBeta_looseControlCollCuts=initHist(h_nMinus1_muonTimeCSC_inverseBeta_looseControlCollCuts,"nMinus1_muonTimeCSC_inverseBeta_looseControlCollCuts", "n-1 two leptons inverseBeta, loose Control collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeCSC_freeInverseBeta_looseControlCollCuts=initHist(h_nMinus1_muonTimeCSC_freeInverseBeta_looseControlCollCuts,"nMinus1_muonTimeCSC_freeInverseBeta_looseControlCollCuts", "n-1 two leptons freeInverseBeta, loose Control collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeCSC_timeAtIpInOut_looseControlCollCuts=initHist(h_nMinus1_muonTimeCSC_timeAtIpInOut_looseControlCollCuts,"nMinus1_muonTimeCSC_timeAtIpInOut_looseControlCollCuts", "n-1 two leptons timeAtIpInOut, loose Control collCuts", 20, -40, 40);
+ h_nMinus1_muonTimeCSC_timeAtIpOutIn_looseControlCollCuts=initHist(h_nMinus1_muonTimeCSC_timeAtIpOutIn_looseControlCollCuts,"nMinus1_muonTimeCSC_timeAtIpOutIn_looseControlCollCuts", "n-1 two leptons timeAtIpOutIn, loose Control collCuts", 20, -40, 40);
+// h_nMinus1_leptonD0Sig_vs_LxySig_looseControlCollCuts = new TH2F(TString("nMinus1_leptonD0Sig_vs_LxySig_looseControlCollCuts")+nameSuffix, "n-1 min d0 sig vs lxy sig", 40, 0, 20, 40, 0, 20 );
+ h_nMinus1_leptonD0Sig_vs_LxySig_looseControlCollCuts = new TH2F(TString("nMinus1_leptonD0Sig_vs_LxySig_looseControlCollCuts")+nameSuffix, "n-1 min d0 sig vs lxy sig", 160, 0, 40, 160, 0, 40 );
+ h_nMinus1_vertexChi2_vs_LxySig_looseControlCollCuts = new TH2F(TString("nMinus1_vertexChi2_vs_LxySig_looseControlCollCuts")+nameSuffix, "n-1 vertex chi2 vs lxy sig", 160, 0, 40, 160, 0, 40 );
+ h_nMinus1_maxTrackChi2_vs_LxySig_looseControlCollCuts = new TH2F(TString("nMinus1_maxTrackChi2_vs_LxySig_looseControlCollCuts")+nameSuffix, "n-1 min track chi2 vs lxy sig", 160, 0, 40, 160, 0, 40 );
+
+ h_nMinus1_lepton_Eta_vs_Phi_looseControlCollCuts = new TH3F(TString("nMinus1_lepton_Eta_vs_Phi_looseControlCollCuts")+nameSuffix, "n-1 min Lepton eta vs. Phi", 40, -2.0, 2.0, 60, 3.14, -3.14, 40, 0, 20);
  // Photon ID Cuts
  h_photonR9_looseControlCollCuts=initHist(h_photonR9_looseControlCollCuts,"PhotonR9_looseControlCollCuts", "Photon R9, final cuts", 20, 0, 1.1);
  h_photonSigmaIetaIeta_barrel_looseControlCollCuts=initHist(h_photonSigmaIetaIeta_barrel_looseControlCollCuts,"PhotonSigmaIetaIeta_barrel_looseControlCollCuts", "Photon SigmaIetaIeta, barrel, final cuts", 40, 0, 0.05);
@@ -413,7 +572,7 @@ nameSuffix(suffix)
  //
  h_mass_controlCollCuts=initHist(h_mass_controlCollCuts,"Mass_controlCollCuts","Dilepton mass,  cuts",75,0,500);
  h_mt_controlCollCuts=initHist(h_mt_controlCollCuts,"Mt_controlCollCuts", "Dilepton Mt, final cuts", 75, 0, 500);
- h_Lxy_controlCollCuts=initHist(h_Lxy_controlCollCuts,"Lxy_controlCollCuts", "Lxy  cuts",100,0,70);
+ h_Lxy_controlCollCuts=initHist(h_Lxy_controlCollCuts,"Lxy_controlCollCuts", "Lxy  cuts",100,0,100);
  h_nRecoPV_controlCollCuts=initHist(h_nRecoPV_controlCollCuts,"nRecoPV_controlCollCuts", "Number reco PV, final cuts", 50, 0, 50);
  h_leptonHSCEta_controlCollCuts=initHist(h_leptonHSCEta_controlCollCuts,"leptonHSCEta_controlCollCuts", "Eta leading lepton, final cuts",60,-3,3);
  h_leptonLSCEta_controlCollCuts=initHist(h_leptonLSCEta_controlCollCuts,"leptonLSCEta_controlCollCuts", "Eta subleading lepton, final cuts",60,-3,3);
@@ -423,15 +582,29 @@ nameSuffix(suffix)
  h_ptOverE_controlCollCuts=initHist(h_ptOverE_controlCollCuts,"ptOverE_controlCollCuts","Track pt over ECAL E",20,0,2);
  h_ptMinusE_controlCollCuts=initHist(h_ptMinusE_controlCollCuts,"ptMinusE_controlCollCuts","Track pt over ECAL E",20,0,0.5);
  h_nCandsPerEvent_controlCollCuts=initHist(h_nCandsPerEvent_controlCollCuts,"nCandsPerEvent_controlCollCuts", "Number of candidates found per event",5, -0.5, 4.5);
-
+ h_data_numberOfValidMuonHits_controlCollCuts=initHist(h_data_numberOfValidMuonHits_controlCollCuts, "data_numberOfValidMuonHits_controlCollCuts", "Leptons Passing Final Selection, control collCuts", 12, 0, 60);
+ h_data_numberOfValidMuonHits_controlCollCuts->GetXaxis()->SetTitle("numberOfValidMuonHits");
+ h_data_numberOfValidMuonDTHits_controlCollCuts=initHist(h_data_numberOfValidMuonDTHits_controlCollCuts, "data_numberOfValidMuonDTHits_controlCollCuts", "Leptons Passing Final Selection, control collCuts", 12, 0, 60);
+ h_data_numberOfValidMuonDTHits_controlCollCuts->GetXaxis()->SetTitle("numberOfValidMuonDTHits");
+ h_data_numberOfValidMuonCSCHits_controlCollCuts=initHist(h_data_numberOfValidMuonCSCHits_controlCollCuts, "data_numberOfValidMuonCSCHits_controlCollCuts", "Leptons Passing Final Selection, control collCuts", 12, 0, 60);
+ h_data_numberOfValidMuonCSCHits_controlCollCuts->GetXaxis()->SetTitle("numberOfValidMuonCSCHits");
+// h_minleptonD0Sig_vs_LxySig_controlCollCuts= new TH2F("MinLeptonD0Sig_vs_MinLxySig_controlCollCuts","Min Abs D0 vs Min Abs Lxy", 40, 0, 40, 40, 0, 40);
+ h_minleptonD0Sig_vs_LxySig_controlCollCuts= new TH2F("MinLeptonD0Sig_vs_MinLxySig_controlCollCuts","Min Abs D0 vs Min Abs Lxy", 160, 0, 40, 160, 0, 40);
  // n-1  control cuts
  h_nMinus1_minValidStations_controlCollCuts=initHist(h_nMinus1_minValidStations_controlCollCuts,"nMinus1_minValidStations_controlCollCuts", "n-1 lepton minimum Valid Stations, final cuts",10,0,10);
- h_nMinus1_DileptonAbsLxySig_controlCollCuts=initHist(h_nMinus1_DileptonAbsLxySig_controlCollCuts,"nMinus1_DileptonAbsLxy_controlCollCuts", "n-1 candidate min Abs Lxy, final cuts",40,0,40);
+ h_nMinus1_minValidHits_controlCollCuts=initHist(h_nMinus1_minValidHits_controlCollCuts,"nMinus1_minValidHits_controlCollCuts", "n-1 lepton minimum Muon Valid Hits, control cuts",55,0,55);
+ h_nMinus1_minValidDTHits_controlCollCuts=initHist(h_nMinus1_minValidDTHits_controlCollCuts,"nMinus1_minValidDTHits_controlCollCuts", "n-1 lepton minimum Muon Valid DT Hits, control cuts",55,0,55);
+ h_nMinus1_minValidCSCHits_controlCollCuts=initHist(h_nMinus1_minValidCSCHits_controlCollCuts,"nMinus1_minValidCSCHits_controlCollCuts", "n-1 lepton minimum Muon Valid CSC Hits, control cuts",55,0,55);
+ h_nMinus1_DileptonAbsLxySig_controlCollCuts=initHist(h_nMinus1_DileptonAbsLxySig_controlCollCuts,"nMinus1_DileptonAbsLxySig_controlCollCuts", "n-1 candidate min Abs Lxy significance, final cuts",40,0,40);
+ h_nMinus1_AbsLeptonD0_controlCollCuts=initHist(h_nMinus1_AbsLeptonD0_controlCollCuts,"nMinus1_AbsLeptonD0_controlCollCuts", "n-1  min Lepton Abs D0, final cuts",400,0,100);
+ h_nMinus1_AbsD0_controlCollCuts=initHist(h_nMinus1_AbsD0_controlCollCuts,"nMinus1_AbsD0_controlCollCuts", "n-1  min Lepton Abs D0, Control cuts",250,0,250);
+ h_nMinus1_AbsDZ_controlCollCuts=initHist(h_nMinus1_AbsDZ_controlCollCuts,"nMinus1_AbsDZ_controlCollCuts", "n-1  min Lepton Abs DZ, Control cuts",250,0,250);
+ h_nMinus1_AbsDZSignificance_controlCollCuts=initHist(h_nMinus1_AbsDZSignificance_controlCollCuts,"nMinus1_AbsDZSignificance_controlCollCuts", "n-1  min Lepton Abs DZSignificance, Control cuts",50,0,50);
  h_nMinus1_oppositeCharge_controlCollCuts=initHist(h_nMinus1_oppositeCharge_controlCollCuts,"nMinus1_oppositeCharge_controlCollCuts", "n-1 lepton opposite charges, final cuts",5,-2,2);
  h_nMinus1_vertexChi2_controlCollCuts=initHist(h_nMinus1_vertexChi2_controlCollCuts,"nMinus1_vertexChi2_controlCollCuts", "n-1 Vertex Chi^2, final cuts", 20, 0, 20);
  h_nMinus1_deltaPhi_controlCollCuts=initHist(h_nMinus1_deltaPhi_controlCollCuts,"nMinus1_deltaPhi_controlCollCuts", "n-1 Delta Phi, final cuts", 40, 0, 4);
  h_nMinus1_cosine_controlCollCuts=initHist(h_nMinus1_cosine_controlCollCuts,"nMinus1_cosine_controlCollCuts", "n-1 Cosine, final cuts",22,-1.1,1.1);
- h_nMinus1_deltaR_controlCollCuts=initHist(h_nMinus1_deltaR_controlCollCuts,"nMinus1_deltaR_controlCollCuts", "n-1 delta R, final cuts",10,0,0.5);
+ h_nMinus1_deltaR_controlCollCuts=initHist(h_nMinus1_deltaR_controlCollCuts,"nMinus1_deltaR_controlCollCuts", "n-1 delta R, final cuts",20,0,1.0);
  h_nMinus1_nHitsBeforeVertex_controlCollCuts=initHist(h_nMinus1_nHitsBeforeVertex_controlCollCuts,"nMinus1_nHitsBeforeVertex_controlCollCuts", "n-1 N hits before vertex", 5, -0.5, 4.5);
  h_nMinus1_nMissingHitsAfterVertex_controlCollCuts=initHist(h_nMinus1_nMissingHitsAfterVertex_controlCollCuts,"nMinus1_nMissingHitsAfterVertex_controlCollCuts", "n-1 N missing hits after vertex", 20, -0.5, 19.5);
  h_nMinus1_minMissingHitsAfterVertex_controlCollCuts=initHist(h_nMinus1_minMissingHitsAfterVertex_controlCollCuts,"nMinus1_minMissingHitsAfterVertex_controlCollCuts", "n-1 N missing hits after vertex", 20, -0.5, 19.5);
@@ -443,6 +616,29 @@ nameSuffix(suffix)
  h_nMinus1_subleadingSCEt_controlCollCuts=initHist(h_nMinus1_subleadingSCEt_controlCollCuts,"nMinus1_subleadingSCEt_controlCollCuts", "n-1 subleading SC Et, final cuts",100,0,150);
  h_nMinus1_relIso_controlCollCuts=initHist(h_nMinus1_relIso_controlCollCuts,"nMinus1_relIso_controlCollCuts", "n-1 lepton rel iso, final cuts", 40, 0, 0.5);
  h_nMinus1_absIso_controlCollCuts=initHist(h_nMinus1_absIso_controlCollCuts,"nMinus1_absIso_controlCollCuts", "n-1 lepton abs iso, final cuts", 80, 0, 20);
+ h_nMinus1_maxTrackChi2_controlCollCuts=initHist(h_nMinus1_maxTrackChi2_controlCollCuts,"nMinus1_maxTrackChi2_controlCollCuts", "n-1 max lepton trackChi2, control collCuts", 80, 0, 20);
+ h_nMinus1_muonTimeC_inverseBeta_controlCollCuts=initHist(h_nMinus1_muonTimeC_inverseBeta_controlCollCuts,"nMinus1_muonTimeC_inverseBeta_controlCollCuts", "n-1 two leptons inverseBeta, Control collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeC_freeInverseBeta_controlCollCuts=initHist(h_nMinus1_muonTimeC_freeInverseBeta_controlCollCuts,"nMinus1_muonTimeC_freeInverseBeta_controlCollCuts", "n-1 two leptons freeInverseBeta, control collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeC_timeAtIpInOut_controlCollCuts=initHist(h_nMinus1_muonTimeC_timeAtIpInOut_controlCollCuts,"nMinus1_muonTimeC_timeAtIpInOut_controlCollCuts", "n-1 two leptons timeAtIpInOut, control collCuts", 20, -40, 40);
+ h_nMinus1_muonTimeC_timeAtIpOutIn_controlCollCuts=initHist(h_nMinus1_muonTimeC_timeAtIpOutIn_controlCollCuts,"nMinus1_muonTimeC_timeAtIpOutIn_controlCollCuts", "n-1 two leptons timeAtIpOutIn, control collCuts", 20, -40, 40);
+ h_nMinus1_muonTimeDT_inverseBeta_controlCollCuts=initHist(h_nMinus1_muonTimeDT_inverseBeta_controlCollCuts,"nMinus1_muonTimeDT_inverseBeta_controlCollCuts", "n-1 two leptons inverseBeta, Control collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeDT_freeInverseBeta_controlCollCuts=initHist(h_nMinus1_muonTimeDT_freeInverseBeta_controlCollCuts,"nMinus1_muonTimeDT_freeInverseBeta_controlCollCuts", "n-1 two leptons freeInverseBeta, control collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeDT_timeAtIpInOut_controlCollCuts=initHist(h_nMinus1_muonTimeDT_timeAtIpInOut_controlCollCuts,"nMinus1_muonTimeDT_timeAtIpInOut_controlCollCuts", "n-1 two leptons timeAtIpInOut, control collCuts", 20, -40, 40);
+ h_nMinus1_muonTimeDT_timeAtIpOutIn_controlCollCuts=initHist(h_nMinus1_muonTimeDT_timeAtIpOutIn_controlCollCuts,"nMinus1_muonTimeDT_timeAtIpOutIn_controlCollCuts", "n-1 two leptons timeAtIpOutIn, control collCuts", 20, -40, 40);
+ h_nMinus1_muonTimeCSC_inverseBeta_controlCollCuts=initHist(h_nMinus1_muonTimeCSC_inverseBeta_controlCollCuts,"nMinus1_muonTimeCSC_inverseBeta_controlCollCuts", "n-1 two leptons inverseBeta, Control collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeCSC_freeInverseBeta_controlCollCuts=initHist(h_nMinus1_muonTimeCSC_freeInverseBeta_controlCollCuts,"nMinus1_muonTimeCSC_freeInverseBeta_controlCollCuts", "n-1 two leptons freeInverseBeta, control collCuts", 50, -5, 5);
+ h_nMinus1_muonTimeCSC_timeAtIpInOut_controlCollCuts=initHist(h_nMinus1_muonTimeCSC_timeAtIpInOut_controlCollCuts,"nMinus1_muonTimeCSC_timeAtIpInOut_controlCollCuts", "n-1 two leptons timeAtIpInOut, control collCuts", 20, -40, 40);
+ h_nMinus1_muonTimeCSC_timeAtIpOutIn_controlCollCuts=initHist(h_nMinus1_muonTimeCSC_timeAtIpOutIn_controlCollCuts,"nMinus1_muonTimeCSC_timeAtIpOutIn_controlCollCuts", "n-1 two leptons timeAtIpOutIn, control collCuts", 20, -40, 40);
+ h_cosmic_non_rejection_muonTimeC_inverseBeta_controlCollCuts=initHist(h_cosmic_non_rejection_muonTimeC_inverseBeta_controlCollCuts,"cosmic_non_rejection_muonTimeC_inverseBeta_controlCollCuts", "Events not Rejected By Cosmic Rejection  two leptons inverseBeta, Control collCuts", 50, -5, 5);
+ h_cosmic_non_rejection_muonTimeC_freeInverseBeta_controlCollCuts=initHist(h_cosmic_non_rejection_muonTimeC_freeInverseBeta_controlCollCuts,"cosmic_non_rejection_muonTimeC_freeInverseBeta_controlCollCuts", "Events not Rejected By Cosmic Rejection two leptons freeInverseBeta, control collCuts", 50, -5, 5);
+ h_cosmic_non_rejection_muonTimeC_timeAtIpInOut_controlCollCuts=initHist(h_cosmic_non_rejection_muonTimeC_timeAtIpInOut_controlCollCuts,"cosmic_non_rejection_muonTimeC_timeAtIpInOut_controlCollCuts", "Events not Rejected By Cosmic Rejection two leptons timeAtIpInOut, control collCuts", 20, -40, 40);
+ h_cosmic_non_rejection_muonTimeC_timeAtIpOutIn_controlCollCuts=initHist(h_cosmic_non_rejection_muonTimeC_timeAtIpOutIn_controlCollCuts,"cosmic_non_rejection_muonTimeC_timeAtIpOutIn_controlCollCuts", "Events not Rejected By Cosmic Rejection two leptons timeAtIpOutIn, control collCuts", 20, -40, 40);
+
+ h_nMinus1_leptonD0Sig_vs_LxySig_controlCollCuts = new TH2F(TString("nMinus1_leptonD0Sig_vs_LxySig_controlCollCuts")+nameSuffix, "n-1 min d0 sig vs lxy sig", 160, 0, 40, 160, 0, 40 );
+ h_nMinus1_vertexChi2_vs_LxySig_controlCollCuts = new TH2F(TString("nMinus1_vertexChi2_vs_LxySig_controlCollCuts")+nameSuffix, "n-1 vertex chi2 vs lxy sig", 160, 0, 40, 160, 0, 40 );
+ h_nMinus1_maxTrackChi2_vs_LxySig_controlCollCuts = new TH2F(TString("nMinus1_maxTrackChi2_vs_LxySig_controlCollCuts")+nameSuffix, "n-1 min track chi2 vs lxy sig", 160, 0, 40, 160, 0, 40 );
+ h_nMinus1_lepton_Eta_vs_Phi_controlCollCuts = new TH3F(TString("nMinus1_lepton_Eta_vs_Phi_controlCollCuts")+nameSuffix, "n-1 min Lepton eta vs. Phi", 40, -2.0, 2.0, 60, 3.14, -3.14, 40, 0, 20);
+
  // Photon ID Cuts
  h_photonR9_controlCollCuts=initHist(h_photonR9_controlCollCuts,"PhotonR9_controlCollCuts", "Photon R9, final cuts", 20, 0, 1.1);
  h_photonSigmaIetaIeta_barrel_controlCollCuts=initHist(h_photonSigmaIetaIeta_barrel_controlCollCuts,"PhotonSigmaIetaIeta_barrel_controlCollCuts", "Photon SigmaIetaIeta, barrel, final cuts", 40, 0, 0.05);
@@ -709,6 +905,7 @@ nameSuffix(suffix)
   histMapFinal["subleadingSCEt"] = h_nMinus1_subleadingSCEt_finalCuts;
   histMapFinal["relIso"] = h_nMinus1_relIso_finalCuts;
   histMapFinal["absIso"] = h_nMinus1_absIso_finalCuts;
+  histMapFinal["maxTrackChi2"] = h_nMinus1_maxTrackChi2_finalCuts;
   histMapFinal["photonR9"] = h_photonR9_finalCuts;
   histMapFinal["photonSigmaIetaIeta_barrel"] = h_photonSigmaIetaIeta_barrel_finalCuts;
   histMapFinal["photonSigmaIetaIeta_endcap"] = h_photonSigmaIetaIeta_endcap_finalCuts;
@@ -723,6 +920,9 @@ nameSuffix(suffix)
   histMapFinal["leptonLSCEta"] = h_leptonLSCEta_finalCuts;
   histMapFinal["leptonD0SigMin_allCuts"] = h_minLeptonD0Sig_finalCuts;
   histMapFinal["leptonD0SigMax_allCuts"] = h_maxLeptonD0Sig_finalCuts;
+  histMapFinal["leptonD0SigMin_vs_LxySig"] = h_nMinus1_leptonD0Sig_vs_LxySig_finalCuts;
+  histMapFinal["vertexChi2_vs_LxySig"] = h_nMinus1_vertexChi2_vs_LxySig_finalCuts;
+  histMapFinal["trackChi2Max_vs_LxySig"] = h_nMinus1_maxTrackChi2_vs_LxySig_finalCuts;
 
 //  // Loose Cuts A
 //  histMapLooseA["vertexChi2"] = h_nMinus1_vertexChi2_looseCutsA;
@@ -867,6 +1067,7 @@ nameSuffix(suffix)
   histMapFinalColl["subleadingSCEt"] = h_nMinus1_subleadingSCEt_finalCollCuts;
   histMapFinalColl["relIso"] = h_nMinus1_relIso_finalCollCuts;
   histMapFinalColl["absIso"] = h_nMinus1_absIso_finalCollCuts;
+  histMapFinalColl["maxTrackChi2"] = h_nMinus1_maxTrackChi2_finalCollCuts;
   histMapFinalColl["photonR9"] = h_photonR9_finalCollCuts;
   histMapFinalColl["photonSigmaIetaIeta_barrel"] = h_photonSigmaIetaIeta_barrel_finalCollCuts;
   histMapFinalColl["photonSigmaIetaIeta_endcap"] = h_photonSigmaIetaIeta_endcap_finalCollCuts;
@@ -885,7 +1086,30 @@ nameSuffix(suffix)
   histMapFinalColl["ptMinusE"] = h_ptMinusE_finalCollCuts;
   histMapFinalColl["nCandsPerEvent"] = h_nCandsPerEvent_finalCollCuts;
   histMapFinalColl["minValidStations"] = h_nMinus1_minValidStations_finalCollCuts;
+  histMapFinalColl["minValidHits"] = h_nMinus1_minValidHits_finalCollCuts;
+  histMapFinalColl["minValidDTHits"] = h_nMinus1_minValidDTHits_finalCollCuts;
+  histMapFinalColl["minValidCSCHits"] = h_nMinus1_minValidCSCHits_finalCollCuts;
   histMapFinalColl["DileptonAbsLxySig"] = h_nMinus1_DileptonAbsLxySig_finalCollCuts;
+  histMapFinalColl["AbsLeptonD0"] = h_nMinus1_AbsLeptonD0_finalCollCuts;
+  histMapFinalColl["AbsD0"] = h_nMinus1_AbsD0_finalCollCuts;
+  histMapFinalColl["AbsDZ"] = h_nMinus1_AbsDZ_finalCollCuts;
+  histMapFinalColl["AbsDZSig"] = h_nMinus1_AbsDZSignificance_finalCollCuts;
+  histMapFinalColl["leptonD0SigMin_vs_LxySig"] = h_nMinus1_leptonD0Sig_vs_LxySig_finalCollCuts;
+  histMapFinalColl["vertexChi2_vs_LxySig"] = h_nMinus1_vertexChi2_vs_LxySig_finalCollCuts;
+  histMapFinalColl["trackChi2Max_vs_LxySig"] = h_nMinus1_maxTrackChi2_vs_LxySig_finalCollCuts;
+  histMapFinalColl["lepton_Eta_vs_Phi"] = h_nMinus1_lepton_Eta_vs_Phi_finalCollCuts;
+  histMapFinalColl["muonTimeC_inverseBeta"] = h_nMinus1_muonTimeC_inverseBeta_finalCollCuts;
+  histMapFinalColl["muonTimeC_freeInverseBeta"] = h_nMinus1_muonTimeC_freeInverseBeta_finalCollCuts;
+  histMapFinalColl["muonTimeC_timeAtIpInOut"] = h_nMinus1_muonTimeC_timeAtIpInOut_finalCollCuts;
+  histMapFinalColl["muonTimeC_timeAtIpOutIn"] = h_nMinus1_muonTimeC_timeAtIpOutIn_finalCollCuts;
+  histMapFinalColl["muonTimeDT_inverseBeta"] = h_nMinus1_muonTimeDT_inverseBeta_finalCollCuts;
+  histMapFinalColl["muonTimeDT_freeInverseBeta"] = h_nMinus1_muonTimeDT_freeInverseBeta_finalCollCuts;
+  histMapFinalColl["muonTimeDT_timeAtIpInOut"] = h_nMinus1_muonTimeDT_timeAtIpInOut_finalCollCuts;
+  histMapFinalColl["muonTimeDT_timeAtIpOutIn"] = h_nMinus1_muonTimeDT_timeAtIpOutIn_finalCollCuts;
+  histMapFinalColl["muonTimeCSC_inverseBeta"] = h_nMinus1_muonTimeCSC_inverseBeta_finalCollCuts;
+  histMapFinalColl["muonTimeCSC_freeInverseBeta"] = h_nMinus1_muonTimeCSC_freeInverseBeta_finalCollCuts;
+  histMapFinalColl["muonTimeCSC_timeAtIpInOut"] = h_nMinus1_muonTimeCSC_timeAtIpInOut_finalCollCuts;
+  histMapFinalColl["muonTimeCSC_timeAtIpOutIn"] = h_nMinus1_muonTimeCSC_timeAtIpOutIn_finalCollCuts;
 
   // Loose Cuts Coll
   histMapLooseColl["vertexChi2"] = h_nMinus1_vertexChi2_looseCollCuts;
@@ -904,6 +1128,7 @@ nameSuffix(suffix)
   histMapLooseColl["subleadingSCEt"] = h_nMinus1_subleadingSCEt_looseCollCuts;
   histMapLooseColl["relIso"] = h_nMinus1_relIso_looseCollCuts;
   histMapLooseColl["absIso"] = h_nMinus1_absIso_looseCollCuts;
+  histMapLooseColl["maxTrackChi2"] = h_nMinus1_maxTrackChi2_looseCollCuts;
   histMapLooseColl["photonR9"] = h_photonR9_looseCollCuts;
   histMapLooseColl["photonSigmaIetaIeta_barrel"] = h_photonSigmaIetaIeta_barrel_looseCollCuts;
   histMapLooseColl["photonSigmaIetaIeta_endcap"] = h_photonSigmaIetaIeta_endcap_looseCollCuts;
@@ -922,7 +1147,30 @@ nameSuffix(suffix)
   histMapLooseColl["ptMinusE"] = h_ptMinusE_looseCollCuts;
   histMapLooseColl["nCandsPerEvent"] = h_nCandsPerEvent_looseCollCuts;
   histMapLooseColl["minValidStations"] = h_nMinus1_minValidStations_looseCollCuts;
+  histMapLooseColl["minValidHits"] = h_nMinus1_minValidHits_looseCollCuts;
+  histMapLooseColl["minValidDTHits"] = h_nMinus1_minValidDTHits_looseCollCuts;
+  histMapLooseColl["minValidCSCHits"] = h_nMinus1_minValidCSCHits_looseCollCuts;
   histMapLooseColl["DileptonAbsLxySig"] = h_nMinus1_DileptonAbsLxySig_looseCollCuts;
+  histMapLooseColl["AbsLeptonD0"] = h_nMinus1_AbsLeptonD0_looseCollCuts;
+  histMapLooseColl["AbsD0"] = h_nMinus1_AbsD0_looseCollCuts;
+  histMapLooseColl["AbsDZ"] = h_nMinus1_AbsDZ_looseCollCuts;
+  histMapLooseColl["AbsDZSig"] = h_nMinus1_AbsDZSignificance_looseCollCuts;
+  histMapLooseColl["leptonD0SigMin_vs_LxySig"] = h_nMinus1_leptonD0Sig_vs_LxySig_looseCollCuts;
+  histMapLooseColl["vertexChi2_vs_LxySig"] = h_nMinus1_vertexChi2_vs_LxySig_looseCollCuts;
+  histMapLooseColl["trackChi2Max_vs_LxySig"] = h_nMinus1_maxTrackChi2_vs_LxySig_looseCollCuts;
+  histMapLooseColl["lepton_Eta_vs_Phi"] = h_nMinus1_lepton_Eta_vs_Phi_looseCollCuts;
+  histMapLooseColl["muonTimeC_inverseBeta"] = h_nMinus1_muonTimeC_inverseBeta_looseCollCuts;
+  histMapLooseColl["muonTimeC_freeInverseBeta"] = h_nMinus1_muonTimeC_freeInverseBeta_looseCollCuts;
+  histMapLooseColl["muonTimeC_timeAtIpInOut"] = h_nMinus1_muonTimeC_timeAtIpInOut_looseCollCuts;
+  histMapLooseColl["muonTimeC_timeAtIpOutIn"] = h_nMinus1_muonTimeC_timeAtIpOutIn_looseCollCuts;
+  histMapLooseColl["muonTimeDT_inverseBeta"] = h_nMinus1_muonTimeDT_inverseBeta_looseCollCuts;
+  histMapLooseColl["muonTimeDT_freeInverseBeta"] = h_nMinus1_muonTimeDT_freeInverseBeta_looseCollCuts;
+  histMapLooseColl["muonTimeDT_timeAtIpInOut"] = h_nMinus1_muonTimeDT_timeAtIpInOut_looseCollCuts;
+  histMapLooseColl["muonTimeDT_timeAtIpOutIn"] = h_nMinus1_muonTimeDT_timeAtIpOutIn_looseCollCuts;
+  histMapLooseColl["muonTimeCSC_inverseBeta"] = h_nMinus1_muonTimeCSC_inverseBeta_looseCollCuts;
+  histMapLooseColl["muonTimeCSC_freeInverseBeta"] = h_nMinus1_muonTimeCSC_freeInverseBeta_looseCollCuts;
+  histMapLooseColl["muonTimeCSC_timeAtIpInOut"] = h_nMinus1_muonTimeCSC_timeAtIpInOut_looseCollCuts;
+  histMapLooseColl["muonTimeCSC_timeAtIpOutIn"] = h_nMinus1_muonTimeCSC_timeAtIpOutIn_looseCollCuts;
 
   // Loose Control Cuts Coll
   histMapLooseControlColl["vertexChi2"] = h_nMinus1_vertexChi2_looseControlCollCuts;
@@ -941,6 +1189,7 @@ nameSuffix(suffix)
   histMapLooseControlColl["subleadingSCEt"] = h_nMinus1_subleadingSCEt_looseControlCollCuts;
   histMapLooseControlColl["relIso"] = h_nMinus1_relIso_looseControlCollCuts;
   histMapLooseControlColl["absIso"] = h_nMinus1_absIso_looseControlCollCuts;
+  histMapLooseControlColl["maxTrackChi2"] = h_nMinus1_maxTrackChi2_looseControlCollCuts;
   histMapLooseControlColl["photonR9"] = h_photonR9_looseControlCollCuts;
   histMapLooseControlColl["photonSigmaIetaIeta_barrel"] = h_photonSigmaIetaIeta_barrel_looseControlCollCuts;
   histMapLooseControlColl["photonSigmaIetaIeta_endcap"] = h_photonSigmaIetaIeta_endcap_looseControlCollCuts;
@@ -960,7 +1209,30 @@ nameSuffix(suffix)
   histMapLooseControlColl["d0SigmaNoMissingHits"] = h_minLeptonAbsD0Sig_deltaPhiG90_noMissingHits_algo10_removedLifetimeCollCuts;
   histMapLooseControlColl["nCandsPerEvent"] = h_nCandsPerEvent_looseControlCollCuts;
   histMapLooseControlColl["minValidStations"] = h_nMinus1_minValidStations_looseControlCollCuts;
+  histMapLooseControlColl["minValidHits"] = h_nMinus1_minValidHits_looseControlCollCuts;
+  histMapLooseControlColl["minValidDTHits"] = h_nMinus1_minValidDTHits_looseControlCollCuts;
+  histMapLooseControlColl["minValidCSCHits"] = h_nMinus1_minValidCSCHits_looseControlCollCuts;
   histMapLooseControlColl["DileptonAbsLxySig"] = h_nMinus1_DileptonAbsLxySig_looseControlCollCuts;
+  histMapLooseControlColl["AbsLeptonD0"] = h_nMinus1_AbsLeptonD0_looseControlCollCuts;
+  histMapLooseControlColl["AbsD0"] = h_nMinus1_AbsD0_looseControlCollCuts;
+  histMapLooseControlColl["AbsDZ"] = h_nMinus1_AbsDZ_looseControlCollCuts;
+  histMapLooseControlColl["AbsDZSig"] = h_nMinus1_AbsDZSignificance_looseControlCollCuts;
+  histMapLooseControlColl["leptonD0SigMin_vs_LxySig"] = h_nMinus1_leptonD0Sig_vs_LxySig_looseControlCollCuts;
+  histMapLooseControlColl["vertexChi2_vs_LxySig"] = h_nMinus1_vertexChi2_vs_LxySig_looseControlCollCuts;
+  histMapLooseControlColl["trackChi2Max_vs_LxySig"] = h_nMinus1_maxTrackChi2_vs_LxySig_looseControlCollCuts;
+  histMapLooseControlColl["lepton_Eta_vs_Phi"] = h_nMinus1_lepton_Eta_vs_Phi_looseControlCollCuts;
+  histMapLooseControlColl["muonTimeC_inverseBeta"] = h_nMinus1_muonTimeC_inverseBeta_looseControlCollCuts;
+  histMapLooseControlColl["muonTimeC_freeInverseBeta"] = h_nMinus1_muonTimeC_freeInverseBeta_looseControlCollCuts;
+  histMapLooseControlColl["muonTimeC_timeAtIpInOut"] = h_nMinus1_muonTimeC_timeAtIpInOut_looseControlCollCuts;
+  histMapLooseControlColl["muonTimeC_timeAtIpOutIn"] = h_nMinus1_muonTimeC_timeAtIpOutIn_looseControlCollCuts;
+  histMapLooseControlColl["muonTimeDT_inverseBeta"] = h_nMinus1_muonTimeDT_inverseBeta_looseControlCollCuts;
+  histMapLooseControlColl["muonTimeDT_freeInverseBeta"] = h_nMinus1_muonTimeDT_freeInverseBeta_looseControlCollCuts;
+  histMapLooseControlColl["muonTimeDT_timeAtIpInOut"] = h_nMinus1_muonTimeDT_timeAtIpInOut_looseControlCollCuts;
+  histMapLooseControlColl["muonTimeDT_timeAtIpOutIn"] = h_nMinus1_muonTimeDT_timeAtIpOutIn_looseControlCollCuts;
+  histMapLooseControlColl["muonTimeCSC_inverseBeta"] = h_nMinus1_muonTimeCSC_inverseBeta_looseControlCollCuts;
+  histMapLooseControlColl["muonTimeCSC_freeInverseBeta"] = h_nMinus1_muonTimeCSC_freeInverseBeta_looseControlCollCuts;
+  histMapLooseControlColl["muonTimeCSC_timeAtIpInOut"] = h_nMinus1_muonTimeCSC_timeAtIpInOut_looseControlCollCuts;
+  histMapLooseControlColl["muonTimeCSC_timeAtIpOutIn"] = h_nMinus1_muonTimeCSC_timeAtIpOutIn_looseControlCollCuts;
 
   //  control Cuts Coll
   histMapControlColl["vertexChi2"] = h_nMinus1_vertexChi2_controlCollCuts;
@@ -979,6 +1251,7 @@ nameSuffix(suffix)
   histMapControlColl["subleadingSCEt"] = h_nMinus1_subleadingSCEt_controlCollCuts;
   histMapControlColl["relIso"] = h_nMinus1_relIso_controlCollCuts;
   histMapControlColl["absIso"] = h_nMinus1_absIso_controlCollCuts;
+  histMapControlColl["maxTrackChi2"] = h_nMinus1_maxTrackChi2_controlCollCuts;
   histMapControlColl["photonR9"] = h_photonR9_controlCollCuts;
   histMapControlColl["photonSigmaIetaIeta_barrel"] = h_photonSigmaIetaIeta_barrel_controlCollCuts;
   histMapControlColl["photonSigmaIetaIeta_endcap"] = h_photonSigmaIetaIeta_endcap_controlCollCuts;
@@ -997,8 +1270,30 @@ nameSuffix(suffix)
   histMapControlColl["ptMinusE"] = h_ptMinusE_controlCollCuts;
   histMapControlColl["nCandsPerEvent"] = h_nCandsPerEvent_controlCollCuts;
   histMapControlColl["minValidStations"] = h_nMinus1_minValidStations_controlCollCuts;
+  histMapControlColl["minValidHits"] = h_nMinus1_minValidHits_controlCollCuts;
+  histMapControlColl["minValidDTHits"] = h_nMinus1_minValidDTHits_controlCollCuts;
+  histMapControlColl["minValidCSCHits"] = h_nMinus1_minValidCSCHits_controlCollCuts;
   histMapControlColl["DileptonAbsLxySig"] = h_nMinus1_DileptonAbsLxySig_controlCollCuts;
-
+  histMapControlColl["AbsLeptonD0"] = h_nMinus1_AbsLeptonD0_controlCollCuts;
+  histMapControlColl["AbsD0"] = h_nMinus1_AbsD0_controlCollCuts;
+  histMapControlColl["AbsDZ"] = h_nMinus1_AbsDZ_controlCollCuts;
+  histMapControlColl["AbsDZSig"] = h_nMinus1_AbsDZSignificance_controlCollCuts;
+  histMapControlColl["leptonD0SigMin_vs_LxySig"] = h_nMinus1_leptonD0Sig_vs_LxySig_controlCollCuts;
+  histMapControlColl["vertexChi2_vs_LxySig"] = h_nMinus1_vertexChi2_vs_LxySig_controlCollCuts;
+  histMapControlColl["trackChi2Max_vs_LxySig"] = h_nMinus1_maxTrackChi2_vs_LxySig_controlCollCuts;
+  histMapControlColl["lepton_Eta_vs_Phi"] = h_nMinus1_lepton_Eta_vs_Phi_controlCollCuts;
+  histMapControlColl["muonTimeC_inverseBeta"] = h_nMinus1_muonTimeC_inverseBeta_controlCollCuts;
+  histMapControlColl["muonTimeC_freeInverseBeta"] = h_nMinus1_muonTimeC_freeInverseBeta_controlCollCuts;
+  histMapControlColl["muonTimeC_timeAtIpInOut"] = h_nMinus1_muonTimeC_timeAtIpInOut_controlCollCuts;
+  histMapControlColl["muonTimeC_timeAtIpOutIn"] = h_nMinus1_muonTimeC_timeAtIpOutIn_controlCollCuts;
+  histMapControlColl["muonTimeDT_inverseBeta"] = h_nMinus1_muonTimeDT_inverseBeta_controlCollCuts;
+  histMapControlColl["muonTimeDT_freeInverseBeta"] = h_nMinus1_muonTimeDT_freeInverseBeta_controlCollCuts;
+  histMapControlColl["muonTimeDT_timeAtIpInOut"] = h_nMinus1_muonTimeDT_timeAtIpInOut_controlCollCuts;
+  histMapControlColl["muonTimeDT_timeAtIpOutIn"] = h_nMinus1_muonTimeDT_timeAtIpOutIn_controlCollCuts;
+  histMapControlColl["muonTimeCSC_inverseBeta"] = h_nMinus1_muonTimeCSC_inverseBeta_controlCollCuts;
+  histMapControlColl["muonTimeCSC_freeInverseBeta"] = h_nMinus1_muonTimeCSC_freeInverseBeta_controlCollCuts;
+  histMapControlColl["muonTimeCSC_timeAtIpInOut"] = h_nMinus1_muonTimeCSC_timeAtIpInOut_controlCollCuts;
+  histMapControlColl["muonTimeCSC_timeAtIpOutIn"] = h_nMinus1_muonTimeCSC_timeAtIpOutIn_controlCollCuts;
 }
 
 Histograms::~Histograms()
@@ -1016,13 +1311,41 @@ void Histograms::writeHistograms( TFile & outputFile ) {
   outputFile.cd();
 
   // Write to file
-  for ( map<TString, TH1F*>::const_iterator hist = histMap.begin(); hist != histMap.end(); hist++ ) {
+  for ( map<TString, TH1*>::const_iterator hist = histMap.begin(); hist != histMap.end(); hist++ ) {
     hist->second->Write();
   }
 
-
+  h_reco_d0_gen_d0->Write();
+  h_reco_d0Sig_gen_d0->Write();
+  h_reco_d0Error_gen_d0->Write();
+  h_reco_Lxy_gen_Lxy->Write();
+  h_reco_LxySig_gen_Lxy->Write();
+  h_reco_LxyError_gen_Lxy->Write();
+  h_reco_d0_gen_d0_aftercuts->Write();
+  h_reco_d0Sig_gen_d0_aftercuts->Write();
+  h_reco_d0Error_gen_d0_aftercuts->Write();
+  h_reco_Lxy_gen_Lxy_aftercuts->Write();
+  h_reco_LxySig_gen_Lxy_aftercuts->Write();
+  h_reco_LxyError_gen_Lxy_aftercuts->Write();
+  
+  h_minLepton_d0Sig_mutrack_finalColl->Write();
+  h_minleptonD0Sig_vs_LxySig_controlCollCuts->Write();
   // A few TH2F to do manually
   h_nMinus1_leptonD0Sig_vs_LxySig_finalCuts->Write();
+  h_nMinus1_vertexChi2_vs_LxySig_finalCuts->Write();
+  h_nMinus1_maxTrackChi2_vs_LxySig_finalCuts->Write();
+  h_nMinus1_leptonD0Sig_vs_LxySig_finalCollCuts->Write();
+  h_nMinus1_vertexChi2_vs_LxySig_finalCollCuts->Write();
+  h_nMinus1_maxTrackChi2_vs_LxySig_finalCollCuts->Write();
+  h_nMinus1_leptonD0Sig_vs_LxySig_looseCollCuts->Write();
+  h_nMinus1_vertexChi2_vs_LxySig_looseCollCuts->Write();
+  h_nMinus1_maxTrackChi2_vs_LxySig_looseCollCuts->Write();
+  h_nMinus1_leptonD0Sig_vs_LxySig_controlCollCuts->Write();
+  h_nMinus1_vertexChi2_vs_LxySig_controlCollCuts->Write();
+  h_nMinus1_maxTrackChi2_vs_LxySig_controlCollCuts->Write();
+  h_nMinus1_leptonD0Sig_vs_LxySig_looseControlCollCuts->Write();
+  h_nMinus1_vertexChi2_vs_LxySig_looseControlCollCuts->Write();
+  h_nMinus1_maxTrackChi2_vs_LxySig_looseControlCollCuts->Write();
 
   h_l_vs_h_leptonD0Sig_removedLifetimeCuts->Write();
   h_singleLeptonD0Significance_vs_phi->Write();
@@ -1062,6 +1385,11 @@ void Histograms::writeHistograms( TFile & outputFile ) {
   h_nMinus1_relIsolationLeptonL_vsPU_finalCollCuts_genMatched->Write();
   h_nMinus1_relIsolationLeptonH_vsPU_finalCollCuts_genMatched->Write();
 
+// n-3 Plots
+  h_nMinus3_3D_finalCollCuts->Write();
+  h_nMinus3_3D_controlCollCuts->Write();
+
+
   h_minD0SigCut_vs_LxySigCut->Write();
   h_nMinus1_minValidStations_controlCollCuts->Write();
   h_nMinus1_minValidStations_finalCollCuts->Write();
@@ -1073,6 +1401,22 @@ void Histograms::writeHistograms( TFile & outputFile ) {
   h_nMinus1_DileptonAbsLxySig_looseControlCollCuts->Write();
   h_nMinus1_DileptonAbsLxySig_looseCollCuts->Write();
 
+  h_nMinus1_AbsLeptonD0_controlCollCuts->Write();
+  h_nMinus1_AbsLeptonD0_finalCollCuts->Write();
+  h_nMinus1_AbsLeptonD0_looseControlCollCuts->Write();
+  h_nMinus1_AbsLeptonD0_looseCollCuts->Write();
+
+  h_nMinus1_lepton_Eta_vs_Phi_controlCollCuts->Write();
+  h_nMinus1_lepton_Eta_vs_Phi_looseControlCollCuts->Write();
+  h_nMinus1_lepton_Eta_vs_Phi_looseCollCuts->Write();
+  h_nMinus1_lepton_Eta_vs_Phi_finalCollCuts->Write();
+
+//  h_cosmic_non_rejection_muonTimeC_inverseBeta_controlCollCuts->Write();
+//  h_cosmic_non_rejection_muonTimeC_freeInverseBeta_controlCollCuts->Write();
+//  h_cosmic_non_rejection_muonTimeC_timeAtIpInOut_controlCollCuts->Write();
+//  h_cosmic_non_rejection_muonTimeC_timeAtIpOutIn_controlCollCuts->Write();
+
+
   for (unsigned int i=0; i<h_trigEff_meanLifetime.size(); i++)
     h_trigEff_meanLifetime[i]->Write();
   for (unsigned int i=0; i<h_trigEff_meanLifetimeLog.size(); i++)
@@ -1083,7 +1427,7 @@ void Histograms::writeHistograms( TFile & outputFile ) {
 void Histograms::drawOverflows() {
   // Draw overflow in final bin
 
-  for ( map<TString, TH1F*>::const_iterator hist = histMap.begin(); hist != histMap.end(); hist++ ) {
+  for ( map<TString, TH1*>::const_iterator hist = histMap.begin(); hist != histMap.end(); hist++ ) {
     overflow(*hist->second);
   }
 }
@@ -1168,16 +1512,48 @@ void Histograms::drawUnderflows() {
   underflow(*h_nMinus1_DileptonAbsLxySig_finalCollCuts);
   underflow(*h_nMinus1_DileptonAbsLxySig_looseControlCollCuts);
   underflow(*h_nMinus1_DileptonAbsLxySig_looseCollCuts);
+
+  underflow(*h_nMinus1_AbsLeptonD0_controlCollCuts);
+  underflow(*h_nMinus1_AbsLeptonD0_finalCollCuts);
+  underflow(*h_nMinus1_AbsLeptonD0_looseControlCollCuts);
+  underflow(*h_nMinus1_AbsLeptonD0_looseCollCuts);
+
+  underflow(*h_minLepton_d0Sig_mutrack_finalColl);
+
+  underflow(*h_cosmic_non_rejection_muonTimeC_inverseBeta_controlCollCuts);
+  underflow(*h_cosmic_non_rejection_muonTimeC_freeInverseBeta_controlCollCuts);
+  underflow(*h_cosmic_non_rejection_muonTimeC_timeAtIpInOut_controlCollCuts);
+  underflow(*h_cosmic_non_rejection_muonTimeC_timeAtIpOutIn_controlCollCuts);
+
 }
 
 void Histograms::deleteHistograms() {
   // Delete all histograms
 
-  for ( map<TString, TH1F*>::const_iterator hist = histMap.begin(); hist != histMap.end(); hist++ ) {
+  for ( map<TString, TH1*>::const_iterator hist = histMap.begin(); hist != histMap.end(); hist++ ) {
     delete hist->second;
   }
 
+  delete h_nMinus3_3D_finalCollCuts;
+  delete h_nMinus3_3D_controlCollCuts;
+
+
+  delete h_minleptonD0Sig_vs_LxySig_controlCollCuts;
   delete h_nMinus1_leptonD0Sig_vs_LxySig_finalCuts;
+  delete h_nMinus1_vertexChi2_vs_LxySig_finalCuts;
+  delete h_nMinus1_maxTrackChi2_vs_LxySig_finalCuts;
+  delete h_nMinus1_leptonD0Sig_vs_LxySig_finalCollCuts;
+  delete h_nMinus1_vertexChi2_vs_LxySig_finalCollCuts;
+  delete h_nMinus1_maxTrackChi2_vs_LxySig_finalCollCuts;
+  delete h_nMinus1_leptonD0Sig_vs_LxySig_looseCollCuts;
+  delete h_nMinus1_vertexChi2_vs_LxySig_looseCollCuts;
+  delete h_nMinus1_maxTrackChi2_vs_LxySig_looseCollCuts;
+  delete h_nMinus1_leptonD0Sig_vs_LxySig_controlCollCuts;
+  delete h_nMinus1_vertexChi2_vs_LxySig_controlCollCuts;
+  delete h_nMinus1_maxTrackChi2_vs_LxySig_controlCollCuts;
+  delete h_nMinus1_leptonD0Sig_vs_LxySig_looseControlCollCuts;
+  delete h_nMinus1_vertexChi2_vs_LxySig_looseControlCollCuts;
+  delete h_nMinus1_maxTrackChi2_vs_LxySig_looseControlCollCuts;
   delete h_l_vs_h_leptonD0Sig_removedLifetimeCuts;
   delete h_singleLeptonD0_vs_phi;
   delete h_singleLeptonD0Significance_vs_phi;
@@ -1218,6 +1594,33 @@ void Histograms::deleteHistograms() {
 
   delete h_minD0SigCut_vs_LxySigCut;
 
+  delete h_minLepton_d0Sig_mutrack_finalColl;
+
+  delete h_reco_d0_gen_d0;
+  delete h_reco_d0Sig_gen_d0;
+  delete h_reco_d0Error_gen_d0;
+  delete h_reco_Lxy_gen_Lxy;
+  delete h_reco_LxySig_gen_Lxy;
+  delete h_reco_LxyError_gen_Lxy;
+
+  delete h_reco_d0_gen_d0_aftercuts;
+  delete h_reco_d0Sig_gen_d0_aftercuts;
+  delete h_reco_d0Error_gen_d0_aftercuts;
+  delete h_reco_Lxy_gen_Lxy_aftercuts;
+  delete h_reco_LxySig_gen_Lxy_aftercuts;
+  delete h_reco_LxyError_gen_Lxy_aftercuts;
+
+  delete h_nMinus1_lepton_Eta_vs_Phi_controlCollCuts;
+  delete h_nMinus1_lepton_Eta_vs_Phi_looseControlCollCuts;
+  delete h_nMinus1_lepton_Eta_vs_Phi_looseCollCuts;
+  delete h_nMinus1_lepton_Eta_vs_Phi_finalCollCuts;
+
+//  delete h_cosmic_non_rejection_muonTimeC_inverseBeta_controlCollCuts;
+//  delete h_cosmic_non_rejection_muonTimeC_freeInverseBeta_controlCollCuts;
+//  delete h_cosmic_non_rejection_muonTimeC_timeAtIpInOut_controlCollCuts;
+//  delete h_cosmic_non_rejection_muonTimeC_timeAtIpOutIn_controlCollCuts;
+
+
   for (unsigned int i=0; i<h_trigEff_meanLifetime.size(); i++)
     delete h_trigEff_meanLifetime[i];
   for (unsigned int i=0; i<h_trigEff_meanLifetimeLog.size(); i++)
@@ -1225,7 +1628,7 @@ void Histograms::deleteHistograms() {
 }
 
 // Adds overflow of a TH1F in the final bin of the histogram
-void Histograms::overflow(TH1F &h)
+void Histograms::overflow(TH1 &h)
 {
   int  N= h.GetNbinsX();
   h.SetBinContent(N,h.GetBinContent(N)+h.GetBinContent(N+1));
@@ -1236,7 +1639,7 @@ void Histograms::overflow(TH1F &h)
 }
 
 // Adds underflow of a TH1F in the first bin of the histogram
-void Histograms::underflow(TH1F &h)
+void Histograms::underflow(TH1 &h)
 {
   h.SetBinContent(1,h.GetBinContent(0)+h.GetBinContent(1));
   double errorN=h.GetBinError(0);

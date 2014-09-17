@@ -58,6 +58,7 @@ class DileptonAnalysisCuts {
           passTriggerMatch(false),
           passRequireVertex(false),
           passVertexChi2(false),
+          passMaxTrackChi2(false),
           passHitsBeforeVertex(false),
           passMissingHitsAfterVertex(false),
           passDeltaR(false),
@@ -67,7 +68,14 @@ class DileptonAnalysisCuts {
           passPhotonID(false),
           passMuonID(false),
           passTrackQuality(false),
-          passMinMuonValidStations(false)
+          passMinMuonValidStations(false),
+          passRejectionCosmics(false),
+          passComplementarity(false),
+          passTrackRejection(false),
+          passMinMuonValidHits(false),
+          passAbsD0(false),
+          passAbsDZ(false),
+          passAbsDZSignificance(false)
         {}
 
         bool passCaloMatch;
@@ -85,6 +93,7 @@ class DileptonAnalysisCuts {
         bool passTriggerMatch;
         bool passRequireVertex;
         bool passVertexChi2;
+        bool passMaxTrackChi2;
         bool passHitsBeforeVertex;
         bool passMissingHitsAfterVertex;
         bool passDeltaR;
@@ -95,13 +104,25 @@ class DileptonAnalysisCuts {
         bool passMuonID;
         bool passTrackQuality;
         bool passMinMuonValidStations;
+        bool passRejectionCosmics;
+        bool passComplementarity;
+        bool passTrackRejection;
+        bool passMinMuonValidHits;
+        bool passAbsD0;
+        bool passAbsDZ;
+        bool passAbsDZSignificance;
     };
 
     // Records which cuts have been passed/failed
-    PassedWhichCuts whichCuts( TreeDipseudoLeptonCandidate & candidate, double mass, TreeLepton & leptonL,
-                               TreeLepton & leptonH, analysisType analysis, double lxyScale, double d0Scale );
+    PassedWhichCuts whichCuts( const std::vector<TreeLepton> & single_cosmic_leptons, 
+			       const Candidates * candidates,
+			       const TreeDipseudoLeptonCandidate & candidate,
+			       const double & mass, const TreeLepton & leptonL, const TreeLepton & leptonH,
+			       const analysisType & analysis, const double & lxyScale, const double & d0Scale,
+			       const DileptonAnalysisCuts * dileptonCuts_finalColl_muTrack = 0) const;
+
     // Checks of all cuts have been passed
-    bool passAllCuts( PassedWhichCuts cuts );
+    bool passAllCuts( const PassedWhichCuts & cuts ) const;
 
     void printPassForOneCand( DileptonAnalysisCuts::PassedWhichCuts cuts );
 
@@ -120,6 +141,11 @@ class DileptonAnalysisCuts {
     void electronsCuts();
     void trackMuonsCuts();
     void standAloneMuonsCuts();
+    // Complementarity requirement (reject candidates matched to track-based candidates)
+    static bool isComplementary(const TreeLepton & leptonL, const TreeLepton & leptonH,
+				const Candidates * candidates, const DileptonAnalysisCuts & dileptonCuts_finalColl_muTrack);
+    static bool isComplementaryExtrapolated(const TreeDipseudoLeptonCandidate & cand, const Candidates * candidates,
+					    const DileptonAnalysisCuts & dileptonCuts_finalColl_muTrack );
 
   private:
     // Which set of cuts & analysis
@@ -137,7 +163,6 @@ class DileptonAnalysisCuts {
     double min_gap_SCEta_; // min eta of gap in ECAL to avoid
     double max_gap_SCEta_; // max eta of gap in ECAL to avoid
     double maxEta_; // lepton eta (track)
-
     bool requireOppositeSignD0_;
     bool cutOnSignedD0_;
     double minD0Sig_; // min value of lepton d0 sig
@@ -161,6 +186,7 @@ class DileptonAnalysisCuts {
 
     bool oppositeCharge_; // Require leptons oto have opposite charge
 
+    double maxTrackChi2_; // max track chi^2
     double maxVertexChi2_; // max vertex chi^2
 
     double maxHitsBeforeVertex_; // max number of hits allowed before vertex
@@ -178,8 +204,20 @@ class DileptonAnalysisCuts {
     // New cut for SA muons
     // Added by Melih February 11, 2014 Fermilab
     int min_csc_dt_station_valid_hits_; // minimum number of csc and dt muon stations with valid hits
+    int min_csc_valid_hits_;
+    int min_dt_valid_hits_;
+    int min_valid_hits_; 
     bool use_PV; // To decide if we want to use PV or BS....
- 
+    double cosinecut_cosmics; // Cosmics rejection
+    double track_reject_DR;
+    double minLeptonD0_;
+    double minLeptonDZ_;
+    double minLeptonDZSignificance_;
+    
+  
+    bool rejectCosmics( const std::vector<TreeLepton> & leptons_, const TreeLepton & leptonL, const TreeLepton & leptonH, const float & cosineCut) const;
+    bool rejectCosmic( const TreeLepton * l1, const TreeLepton * l2, const float & cosineCut ) const;
+    bool trackRejected(const TreeLepton & leptonL, const TreeLepton & leptonH) const;
 };
 
 #endif

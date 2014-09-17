@@ -20,7 +20,7 @@ void DileptonAnalyzer::getEventWeight()
     //    cout << "Total weight : " << totalWeight << endl;
   }
   eventWeight_=totalWeight;
-//  eventWeight_=1;
+  //  eventWeight_=1;
 }
 
 // Get lifetime weight to reweight signal MC
@@ -127,55 +127,55 @@ void DileptonAnalyzer::studyTrackingEfficiency( const std::vector<TreeDipseudoLe
   if (fabs(candidates->ll2_daughterPdgId) == interestingLepton) hists_.h_all_lxy->Fill( candidates->ll2_decayLength2D);
 
   // if ( nSensitiveExoticDecayInEvent_ >= 1 ) {
-    // Fill denominator histograms
-    // Only select tracks with gen values within acceptance
-    if ( fabs(candidates->ll1_daughterPdgId) == interestingLepton ) {
-      hists_.h_all_lxy_DecayMode->Fill( candidates->ll1_decayLength2D);
-      if ( candidates->ll1_daughter1_Pt >= acceptancePt1Cut_ && fabs(candidates->ll1_daughter1_Eta) < acceptanceEtaCut_ &&
-	   candidates->ll1_daughter2_Pt >= acceptancePt2Cut_ && fabs(candidates->ll1_daughter2_Eta) < acceptanceEtaCut_ &&
-	   candidates->ll1_decayLength2D <= acceptanceLxyCut_ ){
-        hists_.h_all_d0->Fill( candidates->ll1_daughter1_D0);
-        genLeptonPt.push_back( candidates->ll1_daughter1_Pt );
-        genLeptonEta.push_back( candidates->ll1_daughter1_Eta );
-        genLeptonD0.push_back( candidates->ll1_daughter1_D0 );
-        hists_.h_all_d0->Fill( candidates->ll1_daughter2_D0);
-        genLeptonD0.push_back( candidates->ll1_daughter2_D0 );
-        genLeptonEta.push_back( candidates->ll1_daughter2_Eta );
-        genLeptonPt.push_back( candidates->ll1_daughter2_Pt );
-        hists_.h_all_lxy_DecayMode_withinAcc->Fill( candidates->ll1_decayLength2D);
-        genLeptonLxy.push_back( candidates->ll1_decayLength2D );
-        if ( signalTriggerFired() ) {
-          hists_.h_all_lxy_DecayMode_withinAcc_trigFired->Fill( candidates->ll1_decayLength2D);
-        }
+  // Fill denominator histograms
+  // Only select tracks with gen values within acceptance
+  if ( fabs(candidates->ll1_daughterPdgId) == interestingLepton ) {
+    hists_.h_all_lxy_DecayMode->Fill( candidates->ll1_decayLength2D);
+    if ( candidates->ll1_daughter1_Pt >= acceptancePt1Cut_ && fabs(candidates->ll1_daughter1_Eta) < acceptanceEtaCut_ &&
+         candidates->ll1_daughter2_Pt >= acceptancePt2Cut_ && fabs(candidates->ll1_daughter2_Eta) < acceptanceEtaCut_ &&
+         candidates->ll1_decayLength2D <= acceptanceLxyCut_ ){
+      hists_.h_all_d0->Fill( candidates->ll1_daughter1_D0);
+      genLeptonPt.push_back( candidates->ll1_daughter1_Pt );
+      genLeptonEta.push_back( candidates->ll1_daughter1_Eta );
+      genLeptonD0.push_back( candidates->ll1_daughter1_D0 );
+      hists_.h_all_d0->Fill( candidates->ll1_daughter2_D0);
+      genLeptonD0.push_back( candidates->ll1_daughter2_D0 );
+      genLeptonEta.push_back( candidates->ll1_daughter2_Eta );
+      genLeptonPt.push_back( candidates->ll1_daughter2_Pt );
+      hists_.h_all_lxy_DecayMode_withinAcc->Fill( candidates->ll1_decayLength2D);
+      genLeptonLxy.push_back( candidates->ll1_decayLength2D );
+      if ( signalTriggerFired() ) {
+        hists_.h_all_lxy_DecayMode_withinAcc_trigFired->Fill( candidates->ll1_decayLength2D);
       }
     }
-    if ( fabs(candidates->ll2_daughterPdgId) == interestingLepton ) {
-      hists_.h_all_lxy_DecayMode->Fill( candidates->ll2_decayLength2D);
-      if ( candidates->ll2_daughter1_Pt >= acceptancePt1Cut_ && fabs(candidates->ll2_daughter1_Eta) < acceptanceEtaCut_ &&
-	   candidates->ll2_daughter2_Pt >= acceptancePt2Cut_ && fabs(candidates->ll2_daughter2_Eta) < acceptanceEtaCut_ &&
-	   candidates->ll2_decayLength2D <= acceptanceLxyCut_ ){
-        hists_.h_all_d0->Fill( candidates->ll2_daughter1_D0);
-        genLeptonPt.push_back( candidates->ll2_daughter1_Pt );
-        genLeptonEta.push_back( candidates->ll2_daughter1_Eta );
-        genLeptonD0.push_back( candidates->ll2_daughter1_D0 );
-        hists_.h_all_d0->Fill( candidates->ll2_daughter2_D0);
-        genLeptonD0.push_back( candidates->ll2_daughter2_D0 );
-        genLeptonEta.push_back( candidates->ll2_daughter2_Eta );
-        genLeptonPt.push_back( candidates->ll2_daughter2_Pt );
-        hists_.h_all_lxy_DecayMode_withinAcc->Fill( candidates->ll2_decayLength2D);
-        genLeptonLxy.push_back( candidates->ll2_decayLength2D );
-        if ( signalTriggerFired() ) {
-          hists_.h_all_lxy_DecayMode_withinAcc_trigFired->Fill( candidates->ll2_decayLength2D);
-        }
+  }
+  if ( fabs(candidates->ll2_daughterPdgId) == interestingLepton ) {
+    hists_.h_all_lxy_DecayMode->Fill( candidates->ll2_decayLength2D);
+    if ( candidates->ll2_daughter1_Pt >= acceptancePt1Cut_ && fabs(candidates->ll2_daughter1_Eta) < acceptanceEtaCut_ &&
+         candidates->ll2_daughter2_Pt >= acceptancePt2Cut_ && fabs(candidates->ll2_daughter2_Eta) < acceptanceEtaCut_ &&
+         candidates->ll2_decayLength2D <= acceptanceLxyCut_ ){
+      hists_.h_all_d0->Fill( candidates->ll2_daughter1_D0);
+      genLeptonPt.push_back( candidates->ll2_daughter1_Pt );
+      genLeptonEta.push_back( candidates->ll2_daughter1_Eta );
+      genLeptonD0.push_back( candidates->ll2_daughter1_D0 );
+      hists_.h_all_d0->Fill( candidates->ll2_daughter2_D0);
+      genLeptonD0.push_back( candidates->ll2_daughter2_D0 );
+      genLeptonEta.push_back( candidates->ll2_daughter2_Eta );
+      genLeptonPt.push_back( candidates->ll2_daughter2_Pt );
+      hists_.h_all_lxy_DecayMode_withinAcc->Fill( candidates->ll2_decayLength2D);
+      genLeptonLxy.push_back( candidates->ll2_decayLength2D );
+      if ( signalTriggerFired() ) {
+        hists_.h_all_lxy_DecayMode_withinAcc_trigFired->Fill( candidates->ll2_decayLength2D);
       }
     }
-    // }
+  }
+  // }
   // Don't bother going further if no exotics survived gen level cuts
   if ( genLeptonPt.size() == 0 ) return;
 
   int nSAmu=0;
-//   for( unsigned int iTreeCand=0; iTreeCand != candidates->candidates_.size(); ++iTreeCand ) {
-//    TreeDipseudoLeptonCandidate cand = candidates->candidates_.at(iTreeCand);
+  //   for( unsigned int iTreeCand=0; iTreeCand != candidates->candidates_.size(); ++iTreeCand ) {
+  //    TreeDipseudoLeptonCandidate cand = candidates->candidates_.at(iTreeCand);
   for( unsigned int iTreeCand=0; iTreeCand != cleanedCandidates.size(); ++iTreeCand ) {
     TreeDipseudoLeptonCandidate cand = cleanedCandidates.at(iTreeCand);
     TreeLepton leptonL = getLepton( candidates->leptons_, cand.leptonIndexL );
@@ -186,8 +186,8 @@ void DileptonAnalyzer::studyTrackingEfficiency( const std::vector<TreeDipseudoLe
   }
   //if(nSAmu!=0) std::cout<<std::endl<<"number of 2SAmu candidates in this event = "<<nSAmu<<std::endl;
 
-//   for( unsigned int iTreeCand=0; iTreeCand != candidates->candidates_.size(); ++iTreeCand ) {
-//     TreeDipseudoLeptonCandidate cand = candidates->candidates_.at(iTreeCand);
+  //   for( unsigned int iTreeCand=0; iTreeCand != candidates->candidates_.size(); ++iTreeCand ) {
+  //     TreeDipseudoLeptonCandidate cand = candidates->candidates_.at(iTreeCand);
   for( unsigned int iTreeCand=0; iTreeCand != cleanedCandidates.size(); ++iTreeCand ) {
     TreeDipseudoLeptonCandidate cand = cleanedCandidates.at(iTreeCand);
     TreeLepton leptonL = getLepton( candidates->leptons_, cand.leptonIndexL );
@@ -200,19 +200,19 @@ void DileptonAnalyzer::studyTrackingEfficiency( const std::vector<TreeDipseudoLe
     //if ( fabs(leptonL.genPdgId) != interestingLepton || fabs(leptonH.genPdgId) != interestingLepton) std::cout<<"fail genMatch. genPdgId = "<<fabs(leptonL.genPdgId)<<" "<<fabs(leptonH.genPdgId)<<std::endl;
     if ( fabs(leptonL.genPdgId) != interestingLepton || fabs(leptonH.genPdgId) != interestingLepton) continue;
     hists_.h_reco_lxy_genMatched->Fill(leptonL.genSignalOriginLxy);
-   
+
     //if ( leptonL.genSignalOriginCtau != leptonH.genSignalOriginCtau) std::cout<<"fail fake comb. lepton.genSignalOriginCtau = "<<leptonL.genSignalOriginCtau<<" "<<leptonH.genSignalOriginCtau<<std::endl;
     //else std::cout<<"pass. lepton.genSignalOriginCtau =  "<<leptonL.genSignalOriginCtau<<std::endl;
     if ( leptonL.genSignalOriginCtau != leptonH.genSignalOriginCtau) continue;
     hists_.h_reco_lxy_removeFakeComb->Fill(leptonL.genSignalOriginLxy);
 
     // if ( leptonL.triggerMatch == 0 || leptonH.triggerMatch == 0 || !(cand.differentTO) ) continue;
-    // hists_.h_reco_lxy_triggerMatch->Fill(leptonL.genSignalOriginLxy);    
+    // hists_.h_reco_lxy_triggerMatch->Fill(leptonL.genSignalOriginLxy);
 
     if (leptonL.genPt < 21 || fabs(leptonL.genEta) >= 2 || leptonH.genPt < 21 || fabs(leptonH.genEta) >= 2 ) continue;
     hists_.h_reco_lxy_withinAcc->Fill(leptonL.genSignalOriginLxy);
 
-	/*bool plotLeptonH=false;
+    /*bool plotLeptonH=false;
     for ( unsigned int iPdg = 0; iPdg < signalPdgId_.size(); iPdg++ ) {
       if ( leptonL.genSignalOriginPdgId == signalPdgId_[iPdg] ) {
         plotLeptonL = true;
@@ -231,8 +231,8 @@ void DileptonAnalyzer::studyTrackingEfficiency( const std::vector<TreeDipseudoLe
 
     //Define final coll cuts here
     DileptonAnalysisCuts::PassedWhichCuts finalCollCuts_studyTrack = dileptonCuts_finalColl_.whichCuts( single_cosmic_muons, candidates,
-													cand, cand.mass, leptonL, leptonH, anaType_, lxyScale_, d0Scale_,
-													&dileptonCuts_finalColl_muTrack );
+                                                                                                        cand, cand.mass, leptonL, leptonH, anaType_, lxyScale_, d0Scale_,
+                                                                                                        &dileptonCuts_finalColl_muTrack );
 
     //temporary set of final cuts, some of which were removed...
     DileptonAnalysisCuts::PassedWhichCuts finalCollCutsTemp_studyTrack = finalCollCuts_studyTrack;
@@ -248,7 +248,7 @@ void DileptonAnalyzer::studyTrackingEfficiency( const std::vector<TreeDipseudoLe
     //finalCollCutsTemp_studyTrack.passTrackPt = true;
 
     DileptonAnalysisCuts::PassedWhichCuts finalCollCutsTemp_noCosmicRejection = finalCollCuts_studyTrack;
-    finalCollCutsTemp_noCosmicRejection.passLeptonD0 = true; 
+    finalCollCutsTemp_noCosmicRejection.passLeptonD0 = true;
     finalCollCutsTemp_noCosmicRejection.passRejectionCosmics = true;
 
     float cand_reco_Lxy = fabs(cand.decayLength_PV);
@@ -285,11 +285,11 @@ void DileptonAnalyzer::studyTrackingEfficiency( const std::vector<TreeDipseudoLe
         // if( isComplementary(leptonL, leptonH, hists_) ) {
         if( DileptonAnalysisCuts::isComplementary(leptonL, leptonH, candidates, dileptonCuts_finalColl_muTrack) ) {
           hists_.h_reco_lxy_aftercuts_complementary->Fill(leptonL.genSignalOriginLxy);
-            }
-          if ( dileptonCuts_finalColl_.passAllCuts( finalCollCuts_studyTrack ) ) {
-            hists_.h_reco_lxy_final->Fill(leptonL.genSignalOriginLxy);
-          }
-//        }
+        }
+        if ( dileptonCuts_finalColl_.passAllCuts( finalCollCuts_studyTrack ) ) {
+          hists_.h_reco_lxy_final->Fill(leptonL.genSignalOriginLxy);
+        }
+        //        }
       }
     }
   }
@@ -462,7 +462,7 @@ unsigned int DileptonAnalyzer::storeNumberOfExoticsALL()
     indexOfPdgId = getIndexOfSignalPdg( candidates->ll2_motherPdgId );
   }
 
-//  eventWeight_ = eventWeight_*(1+25/cand.decayLength_PV);
+  //  eventWeight_ = eventWeight_*(1+25/cand.decayLength_PV);
   // Did signal trigger fire in this event?
   bool sigTrig=false;
   if (signalTriggerFired()) sigTrig=true;
@@ -550,7 +550,7 @@ void DileptonAnalyzer::storeNumberOfExoticsRECO( TreeDipseudoLeptonCandidate & c
     indexOfPdgId = getIndexOfSignalPdg( pdgId );
   }
 
-//  eventWeight_ = eventWeight_*(1-25/cand.decayLength_PV);
+  //  eventWeight_ = eventWeight_*(1-25/cand.decayLength_PV);
   // Did signal trigger fire in this event?
   bool sigTrig=false;
   if (signalTriggerFired()) sigTrig=true;
@@ -772,27 +772,6 @@ bool DileptonAnalyzer::withinAcceptnace( TreeDipseudoLeptonCandidate & cand )
   return false;
 }
 
-// Vary lifetime cuts and store number of cands passing cuts
-void DileptonAnalyzer::optimiseLifetimeCuts( double lxySig, double minD0, double weight )
-{
-  double lxySigCut = 0;
-  double d0SigCut = 0;
-
-  for ( lxySigCut=0; lxySigCut < 40; lxySigCut++ ) {
-    if ( lxySig > lxySigCut ) {
-      for ( d0SigCut=0; d0SigCut < 10; d0SigCut++ ) {
-        if ( minD0 > d0SigCut ) {
-          // Fill 2d histogram
-          hists_.h_minD0SigCut_vs_LxySigCut->Fill(d0SigCut,lxySigCut,weight);
-        }
-        else break;
-      }
-    }
-    else break;
-  }
-}
-
-
 // Takes track of when (if) this candidate failed a cut
 void DileptonAnalyzer::monitorCutFlow( DileptonAnalysisCuts::PassedWhichCuts & whichCuts, map< TString, float > & cutFlowMap, double weight )
 {
@@ -801,10 +780,10 @@ void DileptonAnalyzer::monitorCutFlow( DileptonAnalysisCuts::PassedWhichCuts & w
   cutFlowMap["AllCandidatesAfterPrefilter"] += weight;
 
   if ( whichCuts.passTrackRejection ) cutFlowMap["TrackRejection"] += weight; else return;
-//  if ( whichCuts.passComplementarity ) cutFlowMap["Complementarity"] += weight; else return;
+  //  if ( whichCuts.passComplementarity ) cutFlowMap["Complementarity"] += weight; else return;
   if ( whichCuts.passVertexChi2 ) cutFlowMap["DileptonChi2"] += weight; else return;
   if ( whichCuts.passMaxTrackChi2 ) cutFlowMap["MaxTrackChi2"] += weight; else return;
-//  if ( whichCuts.passOppCharge ) cutFlowMap["DileptonOppositeCharge"] += weight; else return;
+  //  if ( whichCuts.passOppCharge ) cutFlowMap["DileptonOppositeCharge"] += weight; else return;
   // if ( whichCuts.passOppSignD0) cutFlowMap["SameSignD0"] += weight; else return;
   if ( whichCuts.passTrackPt ) cutFlowMap["LeptonPt"] += weight; else return;
   if ( whichCuts.passEta && whichCuts.passSCEta ) cutFlowMap["LeptonAbsEta"] += weight; else return;
@@ -814,12 +793,12 @@ void DileptonAnalyzer::monitorCutFlow( DileptonAnalysisCuts::PassedWhichCuts & w
   // if ( whichCuts.passPhotonID ) cutFlowMap["PhotonID"] += weight; else return;
   // if ( whichCuts.passMuonID ) cutFlowMap["MuonID"] += weight; else return;
   // if ( whichCuts.passTrackQuality ) cutFlowMap["TrackQuality"] += weight; else return;
-//  if ( whichCuts.passTriggerMatch ) cutFlowMap["DileptonTriggerMatch"] += weight; else return;
-//  if ( whichCuts.passIso ) cutFlowMap["DileptonIsolation"] += weight; else return;
+  //  if ( whichCuts.passTriggerMatch ) cutFlowMap["DileptonTriggerMatch"] += weight; else return;
+  //  if ( whichCuts.passIso ) cutFlowMap["DileptonIsolation"] += weight; else return;
   if ( whichCuts.passMass ) cutFlowMap["DileptonMass"] += weight; else return;
   if ( whichCuts.passCosine ) cutFlowMap["DileptonB2BVeto"] += weight; else return;
   if ( whichCuts.passDeltaR ) cutFlowMap["DileptonDeltaR"] += weight; else return;
-  if ( whichCuts.passDeltaPhi ) cutFlowMap["DileptonDeltaPhi"] += weight; else return;  
+  if ( whichCuts.passDeltaPhi ) cutFlowMap["DileptonDeltaPhi"] += weight; else return;
   // if ( whichCuts.passHitsBeforeVertex ) cutFlowMap["DileptonHitsBeforeVertex"] += weight; else return;
   // if ( whichCuts.passMissingHitsAfterVertex ) cutFlowMap["DileptonMissingHitsAfterVertex"] += weight; else return;
   if ( whichCuts.passRejectionCosmics ) cutFlowMap["RejectionCosmics"] += weight; else return;
@@ -1011,61 +990,13 @@ double DileptonAnalyzer::getMinD0( const TreeDipseudoLeptonCandidate &cand )
   return min( fabs(cand.leptonD0SignificanceL_PVrefit_includingPVError), fabs(cand.leptonD0SignificanceH_PVrefit_includingPVError)) ==
       fabs( cand.leptonD0SignificanceL_PVrefit_includingPVError ) ?
         cand.leptonD0SignificanceL_PVrefit_includingPVError : cand.leptonD0SignificanceH_PVrefit_includingPVError;
-  } 
+}
 
 double DileptonAnalyzer::getMaxD0( const TreeDipseudoLeptonCandidate &cand, float minD0Sigma )
 {
   return ( minD0Sigma == cand.leptonD0SignificanceL_PVrefit_includingPVError ) ? cand.leptonD0SignificanceH_PVrefit_includingPVError :
                                                                                  cand.leptonD0SignificanceL_PVrefit_includingPVError;
 }
-
-void DileptonAnalyzer::fillRemovedLifetimePlots( TreeDipseudoLeptonCandidate &cand, TreeLepton& leptonL, TreeLepton& leptonH,
-                                                 double mass, DileptonAnalysisCuts::PassedWhichCuts removedLifetimeCuts, Histograms & h )
-{
-  // n-1 (for track mis-alignment studies)
-  // No requirement on d0/sigma (magnitude or sign)
-  // Also study collinearity method here
-  DileptonAnalysisCuts::PassedWhichCuts removedLifetimeCutsTemp = removedLifetimeCuts;
-  removedLifetimeCutsTemp.passOppSignD0 = true;
-
-  // Only for data
-  if ( isData_ ) {
-    // Remove d0/sigma requirements to measure bias
-    // n-1 (for track mis-alignment studies)
-    removedLifetimeCutsTemp = removedLifetimeCuts;
-    // Optionally reapply this selection
-    bool candPassVertex = ( removedLifetimeCutsTemp.passVertexChi2 );
-
-    removedLifetimeCutsTemp.passOppSignD0 = true;
-    removedLifetimeCutsTemp.passVertexChi2 = true;
-    if ( dileptonCuts_removedLifetime_.passAllCuts( removedLifetimeCutsTemp ) ) {
-      // No requirement on d0/sigma size or sign
-      // No requirement on vertex chi2, but can be reapplied using bool
-      studyTrackD0Misalignment(cand, leptonL, leptonH, candPassVertex, h);
-      studyTrackZ0Misalignment(cand, leptonL, leptonH, candPassVertex, h);
-    }
-  }
-}
-
-// // Study analysis that uses d0 signing
-// void DileptonAnalyzer::studyD0Signing( TreeDipseudoLeptonCandidate &cand, TreeLepton & leptonL, TreeLepton & leptonH,
-//                                        double & mass, Histograms & h, bool fillTextFiles, const DileptonAnalysisCuts & dileptonCuts_finalColl_muTrack )
-// {
-//   // Apply different sets of analysis cuts
-//   // WARNING: This is not changed to the single_cosmic_muons
-//   DileptonAnalysisCuts::PassedWhichCuts finalCuts = dileptonCuts_final_.whichCuts( candidates->leptons_, candidates, dileptonCuts_finalColl_muTrack,
-// 										   cand, mass, leptonL, leptonH, anaType_, lxyScale_, d0Scale_ );
-//   DileptonAnalysisCuts::PassedWhichCuts removedLifetimeCuts = dileptonCuts_removedLifetime_.whichCuts( candidates->leptons_, candidates, dileptonCuts_finalColl_muTrack,
-// 												       cand, mass, leptonL, leptonH, anaType_, lxyScale_, d0Scale_ );
-// 
-//   // Only filling histograms for central ctau exotic in signal MC
-//   if ( ( isSignalMC_ && isCentralCtau() ) || !isSignalMC_ ) {
-//     // Removed lifetime cuts
-//     // Keep separate as need to do a few other things
-//     fillRemovedLifetimePlots( cand, leptonL, leptonH, mass, removedLifetimeCuts, h );
-//   }
-// }
-
 
 // Study analysis that uses collinearity rather than signing d0/sigma
 void DileptonAnalyzer::studyCollinearity( std::vector <TreeLepton> single_cosmic_muons, TreeDipseudoLeptonCandidate &cand, TreeLepton & leptonL, TreeLepton & leptonH,
@@ -1078,17 +1009,17 @@ void DileptonAnalyzer::studyCollinearity( std::vector <TreeLepton> single_cosmic
   // One selects candidates with dPhi < 90 and one for dPhi > 90
   // WARNING: This is not changed to the single_cosmic_muons
   DileptonAnalysisCuts::PassedWhichCuts finalCollCuts = dileptonCuts_finalColl_.whichCuts( single_cosmic_muons, candidates,
-											   cand, mass, leptonL, leptonH, anaType_, lxyScale_, d0Scale_,
-											   &dileptonCuts_finalColl_muTrack);
+                                                                                           cand, mass, leptonL, leptonH, anaType_, lxyScale_, d0Scale_,
+                                                                                           &dileptonCuts_finalColl_muTrack);
   DileptonAnalysisCuts::PassedWhichCuts looseCollCuts = dileptonCuts_looseColl_.whichCuts( single_cosmic_muons, candidates,
-											   cand, mass, leptonL, leptonH, anaType_, lxyScale_, d0Scale_,
-											   &dileptonCuts_finalColl_muTrack);
+                                                                                           cand, mass, leptonL, leptonH, anaType_, lxyScale_, d0Scale_,
+                                                                                           &dileptonCuts_finalColl_muTrack);
   DileptonAnalysisCuts::PassedWhichCuts controlCollCuts = dileptonCuts_controlColl_.whichCuts( single_cosmic_muons, candidates,
-											       cand, mass, leptonL, leptonH, anaType_, lxyScale_, d0Scale_,
-											       &dileptonCuts_finalColl_muTrack);
+                                                                                               cand, mass, leptonL, leptonH, anaType_, lxyScale_, d0Scale_,
+                                                                                               &dileptonCuts_finalColl_muTrack);
   DileptonAnalysisCuts::PassedWhichCuts looseControlCollCuts = dileptonCuts_looseControlColl_.whichCuts( single_cosmic_muons, candidates,
-													 cand, mass, leptonL, leptonH, anaType_, lxyScale_, d0Scale_,
-													 &dileptonCuts_finalColl_muTrack);
+                                                                                                         cand, mass, leptonL, leptonH, anaType_, lxyScale_, d0Scale_,
+                                                                                                         &dileptonCuts_finalColl_muTrack);
   // DileptonAnalysisCuts::PassedWhichCuts removedLifetimeCuts = dileptonCuts_removedLifetimeNoVertex_.whichCuts( cand, mass, leptonL, leptonH, anaType_, lxyScale_, d0Scale_ );
 
   // For signal MC, store candidates that pass all selection
@@ -1132,11 +1063,11 @@ void DileptonAnalyzer::studyCollinearity( std::vector <TreeLepton> single_cosmic
       }
     }
     else if ( dileptonCuts_controlColl_.passAllCuts( controlCollCuts ) ) {
- //      std::cout << "---------------------------------------------------------------------- cosine = " << cand.cosine << std::endl;
-//      std::cout << "Event = " << candidates->event << ", run = " << candidates->run << ", lumi = " << candidates->lumi << std::endl;
-//      std::cout << "lepton d0/sigma = " << std::min(fabs(cand.leptonD0SignificanceL_PVrefit_includingPVError), fabs(cand.leptonD0SignificanceH_PVrefit_includingPVError))
-//		<< " leptonH d0/sigma = " << cand.leptonD0SignificanceH_PVrefit_includingPVError
-//		<< " Lxy/sigma = " << cand.decayLengthSignificance_PV << std::endl;
+      //      std::cout << "---------------------------------------------------------------------- cosine = " << cand.cosine << std::endl;
+      //      std::cout << "Event = " << candidates->event << ", run = " << candidates->run << ", lumi = " << candidates->lumi << std::endl;
+      //      std::cout << "lepton d0/sigma = " << std::min(fabs(cand.leptonD0SignificanceL_PVrefit_includingPVError), fabs(cand.leptonD0SignificanceH_PVrefit_includingPVError))
+      //		<< " leptonH d0/sigma = " << cand.leptonD0SignificanceH_PVrefit_includingPVError
+      //		<< " Lxy/sigma = " << cand.decayLengthSignificance_PV << std::endl;
 
 
       if ( fillCorrectedTextFiles ) {
@@ -1155,13 +1086,13 @@ void DileptonAnalyzer::studyCollinearity( std::vector <TreeLepton> single_cosmic
   
   if ( isSignalMC_ && isCentralCtau() ) {
     nTotalCands_++;
-   if ( dileptonCuts_finalColl_.passAllCuts( finalCollCuts ) ) {
-    h.h_signal_numberOfValidMuonHits_finalCollCuts->Fill(leptonL.numberOfValidMuonHits, eventWeight_ );
-    h.h_signal_numberOfValidMuonDTHits_finalCollCuts->Fill(leptonL.numberOfValidMuonDTHits, eventWeight_ );
-    h.h_signal_numberOfValidMuonCSCHits_finalCollCuts->Fill(leptonL.numberOfValidMuonCSCHits, eventWeight_ );
-    h.h_signal_numberOfValidMuonHits_finalCollCuts->Fill(leptonH.numberOfValidMuonHits, eventWeight_ );
-    h.h_signal_numberOfValidMuonDTHits_finalCollCuts->Fill(leptonH.numberOfValidMuonDTHits, eventWeight_ );
-    h.h_signal_numberOfValidMuonCSCHits_finalCollCuts->Fill(leptonH.numberOfValidMuonCSCHits, eventWeight_ );
+    if ( dileptonCuts_finalColl_.passAllCuts( finalCollCuts ) ) {
+      h.h_signal_numberOfValidMuonHits_finalCollCuts->Fill(leptonL.numberOfValidMuonHits, eventWeight_ );
+      h.h_signal_numberOfValidMuonDTHits_finalCollCuts->Fill(leptonL.numberOfValidMuonDTHits, eventWeight_ );
+      h.h_signal_numberOfValidMuonCSCHits_finalCollCuts->Fill(leptonL.numberOfValidMuonCSCHits, eventWeight_ );
+      h.h_signal_numberOfValidMuonHits_finalCollCuts->Fill(leptonH.numberOfValidMuonHits, eventWeight_ );
+      h.h_signal_numberOfValidMuonDTHits_finalCollCuts->Fill(leptonH.numberOfValidMuonDTHits, eventWeight_ );
+      h.h_signal_numberOfValidMuonCSCHits_finalCollCuts->Fill(leptonH.numberOfValidMuonCSCHits, eventWeight_ );
     }
     if ( nSensitiveExoticDecayInEvent_ == 1 ) {
       if ( correctlyReconstructed( cand, leptonL, leptonH ) ) nTotalCands_correctly1++;
@@ -1186,17 +1117,19 @@ void DileptonAnalyzer::studyCollinearity( std::vector <TreeLepton> single_cosmic
       }
     }
     else if ( isData_ ) {
-//Actual one...
-//      if ( fillCorrectedTextFiles ) monitorCutFlow( finalCollCuts, cutFlowMapColl_, eventWeight_ );
-//if it is unblinded, use finallColl. If not, use controlColl for Data...
+      //Actual one...
+      //      if ( fillCorrectedTextFiles ) monitorCutFlow( finalCollCuts, cutFlowMapColl_, eventWeight_ );
+      //if it is unblinded, use finallColl. If not, use controlColl for Data...
       if ( unblind_ ) monitorCutFlow( finalCollCuts, cutFlowMapColl_, eventWeight_ );
       else  monitorCutFlow( controlCollCuts, cutFlowMapColl_, eventWeight_ );
     }
     else monitorCutFlow( finalCollCuts, cutFlowMapColl_, eventWeight_ );
   }
-   //Fill n-3 Plots
-  fill_nMinus3_Plots( cand, leptonL, leptonH, mass, dileptonCuts_finalColl_, finalCollCuts, h, false );
-  fill_nMinus3_Plots( cand, leptonL, leptonH, mass, dileptonCuts_controlColl_, controlCollCuts, h, false );
+  if (fillNMinus3Plots_) {
+    //Fill n-3 Plots
+    fill_nMinus3_Plots( cand, leptonL, leptonH, mass, dileptonCuts_finalColl_, finalCollCuts, h, false );
+    fill_nMinus3_Plots( cand, leptonL, leptonH, mass, dileptonCuts_controlColl_, controlCollCuts, h, false );
+  }
   // Fill n-1 plots
   fillPlots( cand, leptonL, leptonH, mass, dileptonCuts_finalColl_, finalCollCuts, h.histMapFinalColl, false );
   fillPlots( cand, leptonL, leptonH, mass, dileptonCuts_looseColl_, looseCollCuts, h.histMapLooseColl, false );
@@ -1222,24 +1155,6 @@ void DileptonAnalyzer::studyCollinearity( std::vector <TreeLepton> single_cosmic
 
   // Note how many candidates pass each selection per event
   if ( dileptonCuts_finalColl_.passAllCuts( finalCollCuts ) ) {
-
-//std::cout << "Event = " << candidates->event << ", run = " << candidates->run << ", lumi = " << candidates->lumi
-//                  << std::endl; 
-/*                 cosine = " << cand.cosine << ", d0 Sigma = " << min( fabs(cand.leptonD0SignificanceL_PV_includingPVError), fabs(cand.leptonD0SignificanceH_PV_includingPVError) ) << ", Lxy/sigma = " << cand.decayLengthSignificance_PV << ", deltaR = " << cand.deltaR
-                  << ", leptonL: eta = " << leptonL.eta << ", phi = " << leptonL.phi
-                  << ", leptonH: eta = " << leptonH.eta << ", phi = " << leptonH.phi
-                  << ", leptonL.muonTimeC.inverseBeta = " << leptonL.muonTimeC.inverseBeta
-                  << ", leptonH.muonTimeC.inverseBeta = " << leptonH.muonTimeC.inverseBeta
-                  << ", leptonL.muonTimeC.timeAtIpInOut = " << leptonL.muonTimeC.timeAtIpInOut
-                  << ", leptonH.muonTimeC.timeAtIpInOut = " << leptonH.muonTimeC.timeAtIpInOut
-                  << ", leptonL.muonTimeC.timeAtIpOutIn = " << leptonL.muonTimeC.timeAtIpOutIn
-                  << ", leptonH.muonTimeC.timeAtIpOutIn = " << leptonH.muonTimeC.timeAtIpOutIn
-                  << ", cand.vertexChi2 = " << cand.vertexChi2
-                  << ", max lepton trackChi2 = " << std::max(leptonL.trackChi2, leptonH.trackChi2)
-                  << std::endl;
-*/
-//  cout << " Muon Valid Hits = " << leptonH.numberOfValidMuonHits << ", Muon Valid DT Hits = " << leptonH.numberOfValidMuonDTHits << ", Muon Valid CSC Hits = " << leptonH.numberOfValidMuonCSCHits << endl;
-
     if ( fillCorrectedTextFiles || !isData_ ) ++nCandsPerEvent_final_;
     bestCandidateSoFar( cand, bestFinalSignalCand_);
   }
@@ -1249,57 +1164,6 @@ void DileptonAnalyzer::studyCollinearity( std::vector <TreeLepton> single_cosmic
     if ( dileptonCuts_controlColl_.passAllCuts( controlCollCuts ) ) ++nCandsPerEvent_control_;
     if ( dileptonCuts_looseControlColl_.passAllCuts( looseControlCollCuts ) ) ++nCandsPerEvent_looseControl_;
   }
-
-   DileptonAnalysisCuts::PassedWhichCuts controlCollCuts_Temp1 = controlCollCuts;
-   DileptonAnalysisCuts::PassedWhichCuts controlCollCuts_Temp2 = controlCollCuts;
-//   controlCollCuts_Temp1.passMinLxySig = true;
-//   controlCollCuts_Temp1.passMaxLxySig = true;
-//   controlCollCuts_Temp2.passMinLxySig = true;
-//   controlCollCuts_Temp2.passMaxLxySig = true;
-   controlCollCuts_Temp2.passRejectionCosmics = true;
-//   controlCollCuts_Temp1.passLeptonD0 = true;
-//   controlCollCuts_Temp1.passLeptonD0 = true;
-
-   if( dileptonCuts_controlColl_.passAllCuts( controlCollCuts_Temp2 ) && !dileptonCuts_controlColl_.passAllCuts( controlCollCuts_Temp1 ) ) {
-//   if( dileptonCuts_controlColl_.passAllCuts( controlCollCuts_Temp1 ) ) {
-/*      std::cout << "---------------------------------------------------------------------- cosine = " << cand.cosine << std::endl;
-      std::cout << "Event = " << candidates->event << ", run = " << candidates->run << ", lumi = " << candidates->lumi << std::endl;
-      std::cout << "leptonL d0/sigma = " << cand.leptonD0SignificanceL_PVrefit_includingPVError
-                << " leptonH d0/sigma = " << cand.leptonD0SignificanceH_PVrefit_includingPVError
-                << " Lxy/sigma = " << cand.decayLengthSignificance_PV << std::endl;  
-      if ( leptonL.muonTimeC.nDof > 0 || leptonH.muonTimeC.nDof > 0 ) {
-         if ( leptonL.muonTimeC.nDof > 0 ){
-       h.h_cosmic_non_rejection_muonTimeC_inverseBeta_controlCollCuts->Fill(leptonL.muonTimeC.inverseBeta, eventWeight_ );
-       h.h_cosmic_non_rejection_muonTimeC_freeInverseBeta_controlCollCuts->Fill(leptonL.muonTimeC.freeInverseBeta, eventWeight_ );
-       h.h_cosmic_non_rejection_muonTimeC_timeAtIpInOut_controlCollCuts->Fill(leptonL.muonTimeC.timeAtIpInOut, eventWeight_ );
-       h.h_cosmic_non_rejection_muonTimeC_timeAtIpOutIn_controlCollCuts->Fill(leptonL.muonTimeC.timeAtIpOutIn, eventWeight_ );
-         }
-         if (leptonH.muonTimeC.nDof > 0){
-       h.h_cosmic_non_rejection_muonTimeC_inverseBeta_controlCollCuts->Fill(leptonH.muonTimeC.inverseBeta, eventWeight_ );
-       h.h_cosmic_non_rejection_muonTimeC_freeInverseBeta_controlCollCuts->Fill(leptonH.muonTimeC.freeInverseBeta, eventWeight_ );
-       h.h_cosmic_non_rejection_muonTimeC_timeAtIpInOut_controlCollCuts->Fill(leptonH.muonTimeC.timeAtIpInOut, eventWeight_ );
-       h.h_cosmic_non_rejection_muonTimeC_timeAtIpOutIn_controlCollCuts->Fill(leptonH.muonTimeC.timeAtIpOutIn, eventWeight_ );
-         }
-      }
-*/
-/*       std::cout << "Event = " << candidates->event << ", run = " << candidates->run << ", lumi = " << candidates->lumi
-                  << ", cosine = " << cand.cosine << ", d0 Sigma = " << min( fabs(cand.leptonD0SignificanceL_PV_includingPVError), fabs(cand.leptonD0SignificanceH_PV_includingPVError) ) << ", Lxy/sigma = " << cand.decayLengthSignificance_PV << ", deltaR = " << cand.deltaR
-                  << ", leptonL: eta = " << leptonL.eta << ", phi = " << leptonL.phi
-                  << ", leptonH: eta = " << leptonH.eta << ", phi = " << leptonH.phi
-                  << ", leptonL.muonTimeC.inverseBeta = " << leptonL.muonTimeC.inverseBeta
-                  << ", leptonH.muonTimeC.inverseBeta = " << leptonH.muonTimeC.inverseBeta
-                  << ", leptonL.muonTimeC.timeAtIpInOut = " << leptonL.muonTimeC.timeAtIpInOut
-                  << ", leptonH.muonTimeC.timeAtIpInOut = " << leptonH.muonTimeC.timeAtIpInOut
-                  << ", leptonL.muonTimeC.timeAtIpOutIn = " << leptonL.muonTimeC.timeAtIpOutIn
-                  << ", leptonH.muonTimeC.timeAtIpOutIn = " << leptonH.muonTimeC.timeAtIpOutIn
-                  << ", cand.vertexChi2 = " << cand.vertexChi2
-                  << ", max lepton trackChi2 = " << std::max(leptonL.trackChi2, leptonH.trackChi2)
-                  << ", min lepton muon Valid Hits = " << std::min(leptonL.numberOfValidMuonHits, leptonH.numberOfValidMuonHits)
-                  << ", min lepton muon DT Valid Hits = " << std::min(leptonL.numberOfValidMuonDTHits, leptonH.numberOfValidMuonDTHits)
-                  << ", min lepton muon CSC Valid Hits = " << std::min(leptonL.numberOfValidMuonCSCHits, leptonH.numberOfValidMuonCSCHits)
-                  << std::endl;
-*/
-   }
 
   //
   // Fill d0/sigma plots
@@ -1315,19 +1179,16 @@ void DileptonAnalyzer::studyCollinearity( std::vector <TreeLepton> single_cosmic
   controlCollCuts_removedLifetime.passMinLxySig = true;
   controlCollCuts_removedLifetime.passMaxLxySig = true;
 
-  // fillPlots( cand, leptonL, leptonH, mass, dileptonCuts_controlColl_, controlCollCuts_removedLifetime, h.histMapControlColl, false );
-
   // 2D plot of Lxy sig and D0 sig for control region removed lifetime....
-/*  if (dileptonCuts_finalColl_.passAllCuts(controlCollCuts_removedLifetime)){
-  double absLxy_;
-  if ( dileptonCuts_finalColl_.get_use_PV() ) absLxy_ = fabs(cand.decayLengthSignificance_PV); 
-  else  absLxy_ = fabs(cand.decayLengthSignificance_BS); 
-  double min_D0_;
-  if (dileptonCuts_finalColl_.get_use_PV()) { min_D0_ = min( fabs(cand.leptonD0SignificanceL_PV_includingPVError), fabs(cand.leptonD0SignificanceH_PV_includingPVError) );}
+  if (dileptonCuts_finalColl_.passAllCuts(controlCollCuts_removedLifetime)){
+    double absLxy_;
+    if ( dileptonCuts_finalColl_.get_use_PV() ) absLxy_ = fabs(cand.decayLengthSignificance_PV);
+    else  absLxy_ = fabs(cand.decayLengthSignificance_BS);
+    double min_D0_;
+    if (dileptonCuts_finalColl_.get_use_PV()) { min_D0_ = min( fabs(cand.leptonD0SignificanceL_PV_includingPVError), fabs(cand.leptonD0SignificanceH_PV_includingPVError) );}
     else { min_D0_ = min( fabs(cand.leptonD0SignificanceL_BS), fabs(cand.leptonD0SignificanceH_BS) ); }
-   h.h_minleptonD0Sig_vs_LxySig_controlCollCuts->Fill(absLxy_, min_D0_, eventWeight_);
-  }*/
-
+    h.h_minleptonD0Sig_vs_LxySig_controlCollCuts->Fill(absLxy_, min_D0_, eventWeight_);
+  }
   // Select candidates that pass removed lifetime collinearity cuts
   bool candPassVertex = ( finalCollCuts_removedLifetime.passVertexChi2 || controlCollCuts_removedLifetime.passVertexChi2 );
   finalCollCuts_removedLifetime = finalCollCuts;
@@ -1340,15 +1201,15 @@ void DileptonAnalyzer::studyCollinearity( std::vector <TreeLepton> single_cosmic
   controlCollCuts_removedLifetime.passMinLxySig = true;
   controlCollCuts_removedLifetime.passMaxLxySig = true;
   controlCollCuts_removedLifetime.passTrackRejection = true;
-   if ( dileptonCuts_finalColl_.passAllCuts( finalCollCuts_removedLifetime ) || dileptonCuts_controlColl_.passAllCuts( controlCollCuts_removedLifetime ) ) {
-//  if ( dileptonCuts_controlColl_.passAllCuts( controlCollCuts_removedLifetime ) ) {
+  if ( dileptonCuts_finalColl_.passAllCuts( finalCollCuts_removedLifetime ) || dileptonCuts_controlColl_.passAllCuts( controlCollCuts_removedLifetime ) ) {
+    //  if ( dileptonCuts_controlColl_.passAllCuts( controlCollCuts_removedLifetime ) ) {
 
     h.h_nMinus1_trigDeltaR_removedLifetimeCollCuts->Fill( max( leptonL.tmDeltaR, leptonH.tmDeltaR));
     h.h_nMinus1_photonDeltaR_removedLifetimeCollCuts->Fill( max( leptonL.pmDeltaR, leptonH.pmDeltaR));
 
     // Study the tracker misalignment
     // Only for data
-    if ( isData_ ) {
+    if ( isData_ && studyTrackMisalignment_ ) {
       // No requirement on d0/sigma size or sign
       // No requirement on vertex chi2, but can be reapplied using bool
       studyTrackD0Misalignment(cand, leptonL, leptonH, candPassVertex, h);
@@ -1359,8 +1220,8 @@ void DileptonAnalyzer::studyCollinearity( std::vector <TreeLepton> single_cosmic
     double minD0;
     if (dileptonCuts_finalColl_.get_use_PV()) { minD0 = min( fabs(cand.leptonD0SignificanceL_PV_includingPVError), fabs(cand.leptonD0SignificanceH_PV_includingPVError) );}
     else { minD0 = min( fabs(cand.leptonD0SignificanceL_PVrefit_includingPVError), fabs(cand.leptonD0SignificanceH_PVrefit_includingPVError) ); }
-  
-//  double minD0 = min( fabs(cand.leptonD0SignificanceL_PVrefit_includingPVError), fabs(cand.leptonD0SignificanceH_PVrefit_includingPVError) );
+
+    //  double minD0 = min( fabs(cand.leptonD0SignificanceL_PVrefit_includingPVError), fabs(cand.leptonD0SignificanceH_PVrefit_includingPVError) );
 
     // Select candidates in signal region
     if ( dileptonCuts_finalColl_.passAllCuts( finalCollCuts_removedLifetime ) ) {
@@ -1537,7 +1398,6 @@ void DileptonAnalyzer::studyCandidate( std::vector <TreeLepton> single_cosmic_mu
   // Collinearity methods
   //
   studyCollinearity( single_cosmic_muons, cand, leptonL, leptonH, mass, h, fillCorrectedTextFiles, dileptonCuts_finalColl_muTrack );
-
 }
 
 //Definition of DeltaPhi function
@@ -1547,15 +1407,16 @@ double DileptonAnalyzer::DeltaPhi(double phi1, double phi2)
   double result = fabs(fabs(fabs(resultdel)-TMath::Pi())-TMath::Pi());
   return result;
 }
+
 //n-3 Plots
 void DileptonAnalyzer::fill_nMinus3_Plots( const TreeDipseudoLeptonCandidate &cand, TreeLepton& leptonL, TreeLepton& leptonH,
-                                  const double mass, DileptonAnalysisCuts & cuts, const DileptonAnalysisCuts::PassedWhichCuts & passedWhichCuts, Histograms & h, bool isFinalCuts, bool debug)
+                                           const double mass, DileptonAnalysisCuts & cuts, const DileptonAnalysisCuts::PassedWhichCuts & passedWhichCuts, Histograms & h, bool isFinalCuts, bool debug)
 {
 
   DileptonAnalysisCuts::PassedWhichCuts cutsTemp = passedWhichCuts;
   double absLxy;
-  if ( dileptonCuts_finalColl_.get_use_PV() ) absLxy = fabs(cand.decayLengthSignificance_PV); 
-  else  absLxy = fabs(cand.decayLengthSignificance_BS); 
+  if ( dileptonCuts_finalColl_.get_use_PV() ) absLxy = fabs(cand.decayLengthSignificance_PV);
+  else  absLxy = fabs(cand.decayLengthSignificance_BS);
   double minD0;
   if (dileptonCuts_finalColl_.get_use_PV()) { minD0 = min( fabs(cand.leptonD0SignificanceL_PV_includingPVError), fabs(cand.leptonD0SignificanceH_PV_includingPVError) );}
   else { minD0 = min( fabs(cand.leptonD0SignificanceL_PVrefit_includingPVError), fabs(cand.leptonD0SignificanceH_PVrefit_includingPVError) ); }
@@ -1564,13 +1425,63 @@ void DileptonAnalyzer::fill_nMinus3_Plots( const TreeDipseudoLeptonCandidate &ca
   cutsTemp.passLeptonD0 = true;
   cutsTemp.passMinLxySig = true;
   cutsTemp.passCosine = true;
-     if (  cuts.passAllCuts( cutsTemp )  ) {
-         if ( cand.dPhiCorr < TMath::PiOver2() && cand.dPhiCorr >= 0.0 ) h.h_nMinus3_3D_finalCollCuts->Fill(cand.cosine, minD0, absLxy, eventWeight_ );   
-         if ( cand.dPhiCorr < TMath::Pi() && cand.dPhiCorr >= TMath::PiOver2() ) h.h_nMinus3_3D_controlCollCuts->Fill(cand.cosine, minD0, absLxy, eventWeight_ );
-//          h.histog -> Fill(cand.cosine, minD0, absLxy, eventWeight_ );   
-     }
+  if (  cuts.passAllCuts( cutsTemp )  ) {
+    if ( cand.dPhiCorr < TMath::PiOver2() && cand.dPhiCorr >= 0.0 ) h.h_nMinus3_3D_finalCollCuts->Fill(cand.cosine, minD0, absLxy, eventWeight_ );
+    if ( cand.dPhiCorr < TMath::Pi() && cand.dPhiCorr >= TMath::PiOver2() ) h.h_nMinus3_3D_controlCollCuts->Fill(cand.cosine, minD0, absLxy, eventWeight_ );
+    //          h.histog -> Fill(cand.cosine, minD0, absLxy, eventWeight_ );
+  }
 }
-// Function to fill all plots which are common between each set of cuts e.g. n-1 plots
+
+
+/// Function to fill all timing plots
+void DileptonAnalyzer::fillTimingPlots(TreeLepton& leptonL, TreeLepton& leptonH, map< TString, TH1* > & histMap)
+{
+  if ( leptonL.muonTimeC.nDof > 0 || leptonH.muonTimeC.nDof > 0 ) {
+    if ( leptonL.muonTimeC.nDof > 0 ){
+      histMap["muonTimeC_inverseBeta"]->Fill(leptonL.muonTimeC.inverseBeta, eventWeight_ );
+      histMap["muonTimeC_freeInverseBeta"]->Fill(leptonL.muonTimeC.freeInverseBeta, eventWeight_ );
+      histMap["muonTimeC_timeAtIpInOut"]->Fill(leptonL.muonTimeC.timeAtIpInOut, eventWeight_ );
+      histMap["muonTimeC_timeAtIpOutIn"]->Fill(leptonL.muonTimeC.timeAtIpOutIn, eventWeight_ );
+    }
+    if (leptonH.muonTimeC.nDof > 0){
+      histMap["muonTimeC_inverseBeta"]->Fill(leptonH.muonTimeC.inverseBeta, eventWeight_ );
+      histMap["muonTimeC_freeInverseBeta"]->Fill(leptonH.muonTimeC.freeInverseBeta, eventWeight_ );
+      histMap["muonTimeC_timeAtIpInOut"]->Fill(leptonH.muonTimeC.timeAtIpInOut, eventWeight_ );
+      histMap["muonTimeC_timeAtIpOutIn"]->Fill(leptonH.muonTimeC.timeAtIpOutIn, eventWeight_ );
+    }
+  }
+  if ( leptonL.muonTimeDT.nDof > 0 || leptonH.muonTimeDT.nDof > 0 ) {
+    if ( leptonL.muonTimeDT.nDof > 0 ){
+      histMap["muonTimeDT_inverseBeta"]->Fill(leptonL.muonTimeDT.inverseBeta, eventWeight_ );
+      histMap["muonTimeDT_freeInverseBeta"]->Fill(leptonL.muonTimeDT.freeInverseBeta, eventWeight_ );
+      histMap["muonTimeDT_timeAtIpInOut"]->Fill(leptonL.muonTimeDT.timeAtIpInOut, eventWeight_ );
+      histMap["muonTimeDT_timeAtIpOutIn"]->Fill(leptonL.muonTimeDT.timeAtIpOutIn, eventWeight_ );
+    }
+    if (leptonH.muonTimeDT.nDof > 0){
+      histMap["muonTimeDT_inverseBeta"]->Fill(leptonH.muonTimeDT.inverseBeta, eventWeight_ );
+      histMap["muonTimeDT_freeInverseBeta"]->Fill(leptonH.muonTimeDT.freeInverseBeta, eventWeight_ );
+      histMap["muonTimeDT_timeAtIpInOut"]->Fill(leptonH.muonTimeDT.timeAtIpInOut, eventWeight_ );
+      histMap["muonTimeDT_timeAtIpOutIn"]->Fill(leptonH.muonTimeDT.timeAtIpOutIn, eventWeight_ );
+    }
+  }
+  if ( leptonL.muonTimeCSC.nDof > 0 && leptonH.muonTimeCSC.nDof > 0 ) {
+    if ( leptonL.muonTimeCSC.nDof > 0 ){
+      histMap["muonTimeCSC_inverseBeta"]->Fill(leptonL.muonTimeCSC.inverseBeta, eventWeight_ );
+      histMap["muonTimeCSC_freeInverseBeta"]->Fill(leptonL.muonTimeCSC.freeInverseBeta, eventWeight_ );
+      histMap["muonTimeCSC_timeAtIpInOut"]->Fill(leptonL.muonTimeCSC.timeAtIpInOut, eventWeight_ );
+      histMap["muonTimeCSC_timeAtIpOutIn"]->Fill(leptonL.muonTimeCSC.timeAtIpOutIn, eventWeight_ );
+    }
+    if (leptonH.muonTimeCSC.nDof > 0){
+      histMap["muonTimeCSC_inverseBeta"]->Fill(leptonH.muonTimeCSC.inverseBeta, eventWeight_ );
+      histMap["muonTimeCSC_freeInverseBeta"]->Fill(leptonH.muonTimeCSC.freeInverseBeta, eventWeight_ );
+      histMap["muonTimeCSC_timeAtIpInOut"]->Fill(leptonH.muonTimeCSC.timeAtIpInOut, eventWeight_ );
+      histMap["muonTimeCSC_timeAtIpOutIn"]->Fill(leptonH.muonTimeCSC.timeAtIpOutIn, eventWeight_ );
+    }
+  }
+}
+
+
+/// Function to fill all plots which are common between each set of cuts e.g. n-1 plots
 void DileptonAnalyzer::fillPlots( const TreeDipseudoLeptonCandidate &cand, TreeLepton& leptonL, TreeLepton& leptonH,
                                   const double mass, DileptonAnalysisCuts & cuts, const DileptonAnalysisCuts::PassedWhichCuts & passedWhichCuts,
                                   map< TString, TH1* > & histMap, bool isFinalCuts, bool debug )
@@ -1660,66 +1571,25 @@ void DileptonAnalyzer::fillPlots( const TreeDipseudoLeptonCandidate &cand, TreeL
   cutsTemp.passMinLxySig = true;
   cutsTemp.passMaxLxySig = true;
   double absLxy;
-  if ( dileptonCuts_finalColl_.get_use_PV() ) absLxy = fabs(cand.decayLengthSignificance_PV); 
-  else  absLxy = fabs(cand.decayLengthSignificance_BS); 
- 
+  if ( dileptonCuts_finalColl_.get_use_PV() ) absLxy = fabs(cand.decayLengthSignificance_PV);
+  else  absLxy = fabs(cand.decayLengthSignificance_BS);
+
   if (  cuts.passAllCuts( cutsTemp )  ) {
-      histMap["DileptonAbsLxySig"]->Fill(absLxy, eventWeight_ ); 
-// All Muon Timing Information
-// nDof = 0, when no timing info exists...
-/*
-    if ( leptonL.muonTimeC.nDof > 0 || leptonH.muonTimeC.nDof > 0 ) {
-       if ( leptonL.muonTimeC.nDof > 0 ){
-       histMap["muonTimeC_inverseBeta"]->Fill(leptonL.muonTimeC.inverseBeta, eventWeight_ );
-       histMap["muonTimeC_freeInverseBeta"]->Fill(leptonL.muonTimeC.freeInverseBeta, eventWeight_ );
-       histMap["muonTimeC_timeAtIpInOut"]->Fill(leptonL.muonTimeC.timeAtIpInOut, eventWeight_ );
-       histMap["muonTimeC_timeAtIpOutIn"]->Fill(leptonL.muonTimeC.timeAtIpOutIn, eventWeight_ );
-       }
-       if (leptonH.muonTimeC.nDof > 0){
-       histMap["muonTimeC_inverseBeta"]->Fill(leptonH.muonTimeC.inverseBeta, eventWeight_ );
-       histMap["muonTimeC_freeInverseBeta"]->Fill(leptonH.muonTimeC.freeInverseBeta, eventWeight_ );
-       histMap["muonTimeC_timeAtIpInOut"]->Fill(leptonH.muonTimeC.timeAtIpInOut, eventWeight_ );
-       histMap["muonTimeC_timeAtIpOutIn"]->Fill(leptonH.muonTimeC.timeAtIpOutIn, eventWeight_ );
-       }
-    }
-    if ( leptonL.muonTimeDT.nDof > 0 || leptonH.muonTimeDT.nDof > 0 ) {
-       if ( leptonL.muonTimeDT.nDof > 0 ){
-       histMap["muonTimeDT_inverseBeta"]->Fill(leptonL.muonTimeDT.inverseBeta, eventWeight_ );
-       histMap["muonTimeDT_freeInverseBeta"]->Fill(leptonL.muonTimeDT.freeInverseBeta, eventWeight_ );
-       histMap["muonTimeDT_timeAtIpInOut"]->Fill(leptonL.muonTimeDT.timeAtIpInOut, eventWeight_ );
-       histMap["muonTimeDT_timeAtIpOutIn"]->Fill(leptonL.muonTimeDT.timeAtIpOutIn, eventWeight_ );
-       }
-       if (leptonH.muonTimeDT.nDof > 0){
-       histMap["muonTimeDT_inverseBeta"]->Fill(leptonH.muonTimeDT.inverseBeta, eventWeight_ );
-       histMap["muonTimeDT_freeInverseBeta"]->Fill(leptonH.muonTimeDT.freeInverseBeta, eventWeight_ );
-       histMap["muonTimeDT_timeAtIpInOut"]->Fill(leptonH.muonTimeDT.timeAtIpInOut, eventWeight_ );
-       histMap["muonTimeDT_timeAtIpOutIn"]->Fill(leptonH.muonTimeDT.timeAtIpOutIn, eventWeight_ );
-       }
-    }
-    if ( leptonL.muonTimeCSC.nDof > 0 && leptonH.muonTimeCSC.nDof > 0 ) {
-       if ( leptonL.muonTimeCSC.nDof > 0 ){
-       histMap["muonTimeCSC_inverseBeta"]->Fill(leptonL.muonTimeCSC.inverseBeta, eventWeight_ );
-       histMap["muonTimeCSC_freeInverseBeta"]->Fill(leptonL.muonTimeCSC.freeInverseBeta, eventWeight_ );
-       histMap["muonTimeCSC_timeAtIpInOut"]->Fill(leptonL.muonTimeCSC.timeAtIpInOut, eventWeight_ );
-       histMap["muonTimeCSC_timeAtIpOutIn"]->Fill(leptonL.muonTimeCSC.timeAtIpOutIn, eventWeight_ );
-       }
-       if (leptonH.muonTimeCSC.nDof > 0){
-       histMap["muonTimeCSC_inverseBeta"]->Fill(leptonH.muonTimeCSC.inverseBeta, eventWeight_ );
-       histMap["muonTimeCSC_freeInverseBeta"]->Fill(leptonH.muonTimeCSC.freeInverseBeta, eventWeight_ );
-       histMap["muonTimeCSC_timeAtIpInOut"]->Fill(leptonH.muonTimeCSC.timeAtIpInOut, eventWeight_ );
-       histMap["muonTimeCSC_timeAtIpOutIn"]->Fill(leptonH.muonTimeCSC.timeAtIpOutIn, eventWeight_ );
-       }
-    }
-*/
+    histMap["DileptonAbsLxySig"]->Fill(absLxy, eventWeight_ );
+    // All Muon Timing Information
+    // nDof = 0, when no timing info exists...
+    if (timingPlots_) fillTimingPlots(leptonL, leptonH, histMap);
   }
 
   double minD0;
-  if (dileptonCuts_finalColl_.get_use_PV()) { minD0 = min( fabs(cand.leptonD0SignificanceL_PVrefit_includingPVError), fabs(cand.leptonD0SignificanceH_PVrefit_includingPVError) );}
-  else { minD0 = min( fabs(cand.leptonD0SignificanceL_PVrefit_includingPVError), fabs(cand.leptonD0SignificanceH_PVrefit_includingPVError) ); }
+  if (dileptonCuts_finalColl_.get_use_PV()) { minD0 = min( fabs(cand.leptonD0SignificanceL_PVrefit_includingPVError),
+                                                           fabs(cand.leptonD0SignificanceH_PVrefit_includingPVError) ); }
+  else { minD0 = min( fabs(cand.leptonD0SignificanceL_PVrefit_includingPVError),
+                      fabs(cand.leptonD0SignificanceH_PVrefit_includingPVError) ); }
   cutsTemp = passedWhichCuts;
   cutsTemp.passLeptonD0 = true;
   if (  cuts.passAllCuts( cutsTemp )  ) {
-    histMap["AbsLeptonD0"]->Fill(minD0, eventWeight_ ); 
+    histMap["AbsLeptonD0"]->Fill(minD0, eventWeight_ );
   }
 
   cutsTemp = passedWhichCuts;
@@ -1747,27 +1617,13 @@ void DileptonAnalyzer::fillPlots( const TreeDipseudoLeptonCandidate &cand, TreeL
   if (  cuts.passAllCuts( cutsTemp )  ) {
     dynamic_cast<TH2F*>(histMap["leptonD0SigMin_vs_LxySig"])->Fill(minD0, absLxy, eventWeight_ );
   }
-  cutsTemp = passedWhichCuts;
-  cutsTemp.passMinLxySig = true;
-  cutsTemp.passMaxLxySig = true;
-  cutsTemp.passVertexChi2 = true;
-  if (  cuts.passAllCuts( cutsTemp )  ) {
-    dynamic_cast<TH2F*>(histMap["vertexChi2_vs_LxySig"])->Fill(cand.vertexChi2, absLxy, eventWeight_ );
-  }
-  cutsTemp = passedWhichCuts;
-  cutsTemp.passMinLxySig = true;
-  cutsTemp.passMaxLxySig = true;
-  cutsTemp.passMaxTrackChi2 = true;
-  if (  cuts.passAllCuts( cutsTemp )  ) {
-    dynamic_cast<TH2F*>(histMap["trackChi2Max_vs_LxySig"])->Fill(std::max(leptonL.trackChi2, leptonH.trackChi2), absLxy, eventWeight_ );
-  }
 
-  cutsTemp = passedWhichCuts;
- // cutsTemp.passRejectionCosmics = true;
-  if (  cuts.passAllCuts( cutsTemp )  ) {
-//    dynamic_cast<TH3F*>(histMap["lepton_Eta_vs_Phi"])->Fill(leptonL.eta,  leptonL.phi,fabs(cand.leptonD0SignificanceL_PV_includingPVError), eventWeight_ ); 
-//    dynamic_cast<TH3F*>(histMap["lepton_Eta_vs_Phi"])->Fill(leptonH.eta,  leptonH.phi, fabs(cand.leptonD0SignificanceH_PV_includingPVError), eventWeight_ ); 
-  }
+  // cutsTemp = passedWhichCuts;
+  // cutsTemp.passRejectionCosmics = true;
+  // if (  cuts.passAllCuts( cutsTemp )  ) {
+    //    dynamic_cast<TH3F*>(histMap["lepton_Eta_vs_Phi"])->Fill(leptonL.eta,  leptonL.phi,fabs(cand.leptonD0SignificanceL_PV_includingPVError), eventWeight_ );
+    //    dynamic_cast<TH3F*>(histMap["lepton_Eta_vs_Phi"])->Fill(leptonH.eta,  leptonH.phi, fabs(cand.leptonD0SignificanceH_PV_includingPVError), eventWeight_ );
+  // }
 
 
   if ( debug ) {
@@ -1790,7 +1646,7 @@ void DileptonAnalyzer::fillPlots( const TreeDipseudoLeptonCandidate &cand, TreeL
   cutsTemp = passedWhichCuts;
   cutsTemp.passMissingHitsAfterVertex = true;
 
-  if (  cuts.passAllCuts( cutsTemp )  ) {
+  if ( cuts.passAllCuts( cutsTemp )  ) {
     histMap["nMissingHitsAfterVertex"]->Fill( cand.missedLayersAfterVertexL + cand.missedLayersAfterVertexH, eventWeight_ );
     histMap["minMissingHitsAfterVertex"]->Fill( min(cand.missedLayersAfterVertexL,  cand.missedLayersAfterVertexH), eventWeight_ );
     histMap["maxMissingHitsAfterVertex"]->Fill( max(cand.missedLayersAfterVertexL, cand.missedLayersAfterVertexH), eventWeight_ );
@@ -1837,12 +1693,12 @@ void DileptonAnalyzer::fillPlots( const TreeDipseudoLeptonCandidate &cand, TreeL
     }
   }
 
-  // Calo match delta R (largest of two leptons)
-  cutsTemp = passedWhichCuts;
-  cutsTemp.passCaloMatch = true; // Shouldn't do anything at the moment.  Cut at deltaR < 0.2, which is very loose and applied in Tree Producer anyway.
-  if (  cuts.passAllCuts( cutsTemp )  ) {
-    histMap["caloMatchDeltaR"]->Fill( max(leptonL.cmDeltaR,leptonH.cmDeltaR), eventWeight_ );
-  }
+//  // Calo match delta R (largest of two leptons)
+//  cutsTemp = passedWhichCuts;
+//  cutsTemp.passCaloMatch = true; // Shouldn't do anything at the moment.  Cut at deltaR < 0.2, which is very loose and applied in Tree Producer anyway.
+//  if (  cuts.passAllCuts( cutsTemp ) ) {
+//    histMap["caloMatchDeltaR"]->Fill( max(leptonL.cmDeltaR,leptonH.cmDeltaR), eventWeight_ );
+//  }
 
   // Track pt cut
   cutsTemp = passedWhichCuts;
@@ -1865,19 +1721,18 @@ void DileptonAnalyzer::fillPlots( const TreeDipseudoLeptonCandidate &cand, TreeL
     }
   }
 
-  // SC Et cut
-  cutsTemp = passedWhichCuts;
-  cutsTemp.passSCEt = true;
-  if (  cuts.passAllCuts( cutsTemp )  ) {
-    histMap["leadingSCEt"]->Fill(max(leptonL.photonEt,leptonH.photonEt), eventWeight_);
-    histMap["subleadingSCEt"]->Fill(min(leptonL.photonEt,leptonH.photonEt), eventWeight_);
-  }
+//  // SC Et cut
+//  cutsTemp = passedWhichCuts;
+//  cutsTemp.passSCEt = true;
+//  if (  cuts.passAllCuts( cutsTemp )  ) {
+//    histMap["leadingSCEt"]->Fill(max(leptonL.photonEt,leptonH.photonEt), eventWeight_);
+//    histMap["subleadingSCEt"]->Fill(min(leptonL.photonEt,leptonH.photonEt), eventWeight_);
+//  }
 
   // Isolation
   // All
   cutsTemp = passedWhichCuts;
   cutsTemp.passIso = true;
-
   if (  cuts.passAllCuts( cutsTemp )  ) {
     double leptonIsoL=0;
     double leptonIsoH=0;
@@ -1887,19 +1742,18 @@ void DileptonAnalyzer::fillPlots( const TreeDipseudoLeptonCandidate &cand, TreeL
     histMap["relIso"]->Fill( max( leptonIsoL/leptonL.pt, leptonIsoH/leptonH.pt), eventWeight_ );
   }
 
-  // Photon ID
-  cutsTemp = passedWhichCuts;
-  cutsTemp.passPhotonID = true;
-
-  if (  cuts.passAllCuts( cutsTemp )  ) {
-    histMap["photonR9"]->Fill( min( leptonL.photonR9, leptonH.photonR9), eventWeight_ );
-    if ( fabs( leptonL.photonEta ) < 1.55 ) histMap["photonSigmaIetaIeta_barrel"]->Fill( leptonL.photonSigmaIetaIeta, eventWeight_ );
-    else histMap["photonSigmaIetaIeta_endcap"]->Fill( leptonL.photonSigmaIetaIeta, eventWeight_ );
-    if ( fabs( leptonH.photonEta ) < 1.55 ) histMap["photonSigmaIetaIeta_barrel"]->Fill( leptonH.photonSigmaIetaIeta, eventWeight_ );
-    else histMap["photonSigmaIetaIeta_endcap"]->Fill( leptonH.photonSigmaIetaIeta, eventWeight_ );
-    histMap["photonHadTowOverEm"]->Fill( max( leptonL.photonHadTowOverEm, leptonH.photonHadTowOverEm), eventWeight_ );
-    histMap["photonHadronicOverEm"]->Fill( max( leptonL.photonHadronicOverEm, leptonH.photonHadronicOverEm), eventWeight_ );
-  }
+//  // Photon ID
+//  cutsTemp = passedWhichCuts;
+//  cutsTemp.passPhotonID = true;
+//  if (  cuts.passAllCuts( cutsTemp )  ) {
+//    histMap["photonR9"]->Fill( min( leptonL.photonR9, leptonH.photonR9), eventWeight_ );
+//    if ( fabs( leptonL.photonEta ) < 1.55 ) histMap["photonSigmaIetaIeta_barrel"]->Fill( leptonL.photonSigmaIetaIeta, eventWeight_ );
+//    else histMap["photonSigmaIetaIeta_endcap"]->Fill( leptonL.photonSigmaIetaIeta, eventWeight_ );
+//    if ( fabs( leptonH.photonEta ) < 1.55 ) histMap["photonSigmaIetaIeta_barrel"]->Fill( leptonH.photonSigmaIetaIeta, eventWeight_ );
+//    else histMap["photonSigmaIetaIeta_endcap"]->Fill( leptonH.photonSigmaIetaIeta, eventWeight_ );
+//    histMap["photonHadTowOverEm"]->Fill( max( leptonL.photonHadTowOverEm, leptonH.photonHadTowOverEm), eventWeight_ );
+//    histMap["photonHadronicOverEm"]->Fill( max( leptonL.photonHadronicOverEm, leptonH.photonHadronicOverEm), eventWeight_ );
+//  }
 
   // Plots after applying all selection requirements (for this set of cuts)
   if ( cuts.passAllCuts( passedWhichCuts ) ) {
@@ -1909,7 +1763,7 @@ void DileptonAnalyzer::fillPlots( const TreeDipseudoLeptonCandidate &cand, TreeL
     histMap["mass"]->Fill( mass, eventWeight_ );
     histMap["mt"]->Fill( cand.transverseMass, eventWeight_ );
     histMap["Lxy"]->Fill( cand.decayLength_PV, eventWeight_ );
-//    histMap["Lxy"]->Fill( cand.decayLength_BS, eventWeight_ );
+    //    histMap["Lxy"]->Fill( cand.decayLength_BS, eventWeight_ );
     histMap["nRecoPV"]->Fill(candidates->numPV, eventWeight_ );
     float minD0 = getMinD0( cand );
     float maxD0 = getMaxD0( cand, minD0 );
@@ -2029,19 +1883,17 @@ void DileptonAnalyzer::plotBestCandidates( bool isCorrectedDataCand )
     double minD0 = min( fabs(bestControlCand_->leptonD0SignificanceL_PVrefit_includingPVError),
                         fabs(bestControlCand_->leptonD0SignificanceH_PVrefit_includingPVError) );
     if ( isData_ && isCorrectedDataCand ) {
-      histsCorrected_.h_minleptonD0Sig_vs_LxySig_controlCollCuts->Fill(fabs(bestControlCand_->decayLengthSignificance_PV), minD0, eventWeight_);
       histsCorrected_.h_minLeptonAbsD0Sig_bestCand_deltaPhiG90_removedLifetimeCollCuts->Fill( minD0, eventWeight_ );
       histsCorrected_.h_minLeptonAbsD0Sig_bestCand_signedWrtDeltaPhiGL90_removedLifetimeCollCuts->Fill( -1.0 * minD0, eventWeight_ );
       histsCorrected_.h_minLeptonAbsD0Sig_bestCand_signedWrtDeltaPhiGL90_forFittingData_removedLifetimeCollCuts->Fill( -1.0 * minD0, eventWeight_ );
+
     }
     else if ( isDitauEvent() ) {
-      histsTau_.h_minleptonD0Sig_vs_LxySig_controlCollCuts->Fill(fabs(bestControlCand_->decayLengthSignificance_PV), minD0, eventWeight_);
       histsTau_.h_minLeptonAbsD0Sig_bestCand_deltaPhiG90_removedLifetimeCollCuts->Fill( minD0, eventWeight_ );
       histsTau_.h_minLeptonAbsD0Sig_bestCand_signedWrtDeltaPhiGL90_removedLifetimeCollCuts->Fill( -1.0 * minD0, eventWeight_ );
       histsTau_.h_minLeptonAbsD0Sig_bestCand_signedWrtDeltaPhiGL90_forFittingData_removedLifetimeCollCuts->Fill( -1.0 * minD0, eventWeight_ );
     }
     else {
-      hists_.h_minleptonD0Sig_vs_LxySig_controlCollCuts->Fill(fabs(bestControlCand_->decayLengthSignificance_PV), minD0, eventWeight_);
       hists_.h_minLeptonAbsD0Sig_bestCand_deltaPhiG90_removedLifetimeCollCuts->Fill( minD0, eventWeight_ );
       hists_.h_minLeptonAbsD0Sig_bestCand_signedWrtDeltaPhiGL90_removedLifetimeCollCuts->Fill( -1.0 * minD0, eventWeight_ );
       hists_.h_minLeptonAbsD0Sig_bestCand_signedWrtDeltaPhiGL90_forFittingData_removedLifetimeCollCuts->Fill( -1.0 * minD0, eventWeight_ );
@@ -2484,8 +2336,8 @@ void DileptonAnalyzer::singleCosmicMuons( const std::vector<TreeDipseudoLeptonCa
     // ++numLeptons;
     bool use_this_lepton = true;
 
-//     for( unsigned int iTreeCand=0; iTreeCand != candidates->candidates_.size(); ++iTreeCand ) {
-//       TreeDipseudoLeptonCandidate cand = candidates->candidates_.at(iTreeCand);
+    //     for( unsigned int iTreeCand=0; iTreeCand != candidates->candidates_.size(); ++iTreeCand ) {
+    //       TreeDipseudoLeptonCandidate cand = candidates->candidates_.at(iTreeCand);
     for( unsigned int iTreeCand=0; iTreeCand != cleanedCandidates.size(); ++iTreeCand ) {
       TreeDipseudoLeptonCandidate cand = cleanedCandidates.at(iTreeCand);
       TreeLepton leptonL = getLepton (candidates->leptons_, cand.leptonIndexL);
@@ -2494,14 +2346,14 @@ void DileptonAnalyzer::singleCosmicMuons( const std::vector<TreeDipseudoLeptonCa
       // cout << "lepton index is "<< fabs(lepton.index) <<endl;
       // cout << "leptonL index is "<< fabs(leptonL.index) <<endl;
       // cout << "leptonH index is "<< fabs(leptonH.index) <<endl;
-    
+
       if( fabs(lepton.index) >= 0 && ( fabs(leptonL.index) == fabs(lepton.index) || fabs(leptonH.index) == fabs(lepton.index) ) ) {
-    	// cout << "Found index matching to a lepton from a candidate" << endl;
-    	if ( cand.validVertex ) {
-    	  // cout << "This candidate is valid" << endl;
-    	  use_this_lepton = false;
-    	  break;
-    	}
+        // cout << "Found index matching to a lepton from a candidate" << endl;
+        if ( cand.validVertex ) {
+          // cout << "This candidate is valid" << endl;
+          use_this_lepton = false;
+          break;
+        }
       }
     }
 
@@ -2558,16 +2410,16 @@ void DileptonAnalyzer::Loop()
     // PU weight and cross-section weight
     // Also normalised by number of events in MC samples
     getEventWeight();
- 
-     // Remove duplicate candidates sharing leptons
 
-      std::vector<TreeDipseudoLeptonCandidate> cleanedCandidates;
-      cleaningCandidates(cleanedCandidates);
+    // Remove duplicate candidates sharing leptons
 
-      // Remove leptons in candidates
-      std::vector<TreeLepton> single_cosmic_muons;
-      singleCosmicMuons(cleanedCandidates, single_cosmic_muons);
-//      singleCosmicMuons(candidates->candidates_, single_cosmic_muons);
+    std::vector<TreeDipseudoLeptonCandidate> cleanedCandidates;
+    cleaningCandidates(cleanedCandidates);
+
+    // Remove leptons in candidates
+    std::vector<TreeLepton> single_cosmic_muons;
+    singleCosmicMuons(cleanedCandidates, single_cosmic_muons);
+    //      singleCosmicMuons(candidates->candidates_, single_cosmic_muons);
 
 
     // Study neutralino pt spectrum
@@ -2637,14 +2489,14 @@ void DileptonAnalyzer::Loop()
           }
         }
       }
-    
+
       
       // Check which triggers fired
       studyTriggers();
 
       studyTrackingEfficiency(cleanedCandidates, single_cosmic_muons);
- 
-     // if ( isSignalMC_) studyTrackingEfficiency(single_cosmic_muons);  
+
+      // if ( isSignalMC_) studyTrackingEfficiency(single_cosmic_muons);
       // std::cout << "number of single leptons = " << single_cosmic_muons.size() << std::endl;
       // for ( unsigned int i = 0; i < single_cosmic_muons.size(); i++) {
       //   cout <<"pt of single leptons " << single_cosmic_muons[i].pt << endl;
@@ -2669,7 +2521,7 @@ void DileptonAnalyzer::Loop()
       // Do it for central CTau values....
       //      std::vector<TreeLepton> single_cosmic_muons;
       //      SingleCosmicMuons(single_cosmic_muons);
-   
+
       //  studyTrackingEfficiency(single_cosmic_muons);
     }
 
@@ -2688,46 +2540,46 @@ void DileptonAnalyzer::Loop()
     bestControlCand_=0;
     bestSignalCand_=0;
     bestFinalSignalCand_=0;
-//    if (isSignalMC_ && nSensitiveExoticDecayInEvent_!=2 ) continue;
+    //    if (isSignalMC_ && nSensitiveExoticDecayInEvent_!=2 ) continue;
 
-//      std::vector<TreeDipseudoLeptonCandidate> cleanedCandidates;
-//      cleaningCandidates(cleanedCandidates);
+    //      std::vector<TreeDipseudoLeptonCandidate> cleanedCandidates;
+    //      cleaningCandidates(cleanedCandidates);
 
-      // Remove leptons in candidates
-//      std::vector<TreeLepton> single_cosmic_muons;
-//      singleCosmicMuons(cleanedCandidates, single_cosmic_muons);
+    // Remove leptons in candidates
+    //      std::vector<TreeLepton> single_cosmic_muons;
+    //      singleCosmicMuons(cleanedCandidates, single_cosmic_muons);
 
-//      int k =0;
+    //      int k =0;
     if( !(isData_ && useCorrectedCands_) ) {
-//       for( unsigned int iTreeCand=0; iTreeCand != candidates->candidates_.size(); ++iTreeCand ) {
-//        TreeDipseudoLeptonCandidate &cand = candidates->candidates_.at(iTreeCand);
+      //       for( unsigned int iTreeCand=0; iTreeCand != candidates->candidates_.size(); ++iTreeCand ) {
+      //        TreeDipseudoLeptonCandidate &cand = candidates->candidates_.at(iTreeCand);
       for( unsigned int iTreeCand=0; iTreeCand != cleanedCandidates.size(); ++iTreeCand ) {
         TreeDipseudoLeptonCandidate &cand = cleanedCandidates.at(iTreeCand);
 
-	// Get leptons corresponding to this candidate
-	TreeLepton leptonL = getLepton( candidates->leptons_, cand.leptonIndexL );
-	TreeLepton leptonH = getLepton( candidates->leptons_, cand.leptonIndexH );
+        // Get leptons corresponding to this candidate
+        TreeLepton leptonL = getLepton( candidates->leptons_, cand.leptonIndexL );
+        TreeLepton leptonH = getLepton( candidates->leptons_, cand.leptonIndexH );
 
-	// Check what type of leptons make up this candidate
-	// Make sure they are relevant to this analysis
-	if ( !correctLeptonsInCandidate(cand, leptonL, leptonH ) ) continue;
-//        k++;
-	// Study candidates
-	// Fill different set of histograms if this is a ditau candidates
-	if ( !isDitauEvent() || isData_ || isSignalMC_ ) {
-	  studyCandidate( single_cosmic_muons, cand, leptonL, leptonH, hists_, false );
-	}
-	else {
-	  studyCandidate( single_cosmic_muons, cand, leptonL, leptonH, histsTau_, false );
-	}
-	// numComplementary += eventWeight_;
-	// }
-	// else {
-	//   numMatched += eventWeight_;
-	//   // std::cout << "Skipping candidate with " << cand.leptonD0SignificanceL_PVrefit_includingPVError << std::endl;
-	// }
+        // Check what type of leptons make up this candidate
+        // Make sure they are relevant to this analysis
+        if ( !correctLeptonsInCandidate(cand, leptonL, leptonH ) ) continue;
+        //        k++;
+        // Study candidates
+        // Fill different set of histograms if this is a ditau candidates
+        if ( !isDitauEvent() || isData_ || isSignalMC_ ) {
+          studyCandidate( single_cosmic_muons, cand, leptonL, leptonH, hists_, false );
+        }
+        else {
+          studyCandidate( single_cosmic_muons, cand, leptonL, leptonH, histsTau_, false );
+        }
+        // numComplementary += eventWeight_;
+        // }
+        // else {
+        //   numMatched += eventWeight_;
+        //   // std::cout << "Skipping candidate with " << cand.leptonD0SignificanceL_PVrefit_includingPVError << std::endl;
+        // }
       }
-//      cout << " Number of cleaned candidates in this event is :" << endl << k << endl;
+      //      cout << " Number of cleaned candidates in this event is :" << endl << k << endl;
       plotBestCandidates();
 
       // Reset best cand
@@ -2740,55 +2592,16 @@ void DileptonAnalyzer::Loop()
 
       storeNumberOfCandsPerEvent( hists_ );
     }
-//     else {
-//       // Corrected cand loop
-//       for( unsigned int iTreeCand=0; iTreeCand != candidates->candidatesCorrectedTipLip_.size(); ++iTreeCand ) {
-//       
-// 	TreeDipseudoLeptonCandidate &cand = candidates->candidatesCorrectedTipLip_.at(iTreeCand);
-//       
-// 	// Get leptons corresponding to this candidate
-// 	TreeLepton leptonL = getLepton( candidates->leptons_, cand.leptonIndexL );
-// 	TreeLepton leptonH = getLepton( candidates->leptons_, cand.leptonIndexH );
-//       
-// 	// Check what type of leptons make up this candidate
-// 	// Make sure they are relevant to this analysis
-// 	if ( !correctLeptonsInCandidate(cand, leptonL, leptonH ) ) continue;
-//       
-// 	// if( !isComplementary(leptonL, leptonH, hists_) ) {
-// 	// if( !DileptonAnalysisCuts::isComplementary(leptonL, leptonH, candidates, dileptonCuts_finalColl_muTrack) ) {
-// 	//   ++numMatched;
-// 	//   // std::cout << "Skipping candidate with " << cand.leptonD0SignificanceL_PVrefit_includingPVError << std::endl;
-// 	//   continue;
-// 	// }
-// 	// else ++numComplementary;
-//       
-// 	// Study candidates
-// 	studyCandidate( single_cosmic_muons, cand, leptonL, leptonH, histsCorrected_, true );
-//       
-//       } // corrected cand loop
-//       
-//       plotBestCandidates(true);
-//       
-//       // Reset best cand
-//       bestControlCand_=0;
-//       bestSignalCand_=0;
-//       bestFinalSignalCand_=0;
-//       bestL0Cand_=0;
-//       bestG0Cand_=0;
-// 
-//       storeNumberOfCandsPerEvent( histsCorrected_ );
-//     }
-
   } // end of the main loop
 
-    cout << endl << " Number of total candidates : " << nTotalCands_ << endl;
-    cout << " Number of correctly reconstructed candidates for one decay events : " << nTotalCands_correctly1 << endl;
-    cout << " Number of candidates passing final cuts for one decay events" << nTotalCands_final1 << endl;
-    cout << " Number of correctly reconstructed candidates for two decay events : " << nTotalCands_correctly2 << endl;
-    cout << " Number of candidates passing final cuts for two decay events" << nTotalCands_final2 << endl;
-    cout << " Number of total data candidates in control region : " << nTotalCands_Data << endl;
-    cout << " Number of total data candidates passing all selection except Lxy in control region : " << nTotalCands_Data_control_TempX << endl;
-    cout << " Number of total data candidates passing all selection in control region : " << nTotalCands_Data_control << endl;
+  cout << endl << " Number of total candidates : " << nTotalCands_ << endl;
+  cout << " Number of correctly reconstructed candidates for one decay events : " << nTotalCands_correctly1 << endl;
+  cout << " Number of candidates passing final cuts for one decay events" << nTotalCands_final1 << endl;
+  cout << " Number of correctly reconstructed candidates for two decay events : " << nTotalCands_correctly2 << endl;
+  cout << " Number of candidates passing final cuts for two decay events" << nTotalCands_final2 << endl;
+  cout << " Number of total data candidates in control region : " << nTotalCands_Data << endl;
+  cout << " Number of total data candidates passing all selection except Lxy in control region : " << nTotalCands_Data_control_TempX << endl;
+  cout << " Number of total data candidates passing all selection in control region : " << nTotalCands_Data_control << endl;
 
 
   // Keep track of number of candidates reconstructed per event
@@ -2950,11 +2763,14 @@ DileptonAnalyzer::DileptonAnalyzer(TString fileName, const double & weight, anal
   badRunRangeMin_(999999), badRunRangeMax_(999999),
   useCorrectedCands_(false),
   unblind_(false),
+  timingPlots_(false),
+  fillNMinus3Plots_(false),
+  studyTrackMisalignment_(false),
   reweightExoticLifetime_(false),
   reweightFactor_(1),
   originalCtau_(350),
   DEBUGCOUNTER(0), nTotalCands_(0), nTotalCands_correctly1(0), nTotalCands_final1(0), nTotalCands_correctly2(0), nTotalCands_final2(0), nTotalCands_Data(0),
-  nTotalCands_Data_control_TempX(0), nTotalCands_Data_control(0) 
+  nTotalCands_Data_control_TempX(0), nTotalCands_Data_control(0)
 {
 
   // Initialize analysis cuts
@@ -2988,7 +2804,7 @@ DileptonAnalyzer::DileptonAnalyzer(TString fileName, const double & weight, anal
   // Get good label for output file names
   // Get good name for signal effic files
   TString fileLabel=fileName;
-//  int position=fileLabel.Index("workdirs/")+9;
+  //  int position=fileLabel.Index("workdirs/")+9;
   int position=fileLabel.Index("/uscms_data/d3/msolmaz/myworkingspace/phys_698_spring_2014/CMSSW_5_3_8/src/workdirs/")+84;
   fileLabel.Remove(0,position);
   position=fileLabel.Index("_analysis");
@@ -3116,7 +2932,7 @@ DileptonAnalyzer::DileptonAnalyzer(TString fileName, const double & weight, anal
 
     if ( anaType_==_2eTrack ) allCuts_.open("SignalMassResolutionFiles/electrons/"+fileLabel+".txt");
     else if ( anaType_==_2muTrack || anaType_==_2saMu ) allCuts_.open("SignalMassResolutionFiles/muons/"+fileLabel+".txt");
-//    else if ( anaType_==_2muTrack ) allCuts_.open("SignalMassResolutionFiles/muons/"+fileLabel+".txt");
+    //    else if ( anaType_==_2muTrack ) allCuts_.open("SignalMassResolutionFiles/muons/"+fileLabel+".txt");
 
     // Initialize neutrlino weights
     if ( reweightNeutralinoPt_ ) {
@@ -3151,7 +2967,7 @@ DileptonAnalyzer::DileptonAnalyzer(TString fileName, const double & weight, anal
       allCollCutsNegative_corrected_.open("MassFiles/electrons/"+fileLabel+"_coll_corrected_negative.txt");
     }
     else if ( anaType_==_2muTrack || anaType_==_2saMu ) {
-//    else if ( anaType_==_2muTrack ) {
+      //    else if ( anaType_==_2muTrack ) {
       allCuts_.open("MassFiles/muons/"+fileLabel+"_positive.txt");
       allCutsNegative_.open("MassFiles/muons/"+fileLabel+"_negative.txt");
       allCollCuts_.open("MassFiles/muons/"+fileLabel+"_coll_positive.txt");
@@ -3193,10 +3009,10 @@ DileptonAnalyzer::DileptonAnalyzer(TString fileName, const double & weight, anal
 
   cutNamesInOrder_.push_back("AllCandidatesAfterPrefilter");
   cutNamesInOrder_.push_back("TrackRejection");
-//  cutNamesInOrder_.push_back("Complementarity");
+  //  cutNamesInOrder_.push_back("Complementarity");
   cutNamesInOrder_.push_back("DileptonChi2");
   cutNamesInOrder_.push_back("MaxTrackChi2");
-//  cutNamesInOrder_.push_back("DileptonOppositeCharge");
+  //  cutNamesInOrder_.push_back("DileptonOppositeCharge");
   // cutNamesInOrder_.push_back("SameSignD0");
   cutNamesInOrder_.push_back("LeptonPt");
   cutNamesInOrder_.push_back("LeptonAbsEta");
@@ -3208,15 +3024,15 @@ DileptonAnalyzer::DileptonAnalyzer(TString fileName, const double & weight, anal
   // cutNamesInOrder_.push_back("PhotonID");
   // cutNamesInOrder_.push_back("MuonID");
   // cutNamesInOrder_.push_back("TrackQuality");
-//  cutNamesInOrder_.push_back("DileptonTriggerMatch");
-//  cutNamesInOrder_.push_back("DileptonIsolation");
+  //  cutNamesInOrder_.push_back("DileptonTriggerMatch");
+  //  cutNamesInOrder_.push_back("DileptonIsolation");
   cutNamesInOrder_.push_back("DileptonDeltaR");
   cutNamesInOrder_.push_back("DileptonDeltaPhi");
   // cutNamesInOrder_.push_back("DileptonHitsBeforeVertex");
   // cutNamesInOrder_.push_back("DileptonMissingHitsAfterVertex");
   cutNamesInOrder_.push_back("RejectionCosmics");
   cutNamesInOrder_.push_back("MinMuonValidStations");
-  cutNamesInOrder_.push_back("MinMuonValidHits"); 
+  cutNamesInOrder_.push_back("MinMuonValidHits");
   cutNamesInOrder_.push_back("LeptonD0Sig");
   cutNamesInOrder_.push_back("DileptonAbsLxySig");
 
@@ -3308,9 +3124,6 @@ DileptonAnalyzer::DileptonAnalyzer(TString fileName, const double & weight, anal
 void DileptonAnalyzer::cleaningCandidates(std::vector<TreeDipseudoLeptonCandidate> & cleanCandidates)
 {
   if (candidates->candidates_.size() == 0) return;
-//  std::cout << "event" << std::endl;
-  //int allCands=0;
-  //std::cout<<"****************new event***************"<<std::endl;
 
   for( unsigned int iTreeCand=0; iTreeCand != candidates->candidates_.size(); ++iTreeCand ) {
     TreeDipseudoLeptonCandidate cand = candidates->candidates_.at(iTreeCand);
@@ -3319,7 +3132,7 @@ void DileptonAnalyzer::cleaningCandidates(std::vector<TreeDipseudoLeptonCandidat
     TreeLepton leptonL = getLepton(candidates->leptons_, cand.leptonIndexL);
     TreeLepton leptonH = getLepton(candidates->leptons_, cand.leptonIndexH);
     if( !correctLeptonsInCandidate(cand, leptonL, leptonH) ) continue;
-        if( cand.vertexChi2==-999 ) continue;
+    if( cand.vertexChi2==-999 ) continue;
     //allCands++;
     cleanCandidates.push_back(cand);
   }
@@ -3328,24 +3141,12 @@ void DileptonAnalyzer::cleaningCandidates(std::vector<TreeDipseudoLeptonCandidat
   for (unsigned int i = 0; i < cleanCandidates.size(); i++) {
     for (unsigned int j = cleanCandidates.size()-1; j > i; j--) {
       if (cleanCandidates.at(j).vertexChi2 < cleanCandidates.at(j-1).vertexChi2) {
-       TreeDipseudoLeptonCandidate tmp = cleanCandidates.at(j-1);
-       cleanCandidates.erase(cleanCandidates.begin()+j-1);
-       cleanCandidates.insert(cleanCandidates.begin()+j,tmp);
+        TreeDipseudoLeptonCandidate tmp = cleanCandidates.at(j-1);
+        cleanCandidates.erase(cleanCandidates.begin()+j-1);
+        cleanCandidates.insert(cleanCandidates.begin()+j,tmp);
       }
     }
   }
-  //cout
-/*  cout << " Number of total candidates = " << cleanCandidates.size() << endl;
-  for ( unsigned int iCleanCand=0; iCleanCand != cleanCandidates.size(); ++iCleanCand ) {
-           TreeLepton leptonL, leptonH;
-//          for( unsigned int iTreeCand=0; iTreeCand != candidates->candidates_.size(); ++iTreeCand ) {
-                  leptonL = getLepton(candidates->leptons_, cleanCandidates.at(iCleanCand).leptonIndexL);
-                  leptonH = getLepton(candidates->leptons_, cleanCandidates.at(iCleanCand).leptonIndexH);
-//          }
-    std::cout<< " vertexchi2 = " <<cleanCandidates.at(iCleanCand).vertexChi2<<" leptonIndexL = "<<cleanCandidates.at(iCleanCand).leptonIndexL<<" leptonIndexH = "<<cleanCandidates.at(iCleanCand).leptonIndexH<<" leptonL.genCtau = "<<leptonL.genSignalOriginCtau<<" leptonH.genCtau = "<<leptonH.genSignalOriginCtau<<std::endl;
-    cout << " leptonL.charge = " << leptonL.charge << " leptonH.charge = " << leptonH.charge << " leptonL.trackChi2 = " << leptonL.trackChi2 << " leptonH.trackChi2 = " << leptonH.trackChi2 << endl;
-  }
-*/
   for (unsigned int i = 0; i < cleanCandidates.size(); i++) {
     for (unsigned int j = i+1; j < cleanCandidates.size(); j++) {
       if (cleanCandidates.at(i).leptonIndexL == cleanCandidates.at(j).leptonIndexL ||
@@ -3357,85 +3158,7 @@ void DileptonAnalyzer::cleaningCandidates(std::vector<TreeDipseudoLeptonCandidat
       }
     }
   }
-  //cout
-  /*
-  for ( unsigned int iCleanCand=0; iCleanCand != cleanCandidates.size(); ++iCleanCand ) {
-    std::cout<<"AFTER cleaning: "<<cleanCandidates.at(iCleanCand).vertexChi2<<" "<<cleanCandidates.at(iCleanCand).leptonIndexL<<" "<<cleanCandidates.at(iCleanCand).leptonIndexH<<std::endl;
-  }
-  */
 }
-
-/*
-void DileptonAnalyzer::cleaningCandidates(std::vector<TreeDipseudoLeptonCandidate> & cleanCandidates)
-{ 
-//  int h = 0;  
-  if (candidates->candidates_.size() == 0) return;
-  // std::cout << "event" << std::endl;
-
-  for( unsigned int iTreeCand=0; iTreeCand != candidates->candidates_.size(); ++iTreeCand ) {
-    TreeDipseudoLeptonCandidate cand = candidates->candidates_.at(iTreeCand);
-
-    // Use only RSA
-    TreeLepton leptonL = getLepton(candidates->leptons_, cand.leptonIndexL);
-    TreeLepton leptonH = getLepton(candidates->leptons_, cand.leptonIndexH);
-    if( !correctLeptonsInCandidate(cand, leptonL, leptonH) ) continue;
-//    h++;
-    // std::cout << "cand num " << iTreeCand << std::endl;
-    // std::cout << "cand.leptonIndexL = " << cand.leptonIndexL << std::endl;
-    // std::cout << "cand.leptonPtL = " << cand.leptonPtL << std::endl;
-    // std::cout << "cand.leptonIndexH = " << cand.leptonIndexH << std::endl;
-    // std::cout << "cand.leptonPtH = " << cand.leptonPtH << std::endl;
-
-    int candindex_matchL=-999, candindex_matchH=-999;
-    for( unsigned int iCleanCand=1; iCleanCand != cleanCandidates.size()+1; ++iCleanCand ) {
-      TreeDipseudoLeptonCandidate cleanCand = cleanCandidates.at(iCleanCand-1);
-      // std::cout << "cleanCand.leptonIndexL = " << cleanCand.leptonIndexL << std::endl;
-      // std::cout << "cleanCand.leptonIndexH = " << cleanCand.leptonIndexH << std::endl;
-
-      if(cand.leptonIndexL == cleanCand.leptonIndexL || cand.leptonIndexL == cleanCand.leptonIndexH) {
-	// std::cout << "cand.leptonPtL = " << cand.leptonPtL << std::endl;
-	// std::cout << "cleanCand.leptonPtL = " << cleanCand.leptonPtL << std::endl;
-	// std::cout << "cleanCand.leptonPtH = " << cleanCand.leptonPtH << std::endl;
-//        if(fabs(1-cand.vertexChi2) < fabs(1-cleanCand.vertexChi2)) candindex_matchL = iCleanCand;
-        if(cand.vertexChi2 < cleanCand.vertexChi2) candindex_matchL = iCleanCand;
-	else candindex_matchL = -iCleanCand;
-      }
-      if(cand.leptonIndexH == cleanCand.leptonIndexL || cand.leptonIndexH == cleanCand.leptonIndexH) {
-	// std::cout << "cand.leptonPtH = " << cand.leptonPtH << std::endl;
-	// std::cout << "cleanCand.leptonPtL = " << cleanCand.leptonPtL << std::endl;
-	// std::cout << "cleanCand.leptonPtH = " << cleanCand.leptonPtH << std::endl;
-//        if(fabs(1-cand.vertexChi2) < fabs(1-cleanCand.vertexChi2)) candindex_matchH = iCleanCand;
-        if(cand.vertexChi2 < cleanCand.vertexChi2) candindex_matchH = iCleanCand;
-        else candindex_matchH = -iCleanCand;
-      }
-    }
-
-    // if( candindex_matchL != -999 && (candindex_matchL == candindex_matchH) ) {
-    //   std::cout << "THIS SHOULD NOT HAPPEN" << std::endl;
-    //   exit(1);
-    // }
-    // If they are both matched with better Chi2
-    if(candindex_matchL>0 && candindex_matchH>0 ) {
-      cleanCandidates.erase(cleanCandidates.begin()+candindex_matchL-1);
-      cleanCandidates.erase(cleanCandidates.begin()+candindex_matchH-1);
-      cleanCandidates.push_back(cand);
-    }
-    // If leptonL is matched with better Chi2
-    if(candindex_matchL!=-999 && candindex_matchH==-999 && candindex_matchL>0) {
-      cleanCandidates.erase(cleanCandidates.begin()+candindex_matchL-1);
-      cleanCandidates.push_back(cand);
-    }
-    // If leptonH is matched with better Chi2
-    if(candindex_matchL==-999 && candindex_matchH!=-999 && candindex_matchH>0) {
-      cleanCandidates.erase(cleanCandidates.begin()+candindex_matchH-1);
-      cleanCandidates.push_back(cand);
-    }
-    // If no match, this is a unique candidate
-    if(candindex_matchL==-999 && candindex_matchH==-999) cleanCandidates.push_back(cand);
-  }
-// cout << "Number of total SA Muon Candidates in this event is " << endl << h << endl;
-}
-*/
 
 DileptonAnalyzer::~DileptonAnalyzer()
 {

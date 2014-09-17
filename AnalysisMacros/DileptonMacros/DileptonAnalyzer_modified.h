@@ -140,18 +140,15 @@ class DileptonAnalyzer : public treeAnalyzerBase {
     // Check whether the gen matched leptons of a cand are withing acceptance
     bool withinAcceptnace( TreeDipseudoLeptonCandidate & cand );
 
-    // Simple study of lifetime cuts optimisation
-    void optimiseLifetimeCuts( double lxySig, double minD0, double weight );
-
-    // // Method using d0 signing
-    // void studyD0Signing( TreeDipseudoLeptonCandidate &cand, TreeLepton & leptonL, TreeLepton & leptonH, double & mass,Histograms & h, bool fillTextFiles );
-
     // Study using collinearity to separate signal from background
     void studyCollinearity( std::vector <TreeLepton> single_cosmic_muons, TreeDipseudoLeptonCandidate &cand, TreeLepton & leptonL, TreeLepton & leptonH,
 			    double & mass,Histograms & h, bool fillCorrectedTextFiles, const DileptonAnalysisCuts & dileptonCuts_finalColl_muTrack );
 
     // Study all the candidates reconstructed in the event
     void studyCandidate( std::vector <TreeLepton> single_cosmic_muons, TreeDipseudoLeptonCandidate &cand, TreeLepton& leptonL, TreeLepton& leptonH , Histograms &h, bool fillTextFiles );
+
+    /// Function to fill all timing plots
+    void fillTimingPlots(TreeLepton& leptonL, TreeLepton& leptonH, map<TString, TH1 *> &histMap);
 
     // Function to fill all plots which are common between each set of cuts e.g. n-1 plots
     void fillPlots( const TreeDipseudoLeptonCandidate &cand, TreeLepton& leptonL, TreeLepton& leptonH , const double mass, DileptonAnalysisCuts &cuts, const DileptonAnalysisCuts::PassedWhichCuts &passedWhichCuts, map< TString, TH1* > & histMap, bool isFinalCuts, bool debug=false );
@@ -160,11 +157,6 @@ class DileptonAnalyzer : public treeAnalyzerBase {
 
 void fill_nMinus3_Plots( const TreeDipseudoLeptonCandidate &cand, TreeLepton& leptonL, TreeLepton& leptonH,
                                   const double mass, DileptonAnalysisCuts & cuts, const DileptonAnalysisCuts::PassedWhichCuts & passedWhichCuts, Histograms & h, bool isFinalCuts, bool debug=false );
-
-
-    // Function to fill plots for removed lifetime selection
-    // A little different as a few extra things to plot
-    void fillRemovedLifetimePlots( TreeDipseudoLeptonCandidate &cand, TreeLepton& leptonL, TreeLepton& leptonH, double mass, DileptonAnalysisCuts::PassedWhichCuts removedLifetimeCuts, Histograms & h );
 
     // Check if event is ditau
     bool isDitauEvent();
@@ -380,6 +372,9 @@ void fill_nMinus3_Plots( const TreeDipseudoLeptonCandidate &cand, TreeLepton& le
     bool useCorrectedCands_;
 
     bool unblind_;
+    bool timingPlots_;
+    bool fillNMinus3Plots_;
+    bool studyTrackMisalignment_;
 
     // Use if you want to reweight the exotic lifetime
     // Mainly for cut flow and debugging

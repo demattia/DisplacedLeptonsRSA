@@ -45,9 +45,34 @@ class Histograms {
     // Tracking efficiency plots
     TH1F * h_all_d0;
     TH1F * h_reco_d0;
+    TH1F * h_reco_d0_aftercuts;
     TH1F * h_all_lxy;
+    TH1F * h_all_lxy_DecayMode;
+    TH1F * h_all_lxy_DecayMode_withinAcc;
+    TH1F * h_all_lxy_DecayMode_withinAcc_trigFired;
     TH1F * h_reco_lxy;
+    TH1F * h_reco_lxy_genMatched;
+    TH1F * h_reco_lxy_removeFakeComb;
+    TH1F * h_reco_lxy_triggerMatch;
+    TH1F * h_reco_lxy_withinAcc;
+    TH1F * h_reco_lxy_aftercuts_noCosmicRejection;
+    TH1F * h_reco_lxy_aftercuts;
+    TH1F * h_reco_lxy_aftercuts_complementary;
+	TH1F * h_reco_lxy_final;
+// Additional Studies
 
+    TH2F * h_reco_d0_gen_d0;
+    TH2F * h_reco_d0Sig_gen_d0;
+    TH2F * h_reco_d0Error_gen_d0;
+    TH2F * h_reco_Lxy_gen_Lxy;
+    TH2F * h_reco_LxySig_gen_Lxy;
+    TH2F * h_reco_LxyError_gen_Lxy;
+    TH2F * h_reco_d0_gen_d0_aftercuts;
+    TH2F * h_reco_d0Sig_gen_d0_aftercuts;
+    TH2F * h_reco_d0Error_gen_d0_aftercuts;
+    TH2F * h_reco_Lxy_gen_Lxy_aftercuts;
+    TH2F * h_reco_LxySig_gen_Lxy_aftercuts;
+    TH2F * h_reco_LxyError_gen_Lxy_aftercuts;
     // Neutralino pt plots
     TH1F * h_chiPt_all;
     TH1F * h_chiPt_ss;
@@ -100,6 +125,7 @@ class Histograms {
     // n-1 final cuts
     TH1F * h_nMinus1_oppositeCharge_finalCuts;
     TH1F * h_nMinus1_vertexChi2_finalCuts;
+    TH1F * h_nMinus1_maxTrackChi2_finalCuts;
     TH1F * h_nMinus1_deltaPhi_finalCuts;
     TH1F * h_nMinus1_cosine_finalCuts;
     TH1F * h_nMinus1_deltaR_finalCuts;
@@ -120,6 +146,28 @@ class Histograms {
     TH1F * h_nMinus1_absIso_finalCuts;
 
     TH2F * h_nMinus1_leptonD0Sig_vs_LxySig_finalCuts;
+    TH2F * h_nMinus1_leptonD0Sig_vs_LxySig_finalCollCuts;
+    TH2F * h_nMinus1_leptonD0Sig_vs_LxySig_looseCollCuts;
+    TH2F * h_nMinus1_leptonD0Sig_vs_LxySig_controlCollCuts;
+    TH2F * h_nMinus1_leptonD0Sig_vs_LxySig_looseControlCollCuts;
+
+    TH2F * h_nMinus1_vertexChi2_vs_LxySig_finalCuts;
+    TH2F * h_nMinus1_vertexChi2_vs_LxySig_finalCollCuts;
+    TH2F * h_nMinus1_vertexChi2_vs_LxySig_looseCollCuts;
+    TH2F * h_nMinus1_vertexChi2_vs_LxySig_controlCollCuts;
+    TH2F * h_nMinus1_vertexChi2_vs_LxySig_looseControlCollCuts;
+
+    TH2F * h_nMinus1_maxTrackChi2_vs_LxySig_finalCuts;
+    TH2F * h_nMinus1_maxTrackChi2_vs_LxySig_finalCollCuts;
+    TH2F * h_nMinus1_maxTrackChi2_vs_LxySig_looseCollCuts;
+    TH2F * h_nMinus1_maxTrackChi2_vs_LxySig_controlCollCuts;
+    TH2F * h_nMinus1_maxTrackChi2_vs_LxySig_looseControlCollCuts;
+
+    // Eta vs. Phi fr leptons
+    TH3F * h_nMinus1_lepton_Eta_vs_Phi_looseCollCuts;
+    TH3F * h_nMinus1_lepton_Eta_vs_Phi_looseControlCollCuts;
+    TH3F * h_nMinus1_lepton_Eta_vs_Phi_controlCollCuts;
+    TH3F * h_nMinus1_lepton_Eta_vs_Phi_finalCollCuts;
 
     // Gen matched signal only, n-1, final cuts
     TH1F * h_nMinus1_isolationLeptonL_finalCuts_genMatched;
@@ -156,6 +204,7 @@ class Histograms {
     // n-1 loose cuts
     TH1F * h_nMinus1_oppositeCharge_looseCutsA;
     TH1F * h_nMinus1_vertexChi2_looseCutsA;
+    TH1F * h_nMinus1_maxTrackChi2_looseCutsA;
     TH1F * h_nMinus1_cosine_looseCutsA;
     TH1F * h_nMinus1_deltaR_looseCutsA;
     TH1F * h_nMinus1_nHitsBeforeVertex_looseCutsA;
@@ -190,6 +239,7 @@ class Histograms {
     // n-1 loose cuts
     TH1F * h_nMinus1_oppositeCharge_looseCutsB;
     TH1F * h_nMinus1_vertexChi2_looseCutsB;
+    TH1F * h_nMinus1_maxTrackChi2_looseCutsB;
     TH1F * h_nMinus1_cosine_looseCutsB;
     TH1F * h_nMinus1_deltaR_looseCutsB;
     TH1F * h_nMinus1_nHitsBeforeVertex_looseCutsB;
@@ -224,6 +274,7 @@ class Histograms {
     // n-1 loose cuts
     TH1F * h_nMinus1_oppositeCharge_looseCutsC;
     TH1F * h_nMinus1_vertexChi2_looseCutsC;
+    TH1F * h_nMinus1_maxTrackChi2_looseCutsC;
     TH1F * h_nMinus1_cosine_looseCutsC;
     TH1F * h_nMinus1_deltaR_looseCutsC;
     TH1F * h_nMinus1_nHitsBeforeVertex_looseCutsC;
@@ -309,7 +360,9 @@ class Histograms {
     TH1F * h_nMinus1_relIsolationLeptonL_removedLifetimeCollCuts;
     TH1F * h_nMinus1_relIsolationLeptonH_removedLifetimeCollCuts;
 
-
+     // n-3 plots
+    TH3F * h_nMinus3_3D_finalCollCuts;
+    TH3F * h_nMinus3_3D_controlCollCuts;
     // Final Coll
     TH1F * h_mass_finalCollCuts;
     TH1F * h_mt_finalCollCuts;
@@ -325,9 +378,14 @@ class Histograms {
     TH1F * h_nCandsPerEvent_finalCollCuts;
     TH1F * h_mass_bestCand_finalCollCuts;
     TH1F * h_Lxy_bestCand_finalCollCuts;
+    TH1F * h_signal_numberOfValidMuonHits_finalCollCuts;
+    TH1F * h_signal_numberOfValidMuonDTHits_finalCollCuts;
+    TH1F * h_signal_numberOfValidMuonCSCHits_finalCollCuts;
+    TH1F * h_minLepton_d0Sig_mutrack_finalColl;
     // n-1 loose cuts
     TH1F * h_nMinus1_oppositeCharge_finalCollCuts;
     TH1F * h_nMinus1_vertexChi2_finalCollCuts;
+    TH1F * h_nMinus1_maxTrackChi2_finalCollCuts;
     TH1F * h_nMinus1_cosine_finalCollCuts;
     TH1F * h_nMinus1_deltaR_finalCollCuts;
     TH1F * h_nMinus1_nHitsBeforeVertex_finalCollCuts;
@@ -348,7 +406,26 @@ class Histograms {
     TH1F * h_photonHadTowOverEm_finalCollCuts;
     TH1F * h_photonHadronicOverEm_finalCollCuts;
     TH1F * h_nMinus1_minValidStations_finalCollCuts;
+    TH1F * h_nMinus1_minValidHits_finalCollCuts;
+    TH1F * h_nMinus1_minValidDTHits_finalCollCuts;
+    TH1F * h_nMinus1_minValidCSCHits_finalCollCuts;
     TH1F * h_nMinus1_DileptonAbsLxySig_finalCollCuts;
+    TH1F * h_nMinus1_AbsLeptonD0_finalCollCuts;
+    TH1F * h_nMinus1_AbsD0_finalCollCuts;
+    TH1F * h_nMinus1_AbsDZ_finalCollCuts;
+    TH1F * h_nMinus1_AbsDZSignificance_finalCollCuts;
+    TH1F * h_nMinus1_muonTimeC_inverseBeta_finalCollCuts;
+    TH1F * h_nMinus1_muonTimeC_freeInverseBeta_finalCollCuts;
+    TH1F * h_nMinus1_muonTimeC_timeAtIpInOut_finalCollCuts;
+    TH1F * h_nMinus1_muonTimeC_timeAtIpOutIn_finalCollCuts;
+    TH1F * h_nMinus1_muonTimeDT_inverseBeta_finalCollCuts;
+    TH1F * h_nMinus1_muonTimeDT_freeInverseBeta_finalCollCuts;
+    TH1F * h_nMinus1_muonTimeDT_timeAtIpInOut_finalCollCuts;
+    TH1F * h_nMinus1_muonTimeDT_timeAtIpOutIn_finalCollCuts;
+    TH1F * h_nMinus1_muonTimeCSC_inverseBeta_finalCollCuts;
+    TH1F * h_nMinus1_muonTimeCSC_freeInverseBeta_finalCollCuts;
+    TH1F * h_nMinus1_muonTimeCSC_timeAtIpInOut_finalCollCuts;
+    TH1F * h_nMinus1_muonTimeCSC_timeAtIpOutIn_finalCollCuts;
 
     // Signal isolation plots
     TH2F * h_nMinus1_relIsolationLeptonL_vsPU_finalCollCuts_genMatched;
@@ -375,6 +452,7 @@ class Histograms {
     // n-1 loose cuts
     TH1F * h_nMinus1_oppositeCharge_looseCollCuts;
     TH1F * h_nMinus1_vertexChi2_looseCollCuts;
+    TH1F * h_nMinus1_maxTrackChi2_looseCollCuts;
     TH1F * h_nMinus1_cosine_looseCollCuts;
     TH1F * h_nMinus1_deltaR_looseCollCuts;
     TH1F * h_nMinus1_nHitsBeforeVertex_looseCollCuts;
@@ -395,7 +473,26 @@ class Histograms {
     TH1F * h_photonHadTowOverEm_looseCollCuts;
     TH1F * h_photonHadronicOverEm_looseCollCuts;
     TH1F * h_nMinus1_minValidStations_looseCollCuts;
+    TH1F * h_nMinus1_minValidHits_looseCollCuts;
+    TH1F * h_nMinus1_minValidDTHits_looseCollCuts;
+    TH1F * h_nMinus1_minValidCSCHits_looseCollCuts;
     TH1F * h_nMinus1_DileptonAbsLxySig_looseCollCuts;
+    TH1F * h_nMinus1_AbsLeptonD0_looseCollCuts;
+    TH1F * h_nMinus1_AbsD0_looseCollCuts;
+    TH1F * h_nMinus1_AbsDZ_looseCollCuts;
+    TH1F * h_nMinus1_AbsDZSignificance_looseCollCuts;
+    TH1F * h_nMinus1_muonTimeC_inverseBeta_looseCollCuts;
+    TH1F * h_nMinus1_muonTimeC_freeInverseBeta_looseCollCuts;
+    TH1F * h_nMinus1_muonTimeC_timeAtIpInOut_looseCollCuts;
+    TH1F * h_nMinus1_muonTimeC_timeAtIpOutIn_looseCollCuts;
+    TH1F * h_nMinus1_muonTimeDT_inverseBeta_looseCollCuts;
+    TH1F * h_nMinus1_muonTimeDT_freeInverseBeta_looseCollCuts;
+    TH1F * h_nMinus1_muonTimeDT_timeAtIpInOut_looseCollCuts;
+    TH1F * h_nMinus1_muonTimeDT_timeAtIpOutIn_looseCollCuts;
+    TH1F * h_nMinus1_muonTimeCSC_inverseBeta_looseCollCuts;
+    TH1F * h_nMinus1_muonTimeCSC_freeInverseBeta_looseCollCuts;
+    TH1F * h_nMinus1_muonTimeCSC_timeAtIpInOut_looseCollCuts;
+    TH1F * h_nMinus1_muonTimeCSC_timeAtIpOutIn_looseCollCuts;
 
     // Loose Control Coll
     TH1F * h_mass_looseControlCollCuts;
@@ -414,6 +511,7 @@ class Histograms {
     // n-1 loose cuts
     TH1F * h_nMinus1_oppositeCharge_looseControlCollCuts;
     TH1F * h_nMinus1_vertexChi2_looseControlCollCuts;
+    TH1F * h_nMinus1_maxTrackChi2_looseControlCollCuts;
     TH1F * h_nMinus1_cosine_looseControlCollCuts;
     TH1F * h_nMinus1_deltaR_looseControlCollCuts;
     TH1F * h_nMinus1_nHitsBeforeVertex_looseControlCollCuts;
@@ -438,7 +536,26 @@ class Histograms {
     TH1F * h_photonHadTowOverEm_looseControlCollCuts;
     TH1F * h_photonHadronicOverEm_looseControlCollCuts;
     TH1F * h_nMinus1_minValidStations_looseControlCollCuts;
+    TH1F * h_nMinus1_minValidHits_looseControlCollCuts;
+    TH1F * h_nMinus1_minValidDTHits_looseControlCollCuts;
+    TH1F * h_nMinus1_minValidCSCHits_looseControlCollCuts;
     TH1F * h_nMinus1_DileptonAbsLxySig_looseControlCollCuts;
+    TH1F * h_nMinus1_AbsLeptonD0_looseControlCollCuts;
+    TH1F * h_nMinus1_AbsD0_looseControlCollCuts;
+    TH1F * h_nMinus1_AbsDZ_looseControlCollCuts;
+    TH1F * h_nMinus1_AbsDZSignificance_looseControlCollCuts;
+    TH1F * h_nMinus1_muonTimeC_inverseBeta_looseControlCollCuts;
+    TH1F * h_nMinus1_muonTimeC_freeInverseBeta_looseControlCollCuts;
+    TH1F * h_nMinus1_muonTimeC_timeAtIpInOut_looseControlCollCuts;
+    TH1F * h_nMinus1_muonTimeC_timeAtIpOutIn_looseControlCollCuts;
+    TH1F * h_nMinus1_muonTimeDT_inverseBeta_looseControlCollCuts;
+    TH1F * h_nMinus1_muonTimeDT_freeInverseBeta_looseControlCollCuts;
+    TH1F * h_nMinus1_muonTimeDT_timeAtIpInOut_looseControlCollCuts;
+    TH1F * h_nMinus1_muonTimeDT_timeAtIpOutIn_looseControlCollCuts;
+    TH1F * h_nMinus1_muonTimeCSC_inverseBeta_looseControlCollCuts;
+    TH1F * h_nMinus1_muonTimeCSC_freeInverseBeta_looseControlCollCuts;
+    TH1F * h_nMinus1_muonTimeCSC_timeAtIpInOut_looseControlCollCuts;
+    TH1F * h_nMinus1_muonTimeCSC_timeAtIpOutIn_looseControlCollCuts;
 
     // Control Coll
     TH1F * h_mass_controlCollCuts;
@@ -453,10 +570,15 @@ class Histograms {
     TH1F * h_ptOverE_controlCollCuts;
     TH1F * h_ptMinusE_controlCollCuts;
     TH1F * h_nCandsPerEvent_controlCollCuts;
+    TH1F * h_data_numberOfValidMuonHits_controlCollCuts;
+    TH1F * h_data_numberOfValidMuonDTHits_controlCollCuts;
+    TH1F * h_data_numberOfValidMuonCSCHits_controlCollCuts;
+    TH2F * h_minleptonD0Sig_vs_LxySig_controlCollCuts;
 
     // n-1  cuts
     TH1F * h_nMinus1_oppositeCharge_controlCollCuts;
     TH1F * h_nMinus1_vertexChi2_controlCollCuts;
+    TH1F * h_nMinus1_maxTrackChi2_controlCollCuts;
     TH1F * h_nMinus1_cosine_controlCollCuts;
     TH1F * h_nMinus1_deltaR_controlCollCuts;
     TH1F * h_nMinus1_nHitsBeforeVertex_controlCollCuts;
@@ -477,7 +599,30 @@ class Histograms {
     TH1F * h_photonHadTowOverEm_controlCollCuts;
     TH1F * h_photonHadronicOverEm_controlCollCuts;
     TH1F * h_nMinus1_minValidStations_controlCollCuts;
+    TH1F * h_nMinus1_minValidHits_controlCollCuts;
+    TH1F * h_nMinus1_minValidDTHits_controlCollCuts;
+    TH1F * h_nMinus1_minValidCSCHits_controlCollCuts;
     TH1F * h_nMinus1_DileptonAbsLxySig_controlCollCuts;
+    TH1F * h_nMinus1_AbsLeptonD0_controlCollCuts;
+    TH1F * h_nMinus1_AbsD0_controlCollCuts;
+    TH1F * h_nMinus1_AbsDZ_controlCollCuts;
+    TH1F * h_nMinus1_AbsDZSignificance_controlCollCuts;
+    TH1F * h_nMinus1_muonTimeC_inverseBeta_controlCollCuts;
+    TH1F * h_nMinus1_muonTimeC_freeInverseBeta_controlCollCuts;
+    TH1F * h_nMinus1_muonTimeC_timeAtIpInOut_controlCollCuts;
+    TH1F * h_nMinus1_muonTimeC_timeAtIpOutIn_controlCollCuts;
+    TH1F * h_cosmic_non_rejection_muonTimeC_inverseBeta_controlCollCuts;
+    TH1F * h_cosmic_non_rejection_muonTimeC_freeInverseBeta_controlCollCuts;
+    TH1F * h_cosmic_non_rejection_muonTimeC_timeAtIpInOut_controlCollCuts;
+    TH1F * h_cosmic_non_rejection_muonTimeC_timeAtIpOutIn_controlCollCuts;
+    TH1F * h_nMinus1_muonTimeDT_inverseBeta_controlCollCuts;
+    TH1F * h_nMinus1_muonTimeDT_freeInverseBeta_controlCollCuts;
+    TH1F * h_nMinus1_muonTimeDT_timeAtIpInOut_controlCollCuts;
+    TH1F * h_nMinus1_muonTimeDT_timeAtIpOutIn_controlCollCuts;
+    TH1F * h_nMinus1_muonTimeCSC_inverseBeta_controlCollCuts;
+    TH1F * h_nMinus1_muonTimeCSC_freeInverseBeta_controlCollCuts;
+    TH1F * h_nMinus1_muonTimeCSC_timeAtIpInOut_controlCollCuts;
+    TH1F * h_nMinus1_muonTimeCSC_timeAtIpOutIn_controlCollCuts;
 
     // d0/sigma
     TH1F * h_minLeptonD0Sig_removedLifetimeCuts;
@@ -651,6 +796,8 @@ class Histograms {
     TH1F * h_nMinus1_minMissingHitsAfterVertex_removedLifetimeCuts;
     TH1F * h_nMinus1_vertexChi2_removedLifetimeCuts;
     TH1F * h_nMinus1_vertexChi2_removedLifetimeCuts_vPrompt;
+    TH1F * h_nMinus1_maxTrackChi2_removedLifetimeCuts;
+    TH1F * h_nMinus1_maxTrackChi2_removedLifetimeCuts_vPrompt;
 
     //
     // Removed Lifetime, No Vertex
@@ -668,6 +815,7 @@ class Histograms {
     // n-1 loose cuts
     TH1F * h_nMinus1_oppositeCharge_removedLifetimeNoVertex;
     TH1F * h_nMinus1_vertexChi2_removedLifetimeNoVertex;
+    TH1F * h_nMinus1_maxTrackChi2_removedLifetimeNoVertex;
     TH1F * h_nMinus1_cosine_removedLifetimeNoVertex;
     TH1F * h_nMinus1_deltaR_removedLifetimeNoVertex;
     TH1F * h_nMinus1_nHitsBeforeVertex_removedLifetimeNoVertex;
@@ -720,23 +868,23 @@ class Histograms {
     vector<TProfile *> h_trigEff_meanLifetime;
     vector<TProfile *> h_trigEff_meanLifetimeLog;
 
-    map< TString, TH1F*> histMap;
+    map< TString, TH1*> histMap;
 
-    map< TString, TH1F* > histMapFinal;
-    map< TString, TH1F* > histMapLooseA;
-    map< TString, TH1F* > histMapLooseB;
-    map< TString, TH1F* > histMapLooseC;
-    map< TString, TH1F* > histMapRemovedLifetimeNoVertex;
+    map< TString, TH1* > histMapFinal;
+    map< TString, TH1* > histMapLooseA;
+    map< TString, TH1* > histMapLooseB;
+    map< TString, TH1* > histMapLooseC;
+    map< TString, TH1* > histMapRemovedLifetimeNoVertex;
 
-    map< TString, TH1F* > histMapFinalColl;
-    map< TString, TH1F* > histMapLooseColl;
-    map< TString, TH1F* > histMapLooseControlColl;
-    map< TString, TH1F* > histMapControlColl;
+    map< TString, TH1* > histMapFinalColl;
+    map< TString, TH1* > histMapLooseColl;
+    map< TString, TH1* > histMapLooseControlColl;
+    map< TString, TH1* > histMapControlColl;
 
     TH1F * initHist(TH1F * hist, TString name, TString title, const unsigned int nBins, const float xMin, const float xMax);
 
-    void overflow(TH1F &h);
-    void underflow(TH1F &h);
+    void overflow(TH1 &h);
+    void underflow(TH1 &h);
 };
 
 #endif

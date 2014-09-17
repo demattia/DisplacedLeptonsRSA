@@ -1,14 +1,14 @@
 CC=g++
-CFLAGS=-c -g -Wall `root-config --cflags`
+CFLAGS=-c -O3 -Wall `root-config --cflags`
 LDFLAGS=`root-config --glibs`
 COMMONMACRODIR=../CommonMacros/
-INCDIR=-I/uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Analysis/CMSSW_5_3_8/src
+INCDIR=-I/uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Version_9_5_2014/CMSSW_5_3_8/src/
 TREEDIR=../../TreeProducer/TreeProducer/
 OBJECTS=fullAnalyzer.o DileptonAnalyzer.o PileupReweighting.o treeAnalyzerBase.o DileptonAnalysisCuts.o Histograms.o libMyLib.so
 HEADERS = $(TREEDIR)/interface/Candidates.h $(TREEDIR)/interface/TreeLepton.h $(TREEDIR)/interface/TreeDipseudoLeptonCandidate.h
 
 all : $(OBJECTS) 
-	$(CC) $(LDFLAGS) $(OBJECTS) -g -o main 
+	$(CC) $(LDFLAGS) $(OBJECTS) -O3 -o main 
 
 fullAnalyzer.o : fullAnalyzer.C DileptonAnalyzer.h $(COMMONMACRODIR)/treeAnalyzerBase.h $(COMMONMACRODIR)/FilesAndWeights.h $(COMMONMACRODIR)/GetCategory.h $(COMMONMACRODIR)/analysisType.h
 	$(CC) $(CFLAGS) $(INCDIR) fullAnalyzer.C
