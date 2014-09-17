@@ -16,19 +16,25 @@ TString getCategory(const TString & dirName)
     else if ( fileName.Contains("BCToE", TString::kIgnoreCase ) ) return "QCDBCToE";
     else return "QCD";
   }
-  else if( fileName.BeginsWith("ZZ") ) return "ZZ";
-  else if( fileName.BeginsWith("WW") ) return "WW";
-  else if( fileName.BeginsWith("WZ") ) return "WZ";
-  else if( fileName.BeginsWith("WJets") ) return "WJets";
+//  else if( fileName.BeginsWith("ZZ") ) return "ZZ";
+  else if( fileName.BeginsWith("ZZ") ) return "Diboson";
+//  else if( fileName.BeginsWith("WW") ) return "WW";
+  else if( fileName.BeginsWith("WW") ) return "Diboson";
+//  else if( fileName.BeginsWith("WZ") ) return "WZ";
+  else if( fileName.BeginsWith("WZ") ) return "Diboson";
+//  else if( fileName.BeginsWith("WJets") ) return "WJets";
+  else if( fileName.BeginsWith("WJets") ) return "Diboson";
   else if( fileName.BeginsWith("TTJets") ) return "TTJets";
   else if( fileName.BeginsWith("Zee") ) return "Zee";
   else if( fileName.BeginsWith("Zmumu") ) return "Zmumu";
   else if( fileName.BeginsWith("Ztautau") ) return "Ztautau";
   else if( fileName.BeginsWith("DYJets") ) return "DYJets";
-  else if( fileName.BeginsWith("Data") ) {
+  else if( fileName.BeginsWith("Data") || fileName.BeginsWith("cosmics")) {
+//  else if( fileName.BeginsWith("Data")) {
     if ( fileName.Contains("22Jan", TString::kIgnoreCase ) ) return "Data22Jan";
     else return "Data";
   }
+//  else if (fileName.BeginsWith("HTo2LongLived") || fileName.BeginsWith("Chi0ToNuLL") || fileName.BeginsWith("cosmicsRun")) return fileName.Remove(fileName.Index("_analysis"),fileName.Length());
   else if (fileName.BeginsWith("HTo2LongLived") || fileName.BeginsWith("Chi0ToNuLL")) return fileName.Remove(fileName.Index("_analysis"),fileName.Length());
   std::cout << "Unknown category for " << fileName.Data() << std::endl;
   return "";

@@ -65,19 +65,19 @@ void fullCombination(analysisType ana)
       std::cout << "Adding tau version : " << tauFileName << std::endl;
       categories["Tau"]->Add( TFile::Open(tauFileName) );
     }
-    // Check for d0 corrected fiels
-    if ( category == "Data" ) {
-      TString correctedFileName("WeightedFiles/"+std::string(it->first).substr(std::string(it->first).find_last_of("/")+1)+"_weighted_"+type+"_tipLipCorrected.root");
-      if ( categories["Data_tipLipCorrected"] == 0 ) categories["Data_tipLipCorrected"] = new TList();
-      std::cout << "Adding tip lip corrected version : " << correctedFileName << std::endl;
-      categories["Data_tipLipCorrected"]->Add( TFile::Open(correctedFileName) );
-    }
-    else if ( category == "Data22Jan") {
-      TString correctedFileName("WeightedFiles/"+std::string(it->first).substr(std::string(it->first).find_last_of("/")+1)+"_weighted_"+type+"_tipLipCorrected.root");
-      if ( categories["Data22Jan_tipLipCorrected"] == 0 ) categories["Data22Jan_tipLipCorrected"] = new TList();
-      std::cout << "Adding tip lip corrected version : " << correctedFileName << std::endl;
-      categories["Data22Jan_tipLipCorrected"]->Add( TFile::Open(correctedFileName) );    }
-
+//     // Check for d0 corrected fiels
+//     if ( category == "Data" ) {
+//       TString correctedFileName("WeightedFiles/"+std::string(it->first).substr(std::string(it->first).find_last_of("/")+1)+"_weighted_"+type+"_tipLipCorrected.root");
+//       if ( categories["Data_tipLipCorrected"] == 0 ) categories["Data_tipLipCorrected"] = new TList();
+//       std::cout << "Adding tip lip corrected version : " << correctedFileName << std::endl;
+//       categories["Data_tipLipCorrected"]->Add( TFile::Open(correctedFileName) );
+//     }
+//     else if ( category == "Data22Jan") {
+//       TString correctedFileName("WeightedFiles/"+std::string(it->first).substr(std::string(it->first).find_last_of("/")+1)+"_weighted_"+type+"_tipLipCorrected.root");
+//       if ( categories["Data22Jan_tipLipCorrected"] == 0 ) categories["Data22Jan_tipLipCorrected"] = new TList();
+//       std::cout << "Adding tip lip corrected version : " << correctedFileName << std::endl;
+//       categories["Data22Jan_tipLipCorrected"]->Add( TFile::Open(correctedFileName) );
+//     }
     //    if ( category=="DYJets" ) {
     //      if ( categories["DYJetsTau"] == 0 ) categories["DYJetsTau"] = new TList();
     //      categories["DYJetsTau"]->Add( TFile::Open("WeightedFiles/"+std::string(it->first).substr(std::string(it->first).find_last_of("/")+1)+"_weighted_"+type+"_tau.root") );
