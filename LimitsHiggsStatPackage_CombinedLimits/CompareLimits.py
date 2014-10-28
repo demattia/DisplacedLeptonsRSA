@@ -1,0 +1,228 @@
+import ROOT
+from ROOT import TFile, TCanvas
+
+
+def compare_limits(file_name_combined, file_name_tk, file_name_rsa, mp, expected=True, neutralino=False):
+
+    ROOT.gStyle.SetOptTitle(1)
+    ROOT.gStyle.SetTitleBorderSize(0)
+    ROOT.gStyle.SetTitleFont(42, "")
+    ROOT.gStyle.SetTitleX(0.55)
+    ROOT.gStyle.SetTitleY(0.99)
+    ROOT.gStyle.SetTitleAlign(23)
+    ROOT.gStyle.SetTitleSize(0.05, "XYZ")
+    ROOT.gStyle.SetLabelSize(0.045, "XYZ")
+
+    input_file_combined = TFile(file_name_combined)
+    input_file_tk = TFile(file_name_tk)
+    input_file_rsa = TFile(file_name_rsa)
+
+    canvas_combined = input_file_combined.Get("c")
+    canvas_tk = input_file_tk.Get("c")
+    canvas_rsa = input_file_rsa.Get("c")
+
+    primitives_combined = canvas_combined.GetListOfPrimitives()
+    primitives_tk = canvas_tk.GetListOfPrimitives()
+    primitives_rsa = canvas_rsa.GetListOfPrimitives()
+
+    shift = 4
+    if neutralino:
+        shift = 6
+
+    # Remove extra points from RSA TGraph. They are not combined because no track-based limits are available for them.
+    cutoff = 22
+    if neutralino:
+        cutoff = 15
+
+    primitives_rsa[mp].Set(cutoff)
+    primitives_rsa[mp+1].Set(cutoff)
+    if expected:
+        primitives_rsa[mp+shift].Set(cutoff)
+        primitives_rsa[mp+shift+1].Set(cutoff)
+
+    for i, primitive in enumerate(primitives_tk):
+        print primitive
+
+    new_canvas = TCanvas("comparison", "comparison", 600, 600)
+    new_canvas.Draw()
+
+    ROOT.gPad.SetLeftMargin(0.15)
+    ROOT.gPad.SetTopMargin(0.08)
+    ROOT.gPad.SetRightMargin(0.04)
+
+    primitives_combined[1].Draw()  # Frame
+    # primitives_combined[3].Draw()
+    # primitives_combined[3].Print()
+    y_max = primitives_combined[1].GetYaxis().GetXmax()
+    x_max = primitives_combined[1].GetXaxis().GetXmax()
+
+    if not expected:
+        primitives_combined[mp].Draw("lp same")  # valid for 100% BR
+        primitives_combined[mp].SetLineColor(1)
+        primitives_combined[mp+1].Draw("l same")  # valid for small BR*efficiency
+        primitives_combined[mp+1].SetLineColor(1)
+        primitives_combined[mp].SetMarkerStyle(28)
+        primitives_combined[mp].SetMarkerSize(2)
+        primitives_combined[mp].SetMarkerColor(1)
+    else:
+        # primitives_combined[mp].SetFillStyle(3609)
+        primitives_combined[mp].SetFillColor(3)
+        # primitives_combined[mp].SetLineColor(0)
+        primitives_combined[mp].SetLineColor(1)
+        primitives_combined[mp].Draw("4 same")
+        primitives_combined[mp].SetMarkerStyle(28)
+        primitives_combined[mp].SetMarkerSize(2)
+        primitives_combined[mp].SetMarkerColor(1)
+        primitives_combined[mp+shift].Draw("lp same")  # valid for 100% BR
+        primitives_combined[mp+shift].SetLineColor(1)
+        primitives_combined[mp+shift+1].Draw("l same")  # valid for small BR*efficiency
+        primitives_combined[mp+shift+1].SetLineColor(1)
+        primitives_combined[mp+shift].SetMarkerStyle(28)
+        primitives_combined[mp+shift].SetMarkerSize(2)
+        primitives_combined[mp+shift].SetMarkerColor(1)
+
+    # primitives_combined[1].GetYaxis().SetRangeUser(0.001, 0.9)  # Frame
+    # primitives_combined[1].GetXaxis().SetRangeUser(0.001, 1000)  # Frame
+    # primitives_combined[4].Draw("4 same")  # Expected limit
+
+    # primitives_tk[1].Draw()  # Frame
+    # primitives_tk[mp-4].Draw("4 same")  # Expected limit
+    if not expected:
+        primitives_tk[mp].Draw("lp same")  # valid for 100% BR
+        primitives_tk[mp].SetLineColor(2)
+        primitives_tk[mp+1].Draw("l same")  # valid for small BR*efficiency
+        primitives_tk[mp+1].SetLineColor(2)
+        primitives_tk[mp].SetMarkerColor(2)
+        primitives_tk[mp].SetMarkerStyle(20)
+    else:
+        primitives_tk[mp].SetFillStyle(3002)
+        primitives_tk[mp].SetFillColor(2)
+        # primitives_tk[mp].SetLineColor(0)
+        primitives_tk[mp].SetLineColor(2)
+        primitives_tk[mp].SetMarkerColor(2)
+        primitives_tk[mp].SetMarkerStyle(20)
+        primitives_tk[mp].Draw("4 same")
+        primitives_tk[mp+shift].Draw("lp same")  # valid for 100% BR
+        primitives_tk[mp+shift].SetLineColor(2)
+        primitives_tk[mp+shift+1].Draw("l same")  # valid for small BR*efficiency
+        primitives_tk[mp+shift+1].SetLineColor(2)
+        primitives_tk[mp+shift].SetMarkerColor(2)
+        primitives_tk[mp+shift].SetMarkerStyle(20)
+
+    # primitives_rsa[1].Draw()  # Frame
+    # primitives_rsa[mp-4].Draw("4 same")  # Expected limit
+    if not expected:
+        primitives_rsa[mp].Draw("lp same")  # valid for 100% BR
+        primitives_rsa[mp].SetLineColor(4)
+        primitives_rsa[mp+1].Draw("l same")  # valid for small BR*efficiency
+        primitives_rsa[mp+1].SetLineColor(4)
+        primitives_rsa[mp].SetMarkerColor(4)
+        primitives_rsa[mp].SetMarkerStyle(26)
+    else:
+        primitives_rsa[mp].SetFillStyle(3244)
+        primitives_rsa[mp].SetFillColor(4)
+        primitives_rsa[mp].Draw("3 same")
+        # primitives_rsa[mp].SetLineColor(0)
+        primitives_rsa[mp].SetLineColor(4)
+        primitives_rsa[mp].SetMarkerColor(4)
+        primitives_rsa[mp].SetMarkerStyle(26)
+        primitives_rsa[mp+shift].Draw("lp same")  # valid for 100% BR
+        primitives_rsa[mp+shift].SetLineColor(4)
+        primitives_rsa[mp+shift+1].Draw("l same")  # valid for small BR*efficiency
+        primitives_rsa[mp+shift+1].SetLineColor(4)
+        primitives_rsa[mp+shift].SetMarkerColor(4)
+        primitives_rsa[mp+shift].SetMarkerStyle(26)
+
+    if expected:
+        primitives_combined[mp+shift].Draw("lp same")  # valid for 100% BR
+        primitives_combined[mp+shift+1].Draw("l same")  # valid for small BR*efficiency
+
+
+    print "Number of points for track-based =", primitives_tk[mp].GetN()
+    print "Number of points for RSA-based =", primitives_rsa[mp].GetN()
+    print "Number of points for combined =", primitives_combined[mp].GetN()
+
+    leg = ROOT.TLegend(0.2, 0.58, 0.64, 0.83)
+    if expected:
+        leg.SetHeader("Expected limits (#pm 1 #sigma)")
+    else:
+        leg.SetHeader("Observed limits")
+    marker = "p"
+    if expected:
+        marker = "plf"
+    leg.AddEntry(primitives_tk[mp], "Track-based", marker)
+    leg.AddEntry(primitives_rsa[mp], "RSA-based", marker)
+    leg.AddEntry(primitives_combined[mp], "Combined", marker)
+    leg.SetFillColor(0)
+    leg.SetLineColor(0)
+    leg.Draw("same")
+
+    t1 = ROOT.TLatex(x_max*0.5, y_max*0.045, "#splitline{m_{H} = 1000 GeV/c^{2}}{m_{X} = 350 GeV/c^{2}}")
+    if neutralino:
+        # t1 = ROOT.TLatex(x_max*0.5, y_max*0.15, "m_{#tilde{q}} / m_{#chi} = 350 / 148 GeV/c^{2}")
+        t1 = ROOT.TLatex(x_max*0.5, y_max*0.15, "#splitline{m_{#tilde{q}} = 350 GeV/c^{2}}{m_{#chi} = 148 GeV/c^{2}}")
+    t1.SetTextAlign(32)
+    t1.SetTextFont(62)
+    t1.SetTextSize(0.04)
+    t1.Draw("same")
+
+    new_canvas.SetLogx(True)
+    new_canvas.SetLogy(True)
+
+    suffix = "_Expected"
+    if not expected:
+        suffix = "_Observed"
+    if neutralino:
+        suffix += "_neutralino"
+    new_canvas.Print("LimitsComparison"+suffix+".png")
+    new_canvas.Print("LimitsComparison"+suffix+".pdf")
+    new_canvas.SaveAs("LimitsComparison"+suffix+".root")
+
+
+ROOT.gROOT.LoadMacro("tdrstyle.C")
+ROOT.setTDRStyle()
+
+file_name_combined = "counting_result_Combined_Bayesian/limitsLifetimeMuonsMH1000.root"
+file_name_tk = "/uscmst1b_scratch/lpc1/lpcmuon/zhenhu/Displaced_new6/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Bayesian/limitsLifetimeMuonsMH1000.root"
+file_name_rsa = "/uscmst1b_scratch/lpc1/lpcmuon/zhenhu/RefittedStandAloneMuons/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Bayesian/limitsLifetimeMuonsMH1000.root"
+
+# file_name_combined = "counting_result_Combined_Bayesian/limitsLifetimeMuonsMH400.root"
+# file_name_tk = "/uscmst1b_scratch/lpc1/lpcmuon/zhenhu/Displaced_new6/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Bayesian/limitsLifetimeMuonsMH400.root"
+# file_name_rsa = "/uscmst1b_scratch/lpc1/lpcmuon/zhenhu/RefittedStandAloneMuons/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Bayesian/limitsLifetimeMuonsMH400.root"
+
+# file_name_combined = "counting_result_Combined_Bayesian/limitsLifetimeMuonsMH125.root"
+# file_name_tk = "/uscmst1b_scratch/lpc1/lpcmuon/zhenhu/Displaced_new6/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Bayesian/limitsLifetimeMuonsMH125.root"
+# file_name_rsa = "/uscmst1b_scratch/lpc1/lpcmuon/zhenhu/RefittedStandAloneMuons/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Bayesian/limitsLifetimeMuonsMH125.root"
+
+# Which mass point to plot. For the MH=1000 file. This is for expected limits
+mp = 4  # MX = 350
+# mp = 5  # MX = 150
+# mp = 6  # MX = 50
+# mp = 7  # MX = 20
+compare_limits(file_name_combined, file_name_tk, file_name_rsa, mp, expected=True)
+
+# Which mass point to plot. For the MH=1000 file. This is for observed limits
+mp = 8  # MX = 350
+# mp = 10  # MX = 150
+# mp = 12  # MX = 50
+# mp = 14  # MX = 20
+compare_limits(file_name_combined, file_name_tk, file_name_rsa, mp, expected=False)
+
+# Neutralino
+file_name_combined = "counting_result_Combined_Bayesian_neutralino/limitsLifetimeMuons_neutralino.root"
+file_name_tk = "/uscmst1b_scratch/lpc1/lpcmuon/zhenhu/Displaced_new6/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Bayesian_neutralino/limitsLifetimeMuons_neutralino.root"
+file_name_rsa = "/uscmst1b_scratch/lpc1/lpcmuon/zhenhu/RefittedStandAloneMuons/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Bayesian_neutralino/limitsLifetimeMuons_neutralino.root"
+
+# Which mass point to plot. For the MH=1000 file. This is for expected limits
+# mp = 3  # MX = 1500/494
+# mp = 4  # MX = 1000/148
+mp = 5  # MX = 350/148
+# mp = 6  # MX = 120/48
+compare_limits(file_name_combined, file_name_tk, file_name_rsa, mp, expected=True, neutralino=True)
+
+# Which mass point to plot. For the MH=1000 file. This is for observed limits
+# mp = 7  # MX = 1500/494
+mp = 9  # MX = 1000/148
+# mp = 11  # MX = 350/148
+# mp = 13  # MX = 120/48
+compare_limits(file_name_combined, file_name_tk, file_name_rsa, mp, expected=False, neutralino=True)

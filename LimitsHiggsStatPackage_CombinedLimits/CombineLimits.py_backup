@@ -1,0 +1,27 @@
+import os
+import subprocess
+
+baseDirTk = "counting_job_Tk_Bayesian"
+baseDirRSA = "counting_job_RSA_Bayesian"
+baseDirCombined = "counting_job_Combined_Bayesian"
+
+for subDirName in os.listdir(baseDirRSA):
+    if subDirName.find("multicrab") != -1:
+        continue
+
+    print subDirName
+
+    os.system("mkdir -p "+baseDirCombined+"/"+subDirName)
+    
+    # print "cat "+baseDirTk+"/"+subDirName+"/TestGrid.cfg"
+    os.system("cat "+baseDirTk+"/"+subDirName+"/TestGrid.cfg | sed s@_Tk@_Combined@g > "+baseDirCombined+"/"+subDirName+"/TestGrid.cfg")
+    os.system("cp "+baseDirTk+"/"+subDirName+"/TestGrid.sh "+baseDirCombined+"/"+subDirName+"/TestGrid.sh")
+    # combine.txt
+    # combine.root
+
+    os.system("combineCards.py "+baseDirTk+"/"+subDirName+"/combine.txt "+baseDirRSA+"/"+subDirName+"/combine.txt > "+baseDirCombined+"/"+subDirName+"/combine.txt")
+
+    cmd = "$CMSSW_BASE/src/HiggsAnalysis/CombinedLimit/scripts/text2workspace.py "+baseDirCombined+"/"+subDirName+"/combine.txt -b -o "+baseDirCombined+"/"+subDirName+"/combine.root"
+    istat = subprocess.call(cmd, shell=True)
+    if istat != 0:
+        sys.exit("ERROR: whilst executing %s" %cmd)

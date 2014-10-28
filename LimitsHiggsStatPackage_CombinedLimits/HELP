@@ -1,0 +1,96 @@
+
+INSTRUCTIONS FOR RUNNING LIMIT CODE
+=====================================
+
+Please note:
+
+The 2012 analysis obtained limits by counting events in the tail of the d0/sigma spectrum.
+This uses makeJobCounting.py and makePlotCounting.py below. In this case, step (5) is not used.
+
+The 2011 analysis instead obtained limits by fitting the mass spectrum. 
+This uses makeJob.py and makePlot.py below.
+
+Calculation of CLs limits
+==========================
+
+Uses the Higgs Statistics package, based on RooStats
+https://twiki.cern.ch/twiki/bin/view/CMS/SWGuideHiggsAnalysisCombinedLimit .
+
+1) In a CMSSW area, do "cvs co HiggsAnalysis/CombinedLimit" (taking CVS version recommended on their
+   web page above). Then do "evam `scramv1 runtime -csh`" and "scram b".
+
+   Your own card files go in a seperate area (where this HELP file is).
+
+2) Check the nominal lifetimes and masses of the signal samples are specified in parseEfficiencyFiles.pl.
+   And the correct signal efficiency systematic is specified in parameter signalEffiSys_rel inside it.
+
+3) Prepare two input directories for RSA and Tk: InputData2012_RSA, InputData2012_Tk
+   You can use "copy_txt_files" sript to copy those txt files. But you need to change the directory name with "_RSA" or "Tk" to avoid overwriting. Also please comment out the following commands in the "copy_txt_files" sript: 
+    #   ./parseEfficiencyFiles.pl 1  
+    #   ./parseEfficiencyFiles.pl 2
+    #   ./parseEfficiencyFilesNeutralino.pl 1
+    #   ./parseEfficiencyFilesNeutralino.pl 2
+
+4) Run:
+   ./parseEfficiencyFiles_RSA.pl 1
+   ./parseEfficiencyFiles_Tk.pl 1
+   They will produce two files: SignalSampleInfoEffi_RSA.py, SignalSampleInfoEffi_Tk.py
+
+   or for the neutralino sample, 
+   ./parseEfficiencyFilesNeutralino_RSA.pl 1
+   ./parseEfficiencyFilesNeutralino_Tk.pl 1
+
+5) Prepare SignalSampleInfo_RSA.py, SignalSampleInfo_Tk.py, and SignalSampleInfo_Combined.py. 
+   Ensure that SignalSampleInfo_*.py contains all input parameters (expected background normalization 
+   systematic = bkg_relerr (and shape), luminosity = lumi, link to InputData2012_*/ ...) needed. 
+
+   In SignalSampleInfo_*.py, only set loopOverCtau = True if you want the limit calculation to
+   take into account the variation in mass resolution & signal efficiency uncertainty with
+   lifetime. (This is x10 slower, but a bit more accurate).
+
+   In SignalSampleInfo_*.py, set doNeutralinoLimits to True (False) to do long-lived neutralino (X->l+l-) limits.
+
+   In SignalSampleInfo_*.py, set limitMethod = CLs or Bayesian, depending on what sort of limits you want.
+   (Bayesian is more reliable and faster).
+
+6) Only if you want to change the parameters of the PDF or the lumi uncertainty, edit
+   combine_template.txt
+
+7) python makeJobCounting_RSA.py 1
+   python makeJobCounting_Tk.py 1
+
+  (This creates the card files and RooWorkspace for the problem 
+   and then creates the crab.cfg and multicrab.cfg).
+
+   P.S. Option doNeutralinoLimits in SignalSampleInfo_*.py should be set True or False, depending
+   on whether you want limits for long-lived neutralinos or X bosons.
+
+8) python CombineLimits.py 
+   or
+   python CombineLimits_Neutralino.py
+   
+   This creates the combined card files and combined crab jobs under "counting_job_Combined_Bayesian(_neutralino)". 
+
+9) multicrab -create -submit
+
+10) After jobs have finished running, do "multicrab -getoutput all -c job_output/" if running 
+    a normal CRAB job. It is not necessary if you are using CRAB PBS.
+
+11) python makePlotCounting_Combined.py 1 
+
+    or for debugging do "python makePlot(Counting).py 11", where adding 10 to the option
+    causes it to plot limits on the mean number of signal events passing the cuts, instead of 
+    limits on sigma*BR).
+
+    P.S. Option doNeutralinoLimits in SignalSampleInfo.py should be set True or False, depending
+    on whether you want limits for long-lived neutralinos or X bosons.
+
+    There are two hard-wired constants inside makePlot(Counting).py that you should check:
+
+       i) recalcLimits - If you set this to false, makePlot use the limit calculation from a previous makePlot run to 
+          save time. This is handy if you just want to change the plotting style.
+
+12) Repeat steps 7-11 specifying argument "2" instead of "1" at steps (7) and (11),  
+to get also limits uncorrected for acceptance.
+
+13) ./copyPlotsToPaper copies the limits plot to the paper svn repository.

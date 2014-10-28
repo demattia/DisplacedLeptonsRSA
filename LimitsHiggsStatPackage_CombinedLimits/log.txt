@@ -1,0 +1,2370 @@
+=== Assumed luminosity = 20532.000000/pb (muons) and 19636.000000/pb (electrons)===
+
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1500_494_0.01/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_0.01/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_0.01/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_0.01 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.17081939082 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_0.01 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.58105197198 
+
+=== expected limit on number of cands for quantile  0.84  is  6.1842501091 
+
+=== expected limit on number of cands for quantile  0.16  is  3.16081617546 
+
+=== expected limit on number of cands for quantile  0.975  is  10.6780140478 
+
+=== expected limit on number of cands for quantile  0.025  is  3.13104797934 
+
+0.4237
+Limit on signal cands =  3.17081939082  Limit on sigma*BR =  0.000182320847186 ( 0.000231327599043 ) for small (large) BR; effi =  0.42352 ; lumi =  20532
+Limit on signal cands =  4.58105197198  Limit on sigma*BR =  0.00026340865675 ( 0.000334211326207 ) for small (large) BR; effi =  0.42352 ; lumi =  20532
+Limit on signal cands =  6.1842501091  Limit on sigma*BR =  0.000355591908629 ( 0.000451172884133 ) for small (large) BR; effi =  0.42352 ; lumi =  20532
+Limit on signal cands =  3.16081617546  Limit on sigma*BR =  0.000181745666302 ( 0.000230597812983 ) for small (large) BR; effi =  0.42352 ; lumi =  20532
+Limit on signal cands =  10.6780140478  Limit on sigma*BR =  0.000613981538366 ( 0.000779016098923 ) for small (large) BR; effi =  0.42352 ; lumi =  20532
+Limit on signal cands =  3.13104797934  Limit on sigma*BR =  0.000180034006928 ( 0.000228426069819 ) for small (large) BR; effi =  0.42352 ; lumi =  20532
+Limit on signal cands =  3.13104797934  Limit on sigma*BR =  0.000180034006928 ( 0.000228426069819 ) for small (large) BR; effi =  0.42352 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1500_494_0.02/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_0.02/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_0.02/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_0.02 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.09863407295 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_0.02 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  3.14887014733 
+
+=== expected limit on number of cands for quantile  0.84  is  6.00372769543 
+
+=== expected limit on number of cands for quantile  0.16  is  3.09126218019 
+
+=== expected limit on number of cands for quantile  0.975  is  10.2965934774 
+
+=== expected limit on number of cands for quantile  0.025  is  3.06408697097 
+
+0.4608
+Limit on signal cands =  3.09863407295  Limit on sigma*BR =  0.000164324900673 ( 0.000213519881332 ) for small (large) BR; effi =  0.459204 ; lumi =  20532
+Limit on signal cands =  3.14887014733  Limit on sigma*BR =  0.000166988989991 ( 0.000216981535851 ) for small (large) BR; effi =  0.459204 ; lumi =  20532
+Limit on signal cands =  6.00372769543  Limit on sigma*BR =  0.000318386080446 ( 0.000413703326983 ) for small (large) BR; effi =  0.459204 ; lumi =  20532
+Limit on signal cands =  3.09126218019  Limit on sigma*BR =  0.000163933958885 ( 0.000213011900838 ) for small (large) BR; effi =  0.459204 ; lumi =  20532
+Limit on signal cands =  10.2965934774  Limit on sigma*BR =  0.000546042759685 ( 0.00070951502038 ) for small (large) BR; effi =  0.459204 ; lumi =  20532
+Limit on signal cands =  3.06408697097  Limit on sigma*BR =  0.000162492819515 ( 0.000211139318497 ) for small (large) BR; effi =  0.459204 ; lumi =  20532
+Limit on signal cands =  3.06408697097  Limit on sigma*BR =  0.000162492819515 ( 0.000211139318497 ) for small (large) BR; effi =  0.459204 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1500_494_0.04/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_0.04/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_0.04/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_0.04 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.09492834354 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_0.04 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.45640112852 
+
+=== expected limit on number of cands for quantile  0.84  is  5.95587971565 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07141649972 
+
+=== expected limit on number of cands for quantile  0.975  is  10.160624669 
+
+=== expected limit on number of cands for quantile  0.025  is  3.04604887957 
+
+0.4701
+Limit on signal cands =  3.09492834354  Limit on sigma*BR =  0.000161772622591 ( 0.000211481302819 ) for small (large) BR; effi =  0.465891 ; lumi =  20532
+Limit on signal cands =  4.45640112852  Limit on sigma*BR =  0.000232937120946 ( 0.000304512871359 ) for small (large) BR; effi =  0.465891 ; lumi =  20532
+Limit on signal cands =  5.95587971565  Limit on sigma*BR =  0.000311315214598 ( 0.000406974592586 ) for small (large) BR; effi =  0.465891 ; lumi =  20532
+Limit on signal cands =  3.07141649972  Limit on sigma*BR =  0.000160543653059 ( 0.000209874701692 ) for small (large) BR; effi =  0.465891 ; lumi =  20532
+Limit on signal cands =  10.160624669  Limit on sigma*BR =  0.000531098208881 ( 0.000694291403204 ) for small (large) BR; effi =  0.465891 ; lumi =  20532
+Limit on signal cands =  3.04604887957  Limit on sigma*BR =  0.000159217681668 ( 0.000208141292461 ) for small (large) BR; effi =  0.465891 ; lumi =  20532
+Limit on signal cands =  3.04604887957  Limit on sigma*BR =  0.000159217681668 ( 0.000208141292461 ) for small (large) BR; effi =  0.465891 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1500_494_0.06/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_0.06/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_0.06/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_0.06 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.12125995859 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_0.06 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  3.12464306064 
+
+=== expected limit on number of cands for quantile  0.84  is  5.93380952373 
+
+=== expected limit on number of cands for quantile  0.16  is  3.06459116581 
+
+=== expected limit on number of cands for quantile  0.975  is  10.1437174227 
+
+=== expected limit on number of cands for quantile  0.025  is  3.0386152418 
+
+0.467
+Limit on signal cands =  3.12125995859  Limit on sigma*BR =  0.000164890291309 ( 0.000215121058459 ) for small (large) BR; effi =  0.460971 ; lumi =  20532
+Limit on signal cands =  3.12464306064  Limit on sigma*BR =  0.000165069014225 ( 0.000215354225995 ) for small (large) BR; effi =  0.460971 ; lumi =  20532
+Limit on signal cands =  5.93380952373  Limit on sigma*BR =  0.000313471993336 ( 0.000408965418573 ) for small (large) BR; effi =  0.460971 ; lumi =  20532
+Limit on signal cands =  3.06459116581  Limit on sigma*BR =  0.000161896585602 ( 0.000211215375868 ) for small (large) BR; effi =  0.460971 ; lumi =  20532
+Limit on signal cands =  10.1437174227  Limit on sigma*BR =  0.000535873507163 ( 0.000699117426175 ) for small (large) BR; effi =  0.460971 ; lumi =  20532
+Limit on signal cands =  3.0386152418  Limit on sigma*BR =  0.000160524326407 ( 0.000209425083376 ) for small (large) BR; effi =  0.460971 ; lumi =  20532
+Limit on signal cands =  3.0386152418  Limit on sigma*BR =  0.000160524326407 ( 0.000209425083376 ) for small (large) BR; effi =  0.460971 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1500_494_0.08/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_0.08/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_0.08/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_0.08 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.10913916307 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_0.08 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.43823085323 
+
+=== expected limit on number of cands for quantile  0.84  is  5.93521073852 
+
+=== expected limit on number of cands for quantile  0.16  is  3.05694935832 
+
+=== expected limit on number of cands for quantile  0.975  is  10.1353383392 
+
+=== expected limit on number of cands for quantile  0.025  is  3.03128484799 
+
+0.4657
+Limit on signal cands =  3.10913916307  Limit on sigma*BR =  0.000165313279884 ( 0.000215490164745 ) for small (large) BR; effi =  0.458006 ; lumi =  20532
+Limit on signal cands =  4.43823085323  Limit on sigma*BR =  0.000235981234917 ( 0.000307607684178 ) for small (large) BR; effi =  0.458006 ; lumi =  20532
+Limit on signal cands =  5.93521073852  Limit on sigma*BR =  0.000315575824216 ( 0.000411361303807 ) for small (large) BR; effi =  0.458006 ; lumi =  20532
+Limit on signal cands =  3.05694935832  Limit on sigma*BR =  0.000162538342081 ( 0.000211872961065 ) for small (large) BR; effi =  0.458006 ; lumi =  20532
+Limit on signal cands =  10.1353383392  Limit on sigma*BR =  0.000538897082345 ( 0.000702466378603 ) for small (large) BR; effi =  0.458006 ; lumi =  20532
+Limit on signal cands =  3.03128484799  Limit on sigma*BR =  0.000161173757172 ( 0.000210094189105 ) for small (large) BR; effi =  0.458006 ; lumi =  20532
+Limit on signal cands =  3.03128484799  Limit on sigma*BR =  0.000161173757172 ( 0.000210094189105 ) for small (large) BR; effi =  0.458006 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1500_494_0.1/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_0.1/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_0.1/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_0.1 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.07356372403 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_0.1 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  3.12695663505 
+
+=== expected limit on number of cands for quantile  0.84  is  5.92120416658 
+
+=== expected limit on number of cands for quantile  0.16  is  3.05513115057 
+
+=== expected limit on number of cands for quantile  0.975  is  10.0905182608 
+
+=== expected limit on number of cands for quantile  0.025  is  3.02776611168 
+
+0.465001
+Limit on signal cands =  3.07356372403  Limit on sigma*BR =  0.000164197895251 ( 0.000213938765108 ) for small (large) BR; effi =  0.455841 ; lumi =  20532
+Limit on signal cands =  3.12695663505  Limit on sigma*BR =  0.000167050285635 ( 0.000217655237085 ) for small (large) BR; effi =  0.455841 ; lumi =  20532
+Limit on signal cands =  5.92120416658  Limit on sigma*BR =  0.00031632637186 ( 0.000412151893076 ) for small (large) BR; effi =  0.455841 ; lumi =  20532
+Limit on signal cands =  3.05513115057  Limit on sigma*BR =  0.000163213178473 ( 0.000212655745669 ) for small (large) BR; effi =  0.455841 ; lumi =  20532
+Limit on signal cands =  10.0905182608  Limit on sigma*BR =  0.00053906214713 ( 0.000702361561317 ) for small (large) BR; effi =  0.455841 ; lumi =  20532
+Limit on signal cands =  3.02776611168  Limit on sigma*BR =  0.000161751265791 ( 0.000210750972204 ) for small (large) BR; effi =  0.455841 ; lumi =  20532
+Limit on signal cands =  3.02776611168  Limit on sigma*BR =  0.000161751265791 ( 0.000210750972204 ) for small (large) BR; effi =  0.455841 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1500_494_0.2/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_0.2/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_0.2/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_0.2 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.03295677266 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_0.2 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.42553817309 
+
+=== expected limit on number of cands for quantile  0.84  is  5.89264171294 
+
+=== expected limit on number of cands for quantile  0.16  is  3.04684123157 
+
+=== expected limit on number of cands for quantile  0.975  is  10.0020137752 
+
+=== expected limit on number of cands for quantile  0.025  is  3.01868758863 
+
+0.452758
+Limit on signal cands =  3.03295677266  Limit on sigma*BR =  0.000167828776861 ( 0.000216939272411 ) for small (large) BR; effi =  0.440087 ; lumi =  20532
+Limit on signal cands =  4.42553817309  Limit on sigma*BR =  0.000244887320927 ( 0.000316546889145 ) for small (large) BR; effi =  0.440087 ; lumi =  20532
+Limit on signal cands =  5.89264171294  Limit on sigma*BR =  0.000326069550375 ( 0.000421484874861 ) for small (large) BR; effi =  0.440087 ; lumi =  20532
+Limit on signal cands =  3.04684123157  Limit on sigma*BR =  0.000168597073917 ( 0.000217932390559 ) for small (large) BR; effi =  0.440087 ; lumi =  20532
+Limit on signal cands =  10.0020137752  Limit on sigma*BR =  0.000553461807693 ( 0.000715417249134 ) for small (large) BR; effi =  0.440087 ; lumi =  20532
+Limit on signal cands =  3.01868758863  Limit on sigma*BR =  0.000167039191028 ( 0.000215918635905 ) for small (large) BR; effi =  0.440087 ; lumi =  20532
+Limit on signal cands =  3.01868758863  Limit on sigma*BR =  0.000167039191028 ( 0.000215918635905 ) for small (large) BR; effi =  0.440087 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1500_494_0.4/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_0.4/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_0.4/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_0.4 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.08960054069 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_0.4 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  5.23157303809 
+
+=== expected limit on number of cands for quantile  0.84  is  8.22499784801 
+
+=== expected limit on number of cands for quantile  0.16  is  3.10412370257 
+
+=== expected limit on number of cands for quantile  0.975  is  12.6241508203 
+
+=== expected limit on number of cands for quantile  0.025  is  3.06156465659 
+
+0.409114
+Limit on signal cands =  3.08960054069  Limit on sigma*BR =  0.000189899760798 ( 0.000238734592922 ) for small (large) BR; effi =  0.396202 ; lumi =  20532
+Limit on signal cands =  5.23157303809  Limit on sigma*BR =  0.000321554341879 ( 0.000404245611412 ) for small (large) BR; effi =  0.396202 ; lumi =  20532
+Limit on signal cands =  8.22499784801  Limit on sigma*BR =  0.00050554274034 ( 0.000635548669534 ) for small (large) BR; effi =  0.396202 ; lumi =  20532
+Limit on signal cands =  3.10412370257  Limit on sigma*BR =  0.000190792415019 ( 0.000239856803089 ) for small (large) BR; effi =  0.396202 ; lumi =  20532
+Limit on signal cands =  12.6241508203  Limit on sigma*BR =  0.000775933066258 ( 0.000975472870159 ) for small (large) BR; effi =  0.396202 ; lumi =  20532
+Limit on signal cands =  3.06156465659  Limit on sigma*BR =  0.000188176558197 ( 0.000236568249639 ) for small (large) BR; effi =  0.396202 ; lumi =  20532
+Limit on signal cands =  3.06156465659  Limit on sigma*BR =  0.000188176558197 ( 0.000236568249639 ) for small (large) BR; effi =  0.396202 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1500_494_0.6/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_0.6/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_0.6/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_0.6 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.0805658971 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_0.6 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.34006843229 
+
+=== expected limit on number of cands for quantile  0.84  is  7.2002836266 
+
+=== expected limit on number of cands for quantile  0.16  is  3.08402999445 
+
+=== expected limit on number of cands for quantile  0.975  is  12.0149322731 
+
+=== expected limit on number of cands for quantile  0.025  is  3.04396838353 
+
+0.369863
+Limit on signal cands =  3.0805658971  Limit on sigma*BR =  0.000209750853621 ( 0.000257341381272 ) for small (large) BR; effi =  0.357656 ; lumi =  20532
+Limit on signal cands =  4.34006843229  Limit on sigma*BR =  0.000295508386724 ( 0.000362556505035 ) for small (large) BR; effi =  0.357656 ; lumi =  20532
+Limit on signal cands =  7.2002836266  Limit on sigma*BR =  0.000490255909934 ( 0.000601490439067 ) for small (large) BR; effi =  0.357656 ; lumi =  20532
+Limit on signal cands =  3.08402999445  Limit on sigma*BR =  0.000209986718525 ( 0.000257630761739 ) for small (large) BR; effi =  0.357656 ; lumi =  20532
+Limit on signal cands =  12.0149322731  Limit on sigma*BR =  0.000818077711912 ( 0.00100369197425 ) for small (large) BR; effi =  0.357656 ; lumi =  20532
+Limit on signal cands =  3.04396838353  Limit on sigma*BR =  0.000207258986877 ( 0.000254284133023 ) for small (large) BR; effi =  0.357656 ; lumi =  20532
+Limit on signal cands =  3.04396838353  Limit on sigma*BR =  0.000207258986877 ( 0.000254284133023 ) for small (large) BR; effi =  0.357656 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1500_494_0.8/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_0.8/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_0.8/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_0.8 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.0538556165 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_0.8 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  5.23049290268 
+
+=== expected limit on number of cands for quantile  0.84  is  7.82392242613 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07733275191 
+
+=== expected limit on number of cands for quantile  0.975  is  12.1512697924 
+
+=== expected limit on number of cands for quantile  0.025  is  3.03572308445 
+
+0.337617
+Limit on signal cands =  3.0538556165  Limit on sigma*BR =  0.000227988327121 ( 0.00027429097521 ) for small (large) BR; effi =  0.326193 ; lumi =  20532
+Limit on signal cands =  5.23049290268  Limit on sigma*BR =  0.000390487133857 ( 0.000469792020078 ) for small (large) BR; effi =  0.326193 ; lumi =  20532
+Limit on signal cands =  7.82392242613  Limit on sigma*BR =  0.000584101938487 ( 0.000702728478921 ) for small (large) BR; effi =  0.326193 ; lumi =  20532
+Limit on signal cands =  3.07733275191  Limit on sigma*BR =  0.000229741033699 ( 0.000276399642801 ) for small (large) BR; effi =  0.326193 ; lumi =  20532
+Limit on signal cands =  12.1512697924  Limit on sigma*BR =  0.000907163933161 ( 0.0010914018408 ) for small (large) BR; effi =  0.326193 ; lumi =  20532
+Limit on signal cands =  3.03572308445  Limit on sigma*BR =  0.000226634626695 ( 0.000272662348803 ) for small (large) BR; effi =  0.326193 ; lumi =  20532
+Limit on signal cands =  3.03572308445  Limit on sigma*BR =  0.000226634626695 ( 0.000272662348803 ) for small (large) BR; effi =  0.326193 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1500_494_1.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_1.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_1.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_1.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  2.99410426874 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_1.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.33631921009 
+
+=== expected limit on number of cands for quantile  0.84  is  7.89328384287 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07669811091 
+
+=== expected limit on number of cands for quantile  0.975  is  12.1043742155 
+
+=== expected limit on number of cands for quantile  0.025  is  3.03474364696 
+
+0.31063
+Limit on signal cands =  2.99410426874  Limit on sigma*BR =  0.000243086671263 ( 0.000287783814396 ) for small (large) BR; effi =  0.299947 ; lumi =  20532
+Limit on signal cands =  4.33631921009  Limit on sigma*BR =  0.000352059015887 ( 0.000416793261259 ) for small (large) BR; effi =  0.299947 ; lumi =  20532
+Limit on signal cands =  7.89328384287  Limit on sigma*BR =  0.000640843445144 ( 0.000758677430219 ) for small (large) BR; effi =  0.299947 ; lumi =  20532
+Limit on signal cands =  3.07669811091  Limit on sigma*BR =  0.000249792336918 ( 0.000295722472777 ) for small (large) BR; effi =  0.299947 ; lumi =  20532
+Limit on signal cands =  12.1043742155  Limit on sigma*BR =  0.000982735326389 ( 0.00116343409246 ) for small (large) BR; effi =  0.299947 ; lumi =  20532
+Limit on signal cands =  3.03474364696  Limit on sigma*BR =  0.000246386119207 ( 0.00029168994265 ) for small (large) BR; effi =  0.299947 ; lumi =  20532
+Limit on signal cands =  3.03474364696  Limit on sigma*BR =  0.000246386119207 ( 0.00029168994265 ) for small (large) BR; effi =  0.299947 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1500_494_2.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_2.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_2.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_2.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.0652399972 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_2.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.77001914023 
+
+=== expected limit on number of cands for quantile  0.84  is  7.7761098731 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07463051711 
+
+=== expected limit on number of cands for quantile  0.975  is  12.0745939469 
+
+=== expected limit on number of cands for quantile  0.025  is  3.03261331205 
+
+0.225115
+Limit on signal cands =  3.0652399972  Limit on sigma*BR =  0.000343388420469 ( 0.000386941599562 ) for small (large) BR; effi =  0.217379 ; lumi =  20532
+Limit on signal cands =  4.77001914023  Limit on sigma*BR =  0.000534369034617 ( 0.000602144966707 ) for small (large) BR; effi =  0.217379 ; lumi =  20532
+Limit on signal cands =  7.7761098731  Limit on sigma*BR =  0.000871131164008 ( 0.000981619839041 ) for small (large) BR; effi =  0.217379 ; lumi =  20532
+Limit on signal cands =  3.07463051711  Limit on sigma*BR =  0.000344440408504 ( 0.000388127014994 ) for small (large) BR; effi =  0.217379 ; lumi =  20532
+Limit on signal cands =  12.0745939469  Limit on sigma*BR =  0.00135267572752 ( 0.00152424041842 ) for small (large) BR; effi =  0.217379 ; lumi =  20532
+Limit on signal cands =  3.03261331205  Limit on sigma*BR =  0.000339733363806 ( 0.000382822959016 ) for small (large) BR; effi =  0.217379 ; lumi =  20532
+Limit on signal cands =  3.03261331205  Limit on sigma*BR =  0.000339733363806 ( 0.000382822959016 ) for small (large) BR; effi =  0.217379 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1500_494_4.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_4.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_4.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_4.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.06560223733 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_4.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  5.24019244139 
+
+=== expected limit on number of cands for quantile  0.84  is  8.10320582112 
+
+=== expected limit on number of cands for quantile  0.16  is  3.06932223897 
+
+=== expected limit on number of cands for quantile  0.975  is  12.1286441089 
+
+=== expected limit on number of cands for quantile  0.025  is  3.03547101573 
+
+0.150899
+Limit on signal cands =  3.06560223733  Limit on sigma*BR =  0.000512393891491 ( 0.000554208657603 ) for small (large) BR; effi =  0.145697 ; lumi =  20532
+Limit on signal cands =  5.24019244139  Limit on sigma*BR =  0.000875861377092 ( 0.00094733751925 ) for small (large) BR; effi =  0.145697 ; lumi =  20532
+Limit on signal cands =  8.10320582112  Limit on sigma*BR =  0.00135439396334 ( 0.00146492156279 ) for small (large) BR; effi =  0.145697 ; lumi =  20532
+Limit on signal cands =  3.06932223897  Limit on sigma*BR =  0.000513015663648 ( 0.000554881170524 ) for small (large) BR; effi =  0.145697 ; lumi =  20532
+Limit on signal cands =  12.1286441089  Limit on sigma*BR =  0.00202721771201 ( 0.00219265222614 ) for small (large) BR; effi =  0.145697 ; lumi =  20532
+Limit on signal cands =  3.03547101573  Limit on sigma*BR =  0.00050735766934 ( 0.000548761446065 ) for small (large) BR; effi =  0.145697 ; lumi =  20532
+Limit on signal cands =  3.03547101573  Limit on sigma*BR =  0.00050735766934 ( 0.000548761446065 ) for small (large) BR; effi =  0.145697 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1500_494_6.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_6.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_6.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_6.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.05595059894 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_6.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.76660165886 
+
+=== expected limit on number of cands for quantile  0.84  is  7.74805791112 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07657210281 
+
+=== expected limit on number of cands for quantile  0.975  is  11.8914743063 
+
+=== expected limit on number of cands for quantile  0.025  is  3.03702539654 
+
+0.115585
+Limit on signal cands =  3.05595059894  Limit on sigma*BR =  0.000667562625106 ( 0.000708509139554 ) for small (large) BR; effi =  0.111479 ; lumi =  20532
+Limit on signal cands =  4.76660165886  Limit on sigma*BR =  0.00104124887272 ( 0.00110511630688 ) for small (large) BR; effi =  0.111479 ; lumi =  20532
+Limit on signal cands =  7.74805791112  Limit on sigma*BR =  0.00169253844627 ( 0.00179635424922 ) for small (large) BR; effi =  0.111479 ; lumi =  20532
+Limit on signal cands =  3.07657210281  Limit on sigma*BR =  0.000672067326608 ( 0.000713290147455 ) for small (large) BR; effi =  0.111479 ; lumi =  20532
+Limit on signal cands =  11.8914743063  Limit on sigma*BR =  0.0025976544932 ( 0.00275698770514 ) for small (large) BR; effi =  0.111479 ; lumi =  20532
+Limit on signal cands =  3.03702539654  Limit on sigma*BR =  0.000663428475228 ( 0.000704121411927 ) for small (large) BR; effi =  0.111479 ; lumi =  20532
+Limit on signal cands =  3.03702539654  Limit on sigma*BR =  0.000663428475228 ( 0.000704121411927 ) for small (large) BR; effi =  0.111479 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1500_494_8.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_8.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_8.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_8.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.07540095731 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_8.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  5.20705786201 
+
+=== expected limit on number of cands for quantile  0.84  is  7.38605264124 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07616374835 
+
+=== expected limit on number of cands for quantile  0.975  is  11.815385818 
+
+=== expected limit on number of cands for quantile  0.025  is  3.03764225328 
+
+0.093809
+Limit on signal cands =  3.07540095731  Limit on sigma*BR =  0.000828515980019 ( 0.000869289572786 ) for small (large) BR; effi =  0.090394 ; lumi =  20532
+Limit on signal cands =  5.20705786201  Limit on sigma*BR =  0.00140278640328 ( 0.00147182145261 ) for small (large) BR; effi =  0.090394 ; lumi =  20532
+Limit on signal cands =  7.38605264124  Limit on sigma*BR =  0.00198980969554 ( 0.00208773380583 ) for small (large) BR; effi =  0.090394 ; lumi =  20532
+Limit on signal cands =  3.07616374835  Limit on sigma*BR =  0.000828721476658 ( 0.00086950518249 ) for small (large) BR; effi =  0.090394 ; lumi =  20532
+Limit on signal cands =  11.815385818  Limit on sigma*BR =  0.00318307631953 ( 0.00333972442376 ) for small (large) BR; effi =  0.090394 ; lumi =  20532
+Limit on signal cands =  3.03764225328  Limit on sigma*BR =  0.000818343748785 ( 0.000858616737551 ) for small (large) BR; effi =  0.090394 ; lumi =  20532
+Limit on signal cands =  3.03764225328  Limit on sigma*BR =  0.000818343748785 ( 0.000858616737551 ) for small (large) BR; effi =  0.090394 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1500_494_10.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_10.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_10.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_10.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.03434791199 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_10.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.31546424947 
+
+=== expected limit on number of cands for quantile  0.84  is  7.77426388055 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07712130583 
+
+=== expected limit on number of cands for quantile  0.975  is  11.7904981435 
+
+=== expected limit on number of cands for quantile  0.025  is  3.03942873679 
+
+0.078849
+Limit on signal cands =  3.03434791199  Limit on sigma*BR =  0.000973136057689 ( 0.00101307607542 ) for small (large) BR; effi =  0.075933 ; lumi =  20532
+Limit on signal cands =  4.31546424947  Limit on sigma*BR =  0.00138399879929 ( 0.00144080168534 ) for small (large) BR; effi =  0.075933 ; lumi =  20532
+Limit on signal cands =  7.77426388055  Limit on sigma*BR =  0.00249325941639 ( 0.00259558922374 ) for small (large) BR; effi =  0.075933 ; lumi =  20532
+Limit on signal cands =  3.07712130583  Limit on sigma*BR =  0.000986853776642 ( 0.001027356805 ) for small (large) BR; effi =  0.075933 ; lumi =  20532
+Limit on signal cands =  11.7904981435  Limit on sigma*BR =  0.00378129311943 ( 0.00393648715736 ) for small (large) BR; effi =  0.075933 ; lumi =  20532
+Limit on signal cands =  3.03942873679  Limit on sigma*BR =  0.000974765512834 ( 0.00101477240762 ) for small (large) BR; effi =  0.075933 ; lumi =  20532
+Limit on signal cands =  3.03942873679  Limit on sigma*BR =  0.000974765512834 ( 0.00101477240762 ) for small (large) BR; effi =  0.075933 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1500_494_20.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_20.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_20.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_20.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.09039329194 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_20.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  5.21769273656 
+
+=== expected limit on number of cands for quantile  0.84  is  7.97556453212 
+
+=== expected limit on number of cands for quantile  0.16  is  3.08626370842 
+
+=== expected limit on number of cands for quantile  0.975  is  12.1591731734 
+
+=== expected limit on number of cands for quantile  0.025  is  3.0445393367 
+
+0.044555
+Limit on signal cands =  3.09039329194  Limit on sigma*BR =  0.00175442862478 ( 0.00179440344759 ) for small (large) BR; effi =  0.042896 ; lumi =  20532
+Limit on signal cands =  5.21769273656  Limit on sigma*BR =  0.00296210502276 ( 0.00302959686696 ) for small (large) BR; effi =  0.042896 ; lumi =  20532
+Limit on signal cands =  7.97556453212  Limit on sigma*BR =  0.00452775986489 ( 0.00463092530334 ) for small (large) BR; effi =  0.042896 ; lumi =  20532
+Limit on signal cands =  3.08626370842  Limit on sigma*BR =  0.00175208424372 ( 0.00179200564958 ) for small (large) BR; effi =  0.042896 ; lumi =  20532
+Limit on signal cands =  12.1591731734  Limit on sigma*BR =  0.00690281121333 ( 0.00706009242227 ) for small (large) BR; effi =  0.042896 ; lumi =  20532
+Limit on signal cands =  3.0445393367  Limit on sigma*BR =  0.00172839715111 ( 0.00176777884431 ) for small (large) BR; effi =  0.042896 ; lumi =  20532
+Limit on signal cands =  3.0445393367  Limit on sigma*BR =  0.00172839715111 ( 0.00176777884431 ) for small (large) BR; effi =  0.042896 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1500_494_40.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_40.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1500_494_40.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_40.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.11224867885 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1500_494_40.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.4769701054 
+
+=== expected limit on number of cands for quantile  0.84  is  5.97057116232 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07763113737 
+
+=== expected limit on number of cands for quantile  0.975  is  10.1860617919 
+
+=== expected limit on number of cands for quantile  0.025  is  3.04972234209 
+
+0.028918
+Limit on signal cands =  3.11224867885  Limit on sigma*BR =  0.00270100490777 ( 0.00274063170155 ) for small (large) BR; effi =  0.02806 ; lumi =  20532
+Limit on signal cands =  4.4769701054  Limit on sigma*BR =  0.00388539589038 ( 0.00394239903807 ) for small (large) BR; effi =  0.02806 ; lumi =  20532
+Limit on signal cands =  5.97057116232  Limit on sigma*BR =  0.00518163671214 ( 0.00525765717727 ) for small (large) BR; effi =  0.02806 ; lumi =  20532
+Limit on signal cands =  3.07763113737  Limit on sigma*BR =  0.00267096163068 ( 0.00271014765563 ) for small (large) BR; effi =  0.02806 ; lumi =  20532
+Limit on signal cands =  10.1860617919  Limit on sigma*BR =  0.00884010428788 ( 0.00896979860592 ) for small (large) BR; effi =  0.02806 ; lumi =  20532
+Limit on signal cands =  3.04972234209  Limit on sigma*BR =  0.00264674062497 ( 0.0026855713004 ) for small (large) BR; effi =  0.02806 ; lumi =  20532
+Limit on signal cands =  3.04972234209  Limit on sigma*BR =  0.00264674062497 ( 0.0026855713004 ) for small (large) BR; effi =  0.02806 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_0.01/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_0.01/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_0.01/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_0.01 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.45033124647 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_0.01 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  5.03711339369 
+
+=== expected limit on number of cands for quantile  0.84  is  6.79070808502 
+
+=== expected limit on number of cands for quantile  0.16  is  3.42307734455 
+
+=== expected limit on number of cands for quantile  0.975  is  11.9268239981 
+
+=== expected limit on number of cands for quantile  0.025  is  3.38828633248 
+
+0.1587
+Limit on signal cands =  3.45033124647  Limit on sigma*BR =  0.000535439208676 ( 0.000581588235134 ) for small (large) BR; effi =  0.156924 ; lumi =  20532
+Limit on signal cands =  5.03711339369  Limit on sigma*BR =  0.00078168379117 ( 0.000849056417933 ) for small (large) BR; effi =  0.156924 ; lumi =  20532
+Limit on signal cands =  6.79070808502  Limit on sigma*BR =  0.00105381515677 ( 0.00114464254251 ) for small (large) BR; effi =  0.156924 ; lumi =  20532
+Limit on signal cands =  3.42307734455  Limit on sigma*BR =  0.000531209815429 ( 0.000576994314266 ) for small (large) BR; effi =  0.156924 ; lumi =  20532
+Limit on signal cands =  11.9268239981  Limit on sigma*BR =  0.00185086264111 ( 0.00201038683659 ) for small (large) BR; effi =  0.156924 ; lumi =  20532
+Limit on signal cands =  3.38828633248  Limit on sigma*BR =  0.000525810776716 ( 0.000571129937236 ) for small (large) BR; effi =  0.156924 ; lumi =  20532
+Limit on signal cands =  3.38828633248  Limit on sigma*BR =  0.000525810776716 ( 0.000571129937236 ) for small (large) BR; effi =  0.156924 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_0.02/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_0.02/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_0.02/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_0.02 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.27000534272 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_0.02 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.74326684792 
+
+=== expected limit on number of cands for quantile  0.84  is  6.38858026795 
+
+=== expected limit on number of cands for quantile  0.16  is  3.24877339754 
+
+=== expected limit on number of cands for quantile  0.975  is  11.0079956039 
+
+=== expected limit on number of cands for quantile  0.025  is  3.21568182341 
+
+0.2826
+Limit on signal cands =  3.27000534272  Limit on sigma*BR =  0.000286898823608 ( 0.000334108330742 ) for small (large) BR; effi =  0.277561 ; lumi =  20532
+Limit on signal cands =  4.74326684792  Limit on sigma*BR =  0.000416157631595 ( 0.000484636813317 ) for small (large) BR; effi =  0.277561 ; lumi =  20532
+Limit on signal cands =  6.38858026795  Limit on sigma*BR =  0.000560511672399 ( 0.000652744465354 ) for small (large) BR; effi =  0.277561 ; lumi =  20532
+Limit on signal cands =  3.24877339754  Limit on sigma*BR =  0.000285036007051 ( 0.000331938985735 ) for small (large) BR; effi =  0.277561 ; lumi =  20532
+Limit on signal cands =  11.0079956039  Limit on sigma*BR =  0.000965803005823 ( 0.00112472691956 ) for small (large) BR; effi =  0.277561 ; lumi =  20532
+Limit on signal cands =  3.21568182341  Limit on sigma*BR =  0.000282132668159 ( 0.000328557899335 ) for small (large) BR; effi =  0.277561 ; lumi =  20532
+Limit on signal cands =  3.21568182341  Limit on sigma*BR =  0.000282132668159 ( 0.000328557899335 ) for small (large) BR; effi =  0.277561 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_0.04/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_0.04/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_0.04/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_0.04 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.15135631732 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_0.04 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  3.21229677006 
+
+=== expected limit on number of cands for quantile  0.84  is  6.13400752795 
+
+=== expected limit on number of cands for quantile  0.16  is  3.14226803693 
+
+=== expected limit on number of cands for quantile  0.975  is  10.5278482039 
+
+=== expected limit on number of cands for quantile  0.025  is  3.11262599603 
+
+0.3709
+Limit on signal cands =  3.15135631732  Limit on sigma*BR =  0.000210014793988 ( 0.000257829223482 ) for small (large) BR; effi =  0.365415 ; lumi =  20532
+Limit on signal cands =  3.21229677006  Limit on sigma*BR =  0.00021407602837 ( 0.000262815086084 ) for small (large) BR; effi =  0.365415 ; lumi =  20532
+Limit on signal cands =  6.13400752795  Limit on sigma*BR =  0.000408786629496 ( 0.000501855784785 ) for small (large) BR; effi =  0.365415 ; lumi =  20532
+Limit on signal cands =  3.14226803693  Limit on sigma*BR =  0.000209409126731 ( 0.00025708566292 ) for small (large) BR; effi =  0.365415 ; lumi =  20532
+Limit on signal cands =  10.5278482039  Limit on sigma*BR =  0.00070160389656 ( 0.000861339262857 ) for small (large) BR; effi =  0.365415 ; lumi =  20532
+Limit on signal cands =  3.11262599603  Limit on sigma*BR =  0.00020743370203 ( 0.000254660489877 ) for small (large) BR; effi =  0.365415 ; lumi =  20532
+Limit on signal cands =  3.11262599603  Limit on sigma*BR =  0.00020743370203 ( 0.000254660489877 ) for small (large) BR; effi =  0.365415 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_0.06/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_0.06/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_0.06/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_0.06 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.11809620606 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_0.06 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  3.16067174882 
+
+=== expected limit on number of cands for quantile  0.84  is  6.00974173376 
+
+=== expected limit on number of cands for quantile  0.16  is  3.09471956087 
+
+=== expected limit on number of cands for quantile  0.975  is  10.2825645314 
+
+=== expected limit on number of cands for quantile  0.025  is  3.06995470746 
+
+0.3954
+Limit on signal cands =  3.11809620606  Limit on sigma*BR =  0.000194324272284 ( 0.00024220898951 ) for small (large) BR; effi =  0.390752 ; lumi =  20532
+Limit on signal cands =  3.16067174882  Limit on sigma*BR =  0.000196977641782 ( 0.000245516193172 ) for small (large) BR; effi =  0.390752 ; lumi =  20532
+Limit on signal cands =  6.00974173376  Limit on sigma*BR =  0.000374535810267 ( 0.000466827633388 ) for small (large) BR; effi =  0.390752 ; lumi =  20532
+Limit on signal cands =  3.09471956087  Limit on sigma*BR =  0.000192867405894 ( 0.000240393127127 ) for small (large) BR; effi =  0.390752 ; lumi =  20532
+Limit on signal cands =  10.2825645314  Limit on sigma*BR =  0.000640824316422 ( 0.000798734035176 ) for small (large) BR; effi =  0.390752 ; lumi =  20532
+Limit on signal cands =  3.06995470746  Limit on sigma*BR =  0.000191324024356 ( 0.000238469430831 ) for small (large) BR; effi =  0.390752 ; lumi =  20532
+Limit on signal cands =  3.06995470746  Limit on sigma*BR =  0.000191324024356 ( 0.000238469430831 ) for small (large) BR; effi =  0.390752 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_0.08/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_0.08/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_0.08/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_0.08 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.11073277884 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_0.08 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.47239723808 
+
+=== expected limit on number of cands for quantile  0.84  is  5.9640065444 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07476775856 
+
+=== expected limit on number of cands for quantile  0.975  is  10.1964061131 
+
+=== expected limit on number of cands for quantile  0.025  is  3.04812227548 
+
+0.4041
+Limit on signal cands =  3.11073277884  Limit on sigma*BR =  0.000189313159545 ( 0.000237249401021 ) for small (large) BR; effi =  0.400148 ; lumi =  20532
+Limit on signal cands =  4.47239723808  Limit on sigma*BR =  0.000272181415787 ( 0.000341100840637 ) for small (large) BR; effi =  0.400148 ; lumi =  20532
+Limit on signal cands =  5.9640065444  Limit on sigma*BR =  0.000362957863223 ( 0.000454862915249 ) for small (large) BR; effi =  0.400148 ; lumi =  20532
+Limit on signal cands =  3.07476775856  Limit on sigma*BR =  0.000187124398212 ( 0.000234506420468 ) for small (large) BR; effi =  0.400148 ; lumi =  20532
+Limit on signal cands =  10.1964061131  Limit on sigma*BR =  0.000620533486644 ( 0.000777659611058 ) for small (large) BR; effi =  0.400148 ; lumi =  20532
+Limit on signal cands =  3.04812227548  Limit on sigma*BR =  0.000185502805826 ( 0.000232474222477 ) for small (large) BR; effi =  0.400148 ; lumi =  20532
+Limit on signal cands =  3.04812227548  Limit on sigma*BR =  0.000185502805826 ( 0.000232474222477 ) for small (large) BR; effi =  0.400148 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_0.1/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_0.1/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_0.1/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_0.1 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.08143777773 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_0.1 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  3.12511550878 
+
+=== expected limit on number of cands for quantile  0.84  is  5.94768620274 
+
+=== expected limit on number of cands for quantile  0.16  is  3.06565193904 
+
+=== expected limit on number of cands for quantile  0.975  is  10.152797 
+
+=== expected limit on number of cands for quantile  0.025  is  3.03634046741 
+
+0.4067
+Limit on signal cands =  3.08143777773  Limit on sigma*BR =  0.00018609743729 ( 0.000233599996598 ) for small (large) BR; effi =  0.403229 ; lumi =  20532
+Limit on signal cands =  3.12511550878  Limit on sigma*BR =  0.000188735268848 ( 0.000236911151507 ) for small (large) BR; effi =  0.403229 ; lumi =  20532
+Limit on signal cands =  5.94768620274  Limit on sigma*BR =  0.000359198932439 ( 0.00045088675383 ) for small (large) BR; effi =  0.403229 ; lumi =  20532
+Limit on signal cands =  3.06565193904  Limit on sigma*BR =  0.000185144082286 ( 0.000232403291641 ) for small (large) BR; effi =  0.403229 ; lumi =  20532
+Limit on signal cands =  10.152797  Limit on sigma*BR =  0.000613158414777 ( 0.000769671015849 ) for small (large) BR; effi =  0.403229 ; lumi =  20532
+Limit on signal cands =  3.03634046741  Limit on sigma*BR =  0.000183373873005 ( 0.000230181225136 ) for small (large) BR; effi =  0.403229 ; lumi =  20532
+Limit on signal cands =  3.03634046741  Limit on sigma*BR =  0.000183373873005 ( 0.000230181225136 ) for small (large) BR; effi =  0.403229 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_0.2/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_0.2/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_0.2/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_0.2 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.08826403642 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_0.2 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.41180215795 
+
+=== expected limit on number of cands for quantile  0.84  is  5.89215943854 
+
+=== expected limit on number of cands for quantile  0.16  is  3.04860349475 
+
+=== expected limit on number of cands for quantile  0.975  is  8.80181968796 
+
+=== expected limit on number of cands for quantile  0.025  is  3.02227670083 
+
+0.394
+Limit on signal cands =  3.08826403642  Limit on sigma*BR =  0.000192073324583 ( 0.000239194675695 ) for small (large) BR; effi =  0.391549 ; lumi =  20532
+Limit on signal cands =  4.41180215795  Limit on sigma*BR =  0.000274390239269 ( 0.000341706400086 ) for small (large) BR; effi =  0.391549 ; lumi =  20532
+Limit on signal cands =  5.89215943854  Limit on sigma*BR =  0.000366460457716 ( 0.000456364206371 ) for small (large) BR; effi =  0.391549 ; lumi =  20532
+Limit on signal cands =  3.04860349475  Limit on sigma*BR =  0.000189606653339 ( 0.000236122855964 ) for small (large) BR; effi =  0.391549 ; lumi =  20532
+Limit on signal cands =  8.80181968796  Limit on sigma*BR =  0.000547425592472 ( 0.000681725519891 ) for small (large) BR; effi =  0.391549 ; lumi =  20532
+Limit on signal cands =  3.02227670083  Limit on sigma*BR =  0.000187969269108 ( 0.000234083772239 ) for small (large) BR; effi =  0.391549 ; lumi =  20532
+Limit on signal cands =  3.02227670083  Limit on sigma*BR =  0.000187969269108 ( 0.000234083772239 ) for small (large) BR; effi =  0.391549 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_0.4/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_0.4/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_0.4/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_0.4 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.03562297662 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_0.4 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.38259042482 
+
+=== expected limit on number of cands for quantile  0.84  is  5.89057329359 
+
+=== expected limit on number of cands for quantile  0.16  is  3.04356812122 
+
+=== expected limit on number of cands for quantile  0.975  is  10.0427241364 
+
+=== expected limit on number of cands for quantile  0.025  is  3.01415918285 
+
+0.3555
+Limit on signal cands =  3.03562297662  Limit on sigma*BR =  0.000209059261028 ( 0.000254252673795 ) for small (large) BR; effi =  0.353604 ; lumi =  20532
+Limit on signal cands =  4.38259042482  Limit on sigma*BR =  0.000301823092874 ( 0.000367069738977 ) for small (large) BR; effi =  0.353604 ; lumi =  20532
+Limit on signal cands =  5.89057329359  Limit on sigma*BR =  0.000405675839613 ( 0.000493372866662 ) for small (large) BR; effi =  0.353604 ; lumi =  20532
+Limit on signal cands =  3.04356812122  Limit on sigma*BR =  0.000209606432423 ( 0.000254918130037 ) for small (large) BR; effi =  0.353604 ; lumi =  20532
+Limit on signal cands =  10.0427241364  Limit on sigma*BR =  0.000691628869209 ( 0.000841141829381 ) for small (large) BR; effi =  0.353604 ; lumi =  20532
+Limit on signal cands =  3.01415918285  Limit on sigma*BR =  0.000207581078494 ( 0.000252454944961 ) for small (large) BR; effi =  0.353604 ; lumi =  20532
+Limit on signal cands =  3.01415918285  Limit on sigma*BR =  0.000207581078494 ( 0.000252454944961 ) for small (large) BR; effi =  0.353604 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_0.6/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_0.6/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_0.6/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_0.6 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.05293750423 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_0.6 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.40969863307 
+
+=== expected limit on number of cands for quantile  0.84  is  5.88831984109 
+
+=== expected limit on number of cands for quantile  0.16  is  3.03972646288 
+
+=== expected limit on number of cands for quantile  0.975  is  10.0435427234 
+
+=== expected limit on number of cands for quantile  0.025  is  3.01390159868 
+
+0.325404
+Limit on signal cands =  3.05293750423  Limit on sigma*BR =  0.000229729063069 ( 0.000274369535183 ) for small (large) BR; effi =  0.323624 ; lumi =  20532
+Limit on signal cands =  4.40969863307  Limit on sigma*BR =  0.000331823345218 ( 0.000396302565177 ) for small (large) BR; effi =  0.323624 ; lumi =  20532
+Limit on signal cands =  5.88831984109  Limit on sigma*BR =  0.000443087419337 ( 0.000529187241982 ) for small (large) BR; effi =  0.323624 ; lumi =  20532
+Limit on signal cands =  3.03972646288  Limit on sigma*BR =  0.000228734951612 ( 0.000273182250061 ) for small (large) BR; effi =  0.323624 ; lumi =  20532
+Limit on signal cands =  10.0435427234  Limit on sigma*BR =  0.000755761838084 ( 0.000902619901259 ) for small (large) BR; effi =  0.323624 ; lumi =  20532
+Limit on signal cands =  3.01390159868  Limit on sigma*BR =  0.000226791668512 ( 0.000270861352245 ) for small (large) BR; effi =  0.323624 ; lumi =  20532
+Limit on signal cands =  3.01390159868  Limit on sigma*BR =  0.000226791668512 ( 0.000270861352245 ) for small (large) BR; effi =  0.323624 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_0.8/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_0.8/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_0.8/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_0.8 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.06645056883 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_0.8 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.41783382706 
+
+=== expected limit on number of cands for quantile  0.84  is  5.89386975824 
+
+=== expected limit on number of cands for quantile  0.16  is  3.0384750429 
+
+=== expected limit on number of cands for quantile  0.975  is  10.0738700232 
+
+=== expected limit on number of cands for quantile  0.025  is  3.01200427298 
+
+0.299
+Limit on signal cands =  3.06645056883  Limit on sigma*BR =  0.000251203157992 ( 0.000295359386234 ) for small (large) BR; effi =  0.297269 ; lumi =  20532
+Limit on signal cands =  4.41783382706  Limit on sigma*BR =  0.000361908266228 ( 0.000425524122549 ) for small (large) BR; effi =  0.297269 ; lumi =  20532
+Limit on signal cands =  5.89386975824  Limit on sigma*BR =  0.00048282490222 ( 0.000567695358284 ) for small (large) BR; effi =  0.297269 ; lumi =  20532
+Limit on signal cands =  3.0384750429  Limit on sigma*BR =  0.000248911407219 ( 0.000292664793908 ) for small (large) BR; effi =  0.297269 ; lumi =  20532
+Limit on signal cands =  10.0738700232  Limit on sigma*BR =  0.000825249879698 ( 0.000970311439974 ) for small (large) BR; effi =  0.297269 ; lumi =  20532
+Limit on signal cands =  3.01200427298  Limit on sigma*BR =  0.000246742925827 ( 0.000290115139126 ) for small (large) BR; effi =  0.297269 ; lumi =  20532
+Limit on signal cands =  3.01200427298  Limit on sigma*BR =  0.000246742925827 ( 0.000290115139126 ) for small (large) BR; effi =  0.297269 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_1.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_1.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_1.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_1.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.07509840289 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_1.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.38192834393 
+
+=== expected limit on number of cands for quantile  0.84  is  7.97943683581 
+
+=== expected limit on number of cands for quantile  0.16  is  3.09861476649 
+
+=== expected limit on number of cands for quantile  0.975  is  13.1554946273 
+
+=== expected limit on number of cands for quantile  0.025  is  3.06141798857 
+
+0.282462
+Limit on signal cands =  3.07509840289  Limit on sigma*BR =  0.000266698620743 ( 0.000310559208289 ) for small (large) BR; effi =  0.280787 ; lumi =  20532
+Limit on signal cands =  4.38192834393  Limit on sigma*BR =  0.000380037999572 ( 0.00044253809764 ) for small (large) BR; effi =  0.280787 ; lumi =  20532
+Limit on signal cands =  7.97943683581  Limit on sigma*BR =  0.000692044455039 ( 0.000805856353733 ) for small (large) BR; effi =  0.280787 ; lumi =  20532
+Limit on signal cands =  3.09861476649  Limit on sigma*BR =  0.000268738159293 ( 0.000312934164243 ) for small (large) BR; effi =  0.280787 ; lumi =  20532
+Limit on signal cands =  13.1554946273  Limit on sigma*BR =  0.00114095609721 ( 0.00132859488083 ) for small (large) BR; effi =  0.280787 ; lumi =  20532
+Limit on signal cands =  3.06141798857  Limit on sigma*BR =  0.000265512139158 ( 0.000309177600912 ) for small (large) BR; effi =  0.280787 ; lumi =  20532
+Limit on signal cands =  3.06141798857  Limit on sigma*BR =  0.000265512139158 ( 0.000309177600912 ) for small (large) BR; effi =  0.280787 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_2.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_2.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_2.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_2.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.07906600111 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_2.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.3270511328 
+
+=== expected limit on number of cands for quantile  0.84  is  7.79054049424 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07609780719 
+
+=== expected limit on number of cands for quantile  0.975  is  12.173743705 
+
+=== expected limit on number of cands for quantile  0.025  is  3.03700484514 
+
+0.222854
+Limit on signal cands =  3.07906600111  Limit on sigma*BR =  0.000338804257705 ( 0.000381290290955 ) for small (large) BR; effi =  0.221314 ; lumi =  20532
+Limit on signal cands =  4.3270511328  Limit on sigma*BR =  0.00047612598969 ( 0.000535832159755 ) for small (large) BR; effi =  0.221314 ; lumi =  20532
+Limit on signal cands =  7.79054049424  Limit on sigma*BR =  0.000857230175748 ( 0.000964726787499 ) for small (large) BR; effi =  0.221314 ; lumi =  20532
+Limit on signal cands =  3.07609780719  Limit on sigma*BR =  0.000338477653229 ( 0.000380922730298 ) for small (large) BR; effi =  0.221314 ; lumi =  20532
+Limit on signal cands =  12.173743705  Limit on sigma*BR =  0.0013395348453 ( 0.00150751243319 ) for small (large) BR; effi =  0.221314 ; lumi =  20532
+Limit on signal cands =  3.03700484514  Limit on sigma*BR =  0.000334176068922 ( 0.000376081727582 ) for small (large) BR; effi =  0.221314 ; lumi =  20532
+Limit on signal cands =  3.03700484514  Limit on sigma*BR =  0.000334176068922 ( 0.000376081727582 ) for small (large) BR; effi =  0.221314 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_4.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_4.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_4.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_4.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.0618443009 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_4.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  5.22333477947 
+
+=== expected limit on number of cands for quantile  0.84  is  7.73749189833 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07188452195 
+
+=== expected limit on number of cands for quantile  0.975  is  12.0415741086 
+
+=== expected limit on number of cands for quantile  0.025  is  3.03044354765 
+
+0.161023
+Limit on signal cands =  3.0618443009  Limit on sigma*BR =  0.00046662664777 ( 0.000507485028655 ) for small (large) BR; effi =  0.159791 ; lumi =  20532
+Limit on signal cands =  5.22333477947  Limit on sigma*BR =  0.000796038909492 ( 0.000865741017415 ) for small (large) BR; effi =  0.159791 ; lumi =  20532
+Limit on signal cands =  7.73749189833  Limit on sigma*BR =  0.00117919774876 ( 0.00128244969758 ) for small (large) BR; effi =  0.159791 ; lumi =  20532
+Limit on signal cands =  3.07188452195  Limit on sigma*BR =  0.000468156782627 ( 0.000509149143928 ) for small (large) BR; effi =  0.159791 ; lumi =  20532
+Limit on signal cands =  12.0415741086  Limit on sigma*BR =  0.00183514209345 ( 0.0019958293045 ) for small (large) BR; effi =  0.159791 ; lumi =  20532
+Limit on signal cands =  3.03044354765  Limit on sigma*BR =  0.000461841156808 ( 0.000502280514447 ) for small (large) BR; effi =  0.159791 ; lumi =  20532
+Limit on signal cands =  3.03044354765  Limit on sigma*BR =  0.000461841156808 ( 0.000502280514447 ) for small (large) BR; effi =  0.159791 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_6.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_6.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_6.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_6.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.07004238675 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_6.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  5.26564650866 
+
+=== expected limit on number of cands for quantile  0.84  is  8.07219188935 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07756052072 
+
+=== expected limit on number of cands for quantile  0.975  is  12.2822815808 
+
+=== expected limit on number of cands for quantile  0.025  is  3.03649983919 
+
+0.12846
+Limit on signal cands =  3.07004238675  Limit on sigma*BR =  0.000587149871999 ( 0.000627451053142 ) for small (large) BR; effi =  0.127331 ; lumi =  20532
+Limit on signal cands =  5.26564650866  Limit on sigma*BR =  0.0010070622109 ( 0.00107618561281 ) for small (large) BR; effi =  0.127331 ; lumi =  20532
+Limit on signal cands =  8.07219188935  Limit on sigma*BR =  0.00154381791438 ( 0.00164978350918 ) for small (large) BR; effi =  0.127331 ; lumi =  20532
+Limit on signal cands =  3.07756052072  Limit on sigma*BR =  0.000588587725565 ( 0.000628987599052 ) for small (large) BR; effi =  0.127331 ; lumi =  20532
+Limit on signal cands =  12.2822815808  Limit on sigma*BR =  0.00234900341739 ( 0.00251023586714 ) for small (large) BR; effi =  0.127331 ; lumi =  20532
+Limit on signal cands =  3.03649983919  Limit on sigma*BR =  0.000580734813173 ( 0.000620595673267 ) for small (large) BR; effi =  0.127331 ; lumi =  20532
+Limit on signal cands =  3.03649983919  Limit on sigma*BR =  0.000580734813173 ( 0.000620595673267 ) for small (large) BR; effi =  0.127331 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_8.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_8.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_8.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_8.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.07385334464 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_8.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.30004107184 
+
+=== expected limit on number of cands for quantile  0.84  is  7.64547514688 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07894637746 
+
+=== expected limit on number of cands for quantile  0.975  is  12.6279203936 
+
+=== expected limit on number of cands for quantile  0.025  is  3.04118528218 
+
+0.107841
+Limit on signal cands =  3.07385334464  Limit on sigma*BR =  0.000700858439933 ( 0.000740802902857 ) for small (large) BR; effi =  0.106805 ; lumi =  20532
+Limit on signal cands =  4.30004107184  Limit on sigma*BR =  0.00098043717099 ( 0.0010363158392 ) for small (large) BR; effi =  0.106805 ; lumi =  20532
+Limit on signal cands =  7.64547514688  Limit on sigma*BR =  0.00174321777365 ( 0.00184257007329 ) for small (large) BR; effi =  0.106805 ; lumi =  20532
+Limit on signal cands =  3.07894637746  Limit on sigma*BR =  0.000702019684349 ( 0.000742030330801 ) for small (large) BR; effi =  0.106805 ; lumi =  20532
+Limit on signal cands =  12.6279203936  Limit on sigma*BR =  0.00287924750935 ( 0.00304334626144 ) for small (large) BR; effi =  0.106805 ; lumi =  20532
+Limit on signal cands =  3.04118528218  Limit on sigma*BR =  0.00069340991044 ( 0.000732929854668 ) for small (large) BR; effi =  0.106805 ; lumi =  20532
+Limit on signal cands =  3.04118528218  Limit on sigma*BR =  0.00069340991044 ( 0.000732929854668 ) for small (large) BR; effi =  0.106805 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_10.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_10.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_10.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_10.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.04690595402 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_10.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.29687779398 
+
+=== expected limit on number of cands for quantile  0.84  is  7.9997447401 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07888106376 
+
+=== expected limit on number of cands for quantile  0.975  is  13.3434600666 
+
+=== expected limit on number of cands for quantile  0.025  is  3.0377658896 
+
+0.093295
+Limit on signal cands =  3.04690595402  Limit on sigma*BR =  0.000803471180803 ( 0.000842784993801 ) for small (large) BR; effi =  0.092348 ; lumi =  20532
+Limit on signal cands =  4.29687779398  Limit on sigma*BR =  0.0011330896086 ( 0.0011885316382 ) for small (large) BR; effi =  0.092348 ; lumi =  20532
+Limit on signal cands =  7.9997447401  Limit on sigma*BR =  0.00210953815098 ( 0.00221275776901 ) for small (large) BR; effi =  0.092348 ; lumi =  20532
+Limit on signal cands =  3.07888106376  Limit on sigma*BR =  0.000811903039078 ( 0.000851629422568 ) for small (large) BR; effi =  0.092348 ; lumi =  20532
+Limit on signal cands =  13.3434600666  Limit on sigma*BR =  0.00351867953179 ( 0.00369084838167 ) for small (large) BR; effi =  0.092348 ; lumi =  20532
+Limit on signal cands =  3.0377658896  Limit on sigma*BR =  0.000801060939575 ( 0.000840256819565 ) for small (large) BR; effi =  0.092348 ; lumi =  20532
+Limit on signal cands =  3.0377658896  Limit on sigma*BR =  0.000801060939575 ( 0.000840256819565 ) for small (large) BR; effi =  0.092348 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_20.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_20.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_20.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_20.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.05769736444 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_20.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  5.20952086086 
+
+=== expected limit on number of cands for quantile  0.84  is  7.40659171906 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07686977948 
+
+=== expected limit on number of cands for quantile  0.975  is  12.2779588064 
+
+=== expected limit on number of cands for quantile  0.025  is  3.03753215591 
+
+0.05579
+Limit on signal cands =  3.05769736444  Limit on sigma*BR =  0.00134962936853 ( 0.00138835760389 ) for small (large) BR; effi =  0.055172 ; lumi =  20532
+Limit on signal cands =  5.20952086086  Limit on sigma*BR =  0.00229941734311 ( 0.00236540018117 ) for small (large) BR; effi =  0.055172 ; lumi =  20532
+Limit on signal cands =  7.40659171906  Limit on sigma*BR =  0.0032691769372 ( 0.00336298747275 ) for small (large) BR; effi =  0.055172 ; lumi =  20532
+Limit on signal cands =  3.07686977948  Limit on sigma*BR =  0.00135809183271 ( 0.00139706290237 ) for small (large) BR; effi =  0.055172 ; lumi =  20532
+Limit on signal cands =  12.2779588064  Limit on sigma*BR =  0.0054193374346 ( 0.00557484781438 ) for small (large) BR; effi =  0.055172 ; lumi =  20532
+Limit on signal cands =  3.03753215591  Limit on sigma*BR =  0.00134072869773 ( 0.00137920152425 ) for small (large) BR; effi =  0.055172 ; lumi =  20532
+Limit on signal cands =  3.03753215591  Limit on sigma*BR =  0.00134072869773 ( 0.00137920152425 ) for small (large) BR; effi =  0.055172 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_40.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_40.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_40.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_40.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.08673539598 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_40.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.31864243764 
+
+=== expected limit on number of cands for quantile  0.84  is  7.89665570854 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07537371717 
+
+=== expected limit on number of cands for quantile  0.975  is  12.3988722682 
+
+=== expected limit on number of cands for quantile  0.025  is  3.04006343783 
+
+0.030745
+Limit on signal cands =  3.08673539598  Limit on sigma*BR =  0.00247274227319 ( 0.00251134796985 ) for small (large) BR; effi =  0.030399 ; lumi =  20532
+Limit on signal cands =  4.31864243764  Limit on sigma*BR =  0.00345960646067 ( 0.00351361957763 ) for small (large) BR; effi =  0.030399 ; lumi =  20532
+Limit on signal cands =  7.89665570854  Limit on sigma*BR =  0.00632590484197 ( 0.0064246680516 ) for small (large) BR; effi =  0.030399 ; lumi =  20532
+Limit on signal cands =  3.07537371717  Limit on sigma*BR =  0.00246364058487 ( 0.0025021041814 ) for small (large) BR; effi =  0.030399 ; lumi =  20532
+Limit on signal cands =  12.3988722682  Limit on sigma*BR =  0.00993257006651 ( 0.0100876423485 ) for small (large) BR; effi =  0.030399 ; lumi =  20532
+Limit on signal cands =  3.04006343783  Limit on sigma*BR =  0.00243535399428 ( 0.00247337596632 ) for small (large) BR; effi =  0.030399 ; lumi =  20532
+Limit on signal cands =  3.04006343783  Limit on sigma*BR =  0.00243535399428 ( 0.00247337596632 ) for small (large) BR; effi =  0.030399 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_60.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_60.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_60.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_60.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.05699691932 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_60.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.31405048867 
+
+=== expected limit on number of cands for quantile  0.84  is  7.98121566271 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07780019013 
+
+=== expected limit on number of cands for quantile  0.975  is  12.2793333847 
+
+=== expected limit on number of cands for quantile  0.025  is  3.04085590979 
+
+0.021264
+Limit on signal cands =  3.05699691932  Limit on sigma*BR =  0.00354194947756 ( 0.00358001216692 ) for small (large) BR; effi =  0.021018 ; lumi =  20532
+Limit on signal cands =  4.31405048867  Limit on sigma*BR =  0.00499841814624 ( 0.00505213241811 ) for small (large) BR; effi =  0.021018 ; lumi =  20532
+Limit on signal cands =  7.98121566271  Limit on sigma*BR =  0.00924733108764 ( 0.00934670525794 ) for small (large) BR; effi =  0.021018 ; lumi =  20532
+Limit on signal cands =  3.07780019013  Limit on sigma*BR =  0.00356605291506 ( 0.00360437462609 ) for small (large) BR; effi =  0.021018 ; lumi =  20532
+Limit on signal cands =  12.2793333847  Limit on sigma*BR =  0.0142272889423 ( 0.0143801790055 ) for small (large) BR; effi =  0.021018 ; lumi =  20532
+Limit on signal cands =  3.04085590979  Limit on sigma*BR =  0.00352324790808 ( 0.00356110962562 ) for small (large) BR; effi =  0.021018 ; lumi =  20532
+Limit on signal cands =  3.04085590979  Limit on sigma*BR =  0.00352324790808 ( 0.00356110962562 ) for small (large) BR; effi =  0.021018 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_80.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_80.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_80.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_80.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.07200875011 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_80.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.30273888052 
+
+=== expected limit on number of cands for quantile  0.84  is  7.80023332551 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07465710407 
+
+=== expected limit on number of cands for quantile  0.975  is  12.0299458447 
+
+=== expected limit on number of cands for quantile  0.025  is  3.04165265858 
+
+0.016306
+Limit on signal cands =  3.07200875011  Limit on sigma*BR =  0.00464285146686 ( 0.00468101578858 ) for small (large) BR; effi =  0.016113 ; lumi =  20532
+Limit on signal cands =  4.30273888052  Limit on sigma*BR =  0.00650290384825 ( 0.00655635783367 ) for small (large) BR; effi =  0.016113 ; lumi =  20532
+Limit on signal cands =  7.80023332551  Limit on sigma*BR =  0.0117888091093 ( 0.0118857133301 ) for small (large) BR; effi =  0.016113 ; lumi =  20532
+Limit on signal cands =  3.07465710407  Limit on sigma*BR =  0.00464685403166 ( 0.00468505125454 ) for small (large) BR; effi =  0.016113 ; lumi =  20532
+Limit on signal cands =  12.0299458447  Limit on sigma*BR =  0.0181813452547 ( 0.0183307962364 ) for small (large) BR; effi =  0.016113 ; lumi =  20532
+Limit on signal cands =  3.04165265858  Limit on sigma*BR =  0.00459697307407 ( 0.00463476027459 ) for small (large) BR; effi =  0.016113 ; lumi =  20532
+Limit on signal cands =  3.04165265858  Limit on sigma*BR =  0.00459697307407 ( 0.00463476027459 ) for small (large) BR; effi =  0.016113 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_100.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_100.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_100.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_100.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.0294239326 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_100.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  5.18670487544 
+
+=== expected limit on number of cands for quantile  0.84  is  7.95539129593 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07587509277 
+
+=== expected limit on number of cands for quantile  0.975  is  12.3381367442 
+
+=== expected limit on number of cands for quantile  0.025  is  3.0388547246 
+
+0.013253
+Limit on signal cands =  3.0294239326  Limit on sigma*BR =  0.00563455513532 ( 0.00567214158151 ) for small (large) BR; effi =  0.013093 ; lumi =  20532
+Limit on signal cands =  5.18670487544  Limit on sigma*BR =  0.00964697422398 ( 0.00971132632789 ) for small (large) BR; effi =  0.013093 ; lumi =  20532
+Limit on signal cands =  7.95539129593  Limit on sigma*BR =  0.0147965725092 ( 0.014895276056 ) for small (large) BR; effi =  0.013093 ; lumi =  20532
+Limit on signal cands =  3.07587509277  Limit on sigma*BR =  0.00572095163476 ( 0.00575911440637 ) for small (large) BR; effi =  0.013093 ; lumi =  20532
+Limit on signal cands =  12.3381367442  Limit on sigma*BR =  0.0229482282108 ( 0.0231013090351 ) for small (large) BR; effi =  0.013093 ; lumi =  20532
+Limit on signal cands =  3.0388547246  Limit on sigma*BR =  0.0056520958687 ( 0.00568979932392 ) for small (large) BR; effi =  0.013093 ; lumi =  20532
+Limit on signal cands =  3.0388547246  Limit on sigma*BR =  0.0056520958687 ( 0.00568979932392 ) for small (large) BR; effi =  0.013093 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_200.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_200.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_200.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_200.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.34156698378 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_200.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.83276870047 
+
+=== expected limit on number of cands for quantile  0.84  is  6.52799677384 
+
+=== expected limit on number of cands for quantile  0.16  is  3.30329019712 
+
+=== expected limit on number of cands for quantile  0.975  is  12.8633064872 
+
+=== expected limit on number of cands for quantile  0.025  is  3.26672062279 
+
+0.002981
+Limit on signal cands =  3.34156698378  Limit on sigma*BR =  0.0279158181713 ( 0.0279574888083 ) for small (large) BR; effi =  0.002915 ; lumi =  20532
+Limit on signal cands =  4.83276870047  Limit on sigma*BR =  0.040373481352 ( 0.0404337478532 ) for small (large) BR; effi =  0.002915 ; lumi =  20532
+Limit on signal cands =  6.52799677384  Limit on sigma*BR =  0.0545356031604 ( 0.0546170098135 ) for small (large) BR; effi =  0.002915 ; lumi =  20532
+Limit on signal cands =  3.30329019712  Limit on sigma*BR =  0.0275960496849 ( 0.0276372429956 ) for small (large) BR; effi =  0.002915 ; lumi =  20532
+Limit on signal cands =  12.8633064872  Limit on sigma*BR =  0.107461477421 ( 0.107621887845 ) for small (large) BR; effi =  0.002915 ; lumi =  20532
+Limit on signal cands =  3.26672062279  Limit on sigma*BR =  0.0272905434382 ( 0.0273312807121 ) for small (large) BR; effi =  0.002915 ; lumi =  20532
+Limit on signal cands =  3.26672062279  Limit on sigma*BR =  0.0272905434382 ( 0.0273312807121 ) for small (large) BR; effi =  0.002915 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_400.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_400.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_400.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_400.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.35647541327 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_400.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.82190389198 
+
+=== expected limit on number of cands for quantile  0.84  is  6.54158141257 
+
+=== expected limit on number of cands for quantile  0.16  is  3.30338918427 
+
+=== expected limit on number of cands for quantile  0.975  is  11.4186918036 
+
+=== expected limit on number of cands for quantile  0.025  is  3.27063172428 
+
+0.001586
+Limit on signal cands =  3.35647541327  Limit on sigma*BR =  0.0527680203248 ( 0.0528098985744 ) for small (large) BR; effi =  0.001549 ; lumi =  20532
+Limit on signal cands =  4.82190389198  Limit on sigma*BR =  0.0758064014323 ( 0.0758665636173 ) for small (large) BR; effi =  0.001549 ; lumi =  20532
+Limit on signal cands =  6.54158141257  Limit on sigma*BR =  0.102841897656 ( 0.102923516004 ) for small (large) BR; effi =  0.001549 ; lumi =  20532
+Limit on signal cands =  3.30338918427  Limit on sigma*BR =  0.0519334379532 ( 0.0519746538537 ) for small (large) BR; effi =  0.001549 ; lumi =  20532
+Limit on signal cands =  11.4186918036  Limit on sigma*BR =  0.179516214774 ( 0.179658684111 ) for small (large) BR; effi =  0.001549 ; lumi =  20532
+Limit on signal cands =  3.27063172428  Limit on sigma*BR =  0.0514184494304 ( 0.0514592566209 ) for small (large) BR; effi =  0.001549 ; lumi =  20532
+Limit on signal cands =  3.27063172428  Limit on sigma*BR =  0.0514184494304 ( 0.0514592566209 ) for small (large) BR; effi =  0.001549 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_600.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_600.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_600.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_600.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.35352152704 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_600.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  3.38230380621 
+
+=== expected limit on number of cands for quantile  0.84  is  6.53078720603 
+
+=== expected limit on number of cands for quantile  0.16  is  3.30199820976 
+
+=== expected limit on number of cands for quantile  0.975  is  12.8835334843 
+
+=== expected limit on number of cands for quantile  0.025  is  3.27180785229 
+
+0.001085
+Limit on signal cands =  3.35352152704  Limit on sigma*BR =  0.0771158921287 ( 0.0771577502082 ) for small (large) BR; effi =  0.001059 ; lumi =  20532
+Limit on signal cands =  3.38230380621  Limit on sigma*BR =  0.077777754925 ( 0.0778199722599 ) for small (large) BR; effi =  0.001059 ; lumi =  20532
+Limit on signal cands =  6.53078720603  Limit on sigma*BR =  0.150178693542 ( 0.150260209706 ) for small (large) BR; effi =  0.001059 ; lumi =  20532
+Limit on signal cands =  3.30199820976  Limit on sigma*BR =  0.0759310878727 ( 0.075972302847 ) for small (large) BR; effi =  0.001059 ; lumi =  20532
+Limit on signal cands =  12.8835334843  Limit on sigma*BR =  0.296263247574 ( 0.296424057625 ) for small (large) BR; effi =  0.001059 ; lumi =  20532
+Limit on signal cands =  3.27180785229  Limit on sigma*BR =  0.0752368456169 ( 0.0752776837603 ) for small (large) BR; effi =  0.001059 ; lumi =  20532
+Limit on signal cands =  3.27180785229  Limit on sigma*BR =  0.0752368456169 ( 0.0752776837603 ) for small (large) BR; effi =  0.001059 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_1000_148_800.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_800.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_1000_148_800.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_800.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.34477012273 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_1000_148_800.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.83715255901 
+
+=== expected limit on number of cands for quantile  0.84  is  6.52464714056 
+
+=== expected limit on number of cands for quantile  0.16  is  3.30432738407 
+
+=== expected limit on number of cands for quantile  0.975  is  11.4267839226 
+
+=== expected limit on number of cands for quantile  0.025  is  3.2733602213 
+
+0.000826
+Limit on signal cands =  3.34477012273  Limit on sigma*BR =  0.101057833186 ( 0.101099587316 ) for small (large) BR; effi =  0.000806 ; lumi =  20532
+Limit on signal cands =  4.83715255901  Limit on sigma*BR =  0.146148207042 ( 0.14620859119 ) for small (large) BR; effi =  0.000806 ; lumi =  20532
+Limit on signal cands =  6.52464714056  Limit on sigma*BR =  0.197133637928 ( 0.19721508776 ) for small (large) BR; effi =  0.000806 ; lumi =  20532
+Limit on signal cands =  3.30432738407  Limit on sigma*BR =  0.0998359089917 ( 0.099877158258 ) for small (large) BR; effi =  0.000806 ; lumi =  20532
+Limit on signal cands =  11.4267839226  Limit on sigma*BR =  0.34524525786 ( 0.345387903064 ) for small (large) BR; effi =  0.000806 ; lumi =  20532
+Limit on signal cands =  3.2733602213  Limit on sigma*BR =  0.0989002768692 ( 0.0989411395598 ) for small (large) BR; effi =  0.000806 ; lumi =  20532
+Limit on signal cands =  3.2733602213  Limit on sigma*BR =  0.0989002768692 ( 0.0989411395598 ) for small (large) BR; effi =  0.000806 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_350_148_0.01/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_0.01/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_0.01/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_0.01 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.43315515012 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_0.01 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  5.07121936154 
+
+=== expected limit on number of cands for quantile  0.84  is  6.91644729716 
+
+=== expected limit on number of cands for quantile  0.16  is  3.4748424305 
+
+=== expected limit on number of cands for quantile  0.975  is  12.1490293383 
+
+=== expected limit on number of cands for quantile  0.025  is  3.43901868004 
+
+0.2035
+Limit on signal cands =  3.43315515012  Limit on sigma*BR =  0.000410841369269 ( 0.000457379759832 ) for small (large) BR; effi =  0.203497 ; lumi =  20532
+Limit on signal cands =  5.07121936154  Limit on sigma*BR =  0.000606866458186 ( 0.000675609750277 ) for small (large) BR; effi =  0.203497 ; lumi =  20532
+Limit on signal cands =  6.91644729716  Limit on sigma*BR =  0.000827682570053 ( 0.000921438986978 ) for small (large) BR; effi =  0.203497 ; lumi =  20532
+Limit on signal cands =  3.4748424305  Limit on sigma*BR =  0.000415830033807 ( 0.000462933519407 ) for small (large) BR; effi =  0.203497 ; lumi =  20532
+Limit on signal cands =  12.1490293383  Limit on sigma*BR =  0.00145385909764 ( 0.00161854617049 ) for small (large) BR; effi =  0.203497 ; lumi =  20532
+Limit on signal cands =  3.43901868004  Limit on sigma*BR =  0.000411543050537 ( 0.000458160924617 ) for small (large) BR; effi =  0.203497 ; lumi =  20532
+Limit on signal cands =  3.43901868004  Limit on sigma*BR =  0.000411543050537 ( 0.000458160924617 ) for small (large) BR; effi =  0.203497 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_350_148_0.02/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_0.02/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_0.02/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_0.02 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.37317746429 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_0.02 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.89724867324 
+
+=== expected limit on number of cands for quantile  0.84  is  6.61112900077 
+
+=== expected limit on number of cands for quantile  0.16  is  3.34085286156 
+
+=== expected limit on number of cands for quantile  0.975  is  11.4834532278 
+
+=== expected limit on number of cands for quantile  0.025  is  3.31145541177 
+
+0.2189
+Limit on signal cands =  3.37317746429  Limit on sigma*BR =  0.000375702727207 ( 0.000421877185119 ) for small (large) BR; effi =  0.218642 ; lumi =  20532
+Limit on signal cands =  4.89724867324  Limit on sigma*BR =  0.000545452974777 ( 0.000612490005926 ) for small (large) BR; effi =  0.218642 ; lumi =  20532
+Limit on signal cands =  6.61112900077  Limit on sigma*BR =  0.000736344061884 ( 0.000826841908802 ) for small (large) BR; effi =  0.218642 ; lumi =  20532
+Limit on signal cands =  3.34085286156  Limit on sigma*BR =  0.000372102430001 ( 0.000417834405705 ) for small (large) BR; effi =  0.218642 ; lumi =  20532
+Limit on signal cands =  11.4834532278  Limit on sigma*BR =  0.00127902096499 ( 0.00143621465947 ) for small (large) BR; effi =  0.218642 ; lumi =  20532
+Limit on signal cands =  3.31145541177  Limit on sigma*BR =  0.000368828157545 ( 0.000414157719999 ) for small (large) BR; effi =  0.218642 ; lumi =  20532
+Limit on signal cands =  3.31145541177  Limit on sigma*BR =  0.000368828157545 ( 0.000414157719999 ) for small (large) BR; effi =  0.218642 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_350_148_0.04/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_0.04/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_0.04/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_0.04 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.1477255811 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_0.04 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.59985186662 
+
+=== expected limit on number of cands for quantile  0.84  is  6.18107638777 
+
+=== expected limit on number of cands for quantile  0.16  is  3.15975440471 
+
+=== expected limit on number of cands for quantile  0.975  is  10.6088465381 
+
+=== expected limit on number of cands for quantile  0.025  is  3.129472305 
+
+0.2461
+Limit on signal cands =  3.1477255811  Limit on sigma*BR =  0.000314189788334 ( 0.000358275601042 ) for small (large) BR; effi =  0.243974 ; lumi =  20532
+Limit on signal cands =  4.59985186662  Limit on sigma*BR =  0.000459133570289 ( 0.0005235572955 ) for small (large) BR; effi =  0.243974 ; lumi =  20532
+Limit on signal cands =  6.18107638777  Limit on sigma*BR =  0.000616963274565 ( 0.000703533011648 ) for small (large) BR; effi =  0.243974 ; lumi =  20532
+Limit on signal cands =  3.15975440471  Limit on sigma*BR =  0.000315390443679 ( 0.000359644727384 ) for small (large) BR; effi =  0.243974 ; lumi =  20532
+Limit on signal cands =  10.6088465381  Limit on sigma*BR =  0.00105892053243 ( 0.00120750388554 ) for small (large) BR; effi =  0.243974 ; lumi =  20532
+Limit on signal cands =  3.129472305  Limit on sigma*BR =  0.000312367840135 ( 0.000356198004601 ) for small (large) BR; effi =  0.243974 ; lumi =  20532
+Limit on signal cands =  3.129472305  Limit on sigma*BR =  0.000312367840135 ( 0.000356198004601 ) for small (large) BR; effi =  0.243974 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_350_148_0.06/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_0.06/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_0.06/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_0.06 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.11762263879 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_0.06 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.52945518901 
+
+=== expected limit on number of cands for quantile  0.84  is  6.05615883044 
+
+=== expected limit on number of cands for quantile  0.16  is  3.10952264239 
+
+=== expected limit on number of cands for quantile  0.975  is  10.314253444 
+
+=== expected limit on number of cands for quantile  0.025  is  3.08033026859 
+
+0.2641
+Limit on signal cands =  3.11762263879  Limit on sigma*BR =  0.000292005221652 ( 0.000336430925343 ) for small (large) BR; effi =  0.259999 ; lumi =  20532
+Limit on signal cands =  4.52945518901  Limit on sigma*BR =  0.000424241391492 ( 0.000488785519318 ) for small (large) BR; effi =  0.259999 ; lumi =  20532
+Limit on signal cands =  6.05615883044  Limit on sigma*BR =  0.000567236707752 ( 0.000653536157327 ) for small (large) BR; effi =  0.259999 ; lumi =  20532
+Limit on signal cands =  3.10952264239  Limit on sigma*BR =  0.000291246553423 ( 0.000335556833255 ) for small (large) BR; effi =  0.259999 ; lumi =  20532
+Limit on signal cands =  10.314253444  Limit on sigma*BR =  0.000966061711766 ( 0.00111303843743 ) for small (large) BR; effi =  0.259999 ; lumi =  20532
+Limit on signal cands =  3.08033026859  Limit on sigma*BR =  0.000288512314367 ( 0.000332406606794 ) for small (large) BR; effi =  0.259999 ; lumi =  20532
+Limit on signal cands =  3.08033026859  Limit on sigma*BR =  0.000288512314367 ( 0.000332406606794 ) for small (large) BR; effi =  0.259999 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_350_148_0.08/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_0.08/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_0.08/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_0.08 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.12465628698 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_0.08 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  3.15237864331 
+
+=== expected limit on number of cands for quantile  0.84  is  5.99614158651 
+
+=== expected limit on number of cands for quantile  0.16  is  3.08847903856 
+
+=== expected limit on number of cands for quantile  0.975  is  10.2674169618 
+
+=== expected limit on number of cands for quantile  0.025  is  3.06241468079 
+
+0.274
+Limit on signal cands =  3.12465628698  Limit on sigma*BR =  0.000283447570514 ( 0.000328444461778 ) for small (large) BR; effi =  0.268453 ; lumi =  20532
+Limit on signal cands =  3.15237864331  Limit on sigma*BR =  0.000285962354167 ( 0.000331358463693 ) for small (large) BR; effi =  0.268453 ; lumi =  20532
+Limit on signal cands =  5.99614158651  Limit on sigma*BR =  0.000543929190625 ( 0.00063027716179 ) for small (large) BR; effi =  0.268453 ; lumi =  20532
+Limit on signal cands =  3.08847903856  Limit on sigma*BR =  0.000280165816545 ( 0.000324641734119 ) for small (large) BR; effi =  0.268453 ; lumi =  20532
+Limit on signal cands =  10.2674169618  Limit on sigma*BR =  0.000931390247757 ( 0.00107924710053 ) for small (large) BR; effi =  0.268453 ; lumi =  20532
+Limit on signal cands =  3.06241468079  Limit on sigma*BR =  0.000277801435247 ( 0.000321902010715 ) for small (large) BR; effi =  0.268453 ; lumi =  20532
+Limit on signal cands =  3.06241468079  Limit on sigma*BR =  0.000277801435247 ( 0.000321902010715 ) for small (large) BR; effi =  0.268453 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_350_148_0.1/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_0.1/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_0.1/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_0.1 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.116179322 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_0.1 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.47135799571 
+
+=== expected limit on number of cands for quantile  0.84  is  5.9988930772 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07906917073 
+
+=== expected limit on number of cands for quantile  0.975  is  10.169737379 
+
+=== expected limit on number of cands for quantile  0.025  is  3.04933672707 
+
+0.2793
+Limit on signal cands =  3.116179322  Limit on sigma*BR =  0.000278126267252 ( 0.00032327107253 ) for small (large) BR; effi =  0.272847 ; lumi =  20532
+Limit on signal cands =  4.47135799571  Limit on sigma*BR =  0.000399079122345 ( 0.000463856712204 ) for small (large) BR; effi =  0.272847 ; lumi =  20532
+Limit on signal cands =  5.9988930772  Limit on sigma*BR =  0.000535415188536 ( 0.000622322529826 ) for small (large) BR; effi =  0.272847 ; lumi =  20532
+Limit on signal cands =  3.07906917073  Limit on sigma*BR =  0.000274814099759 ( 0.000319421281756 ) for small (large) BR; effi =  0.272847 ; lumi =  20532
+Limit on signal cands =  10.169737379  Limit on sigma*BR =  0.0009076727633 ( 0.00105500408357 ) for small (large) BR; effi =  0.272847 ; lumi =  20532
+Limit on signal cands =  3.04933672707  Limit on sigma*BR =  0.000272160409866 ( 0.000316336851126 ) for small (large) BR; effi =  0.272847 ; lumi =  20532
+Limit on signal cands =  3.04933672707  Limit on sigma*BR =  0.000272160409866 ( 0.000316336851126 ) for small (large) BR; effi =  0.272847 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_350_148_0.2/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_0.2/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_0.2/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_0.2 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.06454864485 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_0.2 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  3.11558965742 
+
+=== expected limit on number of cands for quantile  0.84  is  5.92344586459 
+
+=== expected limit on number of cands for quantile  0.16  is  3.05359890455 
+
+=== expected limit on number of cands for quantile  0.975  is  10.1164222857 
+
+=== expected limit on number of cands for quantile  0.025  is  3.02825547951 
+
+0.28
+Limit on signal cands =  3.06454864485  Limit on sigma*BR =  0.000273636450401 ( 0.000318181919071 ) for small (large) BR; effi =  0.272729 ; lumi =  20532
+Limit on signal cands =  3.11558965742  Limit on sigma*BR =  0.000278193950746 ( 0.000323481338077 ) for small (large) BR; effi =  0.272729 ; lumi =  20532
+Limit on signal cands =  5.92344586459  Limit on sigma*BR =  0.000528910090317 ( 0.000615011732927 ) for small (large) BR; effi =  0.272729 ; lumi =  20532
+Limit on signal cands =  3.05359890455  Limit on sigma*BR =  0.000272658737721 ( 0.000317045043861 ) for small (large) BR; effi =  0.272729 ; lumi =  20532
+Limit on signal cands =  10.1164222857  Limit on sigma*BR =  0.000903304925401 ( 0.00105035456442 ) for small (large) BR; effi =  0.272729 ; lumi =  20532
+Limit on signal cands =  3.02825547951  Limit on sigma*BR =  0.000270395799301 ( 0.000314413720117 ) for small (large) BR; effi =  0.272729 ; lumi =  20532
+Limit on signal cands =  3.02825547951  Limit on sigma*BR =  0.000270395799301 ( 0.000314413720117 ) for small (large) BR; effi =  0.272729 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_350_148_0.4/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_0.4/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_0.4/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_0.4 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.06525947807 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_0.4 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.41144931806 
+
+=== expected limit on number of cands for quantile  0.84  is  5.91018370554 
+
+=== expected limit on number of cands for quantile  0.16  is  3.04741471194 
+
+=== expected limit on number of cands for quantile  0.975  is  10.056873108 
+
+=== expected limit on number of cands for quantile  0.025  is  3.02104986674 
+
+0.2502
+Limit on signal cands =  3.06525947807  Limit on sigma*BR =  0.000306447054852 ( 0.000350265235857 ) for small (large) BR; effi =  0.243585 ; lumi =  20532
+Limit on signal cands =  4.41144931806  Limit on sigma*BR =  0.000441031390921 ( 0.000504093486022 ) for small (large) BR; effi =  0.243585 ; lumi =  20532
+Limit on signal cands =  5.91018370554  Limit on sigma*BR =  0.000590866255582 ( 0.000675352903854 ) for small (large) BR; effi =  0.243585 ; lumi =  20532
+Limit on signal cands =  3.04741471194  Limit on sigma*BR =  0.000304663037523 ( 0.000348226125869 ) for small (large) BR; effi =  0.243585 ; lumi =  20532
+Limit on signal cands =  10.056873108  Limit on sigma*BR =  0.00100542846927 ( 0.00114919244402 ) for small (large) BR; effi =  0.243585 ; lumi =  20532
+Limit on signal cands =  3.02104986674  Limit on sigma*BR =  0.000302027231576 ( 0.000345213431907 ) for small (large) BR; effi =  0.243585 ; lumi =  20532
+Limit on signal cands =  3.02104986674  Limit on sigma*BR =  0.000302027231576 ( 0.000345213431907 ) for small (large) BR; effi =  0.243585 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_350_148_0.6/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_0.6/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_0.6/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_0.6 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.08198983963 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_0.6 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  5.17211821195 
+
+=== expected limit on number of cands for quantile  0.84  is  7.92178452455 
+
+=== expected limit on number of cands for quantile  0.16  is  3.08163553794 
+
+=== expected limit on number of cands for quantile  0.975  is  12.4401322721 
+
+=== expected limit on number of cands for quantile  0.025  is  3.03986666333 
+
+0.2193
+Limit on signal cands =  3.08198983963  Limit on sigma*BR =  0.000351793233869 ( 0.000395117913033 ) for small (large) BR; effi =  0.213345 ; lumi =  20532
+Limit on signal cands =  5.17211821195  Limit on sigma*BR =  0.000590370600298 ( 0.000663076992529 ) for small (large) BR; effi =  0.213345 ; lumi =  20532
+Limit on signal cands =  7.92178452455  Limit on sigma*BR =  0.000904230818697 ( 0.00101559029449 ) for small (large) BR; effi =  0.213345 ; lumi =  20532
+Limit on signal cands =  3.08163553794  Limit on sigma*BR =  0.00035175279216 ( 0.000395072490773 ) for small (large) BR; effi =  0.213345 ; lumi =  20532
+Limit on signal cands =  12.4401322721  Limit on sigma*BR =  0.00141997689463 ( 0.00159485246771 ) for small (large) BR; effi =  0.213345 ; lumi =  20532
+Limit on signal cands =  3.03986666333  Limit on sigma*BR =  0.000346985090694 ( 0.000389717628679 ) for small (large) BR; effi =  0.213345 ; lumi =  20532
+Limit on signal cands =  3.03986666333  Limit on sigma*BR =  0.000346985090694 ( 0.000389717628679 ) for small (large) BR; effi =  0.213345 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_350_148_0.8/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_0.8/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_0.8/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_0.8 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.09400140173 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_0.8 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.34548757125 
+
+=== expected limit on number of cands for quantile  0.84  is  7.84310380826 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07966180569 
+
+=== expected limit on number of cands for quantile  0.975  is  12.842677087 
+
+=== expected limit on number of cands for quantile  0.025  is  3.04192902269 
+
+0.1936
+Limit on signal cands =  3.09400140173  Limit on sigma*BR =  0.000400039479525 ( 0.000442913507003 ) for small (large) BR; effi =  0.188346 ; lumi =  20532
+Limit on signal cands =  4.34548757125  Limit on sigma*BR =  0.00056185061368 ( 0.00062206666705 ) for small (large) BR; effi =  0.188346 ; lumi =  20532
+Limit on signal cands =  7.84310380826  Limit on sigma*BR =  0.00101407554747 ( 0.0011227585778 ) for small (large) BR; effi =  0.188346 ; lumi =  20532
+Limit on signal cands =  3.07966180569  Limit on sigma*BR =  0.000398185438821 ( 0.000440860760431 ) for small (large) BR; effi =  0.188346 ; lumi =  20532
+Limit on signal cands =  12.842677087  Limit on sigma*BR =  0.00166049629284 ( 0.00183845913733 ) for small (large) BR; effi =  0.188346 ; lumi =  20532
+Limit on signal cands =  3.04192902269  Limit on sigma*BR =  0.000393306771713 ( 0.00043545922466 ) for small (large) BR; effi =  0.188346 ; lumi =  20532
+Limit on signal cands =  3.04192902269  Limit on sigma*BR =  0.000393306771713 ( 0.00043545922466 ) for small (large) BR; effi =  0.188346 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_350_148_1.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_1.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_1.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_1.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.05512889829 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_1.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  5.23184544625 
+
+=== expected limit on number of cands for quantile  0.84  is  7.91700775887 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07332621178 
+
+=== expected limit on number of cands for quantile  0.975  is  11.7658124115 
+
+=== expected limit on number of cands for quantile  0.025  is  3.04003813713 
+
+0.178751
+Limit on signal cands =  3.05512889829  Limit on sigma*BR =  0.000427837348993 ( 0.000469828506692 ) for small (large) BR; effi =  0.173896 ; lumi =  20532
+Limit on signal cands =  5.23184544625  Limit on sigma*BR =  0.000732662666807 ( 0.000804571661324 ) for small (large) BR; effi =  0.173896 ; lumi =  20532
+Limit on signal cands =  7.91700775887  Limit on sigma*BR =  0.00110869024656 ( 0.00121750540048 ) for small (large) BR; effi =  0.173896 ; lumi =  20532
+Limit on signal cands =  3.07332621178  Limit on sigma*BR =  0.000430385683489 ( 0.000472626953798 ) for small (large) BR; effi =  0.173896 ; lumi =  20532
+Limit on signal cands =  11.7658124115  Limit on sigma*BR =  0.00164767319431 ( 0.00180938816637 ) for small (large) BR; effi =  0.173896 ; lumi =  20532
+Limit on signal cands =  3.04003813713  Limit on sigma*BR =  0.000425724053134 ( 0.000467507796171 ) for small (large) BR; effi =  0.173896 ; lumi =  20532
+Limit on signal cands =  3.04003813713  Limit on sigma*BR =  0.000425724053134 ( 0.000467507796171 ) for small (large) BR; effi =  0.173896 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_350_148_2.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_2.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_2.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_2.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.07158230573 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_2.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  5.16660219054 
+
+=== expected limit on number of cands for quantile  0.84  is  7.85271282424 
+
+=== expected limit on number of cands for quantile  0.16  is  3.07209389396 
+
+=== expected limit on number of cands for quantile  0.975  is  12.8337537812 
+
+=== expected limit on number of cands for quantile  0.025  is  3.03033265635 
+
+0.124696
+Limit on signal cands =  3.07158230573  Limit on sigma*BR =  0.000616326759283 ( 0.000657308638262 ) for small (large) BR; effi =  0.121364 ; lumi =  20532
+Limit on signal cands =  5.16660219054  Limit on sigma*BR =  0.00103670189096 ( 0.0011056360899 ) for small (large) BR; effi =  0.121364 ; lumi =  20532
+Limit on signal cands =  7.85271282424  Limit on sigma*BR =  0.00157568203122 ( 0.00168045504219 ) for small (large) BR; effi =  0.121364 ; lumi =  20532
+Limit on signal cands =  3.07209389396  Limit on sigma*BR =  0.000616429411755 ( 0.000657418116481 ) for small (large) BR; effi =  0.121364 ; lumi =  20532
+Limit on signal cands =  12.8337537812  Limit on sigma*BR =  0.0025751502288 ( 0.00274638163071 ) for small (large) BR; effi =  0.121364 ; lumi =  20532
+Limit on signal cands =  3.03033265635  Limit on sigma*BR =  0.000608049832216 ( 0.000648481347255 ) for small (large) BR; effi =  0.121364 ; lumi =  20532
+Limit on signal cands =  3.03033265635  Limit on sigma*BR =  0.000608049832216 ( 0.000648481347255 ) for small (large) BR; effi =  0.121364 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_350_148_4.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_4.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_4.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_4.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.04723075793 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_4.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  5.25996254923 
+
+=== expected limit on number of cands for quantile  0.84  is  7.95175101882 
+
+=== expected limit on number of cands for quantile  0.16  is  3.08220607465 
+
+=== expected limit on number of cands for quantile  0.975  is  11.4201404281 
+
+=== expected limit on number of cands for quantile  0.025  is  3.04410279854 
+
+0.084803
+Limit on signal cands =  3.04723075793  Limit on sigma*BR =  0.000898779931987 ( 0.000938577004858 ) for small (large) BR; effi =  0.082564 ; lumi =  20532
+Limit on signal cands =  5.25996254923  Limit on sigma*BR =  0.00155142460739 ( 0.00162012013113 ) for small (large) BR; effi =  0.082564 ; lumi =  20532
+Limit on signal cands =  7.95175101882  Limit on sigma*BR =  0.00234536692742 ( 0.00244921741985 ) for small (large) BR; effi =  0.082564 ; lumi =  20532
+Limit on signal cands =  3.08220607465  Limit on sigma*BR =  0.0009090958927 ( 0.000949349745953 ) for small (large) BR; effi =  0.082564 ; lumi =  20532
+Limit on signal cands =  11.4201404281  Limit on sigma*BR =  0.0033683674958 ( 0.00351751542614 ) for small (large) BR; effi =  0.082564 ; lumi =  20532
+Limit on signal cands =  3.04410279854  Limit on sigma*BR =  0.000897857341164 ( 0.00093761356264 ) for small (large) BR; effi =  0.082564 ; lumi =  20532
+Limit on signal cands =  3.04410279854  Limit on sigma*BR =  0.000897857341164 ( 0.00093761356264 ) for small (large) BR; effi =  0.082564 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_350_148_6.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_6.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_6.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_6.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.06993690089 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_6.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.3178992332 
+
+=== expected limit on number of cands for quantile  0.84  is  8.02828897767 
+
+=== expected limit on number of cands for quantile  0.16  is  3.08396057192 
+
+=== expected limit on number of cands for quantile  0.975  is  12.2207036361 
+
+=== expected limit on number of cands for quantile  0.025  is  3.044350762 
+
+0.047535
+Limit on signal cands =  3.06993690089  Limit on sigma*BR =  0.00160219051318 ( 0.00164119767901 ) for small (large) BR; effi =  0.046661 ; lumi =  20532
+Limit on signal cands =  4.3178992332  Limit on sigma*BR =  0.00225349817004 ( 0.00230836216786 ) for small (large) BR; effi =  0.046661 ; lumi =  20532
+Limit on signal cands =  8.02828897767  Limit on sigma*BR =  0.00418993902883 ( 0.00429194790056 ) for small (large) BR; effi =  0.046661 ; lumi =  20532
+Limit on signal cands =  3.08396057192  Limit on sigma*BR =  0.00160950942344 ( 0.00164869477654 ) for small (large) BR; effi =  0.046661 ; lumi =  20532
+Limit on signal cands =  12.2207036361  Limit on sigma*BR =  0.00637794718987 ( 0.00653322563003 ) for small (large) BR; effi =  0.046661 ; lumi =  20532
+Limit on signal cands =  3.044350762  Limit on sigma*BR =  0.00158883718693 ( 0.00162751925072 ) for small (large) BR; effi =  0.046661 ; lumi =  20532
+Limit on signal cands =  3.044350762  Limit on sigma*BR =  0.00158883718693 ( 0.00162751925072 ) for small (large) BR; effi =  0.046661 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_350_148_8.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_8.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_8.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_8.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.10306779424 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_8.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.30083259346 
+
+=== expected limit on number of cands for quantile  0.84  is  7.84305537153 
+
+=== expected limit on number of cands for quantile  0.16  is  3.08323279494 
+
+=== expected limit on number of cands for quantile  0.975  is  12.5953725147 
+
+=== expected limit on number of cands for quantile  0.025  is  3.05011438934 
+
+0.056115
+Limit on signal cands =  3.10306779424  Limit on sigma*BR =  0.00138375064443 ( 0.00142369599481 ) for small (large) BR; effi =  0.05461 ; lumi =  20532
+Limit on signal cands =  4.30083259346  Limit on sigma*BR =  0.00191786975581 ( 0.00197323376209 ) for small (large) BR; effi =  0.05461 ; lumi =  20532
+Limit on signal cands =  7.84305537153  Limit on sigma*BR =  0.00349745272882 ( 0.00359841526512 ) for small (large) BR; effi =  0.05461 ; lumi =  20532
+Limit on signal cands =  3.08323279494  Limit on sigma*BR =  0.0013749056256 ( 0.00141459564285 ) for small (large) BR; effi =  0.05461 ; lumi =  20532
+Limit on signal cands =  12.5953725147  Limit on sigma*BR =  0.00561665293499 ( 0.00577879137397 ) for small (large) BR; effi =  0.05461 ; lumi =  20532
+Limit on signal cands =  3.05011438934  Limit on sigma*BR =  0.00136013713902 ( 0.00139940082774 ) for small (large) BR; effi =  0.05461 ; lumi =  20532
+Limit on signal cands =  3.05011438934  Limit on sigma*BR =  0.00136013713902 ( 0.00139940082774 ) for small (large) BR; effi =  0.05461 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_350_148_10.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_10.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_10.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_10.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.06855559977 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_10.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.33162175434 
+
+=== expected limit on number of cands for quantile  0.84  is  8.06891309821 
+
+=== expected limit on number of cands for quantile  0.16  is  3.09137732536 
+
+=== expected limit on number of cands for quantile  0.975  is  12.3355119642 
+
+=== expected limit on number of cands for quantile  0.025  is  3.05271906858 
+
+0.04855
+Limit on signal cands =  3.06855559977  Limit on sigma*BR =  0.00158117168371 ( 0.00162050955311 ) for small (large) BR; effi =  0.04726 ; lumi =  20532
+Limit on signal cands =  4.33162175434  Limit on sigma*BR =  0.00223200702734 ( 0.00228753698772 ) for small (large) BR; effi =  0.04726 ; lumi =  20532
+Limit on signal cands =  8.06891309821  Limit on sigma*BR =  0.00415776625006 ( 0.00426120705123 ) for small (large) BR; effi =  0.04726 ; lumi =  20532
+Limit on signal cands =  3.09137732536  Limit on sigma*BR =  0.00159293130973 ( 0.00163256174611 ) for small (large) BR; effi =  0.04726 ; lumi =  20532
+Limit on signal cands =  12.3355119642  Limit on sigma*BR =  0.00635626814887 ( 0.00651440533846 ) for small (large) BR; effi =  0.04726 ; lumi =  20532
+Limit on signal cands =  3.05271906858  Limit on sigma*BR =  0.00157301140312 ( 0.00161214625342 ) for small (large) BR; effi =  0.04726 ; lumi =  20532
+Limit on signal cands =  3.05271906858  Limit on sigma*BR =  0.00157301140312 ( 0.00161214625342 ) for small (large) BR; effi =  0.04726 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_350_148_20.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_20.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_20.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_20.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.11217080066 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_20.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  5.3748027525 
+
+=== expected limit on number of cands for quantile  0.84  is  8.24822567345 
+
+=== expected limit on number of cands for quantile  0.16  is  3.1158465487 
+
+=== expected limit on number of cands for quantile  0.975  is  12.9110423473 
+
+=== expected limit on number of cands for quantile  0.025  is  3.07275333002 
+
+0.029538
+Limit on signal cands =  3.11217080066  Limit on sigma*BR =  0.00263501499216 ( 0.00267451490276 ) for small (large) BR; effi =  0.028762 ; lumi =  20532
+Limit on signal cands =  5.3748027525  Limit on sigma*BR =  0.00455074182616 ( 0.00461895923511 ) for small (large) BR; effi =  0.028762 ; lumi =  20532
+Limit on signal cands =  8.24822567345  Limit on sigma*BR =  0.00698361359333 ( 0.00708830070646 ) for small (large) BR; effi =  0.028762 ; lumi =  20532
+Limit on signal cands =  3.1158465487  Limit on sigma*BR =  0.00263812717713 ( 0.0026776737406 ) for small (large) BR; effi =  0.028762 ; lumi =  20532
+Limit on signal cands =  12.9110423473  Limit on sigma*BR =  0.0109315305389 ( 0.011095398479 ) for small (large) BR; effi =  0.028762 ; lumi =  20532
+Limit on signal cands =  3.07275333002  Limit on sigma*BR =  0.00260164098001 ( 0.00264064060105 ) for small (large) BR; effi =  0.028762 ; lumi =  20532
+Limit on signal cands =  3.07275333002  Limit on sigma*BR =  0.00260164098001 ( 0.00264064060105 ) for small (large) BR; effi =  0.028762 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_350_148_40.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_40.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_40.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_40.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.105783494 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_40.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.3621372381 
+
+=== expected limit on number of cands for quantile  0.84  is  7.93376817426 
+
+=== expected limit on number of cands for quantile  0.16  is  3.12140910278 
+
+=== expected limit on number of cands for quantile  0.975  is  12.4233107396 
+
+=== expected limit on number of cands for quantile  0.025  is  3.08613585771 
+
+0.01659
+Limit on signal cands =  3.105783494  Limit on sigma*BR =  0.00466667218111 ( 0.00470570601249 ) for small (large) BR; effi =  0.016207 ; lumi =  20532
+Limit on signal cands =  4.3621372381  Limit on sigma*BR =  0.00655443772517 ( 0.00660926154972 ) for small (large) BR; effi =  0.016207 ; lumi =  20532
+Limit on signal cands =  7.93376817426  Limit on sigma*BR =  0.0119210805588 ( 0.0120207930371 ) for small (large) BR; effi =  0.016207 ; lumi =  20532
+Limit on signal cands =  3.12140910278  Limit on sigma*BR =  0.00469015082795 ( 0.00472938104371 ) for small (large) BR; effi =  0.016207 ; lumi =  20532
+Limit on signal cands =  12.4233107396  Limit on sigma*BR =  0.018666954325 ( 0.0188230918721 ) for small (large) BR; effi =  0.016207 ; lumi =  20532
+Limit on signal cands =  3.08613585771  Limit on sigma*BR =  0.00463715013688 ( 0.00467593703458 ) for small (large) BR; effi =  0.016207 ; lumi =  20532
+Limit on signal cands =  3.08613585771  Limit on sigma*BR =  0.00463715013688 ( 0.00467593703458 ) for small (large) BR; effi =  0.016207 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_350_148_60.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_60.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_60.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_60.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.14265177446 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_60.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  5.41900857701 
+
+=== expected limit on number of cands for quantile  0.84  is  7.75597135279 
+
+=== expected limit on number of cands for quantile  0.16  is  3.13348904062 
+
+=== expected limit on number of cands for quantile  0.975  is  12.2553020944 
+
+=== expected limit on number of cands for quantile  0.025  is  3.09339440044 
+
+0.011494
+Limit on signal cands =  3.14265177446  Limit on sigma*BR =  0.00680755923407 ( 0.00684690841674 ) for small (large) BR; effi =  0.011242 ; lumi =  20532
+Limit on signal cands =  5.41900857701  Limit on sigma*BR =  0.0117385649208 ( 0.0118064163958 ) for small (large) BR; effi =  0.011242 ; lumi =  20532
+Limit on signal cands =  7.75597135279  Limit on sigma*BR =  0.0168008542438 ( 0.0168979668594 ) for small (large) BR; effi =  0.011242 ; lumi =  20532
+Limit on signal cands =  3.13348904062  Limit on sigma*BR =  0.00678771107466 ( 0.00682694553062 ) for small (large) BR; effi =  0.011242 ; lumi =  20532
+Limit on signal cands =  12.2553020944  Limit on sigma*BR =  0.0265472285593 ( 0.0267006773521 ) for small (large) BR; effi =  0.011242 ; lumi =  20532
+Limit on signal cands =  3.09339440044  Limit on sigma*BR =  0.0067008587418 ( 0.00673959117226 ) for small (large) BR; effi =  0.011242 ; lumi =  20532
+Limit on signal cands =  3.09339440044  Limit on sigma*BR =  0.0067008587418 ( 0.00673959117226 ) for small (large) BR; effi =  0.011242 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_350_148_80.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_80.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_80.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_80.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.09830209691 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_80.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.38242086436 
+
+=== expected limit on number of cands for quantile  0.84  is  8.25174721277 
+
+=== expected limit on number of cands for quantile  0.16  is  3.13302412445 
+
+=== expected limit on number of cands for quantile  0.975  is  12.5827656612 
+
+=== expected limit on number of cands for quantile  0.025  is  3.09061244274 
+
+0.008794
+Limit on signal cands =  3.09830209691  Limit on sigma*BR =  0.00876822397812 ( 0.00880694812905 ) for small (large) BR; effi =  0.008605 ; lumi =  20532
+Limit on signal cands =  4.38242086436  Limit on sigma*BR =  0.0124022921275 ( 0.012457065846 ) for small (large) BR; effi =  0.008605 ; lumi =  20532
+Limit on signal cands =  8.25174721277  Limit on sigma*BR =  0.023352521965 ( 0.0234556564866 ) for small (large) BR; effi =  0.008605 ; lumi =  20532
+Limit on signal cands =  3.13302412445  Limit on sigma*BR =  0.00886648764155 ( 0.00890564576598 ) for small (large) BR; effi =  0.008605 ; lumi =  20532
+Limit on signal cands =  12.5827656612  Limit on sigma*BR =  0.0356093447737 ( 0.0357666105603 ) for small (large) BR; effi =  0.008605 ; lumi =  20532
+Limit on signal cands =  3.09061244274  Limit on sigma*BR =  0.00874646218474 ( 0.00878509022647 ) for small (large) BR; effi =  0.008605 ; lumi =  20532
+Limit on signal cands =  3.09061244274  Limit on sigma*BR =  0.00874646218474 ( 0.00878509022647 ) for small (large) BR; effi =  0.008605 ; lumi =  20532
+
+ ======= Processing /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_Combined_Bayesian_neutralino/Muons_350_148_100.0/ =======
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_100.0/res//higgsCombineTest.*.mH0_*.root higgsCombineTest.MarkovChainMC.mH0.root 
+
+cp /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_job_output_Combined_Bayesian_neutralino/Muons_350_148_100.0/res//higgsCombineTest.*.mH0.123456*.root higgsCombineTest.MarkovChainMC.mH0.quantAll.root 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_100.0 / higgsCombineTest.MarkovChainMC.mH0.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== observed limit on number of cands is  3.10373083563 
+
+Reading  /uscms_data/d3/demattia/DisplacedLeptons/RefittedStandAloneMuons/Limits/CMSSW_6_1_1/src/LimitsHiggsStatPackage/counting_result_Combined_Bayesian_neutralino/Muons_350_148_100.0 / higgsCombineTest.MarkovChainMC.mH0.quantAll.root
+TFile**		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+ TFile*		higgsCombineTest.MarkovChainMC.mH0.quantAll.root	
+  KEY: TDirectoryFile	toys;1	toys
+  KEY: TTree	limit;1	limit
+=== expected limit on number of cands for quantile  0.5  is  4.42887559167 
+
+=== expected limit on number of cands for quantile  0.84  is  8.20595940198 
+
+=== expected limit on number of cands for quantile  0.16  is  3.13733927449 
+
+=== expected limit on number of cands for quantile  0.975  is  12.3703377671 
+
+=== expected limit on number of cands for quantile  0.025  is  3.09392690042 
+
+0.007127
+Limit on signal cands =  3.10373083563  Limit on sigma*BR =  0.010836239316 ( 0.0108749923513 ) for small (large) BR; effi =  0.006975 ; lumi =  20532
+Limit on signal cands =  4.42887559167  Limit on sigma*BR =  0.0154627956978 ( 0.0155180944273 ) for small (large) BR; effi =  0.006975 ; lumi =  20532
+Limit on signal cands =  8.20595940198  Limit on sigma*BR =  0.0286499521404 ( 0.0287524113582 ) for small (large) BR; effi =  0.006975 ; lumi =  20532
+Limit on signal cands =  3.13733927449  Limit on sigma*BR =  0.0109535784494 ( 0.010992751118 ) for small (large) BR; effi =  0.006975 ; lumi =  20532
+Limit on signal cands =  12.3703377671  Limit on sigma*BR =  0.0431892930036 ( 0.0433437484512 ) for small (large) BR; effi =  0.006975 ; lumi =  20532
+Limit on signal cands =  3.09392690042  Limit on sigma*BR =  0.0108020102563 ( 0.0108406408801 ) for small (large) BR; effi =  0.006975 ; lumi =  20532
+Limit on signal cands =  3.09392690042  Limit on sigma*BR =  0.0108020102563 ( 0.0108406408801 ) for small (large) BR; effi =  0.006975 ; lumi =  20532
